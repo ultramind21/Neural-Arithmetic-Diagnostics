@@ -1,0 +1,48 @@
+================================================================================
+KILLER TEST: CARRY SENSITIVITY FOLLOW-UP INVESTIGATION
+================================================================================
+
+TEST 1: MINIMAL-PAIR RESULTS
+--------------------------------------------------------------------------------
+(a,b) = (0,0) | no sum, sum = 0
+  carry=0: sum=-0.0004 digit=0 carry=0
+  carry=1: sum=0.0260 digit=0 carry=0
+  delta=0.0264 digit_changed=False carry_changed=False
+
+(a,b) = (1,1) | low sum, sum = 2
+  carry=0: sum=2.0077 digit=2 carry=0
+  carry=1: sum=2.9843 digit=3 carry=0
+  delta=0.9766 digit_changed=True carry_changed=False
+
+(a,b) = (4,5) | mid sum, sum = 9
+  carry=0: sum=9.0171 digit=9 carry=0
+  carry=1: sum=9.9790 digit=0 carry=1
+  delta=0.9619 digit_changed=True carry_changed=True
+
+(a,b) = (8,1) | boundary, sum = 9
+  carry=0: sum=9.0051 digit=9 carry=0
+  carry=1: sum=9.9828 digit=0 carry=1
+  delta=0.9777 digit_changed=True carry_changed=True
+
+(a,b) = (9,0) | near boundary, sum = 9
+  carry=0: sum=9.0061 digit=9 carry=0
+  carry=1: sum=9.9885 digit=0 carry=1
+  delta=0.9825 digit_changed=True carry_changed=True
+
+(a,b) = (9,1) | boundary, sum = 10
+  carry=0: sum=9.9987 digit=0 carry=1
+  carry=1: sum=11.0117 digit=1 carry=1
+  delta=1.0130 digit_changed=True carry_changed=False
+
+(a,b) = (9,9) | high sum, sum = 18
+  carry=0: sum=17.9786 digit=8 carry=1
+  carry=1: sum=19.0175 digit=9 carry=1
+  delta=1.0389 digit_changed=True carry_changed=False
+
+
+TEST 2: FULL CARRY SWEEP RESULTS
+--------------------------------------------------------------------------------
+Mean delta: 0.9897
+Std delta:  0.1009
+Min delta:  0.0264
+Max delta:  1.0768

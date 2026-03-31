@@ -1,0 +1,46 @@
+================================================================================
+KILLER TEST: TEST 4 & FREQUENCY ANALYSIS RESULTS
+================================================================================
+
+TEST 4 RESULTS:
+--------------------------------------------------------------------------------
+(0,0,1) - carry-only (KNOWN FAILURE)
+  sum: true=1, pred=0.0260
+  digit: true=1, pred=0, ok=False
+  carry: true=0, pred=0, ok=True
+
+(0,0,0) - zero everywhere
+  sum: true=0, pred=-0.0004
+  digit: true=0, pred=0, ok=True
+  carry: true=0, pred=0, ok=True
+
+(0,1,0) - b has signal, no carry
+  sum: true=1, pred=1.0018
+  digit: true=1, pred=1, ok=True
+  carry: true=0, pred=0, ok=True
+
+(1,0,0) - a has signal, no carry
+  sum: true=1, pred=1.0086
+  digit: true=1, pred=1, ok=True
+  carry: true=0, pred=0, ok=True
+
+(0,1,1) - b + carry, a=0
+  sum: true=2, pred=1.9986
+  digit: true=2, pred=2, ok=True
+  carry: true=0, pred=0, ok=True
+
+(1,0,1) - a + carry, b=0
+  sum: true=2, pred=1.9822
+  digit: true=2, pred=2, ok=True
+  carry: true=0, pred=0, ok=True
+
+(0,2,0) - stronger b signal
+  sum: true=2, pred=2.0292
+  digit: true=2, pred=2, ok=True
+  carry: true=0, pred=0, ok=True
+
+(1,1,0) - equal a,b signal
+  sum: true=2, pred=2.0077
+  digit: true=2, pred=2, ok=True
+  carry: true=0, pred=0, ok=True
+
