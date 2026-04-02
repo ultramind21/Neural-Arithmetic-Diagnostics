@@ -28,6 +28,10 @@ That is the central lesson of this repository.
 
 ---
 
+![Repository Overview](assets/repository_overview.png)
+
+---
+
 ## What makes this repository different
 
 This is not just a code dump and not just a benchmark repository.
