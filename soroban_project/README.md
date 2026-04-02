@@ -20,6 +20,12 @@ This repository documents a full research line that moved through:
 
 That is the central lesson of this repository.
 
+### Start here if you want the human reason this project matters
+- [`WHY_THIS_PROJECT_MATTERS.md`](WHY_THIS_PROJECT_MATTERS.md)
+
+### Start here if you want the fastest possible technical entry
+- [`GETTING_STARTED_FAST.md`](GETTING_STARTED_FAST.md)
+
 ---
 
 ## What makes this repository different
