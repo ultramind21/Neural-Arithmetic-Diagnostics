@@ -1,0 +1,267 @@
+============================================================
+Folder PATH listing for: D:\Music\Project 03 Abacus
+============================================================
+
+Total Folders: 43
+Total Files: 215
+
+Project 03 Abacus/
+
++---.vscode/
+|   \---settings.json (196.0B)
++---soroban_project/
+|   +---Papers/
+|   |   +---audit_reports/
+|   |   +---final_narratives/
+|   |   +---project_closures/
+|   |   +---KILLER_TEST_VERDICT_FINAL.md (7.7KB)
+|   |   +---PROJECT_1_CLOSURE_DOCUMENT_FINAL.md (6.4KB)
+|   |   +---PROJECT_2_CLOSURE_DOCUMENT.md (6.4KB)
+|   |   +---PROJECT_3_CLOSURE_MASTER_INDEX.md (6.0KB)
+|   |   +---PROJECT_3_QUICK_REFERENCE_CARD.md (4.0KB)
+|   |   +---README.md (4.3KB)
+|   |   +---THE_FINAL_JUDGMENT.md (8.1KB)
+|   |   \---killer_test_results.txt (6.0KB)
+|   +---archive_optional/
+|   |   \---debug/
+|   |       +---debug_alternating.py (6.5KB)
+|   |       +---diagnose_phase26c_timeout.py (8.0KB)
+|   |       +---killer_test_carry_followup.py (18.3KB)
+|   |       +---killer_test_test4_frequency.py (14.1KB)
+|   |       \---test_parser_fix.py (1.8KB)
+|   +---checkpoints/
+|   |   \---residual_logic_adder.pt (16.1KB)
+|   +---final_audit/
+|   |   +---archive_legacy_handoffs/
+|   |   |   +---FILES_TO_SEND_TO_NEW_MODEL.md (5.5KB)
+|   |   |   +---FORMAL_HANDOFF_FOR_NEW_MODEL.md (7.3KB)
+|   |   |   +---HANDOFF_COMPLETE_CONTEXT_TO_NEW_MODEL.md (12.6KB)
+|   |   |   +---HANDOFF_PACKAGE_COMPLETE.md (4.3KB)
+|   |   |   +---MESSAGE_TO_NEW_MODEL.md (5.6KB)
+|   |   |   +---QUICK_INDEX_FOR_NEW_MODEL.md (3.6KB)
+|   |   |   \---SESSION_HANDOFF_READY.md (5.3KB)
+|   |   +---code_audit/
+|   |   |   +---KILLER_TEST_FINAL_VERDICT.md (20.0KB)
+|   |   |   +---KILLER_TEST_FOLLOWUP_INVESTIGATION.md (9.4KB)
+|   |   |   +---KILLER_TEST_INVESTIGATION.md (6.7KB)
+|   |   |   +---MODEL_VALIDATION_REPORT.md (3.9KB)
+|   |   |   +---phase_30_interrogation_corrected.py (12.1KB)
+|   |   |   +---phase_30_interrogation_main.py (13.7KB)
+|   |   |   +---phase_30_step2_complete_local_table_VALID.py (16.2KB)
+|   |   |   +---step1d_killer_test_raw_output.txt (59.8KB)
+|   |   |   +---step2e_phase26c_raw_output.txt (3.3KB)
+|   |   |   +---step3e_phase27c_raw_output.txt (80.0B)
+|   |   |   +---step4e_project3_raw_output.txt (16.0KB)
+|   |   |   +---step5e_killer_test_raw_output.txt (58.4KB)
+|   |   |   +---step6e_phase30_raw_output.txt (80.0B)
+|   |   |   +---verify_killer_test_step1a_pattern_generation_OFFICIAL.py (12.5KB)
+|   |   |   +---verify_killer_test_step1b_ground_truth.py (10.8KB)
+|   |   |   +---verify_killer_test_step1c5_prediction_decoding.py (8.8KB)
+|   |   |   +---verify_killer_test_step1c_metric_computation.py (9.8KB)
+|   |   |   +---verify_killer_test_step1d_official_reproduction.py (10.4KB)
+|   |   |   +---verify_phase26c_step2a_source_setup.py (6.9KB)
+|   |   |   +---verify_phase26c_step2b_data_split.py (7.7KB)
+|   |   |   +---verify_phase26c_step2c_ground_truth.py (7.4KB)
+|   |   |   +---verify_phase26c_step2d_metrics.py (9.6KB)
+|   |   |   +---verify_phase26c_step2e_reproduction.py (7.9KB)
+|   |   |   +---verify_phase26c_step2f_error_structure.py (10.4KB)
+|   |   |   +---verify_phase27c_step3a_source_setup.py (7.7KB)
+|   |   |   +---verify_phase27c_step3b_data_split.py (10.3KB)
+|   |   |   +---verify_phase27c_step3b_diagnostic_results.md (7.8KB)
+|   |   |   +---verify_phase27c_step3b_diagnostic_shuffle.py (10.9KB)
+|   |   |   +---verify_phase27c_step3c_ground_truth.py (12.7KB)
+|   |   |   +---verify_phase27c_step3d_metrics.py (15.9KB)
+|   |   |   +---verify_phase27c_step3e_reproduction.py (15.3KB)
+|   |   |   +---verify_phase27c_step3e_reproduction_results.md (4.3KB)
+|   |   |   +---verify_phase4a_source_setup.py (9.7KB)
+|   |   |   +---verify_phase4b_data_generation.py (13.0KB)
+|   |   |   +---verify_phase4c_ground_truth.py (6.0KB)
+|   |   |   +---verify_phase4d_metrics.py (11.4KB)
+|   |   |   +---verify_phase4e_reproduction.py (8.9KB)
+|   |   |   +---verify_phase5a_source_setup.py (9.9KB)
+|   |   |   +---verify_phase5b_pattern_generation.py (8.6KB)
+|   |   |   +---verify_phase5c_pattern_ground_truth.py (8.4KB)
+|   |   |   +---verify_phase5d_metrics.py (10.1KB)
+|   |   |   +---verify_phase5e_reproduction.py (9.7KB)
+|   |   |   +---verify_phase6a_source_setup.py (8.6KB)
+|   |   |   +---verify_phase6b_training_setup.py (9.9KB)
+|   |   |   +---verify_phase6c_ground_truth.py (8.7KB)
+|   |   |   +---verify_phase6d_metrics.py (10.7KB)
+|   |   |   \---verify_phase6e_reproduction.py (8.8KB)
+|   |   +---cross_checks/
+|   |   +---data_checks/
+|   |   +---documentation/
+|   |   |   +---executive_summaries/
+|   |   |   |   +---EXECUTIVE_SUMMARY_FINAL.md (1.3KB)
+|   |   |   |   +---MASTER_AUDIT_SUMMARY_PHASES_1_TO_6.md (10.8KB)
+|   |   |   |   \---QUICK_REFERENCE_FINAL.md (1.9KB)
+|   |   |   \---phase_summaries/
+|   |   |       +---PHASE_30_INTERROGATION_STEP0.md (8.0KB)
+|   |   |       +---PHASE_30_STEPS_1-3_SUMMARY.md (9.5KB)
+|   |   |       +---PHASE_3_CLOSURE_SUMMARY.md (9.5KB)
+|   |   |       +---PHASE_4_CLOSURE_SUMMARY.md (7.6KB)
+|   |   |       +---PHASE_5_CLOSURE_SUMMARY.md (7.6KB)
+|   |   |       \---PHASE_6_CLOSURE_SUMMARY.md (7.3KB)
+|   |   +---integrity_checks/
+|   |   |   \---verify_audit_integrity_master_check.py (8.1KB)
+|   |   +---limitations/
+|   |   |   \---POST_AUDIT_LIMITATIONS_NOTE.md (905.0B)
+|   |   +---reproduction_logs/
+|   |   +---templates/
+|   |   |   +---CROSS_CHECKS_TEMPLATE.md (6.1KB)
+|   |   |   +---DATA_INTEGRITY_TEMPLATE.md (3.0KB)
+|   |   |   +---DOCUMENTATION_ALIGNMENT_TEMPLATE.md (5.1KB)
+|   |   |   +---LOGICAL_VALIDATION_TEMPLATE.md (2.8KB)
+|   |   |   +---REPRODUCTION_TEMPLATE.md (4.0KB)
+|   |   |   \---TEMPLATE.md (2.3KB)
+|   |   +---verify/
+|   |   |   \---verify_killer_test_step1a_pattern_generation.py (12.1KB)
+|   |   +---00_AUDIT_MASTER_PLAN.md (3.8KB)
+|   |   +---01_EXECUTION_CHECKLIST.md (8.4KB)
+|   |   +---ACTION_PLAN_TRUST_RECOVERY.md (6.4KB)
+|   |   +---COMPREHENSIVE_VALIDATION_REPORT.md (7.5KB)
+|   |   +---KILLER_TEST_FOLLOWUP_RESULTS.txt (1.7KB)
+|   |   +---KILLER_TEST_TEST4_FREQUENCY_RESULTS.txt (1.3KB)
+|   |   +---PHASE_1_KILLER_TEST_FOUNDATION_SUMMARY.md (5.2KB)
+|   |   +---PHASE_2_PROJECT_1_BASELINE_REVALIDATION_PLAN.md (7.3KB)
+|   |   +---PHASE_2_PROJECT_1_BASELINE_SUMMARY.md (9.7KB)
+|   |   +---PHASE_2_PROJECT_1_BASELINE_SUMMARY_TEMPLATE.md (8.7KB)
+|   |   +---README.md (4.7KB)
+|   |   +---REVALIDATION_PLAN_FROM_ZERO.md (10.0KB)
+|   |   \---TRUST_RECOVERY_PROTOCOL.md (5.6KB)
+|   +---project_4/
+|   |   +---baselines/
+|   |   |   +---PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md (6.0KB)
+|   |   |   +---PROJECT_4_BASELINE_RESULTS.md (10.2KB)
+|   |   |   +---project_4_baseline_comparison.py (15.5KB)
+|   |   |   +---project_4_baseline_runtime_adapter_phase30.py (7.2KB)
+|   |   |   +---project_4_phase30_lstm_baseline_eval.py (14.3KB)
+|   |   |   +---project_4_phase30_lstm_baseline_validate.py (6.9KB)
+|   |   |   +---project_4_phase30_lstm_training_checkpoint_prep.py (7.1KB)
+|   |   |   +---project_4_phase30_mlp_baseline_eval.py (15.8KB)
+|   |   |   +---project_4_phase30_mlp_baseline_validate.py (7.0KB)
+|   |   |   +---project_4_phase30_mlp_eval_path_audit.py (9.7KB)
+|   |   |   +---project_4_phase30_training_checkpoint_prep.py (6.9KB)
+|   |   |   +---project_4_phase30_transformer_baseline_eval.py (14.4KB)
+|   |   |   +---project_4_phase30_transformer_baseline_validate.py (7.0KB)
+|   |   |   \---project_4_phase30_transformer_training_checkpoint_prep.py (7.2KB)
+|   |   +---checkpoints/
+|   |   |   +---phase30_lstm_project4_ready.pt (65.2KB)
+|   |   |   +---phase30_mlp_project4_ready.pt (19.3KB)
+|   |   |   \---phase30_transformer_project4_ready.pt (15.0KB)
+|   |   +---diagnostics/
+|   |   |   +---benchmark_adversarial_patterns.py (6.8KB)
+|   |   |   +---diagnostic_scorecard.py (13.2KB)
+|   |   |   \---regime_classification.py (10.1KB)
+|   |   +---framework/
+|   |   |   +---FRAMEWORK_CHANGELOG.md (2.2KB)
+|   |   |   +---FRAMEWORK_CHANGELOG_v1.md (2.2KB)
+|   |   |   \---PROJECT_4_DIAGNOSTIC_FRAMEWORK.md (16.2KB)
+|   |   +---interventions/
+|   |   |   +---adversarial_training/
+|   |   |   |   +---results/
+|   |   |   |   |   +---project_4_adversarial_training_artifact.json (1.4KB)
+|   |   |   |   |   +---project_4_adversarial_training_report.md (1012.0B)
+|   |   |   |   |   \---project_4_adversarial_training_validation_runs.json (2.7KB)
+|   |   |   |   +---PROJECT_4_ADVERSARIAL_TRAINING_RESULTS.md (5.3KB)
+|   |   |   |   +---project_4_adversarial_training.py (14.8KB)
+|   |   |   |   \---project_4_adversarial_training_validate.py (5.3KB)
+|   |   |   \---blockwise_decomposition/
+|   |   |       +---results/
+|   |   |       |   +---project_4_blockwise_decomposition_artifact.json (1.1KB)
+|   |   |       |   \---project_4_blockwise_decomposition_report.md (901.0B)
+|   |   |       +---PROJECT_4_BLOCKWISE_RESULTS.md (3.1KB)
+|   |   |       \---project_4_blockwise_decomposition.py (10.6KB)
+|   |   +---results/
+|   |   |   +---baseline_runs/
+|   |   |   |   +---phase30_lstm_baseline_artifact.json (6.0KB)
+|   |   |   |   +---phase30_lstm_baseline_report.md (3.3KB)
+|   |   |   |   +---phase30_lstm_baseline_run0_artifact.json (5.7KB)
+|   |   |   |   +---phase30_lstm_baseline_run0_report.md (3.2KB)
+|   |   |   |   +---phase30_lstm_baseline_run1_artifact.json (5.7KB)
+|   |   |   |   +---phase30_lstm_baseline_run1_report.md (3.2KB)
+|   |   |   |   +---phase30_lstm_baseline_run2_artifact.json (5.7KB)
+|   |   |   |   +---phase30_lstm_baseline_run2_report.md (3.2KB)
+|   |   |   |   +---phase30_lstm_validation_runs.json (4.3KB)
+|   |   |   |   +---phase30_mlp_baseline_artifact.json (5.9KB)
+|   |   |   |   +---phase30_mlp_baseline_report.md (3.2KB)
+|   |   |   |   +---phase30_mlp_baseline_run0_artifact.json (5.6KB)
+|   |   |   |   +---phase30_mlp_baseline_run0_report.md (3.1KB)
+|   |   |   |   +---phase30_mlp_baseline_run1_artifact.json (5.7KB)
+|   |   |   |   +---phase30_mlp_baseline_run1_report.md (3.2KB)
+|   |   |   |   +---phase30_mlp_baseline_run2_artifact.json (5.7KB)
+|   |   |   |   +---phase30_mlp_baseline_run2_report.md (3.2KB)
+|   |   |   |   +---phase30_mlp_validation_runs.json (4.3KB)
+|   |   |   |   +---phase30_transformer_baseline_artifact.json (6.0KB)
+|   |   |   |   +---phase30_transformer_baseline_report.md (3.2KB)
+|   |   |   |   +---phase30_transformer_baseline_run0_artifact.json (5.7KB)
+|   |   |   |   +---phase30_transformer_baseline_run0_report.md (3.2KB)
+|   |   |   |   +---phase30_transformer_baseline_run1_artifact.json (5.7KB)
+|   |   |   |   +---phase30_transformer_baseline_run1_report.md (3.2KB)
+|   |   |   |   +---phase30_transformer_baseline_run2_artifact.json (5.7KB)
+|   |   |   |   +---phase30_transformer_baseline_run2_report.md (3.2KB)
+|   |   |   |   \---phase30_transformer_validation_runs.json (4.4KB)
+|   |   |   +---PROJECT_4_CLOSURE_SUMMARY.md (6.2KB)
+|   |   |   +---PROJECT_4_EXECUTIVE_SUMMARY.md (1.2KB)
+|   |   |   +---PROJECT_4_FINAL_JUDGMENT.md (1.3KB)
+|   |   |   +---PROJECT_4_MVP_DECISION.md (4.3KB)
+|   |   |   +---PROJECT_4_QUICK_REFERENCE.md (1.9KB)
+|   |   |   \---PROJECT_4_RESULTS_SUMMARY.md (6.1KB)
+|   |   +---validation/
+|   |   |   +---RESULT_VALIDATION_PROTOCOL.md (3.9KB)
+|   |   |   \---validate_run_stability.py (9.7KB)
+|   |   \---README.md (6.1KB)
+|   +---src/
+|   |   +---env/
+|   |   |   +---__init__.py (54.0B)
+|   |   |   +---action_factorizer.py (3.0KB)
+|   |   |   +---action_space.py (1.7KB)
+|   |   |   +---encode.py (564.0B)
+|   |   |   +---soroban_env.py (9.4KB)
+|   |   |   \---soroban_rules.py (3.5KB)
+|   |   +---eval/
+|   |   |   +---__init__.py (0.0B)
+|   |   |   +---dagger_eval_fast.py (2.1KB)
+|   |   |   \---eval_add.py (3.9KB)
+|   |   +---models/
+|   |   |   +---__init__.py (0.0B)
+|   |   |   \---residual_logic_adder.py (5.2KB)
+|   |   +---teacher/
+|   |   |   +---__init__.py (0.0B)
+|   |   |   +---dataset_gen.py (3.8KB)
+|   |   |   \---teacher_add.py (8.2KB)
+|   |   +---train/
+|   |   |   +---__init__.py (0.0B)
+|   |   |   +---phase_26c_failure_audit.py (11.3KB)
+|   |   |   +---phase_27c_architecture_audit.py (9.5KB)
+|   |   |   +---phase_30_multidigit_learning.py (18.8KB)
+|   |   |   +---phase_30b_stress_test.py (15.0KB)
+|   |   |   +---project_3_killer_test_adversarial_carry_chain.py (12.2KB)
+|   |   |   \---project_3_residual_logic_layer.py (10.7KB)
+|   |   +---utils/
+|   |   |   +---__init__.py (0.0B)
+|   |   |   +---config.py (1.4KB)
+|   |   |   +---learned_goto.py (2.0KB)
+|   |   |   +---learned_goto_policy.py (3.4KB)
+|   |   |   +---learned_goto_policy_fixed.py (2.4KB)
+|   |   |   \---seed.py (275.0B)
+|   |   \---__init__.py (0.0B)
+|   +---tests/
+|   |   +---test_env.py (2.3KB)
+|   |   +---test_rules.py (5.0KB)
+|   |   \---test_teacher.py (2.5KB)
+|   +---.gitignore (2.0KB)
+|   +---FINAL_DELIVERABLES_OFFICIAL.md (9.8KB)
+|   +---GITHUB_REPOSITORY_REORGANIZATION_PLAN.md (6.1KB)
+|   +---POST_REORGANIZATION_VERIFICATION_CHECKLIST.md (18.4KB)
+|   +---PRE_REORGANIZATION_AUDIT_CHECKLIST.md (13.3KB)
+|   +---PROJECT_3_CLOSURE_DOCUMENT.md (17.2KB)
+|   +---PROJECT_STRUCTURE.md (8.2KB)
+|   +---README.md (5.7KB)
+|   +---REORGANIZATION_PLAN.md (13.2KB)
+|   +---REPOSITORY_REORGANIZATION_EXECUTION_CHECKLIST.md (3.6KB)
+|   +---START_HERE.md (2.1KB)
+|   +---_FOR_MODEL_CONTEXT_FULL_SESSION.md (11.5KB)
+|   \---requirements.txt (62.0B)
+|   project_tree.py (5.1KB)
+|   unnamed.png (5.5MB)
