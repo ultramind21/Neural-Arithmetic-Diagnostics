@@ -194,3 +194,5 @@ That full arc — not any single isolated number — is the real contribution of
 
 *Status: Research line complete | Audit complete | Project 4 complete*  
 *Project identity: Neural-Arithmetic-Diagnostics*
+
+**License:** Custom non-commercial license. Any commercial use requires prior written permission from Mohamed Mhamdi.
