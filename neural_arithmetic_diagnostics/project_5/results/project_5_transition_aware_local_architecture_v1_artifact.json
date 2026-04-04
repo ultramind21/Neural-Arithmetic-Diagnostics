@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-04-04T23:16:12.647572Z",
+  "experiment": "project_5_transition_aware_local_architecture_v1",
+  "chunk_size": 2,
+  "length": 6,
+  "num_samples": 64,
+  "local_analysis": {
+    "overall": {
+      "digit_acc": 0.9246485,
+      "carry_acc": 0.9999055,
+      "exact_acc": 0.9246485
+    },
+    "by_carry_out": {
+      "0": {
+        "count": 1000000,
+        "digit_acc": 0.941983,
+        "carry_acc": 0.999811,
+        "exact_acc": 0.941983
+      },
+      "1": {
+        "count": 1000000,
+        "digit_acc": 0.907314,
+        "carry_acc": 1.0,
+        "exact_acc": 0.907314
+      }
+    }
+  },
+  "results": {
+    "alternating_carry": {
+      "exact_match": 0.0
+    },
+    "full_propagation_chain": {
+      "exact_match": 0.0
+    },
+    "block_boundary_stress": {
+      "exact_match": 0.0
+    }
+  },
+  "notes": [
+    "This experiment tests whether explicit transition-aware structure improves learned decomposition.",
+    "Its purpose is to target the residual family split more directly."
+  ]
+}
