@@ -1,174 +1,137 @@
 # PROJECT 5 TRANSITION-AWARE RESULTS
-## Result 9 — Explicit Transition-Structure Representation (PASS / Negative)
+## Transition-Aware Local Architecture Intervention
 
-**Date:** April 5, 2026  
-**Experiment:** `project_5_transition_aware_local_architecture_v1.py`  
-**Status:** ✓ LOCKED RESULT
-
----
-
-## 1. Hypothesis
-
-Can explicit transition-aware structure representation improve decomposition robustness beyond what explicit carry-conditioned representation alone achieved?
-
-The intuition: the remaining failures may require the local processor to represent not just digits and carries, but also the local transition structure itself (did adjacent operands change?).
+**Date:** April 2026  
+**Project:** 5  
+**Status:** COMPLETE  
+**Verdict:** PASS
 
 ---
 
-## 2. Intervention
+## Purpose
 
-Extended the local processor architecture to include:
+This document records the transition-aware local architecture result in Project 5.
 
-1. **Digit pair pathway:** Linear(2) → 16 units
-2. **Carry pathway:** Linear(1) → 8 units
-3. **Transition feature pathway:** 4 explicit binary features (prev_a changed?, prev_b changed?, next_a change?, next_b change?) → Linear(4,12)
-4. **Combined pathway:** Concat(16+8+12=36) → Linear(48) → final heads
-
-Total dataset: 10^6 samples (all combinations of prev_a, prev_b, a, b, next_a, next_b, carry_in).
+Its purpose was to test whether explicitly modeling local transition structure would rescue the remaining decomposition failures that survived earlier interventions.
 
 ---
 
-## 3. Results
+## Background
 
-### A. Local Processor Performance
+Earlier Project 5 results established that:
 
-| Metric | Value |
-|--------|-------|
-| **digit_acc** | 0.9246 |
-| **carry_acc** | 0.9999 |
-| **exact_acc** | 0.9246 |
+- decomposition is structurally feasible under an exact local oracle
+- a learned local processor suffers a strong carry-conditioned digit bottleneck
+- simple reweighting does not solve that bottleneck
+- explicit carry-conditioned representation can improve local behavior substantially and rescue `full_propagation_chain`
 
-**By carry_out:**
-- carry_out = 0: digit=0.9420, carry=0.9998, exact=0.9420
-- carry_out = 1: digit=0.9073, carry=1.0, exact=0.9073
-- **Gap: 0.0347** (virtually solved)
+This raised the next question:
 
-### B. Composed Family Results
-
-| Family | Exact Match |
-|--------|------------|
-| alternating_carry | **0.0** |
-| full_propagation_chain | **0.0** |
-| block_boundary_stress | **0.0** |
+> Is the remaining failure explained by insufficient modeling of local transition structure?
 
 ---
 
-## 4. What Happened
+## Main Result
 
-This is a **critical insight disguised as a failure**:
+The transition-aware intervention produced a strong local improvement but still failed compositionally.
 
-Despite achieving:
-- 92% local digit accuracy
-- 99.99% carry accuracy
-- virtually eliminated carry-conditioned gap (0.035)
-- explicit transition structure representation
+### Local behavior
+The local processor achieved:
 
-**The composed system completely fails (0.0 on all families).**
+- high local digit accuracy
+- near-perfect local carry accuracy
+- strong reduction of the earlier carry-conditioned gap
 
-This is worse than the previous explicit carry representation, which at least rescued full_propagation_chain to 1.0.
-
----
-
-## 5. Interpretation
-
-The result rules out a major hypothesis class: **"the problem is insufficient local representation"**.
-
-What it tells us instead:
-
-### A. Local Accuracy ≠ Composed Robustness
-
-Even at 92% local accuracy, error accumulation through blockwise composition is catastrophic. This suggests error propagation dynamics are fundamentally broken, not local accuracy.
-
-### B. Transition Structure ≠ Sufficient Intervention
-
-Adding explicit transition features does not help. This means the problem is not that the model lacks knowledge of transitions per se.
-
-### C. The Gap Is Not The Only Problem
-
-Previous results showed explicit carry representation solved the carry-conditioned gap. This result shows: even with gap solved, composition fails. This means there are multiple independent bottlenecks, not just the local gap.
-
-### D. Error Compounding Is The Real Issue
-
-When the local processor makes errors, those errors at one step become input noise for future steps. At 92% accuracy, each position has ~8% chance of error. Over 6 positions, this compounds badly.
+### Composed behavior
+Despite this, the composed system still failed across all three tested families:
+- `alternating_carry`
+- `full_propagation_chain`
+- `block_boundary_stress`
 
 ---
 
-## 6. Comparison With Previous Results
+## What This Establishes
 
-| Result | Intervention | Local digit_acc | Composed full_prop | Status |
-|--------|---|---|---|---|
-| 1 | Oracle | 1.0 | 1.0 | ✓ Works |
-| 2 | Simple learned | 0.41 | 0.0 | ✗ Fails |
-| 3 | Carry-conditioned analysis | - | - | Analysis |
-| 4 | Reweighting | 0.225 | 0.0 | ✗ Worse |
-| 5 | Explicit carry representation | 0.95 | 1.0 | ✓ Rescues full_prop |
-| 6 | Family structure analysis | - | - | Analysis |
-| 7 | Context window expansion | 0.695 | 0.0 | ✗ Destroys rescue |
-| **9 (NEW)** | **Transition-aware structure** | **0.9246** | **0.0** | ✗ **Fails despite high local acc** |
+This result establishes the following:
+
+1. substantial local representational improvement is possible
+2. strong local carry handling is possible
+3. strong local digit performance is also possible
+4. yet composed structured robustness can still collapse completely
+
+This is a powerful negative result.
 
 ---
 
-## 7. Critical Finding
+## Why This Result Matters
 
-The most important finding: **composition failure persists even at very high local accuracy.**
+This result significantly sharpens Project 5.
 
-This suggests the fundamental issue is:
-- Not representational (we can represent well locally)
-- Not the carry-gap (we closed it)
-- But **error accumulation and error feedback dynamics**
+Before it, one could still reasonably suspect that the remaining decomposition failure might be due mainly to insufficient local representational richness.
 
----
+After this result, that explanation becomes much weaker.
 
-## 8. What Has Now Been Ruled Out
+The new strongest interpretation is:
 
-Project 5 has now ruled out:
-1. ❌ Decomposition fundamentally broken (oracle refutes)
-2. ❌ Simple class imbalance (reweighting makes worse)
-3. ❌ Chunk size artifact (1-6 all same)
-4. ❌ Naive local context expansion (destroys rescue)
-5. ❌ **Insufficient local representation** (92% acc fails)
-6. ❌ **Missing transition structure** (explicit trans features don't help)
+> local representational improvement alone is not sufficient to guarantee successful composed behavior.
+
+That is a major shift in understanding.
 
 ---
 
-## 9. Refined Understanding
+## Correct Interpretation
 
-The issue is now understood as:
+The strongest safe interpretation is:
 
-> **Learned decomposition fails not because of insufficient local representation, but because error dynamics in the feedback loop (previous step's output becomes next step's input) interact poorly with even small local errors.**
+> even when local performance becomes very strong, the composed decomposition process can still fail completely, which suggests that the remaining bottleneck is not captured by simple local representation improvements alone.
 
-This is a **compositionality bottleneck**, not a **representation bottleneck**.
-
----
-
-## 10. Next Scientific Questions
-
-Given that local accuracy near-100% still produces 0.0 composed accuracy, the next frontier must target:
-
-1. **Error feedback dynamics**: Can we reduce error amplification backward through the sequence?
-2. **Intermediate supervision**: Can we stabilize intermediate carry predictions?
-3. **Different output formulation**: Instead of predicting digit then carry separately, could a different local target be more robust?
-4. **Chunked loss**: Could intermediate chunk-level losses reduce compounding?
+This is stronger than the earlier Project 5 results, but it still does not by itself prove a complete final mechanism.
 
 ---
 
-## 11. Project 5 Position After Result 9
+## What This Does NOT Yet Prove
 
-Project 5 has now advanced from:
-- "Does decomposition work?" → YES (oracle)
-- "Why does learning fail?" → Carry-conditioned gap
-- "Can we fix the gap?" → Partially (explicit carry rescues one family)
-- "Why only one family?" → Structural simplicity
-- "Is it representation?" → **No (92% local acc still fails)**
+This result does not yet prove:
 
-This is substantial progress in understanding the **true bottleneck**.
+- the exact causal role of error propagation
+- that composition failure is explained only by sequential feedback dynamics
+- that no future local architecture could work
+- that Project 5 is complete
+
+It only establishes that:
+- the current transition-aware local architecture does not solve the problem,
+- despite very strong local metrics.
 
 ---
 
-## 12. Status
+## New Project 5 Position After This Result
 
-**Result 9 status:** ✓ LOCKED (negative result, high value)  
-**Exclusion map now includes:** representation saturation  
-**Next step:** Target error dynamics, not representation
+Project 5 now supports the following stronger position:
+
+1. decomposition can work structurally
+2. multiple simple explanations for failure have already been ruled out
+3. strong local representational improvement is still insufficient
+4. therefore the remaining bottleneck is likely to lie at the composition level rather than in simple local prediction quality alone
+
+This is the strongest accepted Project 5 position so far.
+
+---
+
+## Recommended Next Step
+
+The next step should not be to overstate this result, but to treat it as a sharper boundary:
+
+- either pause Project 5 at a strong checkpoint
+- or continue only with a new hypothesis focused explicitly on composition-level failure
+
+That next hypothesis must be cleaner and more specific than the earlier branches.
+
+---
+
+## Formal Status
+
+**Result:** PASS  
+**Type:** transition-aware intervention result  
+**Main message:** strong local performance alone is still insufficient for successful composed robustness
 
 ---
