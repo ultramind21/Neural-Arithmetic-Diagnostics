@@ -48,6 +48,7 @@ Instead, it asks:
 - does intervention improve real robustness or only local behavior?
 - what survives audit, and what does not?
 - what exists internally in the model, and what still fails globally?
+- and how architecture itself can be redesigned to respond to heterogeneous failure modes
 
 These are the questions that make the difference between:
 - impressive results
@@ -68,6 +69,7 @@ It is a way of working:
 - use adversarial structure, not just standard test sets
 - treat failure as information, not embarrassment
 - move from performance to mechanism when possible
+- and move from mechanism to architecture only after understanding where failure really lives
 
 That makes the repository valuable even beyond arithmetic.
 
@@ -120,13 +122,20 @@ Project 6 opened the model internally:
 - where carry lives
 - which units matter
 - how success and failure differ inside
-- and how arithmetic structure appears in hidden space
+- how arithmetic structure appears in hidden space
+- and how causal signals can be found in units, trajectories, and subspaces
 
 ### Project 7
 Project 7 connected local competence to global failure:
 - some failures are trigger-correctable
 - others are not
 - and family-level failure is not mechanistically uniform
+
+### Project 8
+Project 8 moved from diagnosis to architecture design:
+- different family-level failures can require different rescue mechanisms
+- interface and controller structure are not interchangeable
+- and family-sensitive architectural support can be integrated successfully in one design
 
 This turns the repository from a finished archive into a living research platform.
 
@@ -140,6 +149,7 @@ If you care about:
 - robustness
 - interpretability
 - evaluation
+- architecture design
 - or trustworthy empirical science in AI
 
 then this repository matters.
@@ -158,7 +168,10 @@ It is that it refused to confuse high performance with deep understanding.
 Then it went further:
 - it audited itself
 - rebuilt its foundations
-- and turned the resulting lessons into new research directions
+- mapped decomposition failure
+- opened the model internally
+- exposed heterogeneous failure mechanisms
+- and eventually used that understanding to guide architecture design
 
 That is a lesson worth preserving.
 

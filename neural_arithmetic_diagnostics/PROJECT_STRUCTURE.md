@@ -18,6 +18,7 @@ neural_arithmetic_diagnostics/
 ├── project_5/              # Decomposition Robustness Exploration
 ├── project_6/              # Mechanistic Interpretability Sandbox
 ├── project_7/              # From Local Competence to Global Compositional Failure
+├── project_8/              # Composition Stabilization Architectures
 ├── assets/                 # Public-facing visual assets
 ├── meta/                   # Repository governance / naming / cleanup plans
 ├── archive_optional/       # Archived optional/debug/root legacy materials
@@ -201,7 +202,29 @@ This is the local-to-global bridge frontier branch.
 
 ---
 
-## 8. `paper/` — Writing and Submission Materials
+## 8. `project_8/` — Composition Stabilization Architectures
+**Purpose:** Explore how architecture design can turn local competence into globally robust compositional behavior.
+
+### Role
+Project 8 asks:
+- what kind of architecture can rescue different family-level failures?
+- can interface and controller mechanisms be coordinated successfully?
+- can family-sensitive rescue be integrated into one design?
+
+### Main subfolders:
+- `framework/`
+- `experiments/`
+- `results/`
+
+### Project 8 status:
+- **OPEN / ACTIVE**
+- first strong architecture result established
+
+This is the architecture-design frontier branch.
+
+---
+
+## 9. `paper/` — Writing and Submission Materials
 **Purpose:** Preserve the developing paper draft and pre-submission materials.
 
 ### Contents include:
@@ -214,7 +237,7 @@ This is a writing/pre-publication layer, not a project branch.
 
 ---
 
-## 9. `assets/` — Public-Facing Visual Assets
+## 10. `assets/` — Public-Facing Visual Assets
 **Purpose:** Store visual materials used in presentation and repository identity.
 
 ### Current contents:
@@ -225,7 +248,7 @@ This is the visual layer of the repository.
 
 ---
 
-## 10. `meta/` — Governance / Naming / Cleanup Plans
+## 11. `meta/` — Governance / Naming / Cleanup Plans
 **Purpose:** Store repository-level planning documents that are useful but should not dominate the root view.
 
 ### Typical contents:
@@ -238,7 +261,7 @@ This is the repository-governance layer.
 
 ---
 
-## 11. `archive_optional/` — Archived Non-Core Materials
+## 12. `archive_optional/` — Archived Non-Core Materials
 **Purpose:** Preserve useful but non-primary artifacts outside the main public-facing narrative.
 
 ### Includes:
@@ -249,7 +272,7 @@ This layer exists to reduce clutter while preserving useful history.
 
 ---
 
-## 12. Root-Level Reading Path
+## 13. Root-Level Reading Path
 
 ### Fastest human entry
 1. `README.md`
@@ -271,9 +294,12 @@ This layer exists to reduce clutter while preserving useful history.
 ### Current strongest mechanistic entry
 8. `project_6/results/PROJECT_6_SYNTHESIS_FINAL.md`
 
+### Current strongest architecture-design entry
+9. `project_8/results/PROJECT_8_SYNTHESIS_FINAL.md`
+
 ---
 
-## 13. Current High-Level Status
+## 14. Current High-Level Status
 
 | Layer | Status |
 |------|--------|
@@ -283,10 +309,11 @@ This layer exists to reduce clutter while preserving useful history.
 | Project 5 | OPEN / PAUSED |
 | Project 6 | COMPLETE |
 | Project 7 | OPEN / PAUSED |
+| Project 8 | OPEN / ACTIVE |
 
 ---
 
-## 14. Final Note
+## 15. Final Note
 
 This repository should not be understood as a single project.
 
@@ -296,7 +323,8 @@ It is a **research program repository** containing:
 - methodological framework work
 - decomposition research
 - mechanistic interpretability
-- and local-to-global failure analysis
+- local-to-global failure analysis
+- and composition architecture design
 
 That full structure is the key to reading it correctly.
 

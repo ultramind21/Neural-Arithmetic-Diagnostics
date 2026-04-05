@@ -2,7 +2,7 @@
 ## Neural-Arithmetic-Diagnostics — High-Level Research Position
 
 **Date:** April 2026  
-**Purpose:** Strategic map of Projects 4–7 after the current completed and paused phases
+**Purpose:** Strategic map of Projects 4–8 after the current completed and paused phases
 
 ---
 
@@ -15,7 +15,8 @@ It contains:
 - a completed Project 4
 - a strong Project 5 checkpoint
 - a completed Project 6 interpretability arc
-- and a strong Project 7 checkpoint
+- a strong Project 7 checkpoint
+- and a strong Project 8 architecture-design result
 
 This means the repository should now be understood as a research platform with multiple connected layers, not as a single active experiment.
 
@@ -107,9 +108,30 @@ Project 7 established that family-level compositional failures are mechanistical
 
 ---
 
+## 6. Project 8 — Composition Stabilization Architectures
+
+### Status
+**ACTIVE / STRONG FIRST ARCHITECTURE RESULT**
+
+### Main contribution
+Project 8 established the first strong architecture-level rescue result built directly on the research line's diagnostic and mechanistic findings.
+
+### Strongest results
+- a discriminative architecture regime was created
+- interface and controller mechanisms were shown to rescue different family-level failures
+- an integrated architecture successfully combined family-sensitive rescue mechanisms
+- architecture design can be informed by prior diagnosis rather than blind expansion
+
+### Strategic role
+- architecture-design frontier
+- first strong positive design branch after the diagnostic and mechanistic lines
+- strongest current design-oriented project in the repository
+
+---
+
 ## 6. Highest-Value Scientific Assets Right Now
 
-Across Projects 4–7, the strongest current assets are:
+Across Projects 4–8, the strongest current assets are:
 
 ### Asset A — Diagnostic framework
 (Project 4)
@@ -123,7 +145,10 @@ Across Projects 4–7, the strongest current assets are:
 ### Asset D — Mechanistic heterogeneity bridge
 (Project 7)
 
-These four assets together form the current high-value core of the repository.
+### Asset E — Family-sensitive architecture rescue
+(Project 8)
+
+These five assets together form the current high-value scientific core of the repository.
 
 ---
 
@@ -135,23 +160,25 @@ The strongest current publishable nucleus would likely combine:
 - Project 6 mechanistic arc
 - selected Project 5 decomposition results
 - selected Project 7 bridge results
+- and, if the framing supports it, selected Project 8 architecture findings
 
-This would support a paper positioned around:
+This would support a paper or paper sequence positioned around:
 - diagnostic robustness
 - local-to-global compositional failure
-- and mechanistic structure in neural arithmetic
+- mechanistic structure in neural arithmetic
+- and family-sensitive architecture design
 
 ---
 
 ## 8. Research Directions Ranked by Strategic Value
 
 ### Tier 1 — Highest Value
-1. develop publication-ready synthesis around Projects 4 + 6 + selected 5/7 results
-2. re-open Project 7 with a sharper family-specific mechanism hypothesis
-3. re-open Project 5 only under a stronger composition-level bridge hypothesis
+1. develop publication-ready synthesis around Project 4 + Project 6 + selected 5/7 findings
+2. continue Project 8 as the strongest current design-oriented frontier
+3. re-open Project 7 with a sharper family-specific mechanism hypothesis
 
 ### Tier 2 — Strong but Secondary
-4. deepen Project 6 further only if a genuinely sharper mechanistic hypothesis emerges
+4. re-open Project 5 only under a stronger composition-level bridge hypothesis
 5. package Project 4 alone if a faster methodology-only publication path is needed
 
 ### Tier 3 — Later
@@ -163,7 +190,7 @@ This would support a paper positioned around:
 
 The strongest current high-level scientific position is:
 
-> strong arithmetic behavior can remain narrow, family-sensitive, and mechanistically non-uniform; local competence, internal arithmetic structure, and even causal local signals do not automatically scale into globally robust compositional success.
+> strong arithmetic behavior can remain narrow, family-sensitive, and mechanistically non-uniform; local competence, internal arithmetic structure, and even causal local signals do not automatically scale into globally robust compositional success, but architecture-level rescue may become possible when failure modes are treated as heterogeneous and family-sensitive.
 
 This is the deepest current result across the full research line.
 
@@ -173,12 +200,13 @@ This is the deepest current result across the full research line.
 
 The single strongest recommendation now is:
 
-> treat Project 6 as the strongest completed mechanistic core, while preserving Projects 5 and 7 as high-value paused frontier branches that should only be re-opened under sharper hypotheses.
+> treat Project 6 as the strongest completed mechanistic core, preserve Projects 5 and 7 as high-value paused frontier branches, and treat Project 8 as the strongest active architecture-design branch.
 
 This gives the research line:
 - one completed methodological core
 - one completed mechanistic core
-- and two strong paused frontier branches
+- two strong paused frontier branches
+- and one active design-oriented branch
 
 That is the best strategic position currently available.
 

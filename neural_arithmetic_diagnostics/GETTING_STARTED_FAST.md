@@ -9,12 +9,13 @@ If you are new to this repository, this is the fastest way to understand what it
 
 This repository documents a full research line on **arithmetic reasoning in neural networks**.
 
-It now contains four main layers:
+It now contains five major layers:
 
 1. **Projects 1–3** — the original research line  
 2. **Trust-Recovery Audit** — the formal verification archive  
 3. **Project 4** — the post-audit diagnostic framework  
-4. **Projects 5–7** — advanced research branches on decomposition, mechanistic interpretability, and local-to-global failure
+4. **Projects 5–7** — decomposition, mechanistic, and local-to-global bridge research  
+5. **Project 8** — architecture-level composition stabilization design
 
 ---
 
@@ -49,6 +50,9 @@ That is the central lesson of the repository.
 ### If you want the strongest current local-to-global bridge branch
 9. [`project_7/results/PROJECT_7_SYNTHESIS_V1.md`](project_7/results/PROJECT_7_SYNTHESIS_V1.md)
 
+### If you want the strongest current architecture-design branch
+10. [`project_8/results/PROJECT_8_SYNTHESIS_FINAL.md`](project_8/results/PROJECT_8_SYNTHESIS_FINAL.md)
+
 ---
 
 ## What is the strongest result here?
@@ -58,7 +62,8 @@ The strongest repository-wide message is:
 - models can look strong on standard arithmetic tests
 - but structured adversarial diagnostics can reveal important weaknesses
 - local competence does not automatically scale into global compositional robustness
-- and internal arithmetic structure can be real without yielding a simple one-mechanism explanation of all failures
+- internal arithmetic structure can be real without yielding a simple one-mechanism explanation of all failures
+- and family-sensitive architecture design can matter for rescuing different failure modes
 
 ---
 
@@ -101,6 +106,10 @@ It is a diagnostic project, not just an accuracy project.
 - local-to-global failure bridge
 - asks why different families fail through different mechanisms
 
+### Project 8
+- composition stabilization architectures
+- asks how local competence can be turned into globally robust compositional behavior
+
 ---
 
 ## Where is the final verified position?
@@ -121,6 +130,7 @@ This repository is best understood not as a single benchmark result, but as a co
 - diagnostic reconstruction
 - decomposition analysis
 - mechanistic interpretability
-- and local-to-global bridge discovery
+- local-to-global bridge discovery
+- and architecture-level rescue design
 
 ---
