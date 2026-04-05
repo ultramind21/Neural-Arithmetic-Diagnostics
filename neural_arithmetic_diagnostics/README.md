@@ -1,29 +1,36 @@
 # Neural-Arithmetic-Diagnostics
-## When High Arithmetic Accuracy Is Not Enough
+## From Arithmetic Performance to Robustness, Mechanism, and Failure Structure
 
-**A research repository on arithmetic reasoning in neural networks, including audited baselines, adversarial diagnostics, and a post-audit framework for distinguishing narrow gains from structural robustness.**
+**A research repository on arithmetic reasoning in neural networks, including historical projects, a full trust-recovery audit, a diagnostic framework, decomposition research, mechanistic interpretability, and local-to-global failure analysis.**
 
 ---
 
 ## Why this repository matters
 
-Neural models can achieve very high arithmetic accuracy and still fail badly on structured tests.
+Neural models can achieve high arithmetic accuracy and still fail in structured, surprising, and scientifically important ways.
 
-This repository documents a full research line that moved through:
+This repository matters because it does not stop at:
+- high benchmark scores
+- or shallow interpretations of success
 
-- **Projects 1–3:** original arithmetic-learning experiments  
-- **A full trust-recovery audit:** to determine what was truly supported  
-- **Project 4:** a diagnostic framework for separating apparent improvement from genuine robustness
+Instead, it documents a full research arc that moved through:
+
+- **Projects 1–3:** original arithmetic-learning research
+- **A full trust-recovery audit:** to determine what was actually supported
+- **Project 4:** a diagnostic framework for distinguishing narrow gains from broader structural robustness
+- **Project 5:** decomposition robustness exploration
+- **Project 6:** mechanistic interpretability sandbox
+- **Project 7:** local-to-global failure bridge analysis
 
 ### Core message
 > **High arithmetic accuracy alone is not sufficient evidence of robust reasoning.**
 
-That is the central lesson of this repository.
+That remains the central lesson of the repository.
 
 ### Start here if you want the human reason this project matters
 - [`WHY_THIS_PROJECT_MATTERS.md`](WHY_THIS_PROJECT_MATTERS.md)
 
-### Start here if you want the fastest possible technical entry
+### Start here if you want the fastest technical entry
 - [`GETTING_STARTED_FAST.md`](GETTING_STARTED_FAST.md)
 
 ---
@@ -34,34 +41,43 @@ That is the central lesson of this repository.
 
 ## What makes this repository different
 
-This is not just a code dump and not just a benchmark repository.
+This is not just:
+- a code dump
+- a benchmark repository
+- or a sequence of disconnected experiments
 
 It contains:
 
-- a **research line** (Projects 1–3)
-- a **verification archive** (Phases 1–6 audit)
-- a **post-audit framework project** (Project 4)
-- and a repository structure designed to preserve:
-  - historical claims
-  - corrected verified positions
-  - and new diagnostic methodology
+- a **historical research line** (Projects 1–3)
+- a **verification archive** (the audit)
+- a **post-audit diagnostic framework** (Project 4)
+- a **decomposition research branch** (Project 5)
+- a **mechanistic interpretability branch** (Project 6)
+- a **local-to-global bridge branch** (Project 7)
+
+In other words, it preserves both:
+- scientific results
+- and the process by which those results were tested, corrected, and deepened
 
 ---
 
 ## Key result in one paragraph
 
-Across the research line, strong arithmetic performance on standard/random tests repeatedly turned out to be insufficient for strong reasoning claims. Structured adversarial tests revealed hidden weaknesses, the audit discovered and locked important caveats, and Project 4 then built a reproducible framework for distinguishing between **distribution-bound fit**, **bounded compositional competence**, and **stronger algorithm-like behavior**. The strongest current Project 4 result is that adversarial training can improve a specifically seen adversarial family **without** producing broad held-out robustness transfer.
+Across the research line, strong arithmetic performance on standard/random tests repeatedly turned out to be insufficient for strong reasoning claims. Structured adversarial tests revealed hidden weaknesses, the audit locked important caveats, Project 4 introduced a framework for distinguishing narrow gains from broader structural robustness, Project 5 showed that decomposition can work in principle while learned decomposition fails selectively, Project 6 demonstrated that arithmetic-relevant internal structure is real and mechanistically meaningful, and Project 7 showed that local-to-global compositional failure is not driven by one uniform mechanism. The repository now supports a much stronger position than a single benchmark result: arithmetic behavior must be evaluated behaviorally, structurally, and mechanistically.
 
 ---
 
 ## Repository at a glance
 
 ```text
-soroban_project/
+neural_arithmetic_diagnostics/
 ├── src/               # Core executable project code
 ├── papers/            # Historical research line (Projects 1–3)
 ├── final_audit/       # Trust-recovery verification archive
-├── project_4/         # Post-audit diagnostic framework
+├── project_4/         # Diagnostic arithmetic reasoning
+├── project_5/         # Decomposition robustness exploration
+├── project_6/         # Mechanistic interpretability sandbox
+├── project_7/         # Local-to-global failure bridge
 ├── tests/             # Test files
 ├── checkpoints/       # Original checkpoints
 └── README.md
@@ -69,13 +85,17 @@ soroban_project/
 
 ---
 
-## The three layers of the repository
+## The main layers of the repository
 
 ### 1) Projects 1–3 — Historical research line
 Located in:
 - [`papers/`](papers/)
 
-This is where you find the original project closures, historical findings, and research narratives.
+This is where you find:
+- original project closures
+- historical findings
+- killer-test narratives
+- final research-facing interpretations
 
 **Start here:**  
 - [`papers/README.md`](papers/README.md)
@@ -100,24 +120,61 @@ It contains:
 
 ---
 
-### 3) Project 4 — Post-audit framework
+### 3) Project 4 — Diagnostic Arithmetic Reasoning
 Located in:
 - [`project_4/`](project_4/)
 
-This is the first project built after the audit from a cleaner epistemic foundation.
-
-Its role is methodological:
-- diagnose
-- compare
-- stress-test
-- and classify arithmetic behavior more rigorously
+This project established the post-audit diagnostic framework:
+- regimes
+- scorecard
+- stable baseline matrix
+- intervention-based narrow-vs-transfer distinction
 
 **Start here:**  
 - [`project_4/README.md`](project_4/README.md)
 
 ---
 
-## Current project status
+### 4) Project 5 — Decomposition Robustness Exploration
+Located in:
+- [`project_5/`](project_5/)
+
+This branch asks:
+- can decomposition improve structural robustness?
+- where does learned local decomposition fail?
+- what explanations can be ruled out?
+
+**Current status:** OPEN / PAUSED at strong checkpoint
+
+---
+
+### 5) Project 6 — Mechanistic Interpretability Sandbox
+Located in:
+- [`project_6/`](project_6/)
+
+This branch investigates:
+- where carry lives internally
+- how success and failure differ internally
+- which units and subspaces matter causally
+- and how arithmetic structure appears in hidden geometry
+
+**Current status:** COMPLETE with strong mechanistic success
+
+---
+
+### 6) Project 7 — From Local Competence to Global Compositional Failure
+Located in:
+- [`project_7/`](project_7/)
+
+This branch asks:
+- why local arithmetic competence can coexist with global family-level failure
+- and whether different failure families are driven by different local-to-global mechanisms
+
+**Current status:** OPEN / PAUSED at strong checkpoint
+
+---
+
+## Current repository status
 
 ### Projects 1–3
 - complete
@@ -130,11 +187,20 @@ Its role is methodological:
 - final trust position documented
 
 ### Project 4
-- complete at MVP level
-- framework built
-- stable baselines obtained
-- first intervention result obtained
-- blockwise branch explicitly unresolved
+- complete
+- methodological framework established
+
+### Project 5
+- open / paused
+- strong decomposition checkpoint established
+
+### Project 6
+- complete
+- strong mechanistic interpretability success established
+
+### Project 7
+- open / paused
+- strong local-to-global bridge checkpoint established
 
 ---
 
@@ -143,56 +209,58 @@ Its role is methodological:
 If you want to understand the repository quickly, read:
 
 1. [`PROJECT_STRUCTURE.md`](PROJECT_STRUCTURE.md)
-2. [`final_audit/documentation/executive_summaries/EXECUTIVE_SUMMARY_FINAL.md`](final_audit/documentation/executive_summaries/EXECUTIVE_SUMMARY_FINAL.md)
-3. [`project_4/results/PROJECT_4_FINAL_JUDGMENT.md`](project_4/results/PROJECT_4_FINAL_JUDGMENT.md)
-4. [`papers/THE_FINAL_JUDGMENT.md`](papers/THE_FINAL_JUDGMENT.md)
+2. [`GETTING_STARTED_FAST.md`](GETTING_STARTED_FAST.md)
+3. [`WHY_THIS_PROJECT_MATTERS.md`](WHY_THIS_PROJECT_MATTERS.md)
+4. [`STRATEGIC_RESEARCH_MAP.md`](STRATEGIC_RESEARCH_MAP.md)
 
 ---
 
 ## Best entry points by reader type
 
-### If you are a research reader
-Start with:
+### If you want the historical research story
 - [`papers/README.md`](papers/README.md)
-- then [`final_audit/README.md`](final_audit/README.md)
 
-### If you are a verification-minded reader
-Start with:
+### If you want the final verification-aligned position
 - [`final_audit/README.md`](final_audit/README.md)
-- then [`final_audit/documentation/executive_summaries/MASTER_AUDIT_SUMMARY_PHASES_1_TO_6.md`](final_audit/documentation/executive_summaries/MASTER_AUDIT_SUMMARY_PHASES_1_TO_6.md)
+- [`final_audit/documentation/executive_summaries/EXECUTIVE_SUMMARY_FINAL.md`](final_audit/documentation/executive_summaries/EXECUTIVE_SUMMARY_FINAL.md)
 
-### If you are interested in the new diagnostic methodology
-Start with:
+### If you want the post-audit framework contribution
 - [`project_4/README.md`](project_4/README.md)
-- [`project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md`](project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md)
-- [`project_4/results/PROJECT_4_RESULTS_SUMMARY.md`](project_4/results/PROJECT_4_RESULTS_SUMMARY.md)
+
+### If you want the strongest current mechanistic branch
+- [`project_6/results/PROJECT_6_SYNTHESIS_FINAL.md`](project_6/results/PROJECT_6_SYNTHESIS_FINAL.md)
+
+### If you want the strongest current local-to-global bridge result
+- [`project_7/results/PROJECT_7_SYNTHESIS_V1.md`](project_7/results/PROJECT_7_SYNTHESIS_V1.md)
 
 ---
 
-## Current strongest audited position
+## Current strongest scientific position
 
-The repository now supports this carefully bounded position:
+The repository now supports the following bounded but powerful position:
 
-> Neural arithmetic models can appear strong on standard evaluations while remaining fragile under structured stress.  
-> Diagnostic testing, explicit validation, and post-audit discipline are required before interpreting such performance as robust reasoning.
+> Neural arithmetic models can appear strong on standard evaluations while remaining narrow, family-sensitive, and mechanistically non-uniform. Robust understanding requires not only benchmark performance, but also structured diagnostics, explicit validation, decomposition analysis, mechanistic probing, and local-to-global failure analysis.
 
 ---
 
 ## Final note
 
-This repository should be read as a complete scientific arc:
+This repository should be read as a full scientific arc:
 
 - original research
 - hidden weakness
 - trust crisis
 - rigorous audit
-- and post-audit methodological reconstruction
+- diagnostic reconstruction
+- decomposition research
+- mechanistic interpretability
+- and local-to-global bridge analysis
 
-That full arc — not any single isolated number — is the real contribution of the repository.
+That full arc — not any single isolated metric — is the real contribution of the repository.
 
 ---
 
-*Status: Research line complete | Audit complete | Project 4 complete*  
+*Status: Research line active | Audit complete | Project 4 complete | Projects 5 and 7 paused at strong checkpoints | Project 6 complete*  
 *Project identity: Neural-Arithmetic-Diagnostics*
 
 **License:** Custom non-commercial license. Any commercial use requires prior written permission from Mohamed Mhamdi.

@@ -2,14 +2,14 @@
 Folder PATH listing for: D:\Music\Project 03 Abacus
 ============================================================
 
-Total Folders: 43
-Total Files: 215
+Total Folders: 57
+Total Files: 345
 
 Project 03 Abacus/
 
 +---.vscode/
 |   \---settings.json (196.0B)
-+---soroban_project/
++---neural_arithmetic_diagnostics/
 |   +---Papers/
 |   |   +---audit_reports/
 |   |   +---final_narratives/
@@ -29,6 +29,9 @@ Project 03 Abacus/
 |   |       +---killer_test_carry_followup.py (18.3KB)
 |   |       +---killer_test_test4_frequency.py (14.1KB)
 |   |       \---test_parser_fix.py (1.8KB)
+|   +---assets/
+|   |   +---repository_overview.png (47.3KB)
+|   |   \---repository_overview_spec.md (2.9KB)
 |   +---checkpoints/
 |   |   \---residual_logic_adder.pt (16.1KB)
 |   +---final_audit/
@@ -129,6 +132,11 @@ Project 03 Abacus/
 |   |   +---README.md (4.7KB)
 |   |   +---REVALIDATION_PLAN_FROM_ZERO.md (10.0KB)
 |   |   \---TRUST_RECOVERY_PROTOCOL.md (5.6KB)
+|   +---paper/
+|   |   +---ARXIV_SUBMISSION_CHECKLIST.md (11.1KB)
+|   |   +---CITATION_PLACEHOLDER_PLAN.md (6.0KB)
+|   |   +---paper_draft_full.md (50.3KB)
+|   |   \---paper_draft_full.tex (55.6KB)
 |   +---project_4/
 |   |   +---baselines/
 |   |   |   +---PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md (6.0KB)
@@ -211,6 +219,134 @@ Project 03 Abacus/
 |   |   |   +---RESULT_VALIDATION_PROTOCOL.md (3.9KB)
 |   |   |   \---validate_run_stability.py (9.7KB)
 |   |   \---README.md (6.1KB)
+|   +---project_5/
+|   |   +---experiments/
+|   |   |   +---PROJECT_5_DECOMPOSITION_EXPERIMENT_PLAN.md (3.8KB)
+|   |   |   +---project_5_chunk_size_sensitivity_v1.py (12.0KB)
+|   |   |   +---project_5_decomposition_blockwise_v1.py (10.6KB)
+|   |   |   +---project_5_family_structure_analysis_v1.py (8.8KB)
+|   |   |   +---project_5_learned_local_processor_v1.py (13.0KB)
+|   |   |   +---project_5_local_context_window_v1.py (14.4KB)
+|   |   |   +---project_5_local_digit_bottleneck_analysis.py (9.6KB)
+|   |   |   +---project_5_local_explicit_carry_representation_v1.py (14.4KB)
+|   |   |   +---project_5_local_reweighted_processor_v1.py (13.6KB)
+|   |   |   +---project_5_post_intervention_failure_analysis.py (12.8KB)
+|   |   |   +---project_5_selective_failure_diagnostic.py (13.1KB)
+|   |   |   \---project_5_transition_aware_local_architecture_v1.py (16.6KB)
+|   |   +---framework/
+|   |   |   \---PROJECT_5_EXPLORATION_FRAMEWORK.md (3.7KB)
+|   |   +---results/
+|   |   |   +---PROJECT_5_CHUNK_SIZE_SENSITIVITY_RESULTS.md (3.9KB)
+|   |   |   +---PROJECT_5_COMPREHENSIVE_SYNTHESIS.md (10.4KB)
+|   |   |   +---PROJECT_5_CURRENT_STATUS.md (3.6KB)
+|   |   |   +---PROJECT_5_EXPLORATORY_SELECTIVE_FAILURE_NOTE.md (2.5KB)
+|   |   |   +---PROJECT_5_FAMILY_STRUCTURE_RESULTS.md (4.1KB)
+|   |   |   +---PROJECT_5_INTERIM_SYNTHESIS.md (4.1KB)
+|   |   |   +---PROJECT_5_LEARNED_LOCAL_PROCESSOR_RESULTS.md (4.4KB)
+|   |   |   +---PROJECT_5_LOCAL_CONTEXT_WINDOW_RESULTS.md (3.9KB)
+|   |   |   +---PROJECT_5_LOCAL_DIGIT_BOTTLENECK_RESULTS.md (4.5KB)
+|   |   |   +---PROJECT_5_LOCAL_EXPLICIT_CARRY_RESULTS.md (5.1KB)
+|   |   |   +---PROJECT_5_RESULT_7_SELECTIVE_FAILURE_DIAGNOSTIC.md (7.8KB)
+|   |   |   +---PROJECT_5_STRONG_CHECKPOINT_STATUS.md (3.4KB)
+|   |   |   +---PROJECT_5_SYNTHESIS_V1.md (7.5KB)
+|   |   |   +---PROJECT_5_TRANSITION_AWARE_RESULTS.md (4.1KB)
+|   |   |   +---project_5_chunk_size_sensitivity_v1_artifact.json (698.0B)
+|   |   |   +---project_5_chunk_size_sensitivity_v1_report.md (602.0B)
+|   |   |   +---project_5_decomposition_blockwise_v1_artifact.json (934.0B)
+|   |   |   +---project_5_decomposition_blockwise_v1_report.md (901.0B)
+|   |   |   +---project_5_family_structure_analysis_v1_artifact.json (3.5KB)
+|   |   |   +---project_5_family_structure_analysis_v1_report.md (1.4KB)
+|   |   |   +---project_5_learned_local_processor_v1_artifact.json (801.0B)
+|   |   |   +---project_5_learned_local_processor_v1_report.md (692.0B)
+|   |   |   +---project_5_local_context_window_v1_artifact.json (1.0KB)
+|   |   |   +---project_5_local_context_window_v1_report.md (747.0B)
+|   |   |   +---project_5_local_digit_bottleneck_analysis_artifact.json (32.4KB)
+|   |   |   +---project_5_local_digit_bottleneck_analysis_report.md (1.0KB)
+|   |   |   +---project_5_local_explicit_carry_representation_v1_artifact.json (1019.0B)
+|   |   |   +---project_5_local_explicit_carry_representation_v1_report.md (723.0B)
+|   |   |   +---project_5_local_reweighted_processor_v1_artifact.json (996.0B)
+|   |   |   +---project_5_local_reweighted_processor_v1_report.md (709.0B)
+|   |   |   +---project_5_post_intervention_failure_analysis_artifact.json (3.1KB)
+|   |   |   +---project_5_post_intervention_failure_analysis_report.md (1.5KB)
+|   |   |   +---project_5_selective_failure_diagnostic_artifact.json (122.4KB)
+|   |   |   +---project_5_transition_aware_local_architecture_v1_artifact.json (1.0KB)
+|   |   |   \---project_5_transition_aware_local_architecture_v1_report.md (763.0B)
+|   |   \---PROJECT_5_REENTRY_PLAN.md (2.2KB)
+|   +---project_6/
+|   |   +---experiments/
+|   |   |   +---PROJECT_6_FIRST_EXPERIMENT_PLAN.md (3.0KB)
+|   |   |   +---PROJECT_6_SUBSPACE_INTERVENTION_PLAN.md (2.8KB)
+|   |   |   +---PROJECT_6_TRAJECTORY_INTERVENTION_PLAN.md (2.5KB)
+|   |   |   +---project_6_carry_selectivity_probe_v1.py (11.8KB)
+|   |   |   +---project_6_digit_vs_carry_dissociation_v1.py (9.8KB)
+|   |   |   +---project_6_family_level_causal_linkage_v1.py (14.4KB)
+|   |   |   +---project_6_family_level_link_v1.py (11.4KB)
+|   |   |   +---project_6_sequence_level_probe_v1.py (11.2KB)
+|   |   |   +---project_6_subspace_intervention_v1.py (9.7KB)
+|   |   |   +---project_6_subspace_probe_v1.py (10.6KB)
+|   |   |   +---project_6_success_vs_failure_probe_v1.py (10.3KB)
+|   |   |   +---project_6_top_unit_ablation_v1.py (9.7KB)
+|   |   |   +---project_6_trajectory_intervention_v1.py (12.5KB)
+|   |   |   \---project_6_trajectory_preserving_intervention_v1.py (13.2KB)
+|   |   +---framework/
+|   |   |   \---PROJECT_6_INTERPRETABILITY_FRAMEWORK.md (3.5KB)
+|   |   \---results/
+|   |       +---PROJECT_6_CARRY_SELECTIVITY_RESULTS.md (3.3KB)
+|   |       +---PROJECT_6_CLOSURE_SUMMARY.md (5.2KB)
+|   |       +---PROJECT_6_DIGIT_VS_CARRY_DISSOCIATION_RESULTS.md (3.7KB)
+|   |       +---PROJECT_6_FAMILY_LEVEL_CAUSAL_LINKAGE_RESULTS.md (4.3KB)
+|   |       +---PROJECT_6_FAMILY_LEVEL_LINK_RESULTS.md (4.3KB)
+|   |       +---PROJECT_6_NEXT_FRONTIERS.md (3.3KB)
+|   |       +---PROJECT_6_SEQUENCE_LEVEL_RESULTS.md (4.8KB)
+|   |       +---PROJECT_6_SUBSPACE_INTERVENTION_RESULTS.md (3.7KB)
+|   |       +---PROJECT_6_SUBSPACE_RESULTS.md (3.8KB)
+|   |       +---PROJECT_6_SUCCESS_VS_FAILURE_RESULTS.md (4.4KB)
+|   |       +---PROJECT_6_SYNTHESIS_FINAL.md (7.8KB)
+|   |       +---PROJECT_6_SYNTHESIS_V1.md (6.2KB)
+|   |       +---PROJECT_6_SYNTHESIS_V2.md (7.6KB)
+|   |       +---PROJECT_6_SYNTHESIS_V3.md (7.9KB)
+|   |       +---PROJECT_6_TOP_UNIT_ABLATION_RESULTS.md (4.3KB)
+|   |       +---PROJECT_6_TRAJECTORY_INTERVENTION_RESULTS.md (3.8KB)
+|   |       +---PROJECT_6_TRAJECTORY_PRESERVING_INTERVENTION_RESULTS.md (4.0KB)
+|   |       +---project_6_carry_selectivity_probe_v1_artifact.json (1.9KB)
+|   |       +---project_6_carry_selectivity_probe_v1_report.md (915.0B)
+|   |       +---project_6_digit_vs_carry_dissociation_v1_artifact.json (1.1KB)
+|   |       +---project_6_digit_vs_carry_dissociation_v1_report.md (656.0B)
+|   |       +---project_6_family_level_causal_linkage_v1_artifact.json (965.0B)
+|   |       +---project_6_family_level_causal_linkage_v1_report.md (786.0B)
+|   |       +---project_6_family_level_link_v1_artifact.json (12.2KB)
+|   |       +---project_6_family_level_link_v1_report.md (6.7KB)
+|   |       +---project_6_sequence_level_probe_v1_artifact.json (5.0KB)
+|   |       +---project_6_sequence_level_probe_v1_report.md (2.9KB)
+|   |       +---project_6_subspace_intervention_v1_artifact.json (657.0B)
+|   |       +---project_6_subspace_intervention_v1_report.md (589.0B)
+|   |       +---project_6_subspace_probe_v1_artifact.json (1.5KB)
+|   |       +---project_6_subspace_probe_v1_report.md (1.0KB)
+|   |       +---project_6_success_vs_failure_probe_v1_artifact.json (2.5KB)
+|   |       +---project_6_success_vs_failure_probe_v1_report.md (1.6KB)
+|   |       +---project_6_top_unit_ablation_v1_artifact.json (716.0B)
+|   |       +---project_6_top_unit_ablation_v1_report.md (574.0B)
+|   |       +---project_6_trajectory_intervention_v1_artifact.json (1.2KB)
+|   |       +---project_6_trajectory_intervention_v1_report.md (938.0B)
+|   |       +---project_6_trajectory_preserving_intervention_v1_artifact.json (1.3KB)
+|   |       \---project_6_trajectory_preserving_intervention_v1_report.md (981.0B)
+|   +---project_7/
+|   |   +---experiments/
+|   |   |   +---PROJECT_7_CONTEXT_TRIGGER_INTERVENTION_PLAN.md (3.2KB)
+|   |   |   +---PROJECT_7_FIRST_EXPERIMENT_PLAN.md (2.9KB)
+|   |   |   +---project_7_context_trigger_intervention_v1.py (13.0KB)
+|   |   |   \---project_7_stepwise_composition_trace_v1.py (11.4KB)
+|   |   +---framework/
+|   |   |   \---PROJECT_7_FRAMEWORK.md (3.0KB)
+|   |   \---results/
+|   |       +---PROJECT_7_CONTEXT_TRIGGER_RESULTS.md (3.6KB)
+|   |       +---PROJECT_7_STEPWISE_TRACE_RESULTS.md (3.9KB)
+|   |       +---PROJECT_7_STRONG_CHECKPOINT_STATUS.md (2.9KB)
+|   |       +---PROJECT_7_SYNTHESIS_V1.md (6.6KB)
+|   |       +---project_7_context_trigger_intervention_v1_artifact.json (7.8KB)
+|   |       +---project_7_context_trigger_intervention_v1_report.md (4.7KB)
+|   |       +---project_7_stepwise_composition_trace_v1_artifact.json (11.2KB)
+|   |       \---project_7_stepwise_composition_trace_v1_report.md (6.6KB)
 |   +---src/
 |   |   +---env/
 |   |   |   +---__init__.py (54.0B)
@@ -252,16 +388,24 @@ Project 03 Abacus/
 |   |   \---test_teacher.py (2.5KB)
 |   +---.gitignore (2.0KB)
 |   +---FINAL_DELIVERABLES_OFFICIAL.md (9.8KB)
+|   +---GETTING_STARTED_FAST.md (2.8KB)
 |   +---GITHUB_REPOSITORY_REORGANIZATION_PLAN.md (6.1KB)
+|   +---LICENSE (1.2KB)
 |   +---POST_REORGANIZATION_VERIFICATION_CHECKLIST.md (18.4KB)
 |   +---PRE_REORGANIZATION_AUDIT_CHECKLIST.md (13.3KB)
 |   +---PROJECT_3_CLOSURE_DOCUMENT.md (17.2KB)
 |   +---PROJECT_STRUCTURE.md (8.2KB)
-|   +---README.md (5.7KB)
+|   +---README.md (6.3KB)
 |   +---REORGANIZATION_PLAN.md (13.2KB)
+|   +---REPOSITORY_NAMING_AND_PRESENTATION_PLAN.md (4.0KB)
 |   +---REPOSITORY_REORGANIZATION_EXECUTION_CHECKLIST.md (3.6KB)
+|   +---REPOSITORY_VISUAL_ASSET_PLAN.md (2.7KB)
 |   +---START_HERE.md (2.1KB)
+|   +---STRATEGIC_RESEARCH_MAP.md (5.7KB)
+|   +---WHY_THIS_PROJECT_MATTERS.md (3.8KB)
 |   +---_FOR_MODEL_CONTEXT_FULL_SESSION.md (11.5KB)
 |   \---requirements.txt (62.0B)
+|   generate_diagram.py (6.0KB)
+|   neural_arithmetic_diagnostics.md (49.4KB)
 |   project_tree.py (5.1KB)
 |   unnamed.png (5.5MB)

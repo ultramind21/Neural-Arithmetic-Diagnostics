@@ -17,7 +17,7 @@ At first, the answer seemed easy:
 But the deeper the project went, the less obvious that conclusion became.
 
 Structured tests revealed hidden weaknesses.  
-A later audit revealed that some earlier confidence had been too strong.  
+A later audit showed that some earlier confidence had been too strong.  
 And instead of hiding that, this repository preserves the full arc:
 
 - the original research
@@ -25,7 +25,7 @@ And instead of hiding that, this repository preserves the full arc:
 - the trust crisis
 - the audit
 - the corrections
-- and the post-audit rebuild
+- and the research that came after the audit
 
 That is rare.
 
@@ -47,6 +47,7 @@ Instead, it asks:
 - does performance transfer across pattern families?
 - does intervention improve real robustness or only local behavior?
 - what survives audit, and what does not?
+- what exists internally in the model, and what still fails globally?
 
 These are the questions that make the difference between:
 - impressive results
@@ -66,6 +67,7 @@ It is a way of working:
 - preserve caveats instead of burying them
 - use adversarial structure, not just standard test sets
 - treat failure as information, not embarrassment
+- move from performance to mechanism when possible
 
 That makes the repository valuable even beyond arithmetic.
 
@@ -95,27 +97,38 @@ it shows that credibility can be rebuilt by discipline, not by pretending nothin
 
 ---
 
-## Why Project 4 matters
+## Why the post-audit projects matter
 
-Project 4 is where the lesson becomes reusable.
+The repository did not stop after the audit.
 
-Instead of asking only:
-- "Which model wins?"
+Instead, it used the audit as a foundation for stronger work.
 
-Project 4 asks:
-- what kind of gain is this?
-- narrow or transferable?
-- local or structural?
-- stable or fragile?
+### Project 4
+Project 4 turned the lesson into a reusable diagnostic framework:
+- narrow gain vs broader robustness
+- stability-aware interpretation
+- structured adversarial evaluation
 
-That move is important.
+### Project 5
+Project 5 asked whether decomposition could improve robustness:
+- what works in principle
+- what fails in learned form
+- and which simple explanations can be ruled out
 
-Because it shifts the conversation from:
-- benchmark chasing
-to
-- diagnostic understanding
+### Project 6
+Project 6 opened the model internally:
+- where carry lives
+- which units matter
+- how success and failure differ inside
+- and how arithmetic structure appears in hidden space
 
-And that is where stronger AI science begins.
+### Project 7
+Project 7 connected local competence to global failure:
+- some failures are trigger-correctable
+- others are not
+- and family-level failure is not mechanistically uniform
+
+This turns the repository from a finished archive into a living research platform.
 
 ---
 
@@ -132,7 +145,7 @@ If you care about:
 then this repository matters.
 
 Not because it claims everything is solved,
-but because it shows how to ask the question more honestly.
+but because it shows how to ask the question more honestly — and how to keep going after the easy interpretation breaks.
 
 ---
 
@@ -141,6 +154,11 @@ but because it shows how to ask the question more honestly.
 The real value of this repository is not that it found a perfect model.
 
 It is that it refused to confuse high performance with deep understanding.
+
+Then it went further:
+- it audited itself
+- rebuilt its foundations
+- and turned the resulting lessons into new research directions
 
 That is a lesson worth preserving.
 
