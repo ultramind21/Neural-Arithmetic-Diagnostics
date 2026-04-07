@@ -1,4 +1,4 @@
-# GETTING STARTED FAST
+# GETTING_STARTED_FAST
 ## Neural-Arithmetic-Diagnostics in 2 Minutes
 
 If you are new to this repository, this is the fastest way to understand what it contains.
@@ -9,13 +9,14 @@ If you are new to this repository, this is the fastest way to understand what it
 
 This repository documents a full research line on **arithmetic reasoning in neural networks**.
 
-It now contains five major layers:
+It now contains six major layers:
 
 1. **Projects 1–3** — the original research line  
 2. **Trust-Recovery Audit** — the formal verification archive  
 3. **Project 4** — the post-audit diagnostic framework  
 4. **Projects 5–7** — decomposition, mechanistic, and local-to-global bridge research  
-5. **Project 8** — architecture-level composition stabilization design
+5. **Project 8** — architecture-level composition stabilization design  
+6. **Project 9** — higher-dimensional compositional sandbox research
 
 ---
 
@@ -53,6 +54,9 @@ That is the central lesson of the repository.
 ### If you want the strongest current architecture-design branch
 10. [`project_8/results/PROJECT_8_SYNTHESIS_FINAL.md`](project_8/results/PROJECT_8_SYNTHESIS_FINAL.md)
 
+### If you want the strongest current higher-dimensional sandbox branch
+11. [`project_9/results/PROJECT_9_SYNTHESIS_V2.md`](project_9/results/PROJECT_9_SYNTHESIS_V2.md)
+
 ---
 
 ## What is the strongest result here?
@@ -63,7 +67,8 @@ The strongest repository-wide message is:
 - but structured adversarial diagnostics can reveal important weaknesses
 - local competence does not automatically scale into global compositional robustness
 - internal arithmetic structure can be real without yielding a simple one-mechanism explanation of all failures
-- and family-sensitive architecture design can matter for rescuing different failure modes
+- family-sensitive architecture design can matter for rescuing different failure modes
+- and higher-dimensional compositional worlds can introduce new topology-sensitive and family-sensitive structure
 
 ---
 
@@ -110,6 +115,10 @@ It is a diagnostic project, not just an accuracy project.
 - composition stabilization architectures
 - asks how local competence can be turned into globally robust compositional behavior
 
+### Project 9
+- higher-dimensional compositional sandboxes
+- asks how local-to-global behavior changes when arithmetic-like composition is embedded in a richer structured state space
+
 ---
 
 ## Where is the final verified position?
@@ -131,6 +140,7 @@ This repository is best understood not as a single benchmark result, but as a co
 - decomposition analysis
 - mechanistic interpretability
 - local-to-global bridge discovery
-- and architecture-level rescue design
+- architecture-level rescue design
+- and higher-dimensional compositional exploration
 
 ---
