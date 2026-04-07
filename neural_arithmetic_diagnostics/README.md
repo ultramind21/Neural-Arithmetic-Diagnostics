@@ -1,7 +1,7 @@
 # Neural-Arithmetic-Diagnostics
-## From Arithmetic Performance to Robustness, Mechanism, and Composition Design
+## From Arithmetic Performance to Robustness, Mechanism, and Higher-Dimensional Composition
 
-**A research repository on arithmetic reasoning in neural networks, including historical projects, a full trust-recovery audit, a diagnostic framework, decomposition research, mechanistic interpretability, local-to-global failure analysis, and architecture-level composition design.**
+**A research repository on arithmetic reasoning in neural networks, including historical projects, a full trust-recovery audit, a diagnostic framework, decomposition research, mechanistic interpretability, local-to-global failure analysis, architecture-level composition design, and higher-dimensional compositional sandboxes.**
 
 ---
 
@@ -22,6 +22,7 @@ Instead, it documents a full research arc that moved through:
 - **Project 6:** mechanistic interpretability sandbox
 - **Project 7:** local-to-global failure bridge analysis
 - **Project 8:** family-sensitive composition architecture design
+- **Project 9:** higher-dimensional compositional sandboxes
 
 ### Core message
 > **High arithmetic accuracy alone is not sufficient evidence of robust reasoning.**
@@ -56,16 +57,17 @@ It contains:
 - a **mechanistic interpretability branch** (Project 6)
 - a **local-to-global bridge branch** (Project 7)
 - a **composition architecture design branch** (Project 8)
+- a **higher-dimensional compositional sandbox branch** (Project 9)
 
 In other words, it preserves both:
 - scientific results
-- and the process by which those results were tested, corrected, deepened, and redesigned
+- and the process by which those results were tested, corrected, deepened, redesigned, and extended into new state spaces
 
 ---
 
 ## Key result in one paragraph
 
-Across the research line, strong arithmetic performance on standard/random tests repeatedly turned out to be insufficient for strong reasoning claims. Structured adversarial tests revealed hidden weaknesses, the audit locked important caveats, Project 4 introduced a framework for distinguishing narrow gains from broader structural robustness, Project 5 showed that decomposition can work in principle while learned decomposition fails selectively, Project 6 demonstrated that arithmetic-relevant internal structure is real and mechanistically meaningful, Project 7 showed that local-to-global compositional failure is not driven by one uniform mechanism, and Project 8 demonstrated that family-sensitive rescue mechanisms can be integrated successfully within one architecture. The repository now supports a much stronger position than a single benchmark result: arithmetic behavior must be evaluated behaviorally, structurally, mechanistically, and architecturally.
+Across the research line, strong arithmetic performance on standard/random tests repeatedly turned out to be insufficient for strong reasoning claims. Structured adversarial tests revealed hidden weaknesses, the audit locked important caveats, Project 4 introduced a framework for distinguishing narrow gains from broader structural robustness, Project 5 showed that decomposition can work in principle while learned decomposition fails selectively, Project 6 demonstrated that arithmetic-relevant internal structure is real and mechanistically meaningful, Project 7 showed that local-to-global compositional failure is not driven by one uniform mechanism, Project 8 demonstrated that family-sensitive rescue mechanisms can be integrated successfully within one architecture, and Project 9 showed that higher-dimensional compositional worlds can themselves become topology-sensitive, family-sensitive, and rescue-sensitive. The repository now supports a much stronger position than a single benchmark result: arithmetic behavior must be evaluated behaviorally, structurally, mechanistically, architecturally, and compositionally across richer state spaces.
 
 ---
 
@@ -81,6 +83,7 @@ neural_arithmetic_diagnostics/
 ├── project_6/         # Mechanistic Interpretability Sandbox
 ├── project_7/         # From Local Competence to Global Compositional Failure
 ├── project_8/         # Composition Stabilization Architectures
+├── project_9/         # High-Dimensional Compositional Sandboxes
 ├── tests/             # Test files
 ├── checkpoints/       # Original checkpoints
 └── README.md
@@ -136,6 +139,8 @@ This project established the post-audit diagnostic framework:
 **Start here:**  
 - [`project_4/README.md`](project_4/README.md)
 
+---
+
 ### 4) Project 5 — Decomposition Robustness Exploration
 Located in:
 - [`project_5/`](project_5/)
@@ -184,7 +189,20 @@ This branch asks:
 - whether interface and controller mechanisms can rescue different family-level failures
 - and whether family-sensitive rescue can be integrated inside one architecture
 
-**Current status:** ACTIVE / early strong architecture result established
+**Current status:** OPEN / PAUSED at strong checkpoint
+
+---
+
+### 8) Project 9 — High-Dimensional Compositional Sandboxes
+Located in:
+- [`project_9/`](project_9/)
+
+This branch asks:
+- how local competence behaves in higher-dimensional compositional state spaces
+- whether topology-sensitive and family-sensitive local-to-global propagation emerges
+- and whether adaptive family-aware rescue can succeed inside a 3D arithmetic-like world
+
+**Current status:** ACTIVE with strong first sandbox and adaptive rescue results
 
 ---
 
@@ -217,8 +235,12 @@ This branch asks:
 - strong local-to-global bridge checkpoint established
 
 ### Project 8
+- open / paused
+- strong architecture checkpoint established
+
+### Project 9
 - active
-- first strong architecture result established
+- strong first higher-dimensional compositional sandbox established
 
 ---
 
@@ -254,13 +276,16 @@ If you want to understand the repository quickly, read:
 ### If you want the strongest current architecture-design branch
 - [`project_8/results/PROJECT_8_SYNTHESIS_FINAL.md`](project_8/results/PROJECT_8_SYNTHESIS_FINAL.md)
 
+### If you want the strongest current higher-dimensional branch
+- [`project_9/results/PROJECT_9_SYNTHESIS_V2.md`](project_9/results/PROJECT_9_SYNTHESIS_V2.md)
+
 ---
 
 ## Current strongest scientific position
 
 The repository now supports the following bounded but powerful position:
 
-> Neural arithmetic models can appear strong on standard evaluations while remaining narrow, family-sensitive, and mechanistically non-uniform. Robust understanding requires not only benchmark performance, but also structured diagnostics, explicit validation, decomposition analysis, mechanistic probing, local-to-global failure analysis, and architecture-level design sensitive to heterogeneous failure modes.
+> Neural arithmetic models can appear strong on standard evaluations while remaining narrow, family-sensitive, and mechanistically non-uniform. Robust understanding requires not only benchmark performance, but also structured diagnostics, explicit validation, decomposition analysis, mechanistic probing, local-to-global failure analysis, architecture-level design sensitive to heterogeneous failure modes, and exploration of higher-dimensional compositional state spaces.
 
 ---
 
@@ -276,13 +301,14 @@ This repository should be read as a full scientific arc:
 - decomposition research
 - mechanistic interpretability
 - local-to-global bridge analysis
-- and composition architecture design
+- composition architecture design
+- and higher-dimensional compositional sandbox exploration
 
 That full arc — not any single isolated metric — is the real contribution of the repository.
 
 ---
 
-*Status: Research line active | Audit complete | Project 4 complete | Projects 5 and 7 paused at strong checkpoints | Project 6 complete | Project 8 active*  
+*Status: Research line active | Audit complete | Project 4 complete | Projects 5, 7, and 8 paused at strong checkpoints | Project 6 complete | Project 9 active*  
 *Project identity: Neural-Arithmetic-Diagnostics*
 
 **License:** Custom non-commercial license. Any commercial use requires prior written permission from Mohamed Mhamdi.
