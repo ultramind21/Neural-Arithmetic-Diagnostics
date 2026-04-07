@@ -16,7 +16,8 @@ It contains:
 - decomposition findings
 - mechanistic interpretability results
 - local-to-global bridge findings
-- and a strong architecture-design result
+- a strong architecture-design result
+- and the beginning of a higher-dimensional compositional sandbox line
 
 This creates a new strategic need:
 
@@ -42,7 +43,7 @@ This means the program may yield:
 
 ## 3. Strongest Current Publication Axes
 
-There are now at least three serious publication axes.
+There are now at least four serious publication axes.
 
 ### Axis A — Diagnostic Framework
 Centered on:
@@ -62,6 +63,13 @@ Centered on:
 - Project 7
 - Project 8
 - and the transition from diagnosis to family-sensitive architectural rescue
+
+### Axis D — Higher-Dimensional Compositional Worlds
+Centered on:
+- Project 9
+- topology-sensitive sandbox behavior
+- family-sensitive propagation in higher-dimensional spaces
+- and adaptive rescue in 3D compositional environments
 
 ---
 
@@ -89,8 +97,16 @@ Reason:
 
 Reason:
 - strongest local-to-global and architecture-design story
-- now much stronger because Project 8 has already produced a real architecture success
-- but still structurally ambitious enough that it may benefit from one more round of consolidation before packaging
+- much stronger now because Project 8 produced a real architecture success
+- still ambitious enough that it may benefit from one more round of narrative consolidation before packaging
+
+### Fourth potential paper
+**Project 9 higher-dimensional sandbox paper**
+
+Reason:
+- conceptually fresh
+- could become highly distinctive
+- but should likely mature further before publication packaging unless a short sandbox-method paper becomes attractive
 
 ---
 
@@ -109,7 +125,7 @@ High arithmetic accuracy is insufficient as evidence of robust reasoning, and st
 - audit-backed credibility
 
 ### Why first
-This is the safest, cleanest, and most publishable first paper path.
+This remains the safest, cleanest, and most publishable first paper path.
 
 ---
 
@@ -130,7 +146,7 @@ Arithmetic-relevant internal structure can be measured, behaviorally linked, par
 - subspace-level causal evidence
 
 ### Why second
-This is likely the strongest mechanistic contribution currently available in the program.
+This is still likely the strongest mechanistic contribution currently available in the program.
 
 ---
 
@@ -148,14 +164,34 @@ Local competence, local mechanistic structure, and global compositional success 
 - Project 8 integrated architecture rescue
 
 ### Why third
-This is now one of the highest-upside papers in the program, but it is also the most structurally ambitious. It should be packaged only when its narrative is sharper than a simple collection of strong results.
+This remains one of the highest-upside papers in the program, but it is also the most structurally ambitious. It should be packaged only when its narrative is sharper than a simple collection of strong results.
 
 ---
 
-## 8. What Should NOT Be Done
+## 8. Recommended Fourth Paper (Conditional)
+
+### Title direction
+A higher-dimensional compositional sandbox paper based on Project 9
+
+### Core claim
+When arithmetic-like composition is embedded in a higher-dimensional structured space, local-to-global behavior becomes sensitive not only to topology but also to family identity and rescue-policy alignment.
+
+### Supporting assets
+- Project 9 initial 3D sandbox
+- topology-sensitive perturbation map
+- family-sensitive propagation
+- family-sensitive rescue
+- adaptive rescue logic
+
+### Why conditional
+This paper could become highly original, but should likely be allowed to mature further unless a short methods-style sandbox paper is strategically useful.
+
+---
+
+## 9. What Should NOT Be Done
 
 Do not immediately force:
-- Projects 4–8
+- Projects 4–9
 into one massive paper.
 
 That would likely:
@@ -168,13 +204,14 @@ The publication strategy should preserve that.
 
 ---
 
-## 9. Current Best Strategy
+## 10. Current Best Strategy
 
 The strongest current publication strategy is:
 
 1. finalize and package the Project 4 paper first
 2. preserve Project 6 as the next major mechanistic paper candidate
 3. let Projects 5/7/8 mature into a deeper local-to-global and architecture paper after one more round of narrative consolidation if needed
+4. treat Project 9 as a high-potential higher-dimensional frontier branch that may later become its own paper line
 
 This gives the program both:
 - a near-term paper path
@@ -182,7 +219,7 @@ This gives the program both:
 
 ---
 
-## 10. Strategic Position
+## 11. Strategic Position
 
 The repository is no longer just "a project."
 
