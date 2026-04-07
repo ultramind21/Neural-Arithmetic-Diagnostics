@@ -1,0 +1,600 @@
+{
+  "timestamp_utc": "2026-04-07T19:42:48.626860Z",
+  "experiment": "project_9_family_patterns_in_3d_v1",
+  "shape": [
+    3,
+    2,
+    2
+  ],
+  "base_lattice": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    [
+      [
+        4,
+        8
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    [
+      [
+        2,
+        0
+      ],
+      [
+        5,
+        9
+      ]
+    ]
+  ],
+  "family_map": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  ],
+  "base_total_carry_count": 2,
+  "position_results": [
+    {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "family_type": 0,
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "family_type": 0,
+      "old_value": 7,
+      "new_value": 2,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "family_type": 0,
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        0,
+        1,
+        1
+      ],
+      "family_type": 0,
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 4
+    },
+    {
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "family_type": 1,
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 5,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 3
+    },
+    {
+      "position": [
+        1,
+        0,
+        1
+      ],
+      "family_type": 1,
+      "old_value": 8,
+      "new_value": 3,
+      "changed_count": 5,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        1,
+        1,
+        0
+      ],
+      "family_type": 1,
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 5,
+      "changed_positions": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 3
+    },
+    {
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "family_type": 1,
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 5,
+      "changed_positions": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        2,
+        0,
+        0
+      ],
+      "family_type": 2,
+      "old_value": 2,
+      "new_value": 7,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 3
+    },
+    {
+      "position": [
+        2,
+        0,
+        1
+      ],
+      "family_type": 2,
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        2,
+        1,
+        0
+      ],
+      "family_type": 2,
+      "old_value": 5,
+      "new_value": 0,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        2,
+        1,
+        1
+      ],
+      "family_type": 2,
+      "old_value": 9,
+      "new_value": 4,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 2,
+      "carry_count_after": 1
+    }
+  ],
+  "family_aggregates": {
+    "0": {
+      "mean_changed_count": 4.0,
+      "mean_carry_after": 2.5,
+      "positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    "1": {
+      "mean_changed_count": 5.0,
+      "mean_carry_after": 2.25,
+      "positions": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "2": {
+      "mean_changed_count": 4.0,
+      "mean_carry_after": 2.0,
+      "positions": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "notes": [
+    "This is the first family-sensitive 3D sandbox experiment in Project 9.",
+    "It tests whether family identity shapes perturbation propagation in a higher-dimensional compositional world."
+  ]
+}

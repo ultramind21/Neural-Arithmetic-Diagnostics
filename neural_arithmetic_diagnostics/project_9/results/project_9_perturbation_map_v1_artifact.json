@@ -1,0 +1,584 @@
+{
+  "timestamp_utc": "2026-04-07T19:23:30.494274Z",
+  "experiment": "project_9_perturbation_map_v1",
+  "shape": [
+    2,
+    2,
+    2
+  ],
+  "base_lattice": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    [
+      [
+        4,
+        8
+      ],
+      [
+        0,
+        6
+      ]
+    ]
+  ],
+  "base_total_carry_count": 1,
+  "position_results": [
+    {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "old_value": 7,
+      "new_value": 2,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    },
+    {
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        0,
+        1,
+        1
+      ],
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        1,
+        0,
+        1
+      ],
+      "old_value": 8,
+      "new_value": 3,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    },
+    {
+      "position": [
+        1,
+        1,
+        0
+      ],
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    }
+  ],
+  "ranked_by_influence": [
+    {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        0,
+        0,
+        1
+      ],
+      "old_value": 7,
+      "new_value": 2,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    },
+    {
+      "position": [
+        0,
+        1,
+        0
+      ],
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        0,
+        1,
+        1
+      ],
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        1,
+        0,
+        0
+      ],
+      "old_value": 4,
+      "new_value": 9,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 2
+    },
+    {
+      "position": [
+        1,
+        0,
+        1
+      ],
+      "old_value": 8,
+      "new_value": 3,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    },
+    {
+      "position": [
+        1,
+        1,
+        0
+      ],
+      "old_value": 0,
+      "new_value": 5,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 1
+    },
+    {
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "old_value": 6,
+      "new_value": 1,
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "carry_count_before": 1,
+      "carry_count_after": 0
+    }
+  ],
+  "notes": [
+    "This is the first perturbation map in Project 9.",
+    "It measures whether different lattice positions have different local-to-global effect size."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "timestamp_utc": "2026-04-07T19:15:16.642090Z",
+  "experiment": "project_9_small_3d_lattice_v1",
+  "shape": [
+    2,
+    2,
+    2
+  ],
+  "base_lattice": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        6,
+        4
+      ]
+    ],
+    [
+      [
+        4,
+        8
+      ],
+      [
+        0,
+        6
+      ]
+    ]
+  ],
+  "base_outputs": {
+    "(0, 0, 0)": 2,
+    "(0, 0, 1)": 8,
+    "(0, 1, 0)": 6,
+    "(0, 1, 1)": 7,
+    "(1, 0, 0)": 5,
+    "(1, 0, 1)": 0,
+    "(1, 1, 0)": 2,
+    "(1, 1, 1)": 7
+  },
+  "base_carries": {
+    "(0, 0, 0)": 0,
+    "(0, 0, 1)": 0,
+    "(0, 1, 0)": 0,
+    "(0, 1, 1)": 0,
+    "(1, 0, 0)": 0,
+    "(1, 0, 1)": 1,
+    "(1, 1, 0)": 0,
+    "(1, 1, 1)": 0
+  },
+  "base_total_carry_count": 1,
+  "perturbation": {
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "old_value": 0,
+    "new_value": 5,
+    "output_changes": {
+      "changed_count": 4,
+      "changed_positions": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "carry_count_before": 1,
+    "carry_count_after": 1
+  },
+  "notes": [
+    "This is the first higher-dimensional compositional sandbox in Project 9.",
+    "Its purpose is to test whether local perturbation produces nontrivial global effects."
+  ]
+}

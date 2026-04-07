@@ -59,6 +59,24 @@ Role:
 
 ---
 
+### Project 8
+**Project 8 — Composition Stabilization Architectures**
+
+Role:
+- design architecture-level mechanisms that can rescue family-specific compositional failures
+- test whether interface and controller mechanisms can be integrated productively
+
+---
+
+### Project 9
+**Project 9 — High-Dimensional Compositional Sandboxes**
+
+Role:
+- extend the research line into higher-dimensional compositional worlds
+- study topology-sensitive, family-sensitive, and rescue-sensitive behavior in 3D arithmetic-like spaces
+
+---
+
 ## Usage Policy
 
 From this point onward, these names should be used consistently in:
