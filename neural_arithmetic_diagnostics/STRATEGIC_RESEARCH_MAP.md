@@ -2,7 +2,7 @@
 ## Neural-Arithmetic-Diagnostics — High-Level Research Position
 
 **Date:** April 2026  
-**Purpose:** Strategic map of Projects 4–8 after the current completed and paused phases
+**Purpose:** Strategic map of Projects 4–9 after the current completed, active, and paused phases
 
 ---
 
@@ -16,7 +16,8 @@ It contains:
 - a strong Project 5 checkpoint
 - a completed Project 6 interpretability arc
 - a strong Project 7 checkpoint
-- and a strong Project 8 architecture-design result
+- a strong Project 8 architecture-design result
+- and a new active Project 9 higher-dimensional sandbox branch
 
 This means the repository should now be understood as a research platform with multiple connected layers, not as a single active experiment.
 
@@ -111,7 +112,7 @@ Project 7 established that family-level compositional failures are mechanistical
 ## 6. Project 8 — Composition Stabilization Architectures
 
 ### Status
-**ACTIVE / STRONG FIRST ARCHITECTURE RESULT**
+**OPEN / PAUSED at strong checkpoint**
 
 ### Main contribution
 Project 8 established the first strong architecture-level rescue result built directly on the research line's diagnostic and mechanistic findings.
@@ -129,9 +130,31 @@ Project 8 established the first strong architecture-level rescue result built di
 
 ---
 
-## 6. Highest-Value Scientific Assets Right Now
+## 7. Project 9 — High-Dimensional Compositional Sandboxes
 
-Across Projects 4–8, the strongest current assets are:
+### Status
+**ACTIVE / EARLY STRONG SANDBOX BRANCH**
+
+### Main contribution
+Project 9 established that higher-dimensional arithmetic-like compositional worlds can support topology-sensitive, family-sensitive, and rescue-sensitive local-to-global behavior.
+
+### Strongest results
+- local-to-global propagation exists in the 3D sandbox
+- lattice scaling breaks perturbation symmetry
+- family identity affects perturbation propagation
+- rescue itself is family-sensitive in the 3D world
+- adaptive family-aware rescue can outperform naive rescue logic
+
+### Strategic role
+- higher-dimensional composition frontier
+- strongest current extension beyond linear compositional worlds
+- potential bridge to a broader theory of compositional state spaces
+
+---
+
+## 8. Highest-Value Scientific Assets Right Now
+
+Across Projects 4–9, the strongest current assets are:
 
 ### Asset A — Diagnostic framework
 (Project 4)
@@ -148,11 +171,14 @@ Across Projects 4–8, the strongest current assets are:
 ### Asset E — Family-sensitive architecture rescue
 (Project 8)
 
-These five assets together form the current high-value scientific core of the repository.
+### Asset F — Higher-dimensional compositional sandbox
+(Project 9)
+
+These six assets together form the current high-value scientific core of the repository.
 
 ---
 
-## 7. Closest Thing to a Publishable Core
+## 9. Closest Thing to a Publishable Core
 
 The strongest current publishable nucleus would likely combine:
 
@@ -160,7 +186,9 @@ The strongest current publishable nucleus would likely combine:
 - Project 6 mechanistic arc
 - selected Project 5 decomposition results
 - selected Project 7 bridge results
-- and, if the framing supports it, selected Project 8 architecture findings
+- and, depending on framing maturity, selected Project 8 architecture findings
+
+Project 9 is highly promising, but likely still best treated as a frontier branch rather than as the first publication core.
 
 This would support a paper or paper sequence positioned around:
 - diagnostic robustness
@@ -170,43 +198,44 @@ This would support a paper or paper sequence positioned around:
 
 ---
 
-## 8. Research Directions Ranked by Strategic Value
+## 10. Research Directions Ranked by Strategic Value
 
 ### Tier 1 — Highest Value
 1. develop publication-ready synthesis around Project 4 + Project 6 + selected 5/7 findings
-2. continue Project 8 as the strongest current design-oriented frontier
+2. continue Project 8 as the strongest current architecture-design frontier
 3. re-open Project 7 with a sharper family-specific mechanism hypothesis
 
 ### Tier 2 — Strong but Secondary
 4. re-open Project 5 only under a stronger composition-level bridge hypothesis
-5. package Project 4 alone if a faster methodology-only publication path is needed
+5. develop Project 9 as the main high-dimensional frontier after stronger consolidation
+6. package Project 4 alone if a faster methodology-only publication path is needed
 
 ### Tier 3 — Later
-6. launch a completely new arithmetic project without first exploiting the current strong foundation
+7. launch a completely new arithmetic project without first exploiting the current strong foundation
 
 ---
 
-## 9. Strongest Current Repository-Wide Position
+## 11. Strongest Current Repository-Wide Position
 
 The strongest current high-level scientific position is:
 
-> strong arithmetic behavior can remain narrow, family-sensitive, and mechanistically non-uniform; local competence, internal arithmetic structure, and even causal local signals do not automatically scale into globally robust compositional success, but architecture-level rescue may become possible when failure modes are treated as heterogeneous and family-sensitive.
+> strong arithmetic behavior can remain narrow, family-sensitive, and mechanistically non-uniform; local competence, internal arithmetic structure, and even causal local signals do not automatically scale into globally robust compositional success, but architecture-level rescue may become possible when failure modes are treated as heterogeneous and family-sensitive, and these issues can persist or transform in richer higher-dimensional compositional spaces.
 
 This is the deepest current result across the full research line.
 
 ---
 
-## 10. Recommended Strategic Priority
+## 12. Recommended Strategic Priority
 
 The single strongest recommendation now is:
 
-> treat Project 6 as the strongest completed mechanistic core, preserve Projects 5 and 7 as high-value paused frontier branches, and treat Project 8 as the strongest active architecture-design branch.
+> treat Project 6 as the strongest completed mechanistic core, preserve Projects 5, 7, and 8 as high-value paused or semi-paused frontier branches, and treat Project 9 as the most promising active expansion into higher-dimensional compositional structure.
 
 This gives the research line:
 - one completed methodological core
 - one completed mechanistic core
-- two strong paused frontier branches
-- and one active design-oriented branch
+- multiple strong paused frontier branches
+- and one active high-dimensional expansion branch
 
 That is the best strategic position currently available.
 
