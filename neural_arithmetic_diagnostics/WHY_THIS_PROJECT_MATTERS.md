@@ -48,7 +48,8 @@ Instead, it asks:
 - does intervention improve real robustness or only local behavior?
 - what survives audit, and what does not?
 - what exists internally in the model, and what still fails globally?
-- and how architecture itself can be redesigned to respond to heterogeneous failure modes
+- how architecture itself can be redesigned to respond to heterogeneous failure modes
+- and whether these problems persist or transform in richer higher-dimensional compositional worlds
 
 These are the questions that make the difference between:
 - impressive results
@@ -69,7 +70,8 @@ It is a way of working:
 - use adversarial structure, not just standard test sets
 - treat failure as information, not embarrassment
 - move from performance to mechanism when possible
-- and move from mechanism to architecture only after understanding where failure really lives
+- move from mechanism to architecture only after understanding where failure really lives
+- and expand the problem only after the lower-dimensional case has taught you something real
 
 That makes the repository valuable even beyond arithmetic.
 
@@ -137,6 +139,14 @@ Project 8 moved from diagnosis to architecture design:
 - interface and controller structure are not interchangeable
 - and family-sensitive architectural support can be integrated successfully in one design
 
+### Project 9
+Project 9 extended the problem into higher-dimensional compositional worlds:
+- local-to-global propagation remains meaningful
+- topology matters
+- family identity matters
+- rescue policy matters
+- and compositional structure becomes richer rather than simpler in higher-dimensional spaces
+
 This turns the repository from a finished archive into a living research platform.
 
 ---
@@ -150,6 +160,7 @@ If you care about:
 - interpretability
 - evaluation
 - architecture design
+- compositional structure
 - or trustworthy empirical science in AI
 
 then this repository matters.
@@ -171,7 +182,8 @@ Then it went further:
 - mapped decomposition failure
 - opened the model internally
 - exposed heterogeneous failure mechanisms
-- and eventually used that understanding to guide architecture design
+- used that understanding to guide architecture design
+- and finally pushed the question into richer higher-dimensional compositional worlds
 
 That is a lesson worth preserving.
 
