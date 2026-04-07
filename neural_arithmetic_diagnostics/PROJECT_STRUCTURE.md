@@ -19,10 +19,12 @@ neural_arithmetic_diagnostics/
 ├── project_6/              # Mechanistic Interpretability Sandbox
 ├── project_7/              # From Local Competence to Global Compositional Failure
 ├── project_8/              # Composition Stabilization Architectures
+├── project_9/              # High-Dimensional Compositional Sandboxes
+├── paper/                  # Writing and submission-preparation materials
 ├── assets/                 # Public-facing visual assets
-├── meta/                   # Repository governance / naming / cleanup plans
+├── meta/                   # Governance / naming / cleanup plans
 ├── archive_optional/       # Archived optional/debug/root legacy materials
-├── paper/                  # Paper draft and submission-preparation materials
+├── tools/                  # Secondary technical helper scripts
 ├── README.md
 ├── GETTING_STARTED_FAST.md
 ├── WHY_THIS_PROJECT_MATTERS.md
@@ -141,7 +143,7 @@ This is the repository's strongest diagnostic framework layer.
 ### Role
 Project 5 asks:
 - can local competence scale compositionally?
-- where does learned decomposition fail?
+- where does learned local decomposition fail?
 - what explanations for decomposition failure can be ruled out?
 
 ### Main subfolders:
@@ -217,14 +219,37 @@ Project 8 asks:
 - `results/`
 
 ### Project 8 status:
-- **OPEN / ACTIVE**
-- first strong architecture result established
+- **OPEN / PAUSED**
+- strong architecture checkpoint established
 
 This is the architecture-design frontier branch.
 
 ---
 
-## 9. `paper/` — Writing and Submission Materials
+## 9. `project_9/` — High-Dimensional Compositional Sandboxes
+**Purpose:** Extend the research line into higher-dimensional arithmetic-like compositional worlds.
+
+### Role
+Project 9 asks:
+- how local-to-global behavior changes in a higher-dimensional structured state space
+- how topology affects perturbation propagation
+- how family-sensitive structure appears in 3D composition
+- and how rescue logic behaves in that richer world
+
+### Main subfolders:
+- `framework/`
+- `experiments/`
+- `results/`
+
+### Project 9 status:
+- **ACTIVE**
+- strong first sandbox branch established
+
+This is the higher-dimensional compositional frontier branch.
+
+---
+
+## 10. `paper/` — Writing and Submission Materials
 **Purpose:** Preserve the developing paper draft and pre-submission materials.
 
 ### Contents include:
@@ -232,12 +257,13 @@ This is the architecture-design frontier branch.
 - `paper_draft_full.tex`
 - `CITATION_PLACEHOLDER_PLAN.md`
 - `ARXIV_SUBMISSION_CHECKLIST.md`
+- `PAPER_1_PACKAGING_PLAN.md`
 
 This is a writing/pre-publication layer, not a project branch.
 
 ---
 
-## 10. `assets/` — Public-Facing Visual Assets
+## 11. `assets/` — Public-Facing Visual Assets
 **Purpose:** Store visual materials used in presentation and repository identity.
 
 ### Current contents:
@@ -248,7 +274,7 @@ This is the visual layer of the repository.
 
 ---
 
-## 11. `meta/` — Governance / Naming / Cleanup Plans
+## 12. `meta/` — Governance / Naming / Cleanup Plans
 **Purpose:** Store repository-level planning documents that are useful but should not dominate the root view.
 
 ### Typical contents:
@@ -261,7 +287,7 @@ This is the repository-governance layer.
 
 ---
 
-## 12. `archive_optional/` — Archived Non-Core Materials
+## 13. `archive_optional/` — Archived Non-Core Materials
 **Purpose:** Preserve useful but non-primary artifacts outside the main public-facing narrative.
 
 ### Includes:
@@ -272,7 +298,14 @@ This layer exists to reduce clutter while preserving useful history.
 
 ---
 
-## 13. Root-Level Reading Path
+## 14. `tools/` — Secondary Technical Helper Scripts
+**Purpose:** Store non-core utility scripts that support repository maintenance or visualization but are not part of the main scientific entry path.
+
+This keeps the root cleaner while preserving useful tooling.
+
+---
+
+## 15. Root-Level Reading Path
 
 ### Fastest human entry
 1. `README.md`
@@ -297,23 +330,31 @@ This layer exists to reduce clutter while preserving useful history.
 ### Current strongest architecture-design entry
 9. `project_8/results/PROJECT_8_SYNTHESIS_FINAL.md`
 
----
-
-## 14. Current High-Level Status
+### Current higher-dimensional sandbox entry
+10. `project_9/results/PROJECT_9_SYNTHESIS_V2.md`
 
 | Layer | Status |
 |------|--------|
+| Project 9 | ACTIVE |
+
+---
+
+## 16. Current High-Level Status
+
+| Layer | Status |
+|------|-----|
 | Projects 1–3 | COMPLETE / HISTORICAL |
 | Trust-Recovery Audit | COMPLETE |
 | Project 4 | COMPLETE |
 | Project 5 | OPEN / PAUSED |
 | Project 6 | COMPLETE |
 | Project 7 | OPEN / PAUSED |
-| Project 8 | OPEN / ACTIVE |
+| Project 8 | OPEN / PAUSED |
+| Project 9 | ACTIVE |
 
 ---
 
-## 15. Final Note
+## 17. Final Note
 
 This repository should not be understood as a single project.
 
@@ -324,7 +365,8 @@ It is a **research program repository** containing:
 - decomposition research
 - mechanistic interpretability
 - local-to-global failure analysis
-- and composition architecture design
+- composition architecture design
+- and higher-dimensional compositional sandbox exploration
 
 That full structure is the key to reading it correctly.
 
