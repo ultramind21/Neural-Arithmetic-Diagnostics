@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-This document synthesizes the current position of the post-audit research program across Projects 4–8.
+This document synthesizes the current position of the post-audit research program across Projects 4–9.
 
 The goal is not to repeat each project separately, but to state clearly:
 
@@ -21,7 +21,7 @@ The goal is not to repeat each project separately, but to state clearly:
 
 ## 2. The Program Arc
 
-The post-audit research line developed through five major projects:
+The post-audit research line developed through six major projects:
 
 ### Project 4 — Diagnostic Arithmetic Reasoning
 Established the framework for distinguishing:
@@ -55,6 +55,12 @@ Showed that:
 - interface and controller structure can jointly support global composition
 - architecture can be designed on top of prior diagnosis rather than blind trial-and-error
 
+### Project 9 — High-Dimensional Compositional Sandboxes
+Showed that:
+- local-to-global propagation remains meaningful in higher-dimensional arithmetic-like spaces
+- topology-sensitive and family-sensitive behavior can emerge in 3D compositional worlds
+- adaptive family-aware rescue policies can become meaningful in those higher-dimensional spaces
+
 ---
 
 ## 3. What the Program Has Established
@@ -66,16 +72,16 @@ This was the foundational lesson carried forward from the earlier research line 
 
 ### B. Failure is structured
 Arithmetic models do not simply "work" or "fail."
-They fail in family-specific, architecture-specific, and composition-specific ways.
+They fail in family-specific, architecture-specific, composition-specific, and even topology-sensitive ways.
 
 ### C. Local competence and global robustness are different
 A system can:
 - have strong local arithmetic competence
 - have meaningful internal arithmetic structure
-- and still fail compositionally at the family level
+- and still fail compositionally at the family or sequence level
 
 ### D. Internal structure is real and usable
-Carry-sensitive signals, success/failure contrasts, causal units, and low-dimensional directions can all be identified and studied meaningfully.
+Carry-sensitive signals, success/failure contrasts, causal units, low-dimensional directions, and sequence-level internal dynamics can all be identified and studied meaningfully.
 
 ### E. Global failure is mechanistically heterogeneous
 Different family-level failures are not driven by one shared mechanism.
@@ -83,7 +89,11 @@ Different family-level failures are not driven by one shared mechanism.
 ### F. Design can respond to diagnosis
 Architecture can be improved not by random expansion, but by targeted support for the distinct failure modes revealed by diagnosis.
 
-This is a strong and coherent scientific position.
+### G. Higher-dimensional composition opens a new layer
+The local-to-global problem does not disappear in richer spaces.
+Instead, it acquires new topology-sensitive and family-sensitive forms.
+
+This is now a strong and coherent scientific position.
 
 ---
 
@@ -102,7 +112,8 @@ depends on:
 - structure-aware diagnosis
 - family-sensitive interpretation
 - mechanistic internal analysis
-- and architecture-level support designed for heterogeneous failure modes
+- architecture-level support designed for heterogeneous failure modes
+- and, potentially, the geometry of the compositional state space itself
 
 This is the strongest scientific thread that now runs through the whole program.
 
@@ -125,6 +136,9 @@ This is the strongest scientific thread that now runs through the whole program.
 ### Project 8 added:
 - the first strong architecture-level rescue result based on family-sensitive design
 
+### Project 9 added:
+- the first higher-dimensional compositional sandbox showing that topology, family identity, and rescue can all matter inside richer arithmetic-like worlds
+
 Each project therefore contributed a different layer of understanding rather than repeating the same result.
 
 ---
@@ -133,7 +147,7 @@ Each project therefore contributed a different layer of understanding rather tha
 
 The strongest current program-level position is:
 
-> arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, and successful rescue may require architecture that explicitly supports different failure families through different mechanisms.
+> arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, successful rescue may require architecture that explicitly supports different failure families through different mechanisms, and these same issues can persist in richer higher-dimensional compositional spaces.
 
 This is now the best-supported scientific position across the full research program.
 
@@ -158,7 +172,10 @@ The current strongest research assets are:
 5. **Project 8 architecture success**
    - family-sensitive rescue mechanisms can be integrated successfully
 
-These five assets together make the program unusually rich.
+6. **Project 9 higher-dimensional sandbox**
+   - compositional structure remains meaningful beyond linear sequence settings
+
+These six assets together make the program unusually rich.
 
 ---
 
@@ -170,6 +187,7 @@ The program still does not claim:
 - a full mechanistic theory of all arithmetic failures
 - a complete local-to-global causal closure
 - a final theory that should be generalized to all domains without care
+- or a complete higher-dimensional compositional theory
 
 Those remain future directions.
 
@@ -191,7 +209,8 @@ It now stands as:
 - a decomposition research line
 - a mechanistic interpretability platform
 - a local-to-global bridge analysis
-- and a design-oriented architecture program
+- a design-oriented architecture program
+- and a higher-dimensional compositional sandbox program
 
 That is already a serious research program.
 
@@ -202,7 +221,7 @@ That is already a serious research program.
 The strongest next macro-directions are now likely to be one of:
 
 ### A. Publication synthesis
-Package the strongest subset of Projects 4–8 into publication-ready papers
+Package the strongest subset of Projects 4–9 into publication-ready papers
 
 ### B. Family-sensitive architecture expansion
 Continue Project 8 under harder or broader family regimes
@@ -210,7 +229,10 @@ Continue Project 8 under harder or broader family regimes
 ### C. Deeper mechanistic integration
 Re-open Projects 6 and 7 only with sharper local-to-global causal hypotheses
 
-### D. New domain transfer
+### D. Higher-dimensional sandbox expansion
+Continue Project 9 toward richer lattice geometries, family taxonomies, and adaptive rescue logic
+
+### E. New domain transfer
 Test whether the program's logic extends beyond arithmetic
 
 ---
@@ -219,7 +241,7 @@ Test whether the program's logic extends beyond arithmetic
 
 The most defensible high-level statement is:
 
-> Neural-Arithmetic-Diagnostics has evolved into a full research program showing that arithmetic reasoning in neural models cannot be understood through benchmark accuracy alone. It requires diagnostic structure, decomposition analysis, mechanistic interpretability, local-to-global bridge reasoning, and architecture-level design sensitive to heterogeneous failure modes.
+> Neural-Arithmetic-Diagnostics has evolved into a full research program showing that arithmetic reasoning in neural models cannot be understood through benchmark accuracy alone. It requires diagnostic structure, decomposition analysis, mechanistic interpretability, local-to-global bridge reasoning, architecture-level design sensitive to heterogeneous failure modes, and higher-dimensional compositional exploration.
 
 This is the current strongest statement the program can make.
 
