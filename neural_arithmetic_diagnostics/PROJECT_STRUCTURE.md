@@ -20,6 +20,7 @@ neural_arithmetic_diagnostics/
 ├── project_7/              # From Local Competence to Global Compositional Failure
 ├── project_8/              # Composition Stabilization Architectures
 ├── project_9/              # High-Dimensional Compositional Sandboxes
+├── project_10/             # Compositional Failure Laws and Rescue Regime Theory
 ├── paper/                  # Writing and submission-preparation materials
 ├── assets/                 # Public-facing visual assets
 ├── meta/                   # Governance / naming / cleanup plans
@@ -152,10 +153,10 @@ Project 5 asks:
 - `results/`
 
 ### Project 5 status:
-- **OPEN / PAUSED**
-- strong checkpoint established
+- **COMPLETE**
+- bounded decomposition conclusions established
 
-This is the decomposition-focused frontier branch.
+This is the decomposition-focused structural branch.
 
 ---
 
@@ -197,10 +198,10 @@ Project 7 asks:
 - `results/`
 
 ### Project 7 status:
-- **OPEN / PAUSED**
-- strong checkpoint established
+- **COMPLETE**
+- bounded local-to-global bridge conclusions established
 
-This is the local-to-global bridge frontier branch.
+This is the local-to-global bridge branch.
 
 ---
 
@@ -219,10 +220,10 @@ Project 8 asks:
 - `results/`
 
 ### Project 8 status:
-- **OPEN / PAUSED**
-- strong architecture checkpoint established
+- **COMPLETE**
+- strong architecture-level rescue results established
 
-This is the architecture-design frontier branch.
+This is the architecture-design branch.
 
 ---
 
@@ -242,14 +243,43 @@ Project 9 asks:
 - `results/`
 
 ### Project 9 status:
-- **ACTIVE**
-- strong first sandbox branch established
+- **COMPLETE**
+- first higher-dimensional compositional sandbox phase established
 
-This is the higher-dimensional compositional frontier branch.
+This is the higher-dimensional compositional branch.
 
 ---
 
-## 10. `paper/` — Writing and Submission Materials
+## 10. `project_10/` — Compositional Failure Laws and Rescue Regime Theory
+**Purpose:** Build and stress-test higher-level theory derived from Projects 4–9.
+
+### Role
+Project 10 began as a law-extraction and theory-building project.
+
+It then moved through:
+- structured law testing
+- stronger methodological refinement
+- higher-order candidate construction
+- adversarial falsification
+- post-adversarial revision
+- threshold-regime reformulation
+- and a phase-diagram-style rescue theory
+
+### Main subfolders:
+- `framework/`
+- `experiments/`
+- `results/`
+- `tools/`
+
+### Project 10 status:
+- **COMPLETE**
+- stable packaged checkpoint established
+
+This is the theory-building and post-adversarial higher-level branch.
+
+---
+
+## 11. `paper/` — Writing and Submission Materials
 **Purpose:** Preserve the developing paper draft and pre-submission materials.
 
 ### Contents include:
@@ -263,7 +293,7 @@ This is a writing/pre-publication layer, not a project branch.
 
 ---
 
-## 11. `assets/` — Public-Facing Visual Assets
+## 12. `assets/` — Public-Facing Visual Assets
 **Purpose:** Store visual materials used in presentation and repository identity.
 
 ### Current contents:
@@ -274,7 +304,7 @@ This is the visual layer of the repository.
 
 ---
 
-## 12. `meta/` — Governance / Naming / Cleanup Plans
+## 13. `meta/` — Governance / Naming / Cleanup Plans
 **Purpose:** Store repository-level planning documents that are useful but should not dominate the root view.
 
 ### Typical contents:
@@ -287,7 +317,7 @@ This is the repository-governance layer.
 
 ---
 
-## 13. `archive_optional/` — Archived Non-Core Materials
+## 14. `archive_optional/` — Archived Non-Core Materials
 **Purpose:** Preserve useful but non-primary artifacts outside the main public-facing narrative.
 
 ### Includes:
@@ -298,14 +328,14 @@ This layer exists to reduce clutter while preserving useful history.
 
 ---
 
-## 14. `tools/` — Secondary Technical Helper Scripts
+## 15. `tools/` — Secondary Technical Helper Scripts
 **Purpose:** Store non-core utility scripts that support repository maintenance or visualization but are not part of the main scientific entry path.
 
 This keeps the root cleaner while preserving useful tooling.
 
 ---
 
-## 15. Root-Level Reading Path
+## 16. Root-Level Reading Path
 
 ### Fastest human entry
 1. `README.md`
@@ -333,28 +363,29 @@ This keeps the root cleaner while preserving useful tooling.
 ### Current higher-dimensional sandbox entry
 10. `project_9/results/PROJECT_9_SYNTHESIS_V2.md`
 
-| Layer | Status |
-|------|--------|
-| Project 9 | ACTIVE |
+### Current Project 10 theory entry
+11. `project_10/results/PROJECT_10_PRESENTATION_SUMMARY_V2.md`
+12. `project_10/results/PROJECT_10_PHASE_DIAGRAM_ARTIFACT_RENDERED_V1.md`
 
 ---
 
-## 16. Current High-Level Status
+## 17. Current High-Level Status
 
 | Layer | Status |
-|------|-----|
+|------|--------|
 | Projects 1–3 | COMPLETE / HISTORICAL |
 | Trust-Recovery Audit | COMPLETE |
 | Project 4 | COMPLETE |
-| Project 5 | OPEN / PAUSED |
+| Project 5 | COMPLETE |
 | Project 6 | COMPLETE |
-| Project 7 | OPEN / PAUSED |
-| Project 8 | OPEN / PAUSED |
-| Project 9 | ACTIVE |
+| Project 7 | COMPLETE |
+| Project 8 | COMPLETE |
+| Project 9 | COMPLETE |
+| Project 10 | COMPLETE |
 
 ---
 
-## 17. Final Note
+## 18. Final Note
 
 This repository should not be understood as a single project.
 
@@ -366,7 +397,8 @@ It is a **research program repository** containing:
 - mechanistic interpretability
 - local-to-global failure analysis
 - composition architecture design
-- and higher-dimensional compositional sandbox exploration
+- higher-dimensional compositional sandbox exploration
+- and higher-level theory-building under adversarial pressure
 
 That full structure is the key to reading it correctly.
 

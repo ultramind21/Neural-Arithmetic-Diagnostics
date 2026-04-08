@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-This document synthesizes the current position of the post-audit research program across Projects 4–9.
+This document synthesizes the current position of the post-audit research program across Projects 4–10.
 
 The goal is not to repeat each project separately, but to state clearly:
 
@@ -21,7 +21,7 @@ The goal is not to repeat each project separately, but to state clearly:
 
 ## 2. The Program Arc
 
-The post-audit research line developed through six major projects:
+The post-audit research line developed through seven major projects:
 
 ### Project 4 — Diagnostic Arithmetic Reasoning
 Established the framework for distinguishing:
@@ -61,6 +61,13 @@ Showed that:
 - topology-sensitive and family-sensitive behavior can emerge in 3D compositional worlds
 - adaptive family-aware rescue policies can become meaningful in those higher-dimensional spaces
 
+### Project 10 — Compositional Failure Laws and Rescue Regime Theory
+Showed that:
+- some lower-level law candidates can receive strong support
+- stronger higher-order necessity claims can fail under adversarial pressure
+- theory can improve through falsification rather than decorative defense
+- and the stronger surviving higher-level result may be a threshold-structured regime-space account with transition bands and heterogeneity-dependent boundary geometry
+
 ---
 
 ## 3. What the Program Has Established
@@ -93,6 +100,10 @@ Architecture can be improved not by random expansion, but by targeted support fo
 The local-to-global problem does not disappear in richer spaces.
 Instead, it acquires new topology-sensitive and family-sensitive forms.
 
+### H. Higher-level theory itself must be adversarially tested
+Project 10 established that even higher-order unifications should not be protected from pressure.
+When stronger necessity claims fail, the better surviving result may be a regime-space and threshold-structure account rather than a flat universal law.
+
 This is now a strong and coherent scientific position.
 
 ---
@@ -101,19 +112,19 @@ This is now a strong and coherent scientific position.
 
 The deepest current insight of the program is:
 
-> robust arithmetic behavior is not blocked by one simple missing ingredient.
+> robust arithmetic behavior is not blocked by one simple missing ingredient, and its higher-level explanation is not necessarily compressible into one simple universal law.
 
 Instead, the path from:
 - local competence
 to
 - global robust composition
-
 depends on:
 - structure-aware diagnosis
 - family-sensitive interpretation
 - mechanistic internal analysis
 - architecture-level support designed for heterogeneous failure modes
-- and, potentially, the geometry of the compositional state space itself
+- the geometry of the compositional state space
+- and, at the highest level, threshold-structured regime behavior whose boundaries may themselves shift with other variables
 
 This is the strongest scientific thread that now runs through the whole program.
 
@@ -139,6 +150,9 @@ This is the strongest scientific thread that now runs through the whole program.
 ### Project 9 added:
 - the first higher-dimensional compositional sandbox showing that topology, family identity, and rescue can all matter inside richer arithmetic-like worlds
 
+### Project 10 added:
+- the first program-level law-testing and post-adversarial theory branch, culminating in a threshold-structured rescue regime theory rather than a simple surviving higher-order law
+
 Each project therefore contributed a different layer of understanding rather than repeating the same result.
 
 ---
@@ -147,7 +161,7 @@ Each project therefore contributed a different layer of understanding rather tha
 
 The strongest current program-level position is:
 
-> arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, successful rescue may require architecture that explicitly supports different failure families through different mechanisms, and these same issues can persist in richer higher-dimensional compositional spaces.
+> arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, successful rescue may require architecture that explicitly supports different failure families through different mechanisms, these same issues can persist in richer higher-dimensional compositional spaces, and at the highest level rescue behavior may be better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law.
 
 This is now the best-supported scientific position across the full research program.
 
@@ -175,7 +189,10 @@ The current strongest research assets are:
 6. **Project 9 higher-dimensional sandbox**
    - compositional structure remains meaningful beyond linear sequence settings
 
-These six assets together make the program unusually rich.
+7. **Project 10 rescue regime theory**
+   - threshold structure, transition bands, and heterogeneity-dependent boundary geometry at the theory level
+
+These seven assets together make the program unusually rich.
 
 ---
 
@@ -187,7 +204,8 @@ The program still does not claim:
 - a full mechanistic theory of all arithmetic failures
 - a complete local-to-global causal closure
 - a final theory that should be generalized to all domains without care
-- or a complete higher-dimensional compositional theory
+- a complete higher-dimensional compositional theory
+- or one final universal higher-order law of rescue behavior
 
 Those remain future directions.
 
@@ -210,7 +228,8 @@ It now stands as:
 - a mechanistic interpretability platform
 - a local-to-global bridge analysis
 - a design-oriented architecture program
-- and a higher-dimensional compositional sandbox program
+- a higher-dimensional compositional sandbox program
+- and a theory-building branch that subjects higher-level claims to adversarial revision
 
 That is already a serious research program.
 
@@ -221,16 +240,16 @@ That is already a serious research program.
 The strongest next macro-directions are now likely to be one of:
 
 ### A. Publication synthesis
-Package the strongest subset of Projects 4–9 into publication-ready papers
+Package the strongest subset of Projects 4–10 into publication-ready papers
 
-### B. Family-sensitive architecture expansion
-Continue Project 8 under harder or broader family regimes
+### B. Project 10 theory packaging
+Turn the Project 10 cycle into a cleaner theory-facing outward narrative
 
-### C. Deeper mechanistic integration
-Re-open Projects 6 and 7 only with sharper local-to-global causal hypotheses
+### C. Threshold / phase refinement
+Refine the current Project 10 regime-space and boundary-geometry structure further
 
-### D. Higher-dimensional sandbox expansion
-Continue Project 9 toward richer lattice geometries, family taxonomies, and adaptive rescue logic
+### D. New candidate-law testing
+Return to other candidate laws with the stronger falsification discipline established in Project 10
 
 ### E. New domain transfer
 Test whether the program's logic extends beyond arithmetic
@@ -241,7 +260,7 @@ Test whether the program's logic extends beyond arithmetic
 
 The most defensible high-level statement is:
 
-> Neural-Arithmetic-Diagnostics has evolved into a full research program showing that arithmetic reasoning in neural models cannot be understood through benchmark accuracy alone. It requires diagnostic structure, decomposition analysis, mechanistic interpretability, local-to-global bridge reasoning, architecture-level design sensitive to heterogeneous failure modes, and higher-dimensional compositional exploration.
+> Neural-Arithmetic-Diagnostics has evolved into a full research program showing that arithmetic reasoning in neural models cannot be understood through benchmark accuracy alone. It requires diagnostic structure, decomposition analysis, mechanistic interpretability, local-to-global bridge reasoning, architecture-level design sensitive to heterogeneous failure modes, higher-dimensional compositional exploration, and — at the highest level — adversarially tested threshold-structured regime theory rather than decorative universal law language.
 
 This is the current strongest statement the program can make.
 

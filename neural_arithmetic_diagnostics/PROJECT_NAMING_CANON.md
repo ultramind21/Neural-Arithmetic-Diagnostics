@@ -77,6 +77,16 @@ Role:
 
 ---
 
+### Project 10
+**Project 10 — Compositional Failure Laws and Rescue Regime Theory**
+
+Role:
+- extract and test higher-level compositional failure laws from the post-audit research line
+- subject higher-order theory to adversarial pressure
+- and develop a threshold-structured regime-space account of rescue behavior when stronger flat higher-order claims fail
+
+---
+
 ## Usage Policy
 
 From this point onward, these names should be used consistently in:

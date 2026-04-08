@@ -2,7 +2,7 @@
 ## Neural-Arithmetic-Diagnostics — High-Level Research Position
 
 **Date:** April 2026  
-**Purpose:** Strategic map of Projects 4–9 after the current completed, active, and paused phases
+**Purpose:** Strategic map of Projects 4–10 after the current completed research arc
 
 ---
 
@@ -13,13 +13,14 @@ The repository now contains more than one completed project or isolated branch.
 It contains:
 - a completed trust-recovery audit
 - a completed Project 4
-- a strong Project 5 checkpoint
+- a completed Project 5 decomposition branch
 - a completed Project 6 interpretability arc
-- a strong Project 7 checkpoint
-- a strong Project 8 architecture-design result
-- and a new active Project 9 higher-dimensional sandbox branch
+- a completed Project 7 local-to-global bridge branch
+- a completed Project 8 architecture-design branch
+- a completed Project 9 higher-dimensional sandbox branch
+- and a completed Project 10 theory-building branch
 
-This means the repository should now be understood as a research platform with multiple connected layers, not as a single active experiment.
+This means the repository should now be understood as a research program platform with multiple connected completed layers, not as a single active experiment.
 
 ---
 
@@ -47,7 +48,7 @@ Intervention gains can be real yet still structurally narrow.
 ## 3. Project 5 — Decomposition Robustness Exploration
 
 ### Status
-**OPEN / PAUSED at strong checkpoint**
+**COMPLETE with bounded conclusions**
 
 ### Main contribution
 Project 5 transformed a broad decomposition intuition into a structured exclusion map.
@@ -59,9 +60,9 @@ Project 5 transformed a broad decomposition intuition into a structured exclusio
 - chunk size and simple local context do not explain the remaining failures
 
 ### Strategic role
-- strong unresolved branch
-- decomposition-focused checkpoint
-- source of future composition-level hypotheses
+- decomposition-focused structural branch
+- exclusion-map asset
+- source of later local-to-global and rescue hypotheses
 
 ---
 
@@ -84,14 +85,14 @@ Project 6 established a strong mechanistic interpretability arc for arithmetic m
 ### Strategic role
 - strongest completed mechanistic project in the repository
 - main interpretability foundation
-- most mature source of future publication-grade internal analysis
+- mature source of publication-grade internal analysis
 
 ---
 
 ## 5. Project 7 — From Local Competence to Global Compositional Failure
 
 ### Status
-**OPEN / PAUSED at strong checkpoint**
+**COMPLETE with bounded conclusions**
 
 ### Main contribution
 Project 7 established that family-level compositional failures are mechanistically heterogeneous.
@@ -103,16 +104,16 @@ Project 7 established that family-level compositional failures are mechanistical
 - therefore family-level failure is not monolithic
 
 ### Strategic role
-- local-to-global bridge checkpoint
-- strongest source of heterogeneity insight
-- high-value branch for future causal continuation
+- local-to-global bridge branch
+- strongest source of mechanistic heterogeneity insight
+- major bridge between local competence and global failure theory
 
 ---
 
 ## 6. Project 8 — Composition Stabilization Architectures
 
 ### Status
-**OPEN / PAUSED at strong checkpoint**
+**COMPLETE**
 
 ### Main contribution
 Project 8 established the first strong architecture-level rescue result built directly on the research line's diagnostic and mechanistic findings.
@@ -124,16 +125,16 @@ Project 8 established the first strong architecture-level rescue result built di
 - architecture design can be informed by prior diagnosis rather than blind expansion
 
 ### Strategic role
-- architecture-design frontier
-- first strong positive design branch after the diagnostic and mechanistic lines
-- strongest current design-oriented project in the repository
+- architecture-design branch
+- strongest current positive design result in the repository
+- major design bridge from diagnosis to rescue
 
 ---
 
 ## 7. Project 9 — High-Dimensional Compositional Sandboxes
 
 ### Status
-**ACTIVE / EARLY STRONG SANDBOX BRANCH**
+**COMPLETE as first higher-dimensional sandbox phase**
 
 ### Main contribution
 Project 9 established that higher-dimensional arithmetic-like compositional worlds can support topology-sensitive, family-sensitive, and rescue-sensitive local-to-global behavior.
@@ -146,15 +147,37 @@ Project 9 established that higher-dimensional arithmetic-like compositional worl
 - adaptive family-aware rescue can outperform naive rescue logic
 
 ### Strategic role
-- higher-dimensional composition frontier
+- higher-dimensional composition branch
 - strongest current extension beyond linear compositional worlds
-- potential bridge to a broader theory of compositional state spaces
+- bridge toward a broader theory of compositional state spaces
 
 ---
 
-## 8. Highest-Value Scientific Assets Right Now
+## 8. Project 10 — Compositional Failure Laws and Rescue Regime Theory
 
-Across Projects 4–9, the strongest current assets are:
+### Status
+**COMPLETE at stable packaged checkpoint**
+
+### Main contribution
+Project 10 attempted to extract and test higher-level compositional failure laws from Projects 4–9, then subjected those candidate laws to adversarial pressure.
+
+### Strongest results
+- Law 1 received strong support: local competence is not sufficient for global robustness
+- Law 3 received strong but bounded support: rescue mechanisms are family-sensitive rather than universal
+- stronger higher-order necessity claims were weakened under adversarial testing
+- the strongest surviving higher-level result became a threshold-structured regime-space account
+- rescue behavior was shown to depend on regime regions, transition bands, and heterogeneity-dependent boundary geometry
+
+### Strategic role
+- theory-building branch
+- strongest higher-level synthesis branch in the repository
+- first branch to convert program-level findings into a post-adversarial regime theory rather than a flat higher-order law
+
+---
+
+## 9. Highest-Value Scientific Assets Right Now
+
+Across Projects 4–10, the strongest current assets are:
 
 ### Asset A — Diagnostic framework
 (Project 4)
@@ -174,69 +197,76 @@ Across Projects 4–9, the strongest current assets are:
 ### Asset F — Higher-dimensional compositional sandbox
 (Project 9)
 
-These six assets together form the current high-value scientific core of the repository.
+### Asset G — Threshold-structured rescue regime theory
+(Project 10)
+
+These seven assets together form the current high-value scientific core of the repository.
 
 ---
 
-## 9. Closest Thing to a Publishable Core
+## 10. Closest Thing to a Publishable Core
 
-The strongest current publishable nucleus would likely combine:
+The strongest current publishable nucleus is no longer limited to Projects 4–9.
 
-- Project 4 framework
-- Project 6 mechanistic arc
-- selected Project 5 decomposition results
-- selected Project 7 bridge results
-- and, depending on framing maturity, selected Project 8 architecture findings
+It now likely includes two major publication-facing paths:
 
-Project 9 is highly promising, but likely still best treated as a frontier branch rather than as the first publication core.
+### Path A — Diagnostic / mechanistic / bridge / architecture sequence
+Centered on:
+- Project 4
+- Project 6
+- selected Project 7
+- selected Project 8
 
-This would support a paper or paper sequence positioned around:
-- diagnostic robustness
-- local-to-global compositional failure
-- mechanistic structure in neural arithmetic
-- and family-sensitive architecture design
+### Path B — Theory-building and regime-theory path
+Centered on:
+- Project 10
+with dependency context from:
+- Projects 5, 7, 8, and 9
+
+Project 10 is now a serious candidate for a theory-facing paper or synthesis section because it does not merely summarize earlier projects; it subjects higher-order claims to adversarial pressure and derives a threshold-structured regime-space account instead.
 
 ---
 
-## 10. Research Directions Ranked by Strategic Value
+## 11. Research Directions Ranked by Strategic Value
 
 ### Tier 1 — Highest Value
-1. develop publication-ready synthesis around Project 4 + Project 6 + selected 5/7 findings
-2. continue Project 8 as the strongest current architecture-design frontier
-3. re-open Project 7 with a sharper family-specific mechanism hypothesis
+1. package Project 10 into a clean outward-facing theory narrative
+2. build a publication-facing synthesis linking Projects 4, 6, 7, 8, and 10
+3. update repository-wide presentation and status consistency after Project 10
 
 ### Tier 2 — Strong but Secondary
-4. re-open Project 5 only under a stronger composition-level bridge hypothesis
-5. develop Project 9 as the main high-dimensional frontier after stronger consolidation
-6. package Project 4 alone if a faster methodology-only publication path is needed
+4. refine the current Project 10 threshold and phase-diagram structure further
+5. return to untested or partially tested candidate laws with the stronger Project 10 falsification discipline
+6. extend higher-dimensional theory links from Project 9 into later work
 
 ### Tier 3 — Later
-7. launch a completely new arithmetic project without first exploiting the current strong foundation
+7. launch a completely new arithmetic branch without first exploiting the current completed theory and packaging foundation
 
 ---
 
-## 11. Strongest Current Repository-Wide Position
+## 12. Strongest Current Repository-Wide Position
 
 The strongest current high-level scientific position is:
 
-> strong arithmetic behavior can remain narrow, family-sensitive, and mechanistically non-uniform; local competence, internal arithmetic structure, and even causal local signals do not automatically scale into globally robust compositional success, but architecture-level rescue may become possible when failure modes are treated as heterogeneous and family-sensitive, and these issues can persist or transform in richer higher-dimensional compositional spaces.
+> strong arithmetic behavior can remain narrow, family-sensitive, mechanistically non-uniform, and compositionally fragile; local competence, internal arithmetic structure, and even local causal signals do not automatically scale into globally robust compositional success; rescue can be architecture-sensitive, family-sensitive, and higher-dimensional; and at the highest level, rescue behavior is better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law.
 
 This is the deepest current result across the full research line.
 
 ---
 
-## 12. Recommended Strategic Priority
+## 13. Recommended Strategic Priority
 
 The single strongest recommendation now is:
 
-> treat Project 6 as the strongest completed mechanistic core, preserve Projects 5, 7, and 8 as high-value paused or semi-paused frontier branches, and treat Project 9 as the most promising active expansion into higher-dimensional compositional structure.
+> consolidate and package the completed research arc through Project 10 before launching major new branch expansion.
 
 This gives the research line:
-- one completed methodological core
-- one completed mechanistic core
-- multiple strong paused frontier branches
-- and one active high-dimensional expansion branch
+- a completed methodological core
+- a completed mechanistic core
+- a completed architecture branch
+- a completed higher-dimensional branch
+- and a completed theory-building branch
 
-That is the best strategic position currently available.
+That is the strongest strategic position currently available.
 
 ---

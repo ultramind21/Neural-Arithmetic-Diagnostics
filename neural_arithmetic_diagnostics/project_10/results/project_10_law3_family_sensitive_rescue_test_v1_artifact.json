@@ -1,0 +1,45 @@
+{
+  "timestamp_utc": "2026-04-07T21:42:05.262841Z",
+  "experiment": "project_10_law3_family_sensitive_rescue_test_v1",
+  "candidate_law": "Rescue mechanisms are family-sensitive rather than universal",
+  "evidence": {
+    "project_4": {
+      "source": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_4\\interventions\\adversarial_training\\PROJECT_4_ADVERSARIAL_TRAINING_RESULTS.md",
+      "present": true,
+      "supports_law": false,
+      "notes": [
+        "checks for seen-family gain vs held-out transfer pattern"
+      ]
+    },
+    "project_7": {
+      "source": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_7\\results\\PROJECT_7_CONTEXT_TRIGGER_RESULTS.md",
+      "present": true,
+      "supports_law": true,
+      "notes": [
+        "checks for heterogeneous family-level rescue behavior"
+      ]
+    },
+    "project_8": {
+      "source": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_8\\results\\PROJECT_8_INTEGRATED_ARCHITECTURE_V3_RESULTS.md",
+      "present": true,
+      "supports_law": false,
+      "notes": [
+        "checks for family-sensitive architecture rescue"
+      ]
+    },
+    "project_9": {
+      "source": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_9\\results\\PROJECT_9_ADAPTIVE_FAMILY_RESCUE_RESULTS.md",
+      "present": true,
+      "supports_law": true,
+      "notes": [
+        "checks for family-sensitive rescue in 3D sandbox"
+      ]
+    }
+  },
+  "support_count": 2,
+  "overall_verdict": "PARTIAL SUPPORT",
+  "notes": [
+    "This is the first explicit law-level synthesis test in Project 10.",
+    "It checks whether multiple projects converge on family-sensitive rescue rather than universal rescue."
+  ]
+}

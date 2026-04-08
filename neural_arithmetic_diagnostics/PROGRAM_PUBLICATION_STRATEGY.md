@@ -17,7 +17,8 @@ It contains:
 - mechanistic interpretability results
 - local-to-global bridge findings
 - a strong architecture-design result
-- and the beginning of a higher-dimensional compositional sandbox line
+- a higher-dimensional compositional sandbox branch
+- and a completed Project 10 theory-building branch
 
 This creates a new strategic need:
 
@@ -43,7 +44,7 @@ This means the program may yield:
 
 ## 3. Strongest Current Publication Axes
 
-There are now at least four serious publication axes.
+There are now at least five serious publication axes.
 
 ### Axis A — Diagnostic Framework
 Centered on:
@@ -71,6 +72,14 @@ Centered on:
 - family-sensitive propagation in higher-dimensional spaces
 - and adaptive rescue in 3D compositional environments
 
+### Axis E — Theory-Building and Rescue Regime Theory
+Centered on:
+- Project 10
+- law extraction and law testing
+- adversarial weakening of higher-order claims
+- threshold-structured rescue regime theory
+- and heterogeneity-dependent boundary geometry
+
 ---
 
 ## 4. Recommended Publication Order
@@ -97,16 +106,26 @@ Reason:
 
 Reason:
 - strongest local-to-global and architecture-design story
-- much stronger now because Project 8 produced a real architecture success
-- still ambitious enough that it may benefit from one more round of narrative consolidation before packaging
+- now fully completed as a branch sequence
+- high upside once narrative is sharply consolidated
 
-### Fourth potential paper
+### Fourth recommended paper
+**Project 10 theory-building paper or theory-facing synthesis note**
+
+Reason:
+- conceptually distinctive
+- adds something not covered by the earlier empirical branches
+- shows how higher-order claims should be stress-tested rather than merely asserted
+- culminates in a threshold-structured regime-space account rather than a decorative universal law
+
+### Fifth potential paper
 **Project 9 higher-dimensional sandbox paper**
 
 Reason:
 - conceptually fresh
-- could become highly distinctive
-- but should likely mature further before publication packaging unless a short sandbox-method paper becomes attractive
+- highly original
+- can stand as its own frontier line
+- but may still benefit from selective maturation or sharper framing depending on venue strategy
 
 ---
 
@@ -164,11 +183,32 @@ Local competence, local mechanistic structure, and global compositional success 
 - Project 8 integrated architecture rescue
 
 ### Why third
-This remains one of the highest-upside papers in the program, but it is also the most structurally ambitious. It should be packaged only when its narrative is sharper than a simple collection of strong results.
+This remains one of the highest-upside papers in the program, but it is also structurally ambitious. It should be packaged when its narrative is tighter than a simple collection of strong results.
 
 ---
 
-## 8. Recommended Fourth Paper (Conditional)
+## 8. Recommended Fourth Paper
+
+### Title direction
+A theory-building paper or synthesis note based on Project 10
+
+### Core claim
+Higher-order compositional rescue claims should be subjected to adversarial law testing; when stronger necessity-style formulations fail, the better surviving theory may be a threshold-structured regime-space account with transition bands and heterogeneity-dependent boundary geometry.
+
+### Supporting assets
+- Project 10 law-testing framework
+- Law 1 strong support
+- Law 3 bounded strong support
+- adversarial falsification cycle
+- threshold refinement
+- phase-diagram and boundary-geometry result
+
+### Why fourth
+This is one of the most distinctive current contributions in the program. It is not merely another empirical branch; it is a theory-and-method contribution about how higher-level claims should survive pressure.
+
+---
+
+## 9. Recommended Fifth Paper (Conditional)
 
 ### Title direction
 A higher-dimensional compositional sandbox paper based on Project 9
@@ -184,14 +224,14 @@ When arithmetic-like composition is embedded in a higher-dimensional structured 
 - adaptive rescue logic
 
 ### Why conditional
-This paper could become highly original, but should likely be allowed to mature further unless a short methods-style sandbox paper is strategically useful.
+This paper could become highly original, but may still benefit from selective maturation depending on whether the strategy favors immediate packaging or further extension.
 
 ---
 
-## 9. What Should NOT Be Done
+## 10. What Should NOT Be Done
 
 Do not immediately force:
-- Projects 4–9
+- Projects 4–10
 into one massive paper.
 
 That would likely:
@@ -204,22 +244,23 @@ The publication strategy should preserve that.
 
 ---
 
-## 10. Current Best Strategy
+## 11. Current Best Strategy
 
 The strongest current publication strategy is:
 
 1. finalize and package the Project 4 paper first
 2. preserve Project 6 as the next major mechanistic paper candidate
-3. let Projects 5/7/8 mature into a deeper local-to-global and architecture paper after one more round of narrative consolidation if needed
-4. treat Project 9 as a high-potential higher-dimensional frontier branch that may later become its own paper line
+3. package Projects 5/7/8 into a strong local-to-global and architecture paper
+4. package Project 10 as a theory-facing law-testing and regime-theory contribution
+5. treat Project 9 as a high-potential frontier paper line, to be packaged at the right strategic moment
 
 This gives the program both:
 - a near-term paper path
-- and a long-term high-value paper pipeline
+- and a strong long-term high-value paper pipeline
 
 ---
 
-## 11. Strategic Position
+## 12. Strategic Position
 
 The repository is no longer just "a project."
 
@@ -228,6 +269,8 @@ It is now:
 - with multiple coherent paper directions
 - and enough separation between contributions to avoid forcing one overloaded manuscript
 
-That is a strong position.
+Project 10 strengthens that position further by adding a theory-building publication path rather than only another empirical branch.
+
+That is a strong strategic position.
 
 ---

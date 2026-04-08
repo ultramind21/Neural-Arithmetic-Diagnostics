@@ -1,0 +1,101 @@
+{
+  "timestamp_utc": "2026-04-07T22:15:46.940083Z",
+  "experiment": "project_10_higher_order_law_evidence_matrix_v1",
+  "candidate_law": "When local competence reaches saturation without global robustness, successful rescue requires mechanisms aligned to the heterogeneous structure of family-level failure",
+  "rows": [
+    {
+      "project": "Project 5",
+      "result_id": "P5-R9",
+      "result_title": "Strong local performance still fails compositionally",
+      "chain_component": "local_competence_without_global_robustness",
+      "evidence_role": "support",
+      "confidence_level": "high",
+      "comments": "Direct support for the first half of the higher-order candidate"
+    },
+    {
+      "project": "Project 6",
+      "result_id": "P6-R10",
+      "result_title": "Carry direction is causally important locally",
+      "chain_component": "local_competence_without_global_robustness",
+      "evidence_role": "boundary",
+      "confidence_level": "high",
+      "comments": "Local mechanistic strength alone does not guarantee family-level explanation"
+    },
+    {
+      "project": "Project 7",
+      "result_id": "P7-R2",
+      "result_title": "One family is trigger-correctable, another is not",
+      "chain_component": "family_level_heterogeneity",
+      "evidence_role": "support",
+      "confidence_level": "high",
+      "comments": "Strong support for heterogeneous family-level failure"
+    },
+    {
+      "project": "Project 6",
+      "result_id": "P6-R8",
+      "result_title": "Trajectory dynamics differ sharply across families",
+      "chain_component": "family_level_heterogeneity",
+      "evidence_role": "support",
+      "confidence_level": "high",
+      "comments": "Strong support that family-level internal dynamics are not uniform"
+    },
+    {
+      "project": "Project 8",
+      "result_id": "P8-R2",
+      "result_title": "Different family-level failures respond to different architectural components",
+      "chain_component": "family_sensitive_rescue",
+      "evidence_role": "support",
+      "confidence_level": "high",
+      "comments": "Strong architecture-level support"
+    },
+    {
+      "project": "Project 9",
+      "result_id": "P9-R5",
+      "result_title": "Adaptive family-aware rescue outperforms naive rescue",
+      "chain_component": "family_sensitive_rescue",
+      "evidence_role": "support",
+      "confidence_level": "high",
+      "comments": "Strong sandbox-level support"
+    },
+    {
+      "project": "Project 4",
+      "result_id": "P4-I1",
+      "result_title": "Seen-family gain without broad held-out transfer",
+      "chain_component": "family_sensitive_rescue",
+      "evidence_role": "partial_support",
+      "confidence_level": "high",
+      "comments": "Supports narrow intervention gain pattern but not full architecture-level rescue"
+    },
+    {
+      "project": "Project 6",
+      "result_id": "P6-R11",
+      "result_title": "Trajectory smoothing does not rescue failing family",
+      "chain_component": "boundary_on_naive_rescue",
+      "evidence_role": "boundary",
+      "confidence_level": "high",
+      "comments": "Shows that not all rescue-like interventions are valid causal levers"
+    }
+  ],
+  "summary": {
+    "counts": {
+      "support": 5,
+      "partial_support": 1,
+      "boundary": 2,
+      "no_evidence": 0,
+      "contradiction": 0,
+      "falsification_candidate": 0
+    },
+    "chain_counts": {
+      "local_competence_without_global_robustness": 2,
+      "family_level_heterogeneity": 2,
+      "family_sensitive_rescue": 3,
+      "boundary_on_naive_rescue": 1
+    },
+    "support_strength_score": 5.5,
+    "overall_verdict": "STRONG SUPPORT"
+  },
+  "notes": [
+    "This is the first higher-order law test in Project 10.",
+    "It evaluates whether the full chain behind the candidate law is supported by the current program."
+  ]
+}

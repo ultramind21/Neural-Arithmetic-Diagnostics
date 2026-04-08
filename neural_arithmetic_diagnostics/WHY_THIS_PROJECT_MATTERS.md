@@ -49,7 +49,8 @@ Instead, it asks:
 - what survives audit, and what does not?
 - what exists internally in the model, and what still fails globally?
 - how architecture itself can be redesigned to respond to heterogeneous failure modes
-- and whether these problems persist or transform in richer higher-dimensional compositional worlds
+- whether these problems persist or transform in richer higher-dimensional compositional worlds
+- and even whether higher-level theory about rescue behavior survives adversarial pressure
 
 These are the questions that make the difference between:
 - impressive results
@@ -73,12 +74,19 @@ It is a way of working:
 - move from mechanism to architecture only after understanding where failure really lives
 - and expand the problem only after the lower-dimensional case has taught you something real
 
+Project 10 adds one more lesson:
+
+- even attractive higher-order theory should be stress-tested
+- and if it fails, the right response is not to defend it decoratively
+- but to replace it with a more honest account of regions, thresholds, and boundary structure
+
 That makes the repository valuable even beyond arithmetic.
 
 Because the same pattern appears everywhere in AI:
 - a model looks strong
 - the benchmark says it wins
-- but deeper diagnostics reveal that the behavior is narrower than it first appeared
+- deeper diagnostics reveal the behavior is narrower than it first appeared
+- and sometimes even the best early theory must be revised under stronger testing
 
 This project gives one concrete example of how to investigate that honestly.
 
@@ -147,7 +155,21 @@ Project 9 extended the problem into higher-dimensional compositional worlds:
 - rescue policy matters
 - and compositional structure becomes richer rather than simpler in higher-dimensional spaces
 
-This turns the repository from a finished archive into a living research platform.
+### Project 10
+Project 10 asked whether the full post-audit research line could be compressed into explicit compositional failure laws.
+
+It found:
+- strong support for some lower-level laws
+- but also that stronger higher-order necessity claims could fail under adversarial pressure
+
+Its deepest result was methodological and theoretical:
+- the better theory was not one clean universal higher-order law
+- but a threshold-structured rescue regime space with transition bands and heterogeneity-dependent boundary geometry
+
+This is one of the strongest intellectual contributions in the whole repository.
+
+This turns the repository not only into a living research platform,
+but into a concrete example of how theory itself should be tested, weakened, and improved.
 
 ---
 
@@ -161,6 +183,7 @@ If you care about:
 - evaluation
 - architecture design
 - compositional structure
+- theory-building
 - or trustworthy empirical science in AI
 
 then this repository matters.
@@ -183,7 +206,13 @@ Then it went further:
 - opened the model internally
 - exposed heterogeneous failure mechanisms
 - used that understanding to guide architecture design
-- and finally pushed the question into richer higher-dimensional compositional worlds
+- pushed the question into richer higher-dimensional compositional worlds
+- and finally subjected its own higher-level theory to adversarial pressure
+
+That last step matters a great deal.
+
+Because many research programs stop once they have a satisfying explanation.  
+This one kept going until even the explanation itself had to prove that it deserved to survive.
 
 That is a lesson worth preserving.
 
