@@ -1,0 +1,566 @@
+{
+  "timestamp_utc": "2026-04-08T23:15:48.078915Z",
+  "gate_version": "v1",
+  "submission_file": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\meta\\project_11_gate\\PROJECT_11_PREDICTIONS_SUBMISSION_V1.json",
+  "summary": {
+    "n_points": 12,
+    "accuracy": 0.9166666666666666,
+    "random_baseline": 0.3333333333333333,
+    "majority_class": "transition_region",
+    "majority_baseline": 0.5,
+    "boundary_n": 10,
+    "boundary_accuracy": 0.9,
+    "verdict": "PASS"
+  },
+  "confusion_matrix": {
+    "family_aware_region": {
+      "family_aware_region": 2,
+      "transition_region": 1,
+      "universal_region": 0
+    },
+    "transition_region": {
+      "family_aware_region": 0,
+      "transition_region": 6,
+      "universal_region": 0
+    },
+    "universal_region": {
+      "family_aware_region": 0,
+      "transition_region": 0,
+      "universal_region": 3
+    }
+  },
+  "results": [
+    {
+      "id": "G1",
+      "H": 0.0058,
+      "P": 0.3,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "medium",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.5914999999999999,
+        "avg_fam": 0.5961399999999999,
+        "gap_fam_minus_uni": 0.0046399999999999775,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.603,
+            "fam": 0.60764,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.59,
+            "fam": 0.59464,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.583,
+            "fam": 0.5876399999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.59,
+            "fam": 0.59464,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2",
+      "H": 0.0063,
+      "P": 0.3,
+      "predicted": "transition_region",
+      "actual": "family_aware_region",
+      "correct": false,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.5914999999999999,
+        "avg_fam": 0.5965400000000001,
+        "gap_fam_minus_uni": 0.0050400000000001555,
+        "universal_wins": 0,
+        "family_aware_wins": 4,
+        "near_ties": 0,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.603,
+            "fam": 0.60804,
+            "winner": "family_aware"
+          },
+          {
+            "family": "B",
+            "uni": 0.59,
+            "fam": 0.59504,
+            "winner": "family_aware"
+          },
+          {
+            "family": "C",
+            "uni": 0.583,
+            "fam": 0.58804,
+            "winner": "family_aware"
+          },
+          {
+            "family": "D",
+            "uni": 0.59,
+            "fam": 0.59504,
+            "winner": "family_aware"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G3",
+      "H": 0.0067,
+      "P": 0.3,
+      "predicted": "family_aware_region",
+      "actual": "family_aware_region",
+      "correct": true,
+      "confidence": "medium",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.5914999999999999,
+        "avg_fam": 0.59686,
+        "gap_fam_minus_uni": 0.005360000000000031,
+        "universal_wins": 0,
+        "family_aware_wins": 4,
+        "near_ties": 0,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.603,
+            "fam": 0.60836,
+            "winner": "family_aware"
+          },
+          {
+            "family": "B",
+            "uni": 0.59,
+            "fam": 0.59536,
+            "winner": "family_aware"
+          },
+          {
+            "family": "C",
+            "uni": 0.583,
+            "fam": 0.58836,
+            "winner": "family_aware"
+          },
+          {
+            "family": "D",
+            "uni": 0.59,
+            "fam": 0.59536,
+            "winner": "family_aware"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G4",
+      "H": 0.0078,
+      "P": 0.3,
+      "predicted": "family_aware_region",
+      "actual": "family_aware_region",
+      "correct": true,
+      "confidence": "high",
+      "is_boundary_probe": false,
+      "debug": {
+        "avg_uni": 0.5914999999999999,
+        "avg_fam": 0.5977399999999999,
+        "gap_fam_minus_uni": 0.006240000000000023,
+        "universal_wins": 0,
+        "family_aware_wins": 4,
+        "near_ties": 0,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.603,
+            "fam": 0.60924,
+            "winner": "family_aware"
+          },
+          {
+            "family": "B",
+            "uni": 0.59,
+            "fam": 0.59624,
+            "winner": "family_aware"
+          },
+          {
+            "family": "C",
+            "uni": 0.583,
+            "fam": 0.58924,
+            "winner": "family_aware"
+          },
+          {
+            "family": "D",
+            "uni": 0.59,
+            "fam": 0.59624,
+            "winner": "family_aware"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G5",
+      "H": 0.0105,
+      "P": 0.32,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "medium",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.5995999999999999,
+        "avg_fam": 0.5998999999999999,
+        "gap_fam_minus_uni": 0.00029999999999996696,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.6112,
+            "fam": 0.6113999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.598,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.5912,
+            "fam": 0.5913999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.598,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G6",
+      "H": 0.0105,
+      "P": 0.327,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.602435,
+        "avg_fam": 0.5998999999999999,
+        "gap_fam_minus_uni": -0.002535000000000176,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61407,
+            "fam": 0.6113999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.6008,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.59407,
+            "fam": 0.5913999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.6008,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7",
+      "H": 0.0105,
+      "P": 0.333,
+      "predicted": "universal_region",
+      "actual": "universal_region",
+      "correct": true,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.604865,
+        "avg_fam": 0.5998999999999999,
+        "gap_fam_minus_uni": -0.004965000000000108,
+        "universal_wins": 2,
+        "family_aware_wins": 0,
+        "near_ties": 2,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61653,
+            "fam": 0.6113999999999999,
+            "winner": "universal"
+          },
+          {
+            "family": "B",
+            "uni": 0.6032,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.59653,
+            "fam": 0.5913999999999999,
+            "winner": "universal"
+          },
+          {
+            "family": "D",
+            "uni": 0.6032,
+            "fam": 0.5983999999999999,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G8",
+      "H": 0.0105,
+      "P": 0.338,
+      "predicted": "universal_region",
+      "actual": "universal_region",
+      "correct": true,
+      "confidence": "medium",
+      "is_boundary_probe": false,
+      "debug": {
+        "avg_uni": 0.6068899999999999,
+        "avg_fam": 0.5998999999999999,
+        "gap_fam_minus_uni": -0.006990000000000052,
+        "universal_wins": 4,
+        "family_aware_wins": 0,
+        "near_ties": 0,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61858,
+            "fam": 0.6113999999999999,
+            "winner": "universal"
+          },
+          {
+            "family": "B",
+            "uni": 0.6052,
+            "fam": 0.5983999999999999,
+            "winner": "universal"
+          },
+          {
+            "family": "C",
+            "uni": 0.59858,
+            "fam": 0.5913999999999999,
+            "winner": "universal"
+          },
+          {
+            "family": "D",
+            "uni": 0.6052,
+            "fam": 0.5983999999999999,
+            "winner": "universal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G9",
+      "H": 0.0135,
+      "P": 0.32,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "medium",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.5995999999999999,
+        "avg_fam": 0.6023000000000001,
+        "gap_fam_minus_uni": 0.0027000000000001467,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.6112,
+            "fam": 0.6138,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.598,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.5912,
+            "fam": 0.5938,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.598,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G10",
+      "H": 0.0135,
+      "P": 0.327,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.602435,
+        "avg_fam": 0.6023000000000001,
+        "gap_fam_minus_uni": -0.00013499999999999623,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61407,
+            "fam": 0.6138,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.6008,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.59407,
+            "fam": 0.5938,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.6008,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G11",
+      "H": 0.0135,
+      "P": 0.333,
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.604865,
+        "avg_fam": 0.6023000000000001,
+        "gap_fam_minus_uni": -0.0025649999999999284,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61653,
+            "fam": 0.6138,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.6032,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.59653,
+            "fam": 0.5938,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.6032,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G12",
+      "H": 0.0135,
+      "P": 0.338,
+      "predicted": "universal_region",
+      "actual": "universal_region",
+      "correct": true,
+      "confidence": "low",
+      "is_boundary_probe": true,
+      "debug": {
+        "avg_uni": 0.6068899999999999,
+        "avg_fam": 0.6023000000000001,
+        "gap_fam_minus_uni": -0.004589999999999872,
+        "universal_wins": 0,
+        "family_aware_wins": 0,
+        "near_ties": 4,
+        "rows": [
+          {
+            "family": "A",
+            "uni": 0.61858,
+            "fam": 0.6138,
+            "winner": "near_tie"
+          },
+          {
+            "family": "B",
+            "uni": 0.6052,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          },
+          {
+            "family": "C",
+            "uni": 0.59858,
+            "fam": 0.5938,
+            "winner": "near_tie"
+          },
+          {
+            "family": "D",
+            "uni": 0.6052,
+            "fam": 0.6008,
+            "winner": "near_tie"
+          }
+        ]
+      }
+    }
+  ],
+  "notes": [
+    "This gate is meaningful only if predictions were committed before running.",
+    "PASS allows creating project_11/. FAIL blocks project_11/ and requires theory revision first."
+  ]
+}
