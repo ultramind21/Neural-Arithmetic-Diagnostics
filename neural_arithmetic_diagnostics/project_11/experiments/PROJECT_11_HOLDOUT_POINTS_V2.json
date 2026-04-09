@@ -1,0 +1,24 @@
+{
+  "system_id": "holdout_system_v2_identifiable_ood",
+  "notes": [
+    "Structural-OOD points with signed heterogeneity interaction to preserve identifiability.",
+    "No direct H or P inputs."
+  ],
+  "points": [
+    {"id": "V2_1", "h_scale": 0.0058, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_2", "h_scale": 0.0063, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_3", "h_scale": 0.0068, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_4", "h_scale": 0.0076, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+
+    {"id": "V2_5", "h_scale": 0.0090, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_6", "h_scale": 0.0090, "u_power": 0.335, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_7", "h_scale": 0.0090, "u_power": 0.35, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+
+    {"id": "V2_8", "h_scale": 0.0150, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_9", "h_scale": 0.0150, "u_power": 0.335, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "V2_10", "h_scale": 0.0150, "u_power": 0.345, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+
+    {"id": "V2_11", "h_scale": 0.0120, "u_power": 0.37, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "V2_12", "h_scale": 0.0180, "u_power": 0.37, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false}
+  ]
+}
