@@ -1,0 +1,37 @@
+{
+  "system_id": "holdout_system_v2_identifiable_ood",
+  "design": "balanced_by_u_power",
+  "notes": [
+    "Balanced holdout design: for each u_power level, multiple h_scale values are tested.",
+    "This removes confounding from uneven stratum sizes.",
+    "No direct H/P inputs; only h_scale/u_power/k_signed/noise/n_runs."
+  ],
+  "u_power_levels": [0.30, 0.32, 0.33, 0.34],
+  "h_scale_levels": [0.0060, 0.0066, 0.0072, 0.0090, 0.0150],
+  "fixed": {"k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400},
+  "points": [
+    {"id": "B300_0060", "h_scale": 0.0060, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B300_0066", "h_scale": 0.0066, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B300_0072", "h_scale": 0.0072, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B300_0090", "h_scale": 0.0090, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B300_0150", "h_scale": 0.0150, "u_power": 0.30, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+
+    {"id": "B320_0060", "h_scale": 0.0060, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B320_0066", "h_scale": 0.0066, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B320_0072", "h_scale": 0.0072, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B320_0090", "h_scale": 0.0090, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B320_0150", "h_scale": 0.0150, "u_power": 0.32, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+
+    {"id": "B330_0060", "h_scale": 0.0060, "u_power": 0.33, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B330_0066", "h_scale": 0.0066, "u_power": 0.33, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B330_0072", "h_scale": 0.0072, "u_power": 0.33, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B330_0090", "h_scale": 0.0090, "u_power": 0.33, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B330_0150", "h_scale": 0.0150, "u_power": 0.33, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+
+    {"id": "B340_0060", "h_scale": 0.0060, "u_power": 0.34, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B340_0066", "h_scale": 0.0066, "u_power": 0.34, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "B340_0072", "h_scale": 0.0072, "u_power": 0.34, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B340_0090", "h_scale": 0.0090, "u_power": 0.34, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "B340_0150", "h_scale": 0.0150, "u_power": 0.34, "k_signed": 0.90, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false}
+  ]
+}
