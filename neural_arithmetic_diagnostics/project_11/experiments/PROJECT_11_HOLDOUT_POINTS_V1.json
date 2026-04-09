@@ -1,0 +1,24 @@
+{
+  "system_id": "holdout_system_v1_structural_ood",
+  "notes": [
+    "Points define pre-run observable parameters only (h_scale, u_power, k_interference, noise_sigma, n_runs).",
+    "No direct H or P inputs are allowed."
+  ],
+  "points": [
+    {"id": "S1", "h_scale": 0.0058, "u_power": 0.30, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S2", "h_scale": 0.0063, "u_power": 0.30, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S3", "h_scale": 0.0068, "u_power": 0.30, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S4", "h_scale": 0.0076, "u_power": 0.30, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+
+    {"id": "S5", "h_scale": 0.0090, "u_power": 0.32, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S6", "h_scale": 0.0090, "u_power": 0.335, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S7", "h_scale": 0.0090, "u_power": 0.35, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+
+    {"id": "S8", "h_scale": 0.0150, "u_power": 0.32, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S9", "h_scale": 0.0150, "u_power": 0.335, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+    {"id": "S10", "h_scale": 0.0150, "u_power": 0.345, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": true},
+
+    {"id": "S11", "h_scale": 0.0120, "u_power": 0.37, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false},
+    {"id": "S12", "h_scale": 0.0180, "u_power": 0.37, "k_interference": 1.10, "noise_sigma": 0.04, "n_runs": 400, "is_boundary_probe": false}
+  ]
+}
