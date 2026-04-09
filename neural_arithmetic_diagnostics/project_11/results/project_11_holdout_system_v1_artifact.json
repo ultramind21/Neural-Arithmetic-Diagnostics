@@ -1,0 +1,609 @@
+{
+  "timestamp_utc": "2026-04-09T00:58:50.233041+00:00",
+  "system_id": "holdout_system_v1_structural_ood",
+  "summary": {
+    "n_points": 12,
+    "accuracy": 0.4166666666666667,
+    "boundary_n": 9,
+    "boundary_accuracy": 0.4444444444444444
+  },
+  "confusion_matrix": {
+    "family_aware_region": {
+      "family_aware_region": 0,
+      "transition_region": 1,
+      "universal_region": 0
+    },
+    "transition_region": {
+      "family_aware_region": 2,
+      "transition_region": 3,
+      "universal_region": 2
+    },
+    "universal_region": {
+      "family_aware_region": 0,
+      "transition_region": 2,
+      "universal_region": 2
+    }
+  },
+  "results": [
+    {
+      "id": "S1",
+      "inputs": {
+        "h_scale": 0.0058,
+        "u_power": 0.3,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.14375000000000002,
+        "H_obs": 0.0004015624999999994
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.0058,
+          "G_base": 0.425,
+          "G_uni": 0.5775,
+          "G_fam": 0.6425,
+          "D_fam_minus_uni": 0.06499999999999995
+        },
+        "B": {
+          "mode": -0.0058,
+          "G_base": 0.4225,
+          "G_uni": 0.5475,
+          "G_fam": 0.5725,
+          "D_fam_minus_uni": 0.025000000000000022
+        },
+        "C": {
+          "mode": 0.0058,
+          "G_base": 0.415,
+          "G_uni": 0.54,
+          "G_fam": 0.51,
+          "D_fam_minus_uni": -0.030000000000000027
+        },
+        "D": {
+          "mode": -0.0058,
+          "G_base": 0.4225,
+          "G_uni": 0.595,
+          "G_fam": 0.565,
+          "D_fam_minus_uni": -0.030000000000000027
+        }
+      }
+    },
+    {
+      "id": "S2",
+      "inputs": {
+        "h_scale": 0.0063,
+        "u_power": 0.3,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.11875,
+        "H_obs": 0.0007671874999999994
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.0063,
+          "G_base": 0.4575,
+          "G_uni": 0.5575,
+          "G_fam": 0.59,
+          "D_fam_minus_uni": 0.03249999999999997
+        },
+        "B": {
+          "mode": -0.0063,
+          "G_base": 0.45,
+          "G_uni": 0.545,
+          "G_fam": 0.5525,
+          "D_fam_minus_uni": 0.007499999999999951
+        },
+        "C": {
+          "mode": 0.0063,
+          "G_base": 0.4225,
+          "G_uni": 0.5375,
+          "G_fam": 0.5325,
+          "D_fam_minus_uni": -0.0050000000000000044
+        },
+        "D": {
+          "mode": -0.0063,
+          "G_base": 0.425,
+          "G_uni": 0.59,
+          "G_fam": 0.56,
+          "D_fam_minus_uni": -0.029999999999999916
+        }
+      }
+    },
+    {
+      "id": "S3",
+      "inputs": {
+        "h_scale": 0.0068,
+        "u_power": 0.3,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "family_aware_region",
+      "actual": "transition_region",
+      "correct": false,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.138125,
+        "H_obs": 0.00030117187499999984
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.0068,
+          "G_base": 0.47,
+          "G_uni": 0.6025,
+          "G_fam": 0.6025,
+          "D_fam_minus_uni": 0.0
+        },
+        "B": {
+          "mode": -0.0068,
+          "G_base": 0.4275,
+          "G_uni": 0.5775,
+          "G_fam": 0.5475,
+          "D_fam_minus_uni": -0.030000000000000027
+        },
+        "C": {
+          "mode": 0.0068,
+          "G_base": 0.415,
+          "G_uni": 0.5275,
+          "G_fam": 0.5825,
+          "D_fam_minus_uni": 0.05500000000000005
+        },
+        "D": {
+          "mode": -0.0068,
+          "G_base": 0.4,
+          "G_uni": 0.5575,
+          "G_fam": 0.5875,
+          "D_fam_minus_uni": 0.030000000000000027
+        }
+      }
+    },
+    {
+      "id": "S4",
+      "inputs": {
+        "h_scale": 0.0076,
+        "u_power": 0.3,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "family_aware_region",
+      "actual": "transition_region",
+      "correct": false,
+      "is_boundary_probe": false,
+      "observed_metrics": {
+        "P_obs": 0.14437500000000003,
+        "H_obs": 0.0025511718750000027
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.0076,
+          "G_base": 0.47,
+          "G_uni": 0.58,
+          "G_fam": 0.5875,
+          "D_fam_minus_uni": 0.007500000000000062
+        },
+        "B": {
+          "mode": -0.0076,
+          "G_base": 0.4125,
+          "G_uni": 0.6075,
+          "G_fam": 0.5625,
+          "D_fam_minus_uni": -0.04500000000000004
+        },
+        "C": {
+          "mode": 0.0076,
+          "G_base": 0.44,
+          "G_uni": 0.52,
+          "G_fam": 0.5775,
+          "D_fam_minus_uni": 0.057499999999999996
+        },
+        "D": {
+          "mode": -0.0076,
+          "G_base": 0.42,
+          "G_uni": 0.6125,
+          "G_fam": 0.585,
+          "D_fam_minus_uni": -0.02750000000000008
+        }
+      }
+    },
+    {
+      "id": "S5",
+      "inputs": {
+        "h_scale": 0.009,
+        "u_power": 0.32,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "universal_region",
+      "correct": false,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.179375,
+        "H_obs": 0.0004730468749999998
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.009,
+          "G_base": 0.4425,
+          "G_uni": 0.61,
+          "G_fam": 0.6125,
+          "D_fam_minus_uni": 0.0025000000000000577
+        },
+        "B": {
+          "mode": -0.009,
+          "G_base": 0.445,
+          "G_uni": 0.6225,
+          "G_fam": 0.5725,
+          "D_fam_minus_uni": -0.050000000000000044
+        },
+        "C": {
+          "mode": 0.009,
+          "G_base": 0.395,
+          "G_uni": 0.61,
+          "G_fam": 0.5675,
+          "D_fam_minus_uni": -0.04249999999999998
+        },
+        "D": {
+          "mode": -0.009,
+          "G_base": 0.4575,
+          "G_uni": 0.615,
+          "G_fam": 0.5575,
+          "D_fam_minus_uni": -0.057499999999999996
+        }
+      }
+    },
+    {
+      "id": "S6",
+      "inputs": {
+        "h_scale": 0.009,
+        "u_power": 0.335,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "universal_region",
+      "actual": "transition_region",
+      "correct": false,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.15999999999999998,
+        "H_obs": 0.00036875000000000064
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.009,
+          "G_base": 0.4525,
+          "G_uni": 0.62,
+          "G_fam": 0.655,
+          "D_fam_minus_uni": 0.03500000000000003
+        },
+        "B": {
+          "mode": -0.009,
+          "G_base": 0.4575,
+          "G_uni": 0.585,
+          "G_fam": 0.5625,
+          "D_fam_minus_uni": -0.022499999999999964
+        },
+        "C": {
+          "mode": 0.009,
+          "G_base": 0.39,
+          "G_uni": 0.5675,
+          "G_fam": 0.55,
+          "D_fam_minus_uni": -0.01749999999999996
+        },
+        "D": {
+          "mode": -0.009,
+          "G_base": 0.4075,
+          "G_uni": 0.575,
+          "G_fam": 0.6075,
+          "D_fam_minus_uni": 0.032500000000000084
+        }
+      }
+    },
+    {
+      "id": "S7",
+      "inputs": {
+        "h_scale": 0.009,
+        "u_power": 0.35,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "universal_region",
+      "actual": "universal_region",
+      "correct": true,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.1775,
+        "H_obs": 2.187499999999983e-05
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.009,
+          "G_base": 0.455,
+          "G_uni": 0.635,
+          "G_fam": 0.6275,
+          "D_fam_minus_uni": -0.007500000000000062
+        },
+        "B": {
+          "mode": -0.009,
+          "G_base": 0.4075,
+          "G_uni": 0.5775,
+          "G_fam": 0.5625,
+          "D_fam_minus_uni": -0.015000000000000013
+        },
+        "C": {
+          "mode": 0.009,
+          "G_base": 0.3975,
+          "G_uni": 0.575,
+          "G_fam": 0.5425,
+          "D_fam_minus_uni": -0.03249999999999997
+        },
+        "D": {
+          "mode": -0.009,
+          "G_base": 0.4275,
+          "G_uni": 0.61,
+          "G_fam": 0.555,
+          "D_fam_minus_uni": -0.05499999999999994
+        }
+      }
+    },
+    {
+      "id": "S8",
+      "inputs": {
+        "h_scale": 0.015,
+        "u_power": 0.32,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "family_aware_region",
+      "correct": false,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.13374999999999998,
+        "H_obs": 0.0004421875000000004
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.015,
+          "G_base": 0.4975,
+          "G_uni": 0.595,
+          "G_fam": 0.6525,
+          "D_fam_minus_uni": 0.057499999999999996
+        },
+        "B": {
+          "mode": -0.015,
+          "G_base": 0.4025,
+          "G_uni": 0.545,
+          "G_fam": 0.59,
+          "D_fam_minus_uni": 0.04499999999999993
+        },
+        "C": {
+          "mode": 0.015,
+          "G_base": 0.4375,
+          "G_uni": 0.585,
+          "G_fam": 0.6025,
+          "D_fam_minus_uni": 0.01750000000000007
+        },
+        "D": {
+          "mode": -0.015,
+          "G_base": 0.465,
+          "G_uni": 0.6125,
+          "G_fam": 0.575,
+          "D_fam_minus_uni": -0.03750000000000009
+        }
+      }
+    },
+    {
+      "id": "S9",
+      "inputs": {
+        "h_scale": 0.015,
+        "u_power": 0.335,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "transition_region",
+      "correct": true,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.14500000000000002,
+        "H_obs": 7.187499999999985e-05
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.015,
+          "G_base": 0.4825,
+          "G_uni": 0.6175,
+          "G_fam": 0.6075,
+          "D_fam_minus_uni": -0.010000000000000009
+        },
+        "B": {
+          "mode": -0.015,
+          "G_base": 0.41,
+          "G_uni": 0.5575,
+          "G_fam": 0.5525,
+          "D_fam_minus_uni": -0.0050000000000000044
+        },
+        "C": {
+          "mode": 0.015,
+          "G_base": 0.4275,
+          "G_uni": 0.5675,
+          "G_fam": 0.5625,
+          "D_fam_minus_uni": -0.0050000000000000044
+        },
+        "D": {
+          "mode": -0.015,
+          "G_base": 0.445,
+          "G_uni": 0.6025,
+          "G_fam": 0.585,
+          "D_fam_minus_uni": -0.01750000000000007
+        }
+      }
+    },
+    {
+      "id": "S10",
+      "inputs": {
+        "h_scale": 0.015,
+        "u_power": 0.345,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "universal_region",
+      "actual": "transition_region",
+      "correct": false,
+      "is_boundary_probe": true,
+      "observed_metrics": {
+        "P_obs": 0.19937499999999997,
+        "H_obs": 0.0008324218750000002
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.015,
+          "G_base": 0.4775,
+          "G_uni": 0.6325,
+          "G_fam": 0.6375,
+          "D_fam_minus_uni": 0.0050000000000000044
+        },
+        "B": {
+          "mode": -0.015,
+          "G_base": 0.415,
+          "G_uni": 0.61,
+          "G_fam": 0.5875,
+          "D_fam_minus_uni": -0.022499999999999964
+        },
+        "C": {
+          "mode": 0.015,
+          "G_base": 0.3975,
+          "G_uni": 0.63,
+          "G_fam": 0.5775,
+          "D_fam_minus_uni": -0.05249999999999999
+        },
+        "D": {
+          "mode": -0.015,
+          "G_base": 0.405,
+          "G_uni": 0.62,
+          "G_fam": 0.6275,
+          "D_fam_minus_uni": 0.007499999999999951
+        }
+      }
+    },
+    {
+      "id": "S11",
+      "inputs": {
+        "h_scale": 0.012,
+        "u_power": 0.37,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "universal_region",
+      "actual": "universal_region",
+      "correct": true,
+      "is_boundary_probe": false,
+      "observed_metrics": {
+        "P_obs": 0.18125000000000002,
+        "H_obs": 0.00039531250000000086
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.012,
+          "G_base": 0.445,
+          "G_uni": 0.65,
+          "G_fam": 0.6075,
+          "D_fam_minus_uni": -0.04249999999999998
+        },
+        "B": {
+          "mode": -0.012,
+          "G_base": 0.435,
+          "G_uni": 0.6225,
+          "G_fam": 0.595,
+          "D_fam_minus_uni": -0.02750000000000008
+        },
+        "C": {
+          "mode": 0.012,
+          "G_base": 0.425,
+          "G_uni": 0.575,
+          "G_fam": 0.5325,
+          "D_fam_minus_uni": -0.04249999999999998
+        },
+        "D": {
+          "mode": -0.012,
+          "G_base": 0.4375,
+          "G_uni": 0.62,
+          "G_fam": 0.55,
+          "D_fam_minus_uni": -0.06999999999999995
+        }
+      }
+    },
+    {
+      "id": "S12",
+      "inputs": {
+        "h_scale": 0.018,
+        "u_power": 0.37,
+        "k_interference": 1.1,
+        "noise_sigma": 0.04,
+        "n_runs": 400
+      },
+      "predicted": "transition_region",
+      "actual": "universal_region",
+      "correct": false,
+      "is_boundary_probe": false,
+      "observed_metrics": {
+        "P_obs": 0.21187500000000004,
+        "H_obs": 0.000594921875
+      },
+      "per_family": {
+        "A": {
+          "mode": 0.018,
+          "G_base": 0.4175,
+          "G_uni": 0.655,
+          "G_fam": 0.595,
+          "D_fam_minus_uni": -0.06000000000000005
+        },
+        "B": {
+          "mode": -0.018,
+          "G_base": 0.415,
+          "G_uni": 0.5875,
+          "G_fam": 0.595,
+          "D_fam_minus_uni": 0.007499999999999951
+        },
+        "C": {
+          "mode": 0.018,
+          "G_base": 0.3775,
+          "G_uni": 0.59,
+          "G_fam": 0.53,
+          "D_fam_minus_uni": -0.05999999999999994
+        },
+        "D": {
+          "mode": -0.018,
+          "G_base": 0.43,
+          "G_uni": 0.655,
+          "G_fam": 0.59,
+          "D_fam_minus_uni": -0.06500000000000006
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Structural-OOD holdout system: stochastic, nonlinear, interference-based.",
+    "No direct H,P inputs; H_obs and P_obs computed from outcomes."
+  ]
+}
