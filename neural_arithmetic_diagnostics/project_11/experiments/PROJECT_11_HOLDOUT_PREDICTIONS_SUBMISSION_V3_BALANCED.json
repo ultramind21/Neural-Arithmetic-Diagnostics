@@ -1,0 +1,35 @@
+{
+  "submission_version": "v3_balanced",
+  "system_id": "holdout_system_v2_identifiable_ood",
+  "region_labels": ["family_aware_region", "transition_region", "universal_region"],
+  "notes": [
+    "Balanced design predictions. Focus is on identifiability diagnostics, not accuracy.",
+    "Predictions are heuristic and sealed before run."
+  ],
+  "default_rule": "As u_power increases, universal_region becomes more likely; as h_scale increases at low u_power, family_aware becomes more likely.",
+  "predictions": [
+    {"id": "B300_0060", "predicted_region": "transition_region"},
+    {"id": "B300_0066", "predicted_region": "transition_region"},
+    {"id": "B300_0072", "predicted_region": "family_aware_region"},
+    {"id": "B300_0090", "predicted_region": "family_aware_region"},
+    {"id": "B300_0150", "predicted_region": "family_aware_region"},
+
+    {"id": "B320_0060", "predicted_region": "transition_region"},
+    {"id": "B320_0066", "predicted_region": "transition_region"},
+    {"id": "B320_0072", "predicted_region": "transition_region"},
+    {"id": "B320_0090", "predicted_region": "transition_region"},
+    {"id": "B320_0150", "predicted_region": "transition_region"},
+
+    {"id": "B330_0060", "predicted_region": "universal_region"},
+    {"id": "B330_0066", "predicted_region": "universal_region"},
+    {"id": "B330_0072", "predicted_region": "universal_region"},
+    {"id": "B330_0090", "predicted_region": "universal_region"},
+    {"id": "B330_0150", "predicted_region": "universal_region"},
+
+    {"id": "B340_0060", "predicted_region": "universal_region"},
+    {"id": "B340_0066", "predicted_region": "universal_region"},
+    {"id": "B340_0072", "predicted_region": "universal_region"},
+    {"id": "B340_0090", "predicted_region": "universal_region"},
+    {"id": "B340_0150", "predicted_region": "universal_region"}
+  ]
+}
