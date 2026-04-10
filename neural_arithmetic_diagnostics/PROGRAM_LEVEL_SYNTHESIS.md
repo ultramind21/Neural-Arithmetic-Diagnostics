@@ -8,7 +8,7 @@
 
 ## 1. Purpose
 
-This document synthesizes the current position of the post-audit research program across Projects 4–10.
+This document synthesizes the current position of the post-audit research program across Projects 4–11.
 
 The goal is not to repeat each project separately, but to state clearly:
 
@@ -68,6 +68,14 @@ Showed that:
 - theory can improve through falsification rather than decorative defense
 - and the stronger surviving higher-level result may be a threshold-structured regime-space account with transition bands and heterogeneity-dependent boundary geometry
 
+### Project 11 — Structure vs Resolution vs Adaptive Sampling (Efficiency Layer)
+Showed that:
+- structured sampling (uniform + boundary mixture) can approximate dense representation performance with significantly fewer reference points
+- efficiency-performance trade-offs form a meaningful new axis in the program
+- k-NN smoothing does not universally improve retrieval-based inference in this regime
+- there exists a measurable efficiency frontier between accuracy and reference cost
+- dense NN remains the upper bound, but can be approximated at reduced cost via structured sampling strategies
+
 ---
 
 ## 3. What the Program Has Established
@@ -103,6 +111,12 @@ Instead, it acquires new topology-sensitive and family-sensitive forms.
 ### H. Higher-level theory itself must be adversarially tested
 Project 10 established that even higher-order unifications should not be protected from pressure.
 When stronger necessity claims fail, the better surviving result may be a regime-space and threshold-structure account rather than a flat universal law.
+
+### I. Efficiency is a first-class axis of analysis
+Beyond correctness and structural understanding, the program now shows that:
+- performance can be preserved under significant reduction in computational or representational cost
+- sampling strategy is a key determinant of this efficiency frontier
+- dense representation is not always necessary to approach near-optimal performance
 
 This is now a strong and coherent scientific position.
 
@@ -153,6 +167,12 @@ This is the strongest scientific thread that now runs through the whole program.
 ### Project 10 added:
 - the first program-level law-testing and post-adversarial theory branch, culminating in a threshold-structured rescue regime theory rather than a simple surviving higher-order law
 
+### Project 11 added:
+- the efficiency frontier of retrieval-based inference
+- structure-guided sampling (uniform + boundary) as a principled alternative to dense reference sets
+- empirical evidence that 3× cost reduction can be achieved with small performance loss
+- evidence that smoothing (k-NN) is not universally beneficial in structured retrieval regimes
+
 Each project therefore contributed a different layer of understanding rather than repeating the same result.
 
 ---
@@ -162,6 +182,8 @@ Each project therefore contributed a different layer of understanding rather tha
 The strongest current program-level position is:
 
 > arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, successful rescue may require architecture that explicitly supports different failure families through different mechanisms, these same issues can persist in richer higher-dimensional compositional spaces, and at the highest level rescue behavior may be better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law.
+>
+> The program now also includes a second axis of understanding: efficiency of structured inference. This axis shows that near-optimal performance can be achieved through carefully designed sampling distributions rather than purely increasing resolution, introducing a cost-aware dimension to the previously structure-centric theory of arithmetic reasoning.
 
 This is now the best-supported scientific position across the full research program.
 
@@ -253,6 +275,9 @@ Return to other candidate laws with the stronger falsification discipline establ
 
 ### E. New domain transfer
 Test whether the program's logic extends beyond arithmetic
+
+### F. Efficiency-aware scaling laws
+Study how structure + sampling strategies define performance/cost scaling curves across retrieval-based inference systems
 
 ---
 

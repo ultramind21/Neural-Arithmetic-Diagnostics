@@ -208,6 +208,28 @@ This is one of the most distinctive current contributions in the program. It is 
 
 ---
 
+## 8.5. Project 11 — Efficiency Frontier of Structured Inference
+
+### Status
+**COMPLETE (efficiency-analysis extension layer)**
+
+### Main contribution
+Project 11 introduces a cost-aware dimension into the publication strategy by analyzing how structured sampling strategies affect performance in retrieval-based inference systems.
+
+### Strongest results
+- structured sampling (uniform + boundary-aware mixtures) can approximate dense reference performance with significantly fewer samples
+- efficiency-performance trade-offs form a continuous frontier rather than a discrete degradation regime
+- k-NN smoothing is not universally beneficial under structured retrieval regimes
+- performance remains bounded under controlled sampling reduction strategies
+- dense representations define an upper performance bound but are not strictly required for near-optimal behavior in all regimes
+
+### Strategic role (publication context)
+- introduces a cost–performance axis complementary to structural and mechanistic axes
+- strengthens the program's positioning for systems-level evaluation narratives
+- connects diagnostic reasoning (Project 4) with scalable inference behavior under constrained computation
+
+---
+
 ## 9. Recommended Fifth Paper (Conditional)
 
 ### Title direction
@@ -253,6 +275,7 @@ The strongest current publication strategy is:
 3. package Projects 5/7/8 into a strong local-to-global and architecture paper
 4. package Project 10 as a theory-facing law-testing and regime-theory contribution
 5. treat Project 9 as a high-potential frontier paper line, to be packaged at the right strategic moment
+6. formalize Project 11 efficiency-performance scaling laws for inclusion in publication-level synthesis alongside compositional and mechanistic results
 
 This gives the program both:
 - a near-term paper path
@@ -269,7 +292,7 @@ It is now:
 - with multiple coherent paper directions
 - and enough separation between contributions to avoid forcing one overloaded manuscript
 
-Project 10 strengthens that position further by adding a theory-building publication path rather than only another empirical branch.
+Project 10 strengthens that position further by adding a theory-building publication path rather than only another empirical branch. Project 11 extends the program's publication reach by introducing a cost-aware perspective in which structured sampling strategies define a measurable efficiency frontier, complementing the previously established structural, mechanistic, and regime-theoretic dimensions.
 
 That is a strong strategic position.
 

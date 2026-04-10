@@ -87,6 +87,18 @@ Role:
 
 ---
 
+### Project 11
+**Project 11 — Efficiency Frontier of Structured Inference**
+
+Role:
+- introduce a cost-aware dimension into the post-audit research line
+- study how structured sampling strategies affect performance in retrieval-based inference systems
+- define an efficiency–performance frontier where structured sampling approximates dense representations under reduced computational cost
+- analyze when smoothing (e.g., k-NN) fails or becomes suboptimal under structured regimes
+- extend diagnostic and compositional reasoning into scaling-law and cost-geometry analysis
+
+---
+
 ## Usage Policy
 
 From this point onward, these names should be used consistently in:

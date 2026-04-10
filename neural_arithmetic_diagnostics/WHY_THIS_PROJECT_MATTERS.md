@@ -4,7 +4,7 @@
 Most AI projects show accuracy.  
 Far fewer show what that accuracy actually means.
 
-This repository matters because it documents a full research journey through that problem.
+This repository matters because it documents a full research journey through that problem — including the parts that are usually removed from the story.
 
 It began with a simple question:
 > Can neural networks really learn arithmetic?
@@ -50,7 +50,7 @@ Instead, it asks:
 - what exists internally in the model, and what still fails globally?
 - how architecture itself can be redesigned to respond to heterogeneous failure modes
 - whether these problems persist or transform in richer higher-dimensional compositional worlds
-- and even whether higher-level theory about rescue behavior survives adversarial pressure
+- and whether higher-level theory about rescue behavior survives adversarial pressure
 
 These are the questions that make the difference between:
 - impressive results
@@ -72,7 +72,8 @@ It is a way of working:
 - treat failure as information, not embarrassment
 - move from performance to mechanism when possible
 - move from mechanism to architecture only after understanding where failure really lives
-- and expand the problem only after the lower-dimensional case has taught you something real
+- expand the problem only after the lower-dimensional case has taught you something real
+- and treat theories as hypotheses that must survive falsification, not as decorations around results
 
 Project 10 adds one more lesson:
 
@@ -80,15 +81,12 @@ Project 10 adds one more lesson:
 - and if it fails, the right response is not to defend it decoratively
 - but to replace it with a more honest account of regions, thresholds, and boundary structure
 
-That makes the repository valuable even beyond arithmetic.
+Project 11 adds a further methodological upgrade:
 
-Because the same pattern appears everywhere in AI:
-- a model looks strong
-- the benchmark says it wins
-- deeper diagnostics reveal the behavior is narrower than it first appeared
-- and sometimes even the best early theory must be revised under stronger testing
-
-This project gives one concrete example of how to investigate that honestly.
+- **prediction must come before running**
+- theory must be tested against strong baselines (not just random baselines)
+- "clean success" must be separated from **boundary behavior**
+- mechanism shifts must be treated explicitly as mechanism shifts (not smuggled in as a silent improvement)
 
 ---
 
@@ -168,8 +166,42 @@ Its deepest result was methodological and theoretical:
 
 This is one of the strongest intellectual contributions in the whole repository.
 
-This turns the repository not only into a living research platform,
+It turns the repository not only into a living research platform,
 but into a concrete example of how theory itself should be tested, weakened, and improved.
+
+### Project 11
+Project 11 took the Project 10 regime idea and asked a harder question:
+
+> Can the regime story become genuinely predictive (pre-run), transferable, and compressible — without collapsing into post-hoc explanation?
+
+It starts with a foundation step:
+- validate that the core axes (H, P) are real and stable in a minimal controlled system
+- then move to strict prediction gates
+
+Project 11 then makes three contributions that matter beyond its toy setting:
+
+1) **Gate discipline (predict before run)**
+- a first prediction gate can fail even when accuracy looks "pretty good"
+- a later gate can pass only when the rule is truly compressed and locked pre-run
+
+2) **Transfer reveals boundaries**
+- a rule can transfer in mild shifts but break under stress
+- that break is not "bad luck"; it identifies missing system-level structure (e.g., shared-failure distribution effects)
+
+3) **Mechanism matters: discontinuity creates artificial boundary instability**
+Large-scale boundary-focused evaluation showed a key failure mode:
+- rule-based predictors fail near boundaries where clamping/saturation destroys information
+- dense local interpolation baselines can dominate simply by capturing local geometry
+Project 11 then demonstrated a mechanism-level result:
+- replacing hard clamp with soft saturation changes boundary behavior substantially
+- under soft saturation, interpretable rules can become competitive again
+This is not "everything is solved"; it is a concrete demonstration that formulation and mechanism can create (or remove) boundary pathologies.
+
+Finally, Project 11 reframes the question as a tradeoff axis:
+- **Structure vs Resolution vs Adaptive Sampling**
+Dense NN wins with enough reference points, but structure-guided sampling can close much of the gap with far fewer points — and this can be measured cleanly.
+
+(See `project_11/packaging/` for a packaged evidence matrix, key claims, and figure-ready tables.)
 
 ---
 
@@ -207,11 +239,10 @@ Then it went further:
 - exposed heterogeneous failure mechanisms
 - used that understanding to guide architecture design
 - pushed the question into richer higher-dimensional compositional worlds
-- and finally subjected its own higher-level theory to adversarial pressure
+- stress-tested higher-level regime theory
+- and finally, in Project 11, showed how boundary behavior, transfer failure, and mechanism discontinuity can make (or break) "theory-like" claims
 
-That last step matters a great deal.
-
-Because many research programs stop once they have a satisfying explanation.  
+Many research programs stop once they have a satisfying explanation.  
 This one kept going until even the explanation itself had to prove that it deserved to survive.
 
 That is a lesson worth preserving.

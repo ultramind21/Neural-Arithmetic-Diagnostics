@@ -1,0 +1,82 @@
+=== PHASE D POSTMORTEM (soft labels) ===
+points: 800
+
+overall true dist: {'family-aware region': 0, 'transition region': 567, 'universal region': 233}
+overall nn pred dist: {'family-aware region': 0, 'transition region': 573, 'universal region': 227}
+
+overall V3   acc=0.1475 f1=0.1041
+overall V3.1 acc=0.1963 f1=0.1272
+overall NN11 acc=0.9450 f1=0.6219
+
+confusion NN11:
+{
+  "family-aware region": {
+    "family-aware region": 0,
+    "transition region": 0,
+    "universal region": 0
+  },
+  "transition region": {
+    "family-aware region": 0,
+    "transition region": 548,
+    "universal region": 19
+  },
+  "universal region": {
+    "family-aware region": 0,
+    "transition region": 25,
+    "universal region": 208
+  }
+}
+
+subset uniform:
+{
+  "n": 400,
+  "v3": {
+    "acc": 0.0575,
+    "f1": 0.050605060506050605
+  },
+  "v31": {
+    "acc": 0.0725,
+    "f1": 0.06176783812566561
+  },
+  "nn11": {
+    "acc": 0.9925,
+    "f1": 0.6609339954568582
+  },
+  "true_dist": {
+    "family-aware region": 0,
+    "transition region": 272,
+    "universal region": 128
+  },
+  "nn_dist": {
+    "family-aware region": 0,
+    "transition region": 271,
+    "universal region": 129
+  }
+}
+
+subset boundary:
+{
+  "n": 400,
+  "v3": {
+    "acc": 0.2375,
+    "f1": 0.13980868285504047
+  },
+  "v31": {
+    "acc": 0.32,
+    "f1": 0.16732026143790849
+  },
+  "nn11": {
+    "acc": 0.8975,
+    "f1": 0.5764509465774411
+  },
+  "true_dist": {
+    "family-aware region": 0,
+    "transition region": 295,
+    "universal region": 105
+  },
+  "nn_dist": {
+    "family-aware region": 0,
+    "transition region": 302,
+    "universal region": 98
+  }
+}

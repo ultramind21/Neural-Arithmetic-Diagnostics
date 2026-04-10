@@ -1,0 +1,340 @@
+{
+  "test": "phase_e2_sample_efficiency",
+  "true_dist": {
+    "family-aware region": 127,
+    "transition region": 310,
+    "universal region": 363
+  },
+  "v31": {
+    "acc": 0.93,
+    "macro_f1_present": 0.9352584140643304
+  },
+  "nn41": {
+    "acc": 0.97,
+    "macro_f1_present": 0.9673707467962881,
+    "grid_points": 1681
+  },
+  "nn81": {
+    "acc": 0.98625,
+    "macro_f1_present": 0.9847195725541383,
+    "grid_points": 6561
+  },
+  "rows": [
+    {
+      "seed": 101,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.8875,
+      "macro_f1_present": 0.8811413097893971
+    },
+    {
+      "seed": 101,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.83875,
+      "macro_f1_present": 0.688602090563227
+    },
+    {
+      "seed": 101,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.95125,
+      "macro_f1_present": 0.9446135789028157
+    },
+    {
+      "seed": 101,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.92625,
+      "macro_f1_present": 0.9226664627112054
+    },
+    {
+      "seed": 101,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.84,
+      "macro_f1_present": 0.6960840412223107
+    },
+    {
+      "seed": 101,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.94,
+      "macro_f1_present": 0.9230979307858543
+    },
+    {
+      "seed": 101,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.96375,
+      "macro_f1_present": 0.9610128251618039
+    },
+    {
+      "seed": 101,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.84125,
+      "macro_f1_present": 0.694233979832107
+    },
+    {
+      "seed": 101,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.98375,
+      "macro_f1_present": 0.9818318316827833
+    },
+    {
+      "seed": 101,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.9725,
+      "macro_f1_present": 0.970430325634147
+    },
+    {
+      "seed": 101,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.845,
+      "macro_f1_present": 0.712855737039284
+    },
+    {
+      "seed": 101,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.9825,
+      "macro_f1_present": 0.9781416338306489
+    },
+    {
+      "seed": 101,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.97125,
+      "macro_f1_present": 0.9701508552955315
+    },
+    {
+      "seed": 101,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.85,
+      "macro_f1_present": 0.7249950557603072
+    },
+    {
+      "seed": 101,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.97625,
+      "macro_f1_present": 0.9714247732035967
+    },
+    {
+      "seed": 202,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.90375,
+      "macro_f1_present": 0.8901271870558954
+    },
+    {
+      "seed": 202,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.8325,
+      "macro_f1_present": 0.7006097911591501
+    },
+    {
+      "seed": 202,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.93,
+      "macro_f1_present": 0.911005645212852
+    },
+    {
+      "seed": 202,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.92875,
+      "macro_f1_present": 0.9150311264381047
+    },
+    {
+      "seed": 202,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.83875,
+      "macro_f1_present": 0.6989200963591639
+    },
+    {
+      "seed": 202,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.965,
+      "macro_f1_present": 0.955720896023721
+    },
+    {
+      "seed": 202,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.9625,
+      "macro_f1_present": 0.9566312640132805
+    },
+    {
+      "seed": 202,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.83875,
+      "macro_f1_present": 0.6984676842858374
+    },
+    {
+      "seed": 202,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.9775,
+      "macro_f1_present": 0.9741996924700365
+    },
+    {
+      "seed": 202,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.97,
+      "macro_f1_present": 0.9656754902656542
+    },
+    {
+      "seed": 202,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.8525,
+      "macro_f1_present": 0.7244081810680926
+    },
+    {
+      "seed": 202,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.97375,
+      "macro_f1_present": 0.9674746378450082
+    },
+    {
+      "seed": 202,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.9775,
+      "macro_f1_present": 0.9761319094488138
+    },
+    {
+      "seed": 202,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.85,
+      "macro_f1_present": 0.7254399437421116
+    },
+    {
+      "seed": 202,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.98,
+      "macro_f1_present": 0.976143291205425
+    },
+    {
+      "seed": 303,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.9275,
+      "macro_f1_present": 0.9157904564907748
+    },
+    {
+      "seed": 303,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.82125,
+      "macro_f1_present": 0.6436866282719826
+    },
+    {
+      "seed": 303,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.9375,
+      "macro_f1_present": 0.9198590396427839
+    },
+    {
+      "seed": 303,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.92125,
+      "macro_f1_present": 0.9074139965828406
+    },
+    {
+      "seed": 303,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.845,
+      "macro_f1_present": 0.7123276804061714
+    },
+    {
+      "seed": 303,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.9525,
+      "macro_f1_present": 0.9374500792224252
+    },
+    {
+      "seed": 303,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.96,
+      "macro_f1_present": 0.9544096869417906
+    },
+    {
+      "seed": 303,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.84625,
+      "macro_f1_present": 0.7104533573403735
+    },
+    {
+      "seed": 303,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.97875,
+      "macro_f1_present": 0.9779253638938284
+    },
+    {
+      "seed": 303,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.96625,
+      "macro_f1_present": 0.9580032893605109
+    },
+    {
+      "seed": 303,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.84375,
+      "macro_f1_present": 0.7025654052847133
+    },
+    {
+      "seed": 303,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.9725,
+      "macro_f1_present": 0.968443522538303
+    },
+    {
+      "seed": 303,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.96,
+      "macro_f1_present": 0.9585232544909768
+    },
+    {
+      "seed": 303,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.8525,
+      "macro_f1_present": 0.720951897368983
+    },
+    {
+      "seed": 303,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.97625,
+      "macro_f1_present": 0.9767808882334382
+    }
+  ],
+  "elapsed_seconds": 19.750627040863037
+}

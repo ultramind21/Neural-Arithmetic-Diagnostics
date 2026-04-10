@@ -175,6 +175,28 @@ Project 10 attempted to extract and test higher-level compositional failure laws
 
 ---
 
+## 8.5. Project 11 — Efficiency Frontier of Structured Inference
+
+### Status
+**COMPLETE (efficiency-analysis extension layer)**
+
+### Main contribution
+Project 11 introduces a cost-aware axis into the existing program by studying how structured sampling strategies affect performance in retrieval-based inference systems.
+
+### Strongest results
+- structured sampling (uniform + boundary-aware mixtures) can approximate dense reference performance with significantly fewer samples
+- efficiency-performance trade-offs form a measurable frontier rather than a binary degradation curve
+- k-NN smoothing is not universally beneficial in structured retrieval regimes
+- performance loss under reduced sampling can remain bounded under carefully designed distributions
+- dense NN remains an upper bound, but is not always necessary to approach near-optimal behavior
+
+### Strategic role
+- introduces efficiency as a first-class axis alongside correctness and compositional structure
+- connects diagnostic structure (Project 4) with scaling behavior in inference cost
+- extends program from "structure-only analysis" to "structure + cost geometry"
+
+---
+
 ## 9. Highest-Value Scientific Assets Right Now
 
 Across Projects 4–10, the strongest current assets are:
@@ -200,7 +222,10 @@ Across Projects 4–10, the strongest current assets are:
 ### Asset G — Threshold-structured rescue regime theory
 (Project 10)
 
-These seven assets together form the current high-value scientific core of the repository.
+### Asset H — Efficiency frontier of structured inference
+(Project 11)
+
+These eight assets together form the current high-value scientific core of the repository.
 
 ---
 
@@ -233,14 +258,15 @@ Project 10 is now a serious candidate for a theory-facing paper or synthesis sec
 1. package Project 10 into a clean outward-facing theory narrative
 2. build a publication-facing synthesis linking Projects 4, 6, 7, 8, and 10
 3. update repository-wide presentation and status consistency after Project 10
+4. formalize efficiency-performance scaling laws from Project 11 and relate them to compositional and retrieval regimes
 
 ### Tier 2 — Strong but Secondary
-4. refine the current Project 10 threshold and phase-diagram structure further
-5. return to untested or partially tested candidate laws with the stronger Project 10 falsification discipline
-6. extend higher-dimensional theory links from Project 9 into later work
+5. refine the current Project 10 threshold and phase-diagram structure further
+6. return to untested or partially tested candidate laws with the stronger Project 10 falsification discipline
+7. extend higher-dimensional theory links from Project 9 into later work
 
 ### Tier 3 — Later
-7. launch a completely new arithmetic branch without first exploiting the current completed theory and packaging foundation
+8. launch a completely new arithmetic branch without first exploiting the current completed theory and packaging foundation
 
 ---
 
@@ -248,7 +274,7 @@ Project 10 is now a serious candidate for a theory-facing paper or synthesis sec
 
 The strongest current high-level scientific position is:
 
-> strong arithmetic behavior can remain narrow, family-sensitive, mechanistically non-uniform, and compositionally fragile; local competence, internal arithmetic structure, and even local causal signals do not automatically scale into globally robust compositional success; rescue can be architecture-sensitive, family-sensitive, and higher-dimensional; and at the highest level, rescue behavior is better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law.
+> strong arithmetic behavior can remain narrow, family-sensitive, mechanistically non-uniform, and compositionally fragile; local competence, internal arithmetic structure, and even local causal signals do not automatically scale into globally robust compositional success; rescue can be architecture-sensitive, family-sensitive, and higher-dimensional; and at the highest level, rescue behavior is better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law. The program now also includes an efficiency-aware axis showing that structured sampling strategies can achieve near-optimal performance under reduced computational cost, introducing a cost–performance geometry alongside the previously established structural and mechanistic dimensions.
 
 This is the deepest current result across the full research line.
 

@@ -1,0 +1,110 @@
+{
+  "test": "phase_d_soft_clamp",
+  "k_soft": 15,
+  "n_points": 800,
+  "overall": {
+    "v3": {
+      "accuracy": 0.84875,
+      "macro_f1": 0.8434988111916244,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 127,
+          "transition region": 0,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 35,
+          "transition region": 189,
+          "universal region": 86
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 363
+        }
+      }
+    },
+    "v31": {
+      "accuracy": 0.93,
+      "macro_f1": 0.9352584140643304,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 126,
+          "transition region": 1,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 8,
+          "transition region": 255,
+          "universal region": 47
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 363
+        }
+      }
+    },
+    "nn11": {
+      "accuracy": 0.89375,
+      "macro_f1": 0.8770363362287398,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 109,
+          "transition region": 18,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 27,
+          "transition region": 252,
+          "universal region": 31
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 9,
+          "universal region": 354
+        }
+      }
+    },
+    "label_shift_hard_to_soft": {
+      "count": 50,
+      "rate": 0.0625
+    }
+  },
+  "subsets": {
+    "uniform": {
+      "v3": {
+        "n": 400,
+        "accuracy": 0.9525,
+        "macro_f1": 0.9043289831376887
+      },
+      "v31": {
+        "n": 400,
+        "accuracy": 0.9725,
+        "macro_f1": 0.9490385986891386
+      },
+      "nn11": {
+        "n": 400,
+        "accuracy": 0.94,
+        "macro_f1": 0.8984855300644773
+      }
+    },
+    "boundary": {
+      "v3": {
+        "n": 400,
+        "accuracy": 0.745,
+        "macro_f1": 0.6684888479190748
+      },
+      "v31": {
+        "n": 400,
+        "accuracy": 0.8875,
+        "macro_f1": 0.8693061378484614
+      },
+      "nn11": {
+        "n": 400,
+        "accuracy": 0.8475,
+        "macro_f1": 0.5937898870888562
+      }
+    }
+  }
+}

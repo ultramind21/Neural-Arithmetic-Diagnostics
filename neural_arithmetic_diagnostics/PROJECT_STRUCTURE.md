@@ -21,6 +21,7 @@ neural_arithmetic_diagnostics/
 ├── project_8/              # Composition Stabilization Architectures
 ├── project_9/              # High-Dimensional Compositional Sandboxes
 ├── project_10/             # Compositional Failure Laws and Rescue Regime Theory
+├── project_11/             # Structure vs Resolution vs Adaptive Sampling (Packaged Results)
 ├── paper/                  # Writing and submission-preparation materials
 ├── assets/                 # Public-facing visual assets
 ├── meta/                   # Governance / naming / cleanup plans
@@ -279,7 +280,83 @@ This is the theory-building and post-adversarial higher-level branch.
 
 ---
 
-## 11. `paper/` — Writing and Submission Materials
+## 11. `project_11/` — Predictive Regime Theory + Transfer + Boundary Evaluation + Packaging
+
+**Purpose:** Test and package the Project 10 regime theory through prediction gates, transfer tests, boundary-focused evaluation, and structure-guided sampling analysis.
+
+### Role
+
+Project 11 extends the repository into a new axis:
+
+> How far can structured sampling (uniform + boundary-focused) replace dense reference sets without losing performance?
+
+It studies the trade-off between:
+- resolution (dense grid reference sets)
+- structure-guided sampling (adaptive coverage)
+- compute cost vs performance efficiency
+- discontinuity artifacts (hard clamp vs soft clamp)
+
+### Core Research Questions
+
+Project 11 asks:
+
+- Can we match high-resolution NN performance with far fewer reference points?
+- What is the optimal balance between uniform coverage and boundary focus?
+- Does kNN smoothing improve structured decision boundaries, or degrade them?
+- How much does mechanism (clamp type) affect boundary behavior and "winner" classification?
+- Can practical efficiency gains be measured cleanly while maintaining interpretation?
+
+### Key Findings
+
+Phase E/F consolidated results:
+
+| Configuration | macroF1 | Interpretation |
+|---|---:|---|
+| V3.1 rule baseline | 0.9353 | interpretable reference |
+| NN81 dense (6561 pts) | 0.9847 | upper bound |
+| NN41 mid-resolution (1681 pts) | 0.9674 | intermediate |
+| Adaptive E1 (N=2000) | 0.9752 | strong efficiency |
+| Mixed optimal E2 (N=1000) | ~0.9780 | peak efficiency |
+| Best compact E3 (N=1500, frac=0.5) | 0.9747 | **3× cost reduction** |
+
+**Critical mechanistic finding:**
+- Hard clamp creates boundary discontinuities
+- Soft clamp (soft-clamp k=15) restores smoother structure
+- Under soft labels, interpretable rules become competitive
+
+### Project 11 Contributions
+
+1. **Gate discipline:** Prediction must come before execution
+2. **Transfer tests:** Rules that work locally can fail under stress
+3. **Boundary analysis:** Near transitions, mechanism (discontinuities) dominates performance
+4. **Sampling efficiency:** Structure-guided sampling closes gap to dense NN with ~23% of points
+5. **Packaging:** Complete evidence matrix + key claims + figure-ready tables
+
+### Main Subfolders
+
+- `results/` — phase summaries and verdicts
+- `packaging/` — publication-ready aggregation
+  - `out/` — 5 packaged outputs
+  - `EXECUTIVE_ABSTRACT.md`
+  - `PACKAGING_INDEX.md`
+- `experiments/` — phase E1/E2/E3 code
+
+### Project 11 Status
+
+- **COMPLETE (Phase F locked)**
+- Evidence matrix finalized
+- Key claims ready for publication
+- Figure tables generated and verified
+
+### Strategic Position
+
+Project 11 is the **efficiency layer** of the research program.
+
+It compresses insights from Projects 4–10 into cost-aware inference and publishable results.
+
+---
+
+## 12. `paper/` — Writing and Submission Materials
 **Purpose:** Preserve the developing paper draft and pre-submission materials.
 
 ### Contents include:
@@ -293,7 +370,7 @@ This is a writing/pre-publication layer, not a project branch.
 
 ---
 
-## 12. `assets/` — Public-Facing Visual Assets
+## 13. `assets/` — Public-Facing Visual Assets
 **Purpose:** Store visual materials used in presentation and repository identity.
 
 ### Current contents:
@@ -304,7 +381,7 @@ This is the visual layer of the repository.
 
 ---
 
-## 13. `meta/` — Governance / Naming / Cleanup Plans
+## 14. `meta/` — Governance / Naming / Cleanup Plans
 **Purpose:** Store repository-level planning documents that are useful but should not dominate the root view.
 
 ### Typical contents:
@@ -317,7 +394,7 @@ This is the repository-governance layer.
 
 ---
 
-## 14. `archive_optional/` — Archived Non-Core Materials
+## 15. `archive_optional/` — Archived Non-Core Materials
 **Purpose:** Preserve useful but non-primary artifacts outside the main public-facing narrative.
 
 ### Includes:
@@ -328,14 +405,14 @@ This layer exists to reduce clutter while preserving useful history.
 
 ---
 
-## 15. `tools/` — Secondary Technical Helper Scripts
+## 16. `tools/` — Secondary Technical Helper Scripts
 **Purpose:** Store non-core utility scripts that support repository maintenance or visualization but are not part of the main scientific entry path.
 
 This keeps the root cleaner while preserving useful tooling.
 
 ---
 
-## 16. Root-Level Reading Path
+## 17. Root-Level Reading Path
 
 ### Fastest human entry
 1. `README.md`
@@ -367,9 +444,14 @@ This keeps the root cleaner while preserving useful tooling.
 11. `project_10/results/PROJECT_10_PRESENTATION_SUMMARY_V2.md`
 12. `project_10/results/PROJECT_10_PHASE_DIAGRAM_ARTIFACT_RENDERED_V1.md`
 
+### Current Project 11 results (packaged)
+13. `project_11/packaging/EXECUTIVE_ABSTRACT.md`
+14. `project_11/packaging/PACKAGING_INDEX.md`
+15. `project_11/packaging/out/EVIDENCE_MATRIX.md`
+
 ---
 
-## 17. Current High-Level Status
+## 18. Current High-Level Status
 
 | Layer | Status |
 |------|--------|
@@ -382,10 +464,11 @@ This keeps the root cleaner while preserving useful tooling.
 | Project 8 | COMPLETE |
 | Project 9 | COMPLETE |
 | Project 10 | COMPLETE |
+| **Project 11** | **COMPLETE (Efficiency + Packaging)** |
 
 ---
 
-## 18. Final Note
+## 19. Final Note (Updated)
 
 This repository should not be understood as a single project.
 
@@ -398,8 +481,12 @@ It is a **research program repository** containing:
 - local-to-global failure analysis
 - composition architecture design
 - higher-dimensional compositional sandbox exploration
-- and higher-level theory-building under adversarial pressure
+- theory-building under adversarial pressure (Project 10)
+- and **efficiency-aware sampling with packaged results** (Project 11)
 
-That full structure is the key to reading it correctly.
+Project 11 adds a second key axis:
+> cost-aware inference under structured constraints
+
+That full structure — spanning both mechanism/theory and efficiency/cost — is the key to reading it correctly.
 
 ---
