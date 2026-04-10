@@ -19,6 +19,9 @@ venv/
 env/
 ENV/
 
+# Exception: src/env/ is application code, not virtual environment
+!src/env/
+
 # ============================================================================
 # VS Code / Editor
 # ============================================================================
