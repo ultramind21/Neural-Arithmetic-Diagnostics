@@ -142,3 +142,39 @@ def check_leakage(holdout_points: list, pool_points: list, tolerance: float = 1e
         )
     
     print(f"✅ Leakage check PASS: {len(holdout_keys)} holdout points ∩ {len(pool_keys)} pool points = ∅")
+
+
+def build_p12_metadata(
+    manifest_path: str,
+    entrypoint: str,
+    source_script_copied_from: str,
+) -> dict:
+    """
+    Build P12 standard metadata dictionary for inclusion in artifacts.
+    
+    Parameters:
+    - manifest_path: Path to the manifest JSON used for this run
+    - entrypoint: Name of the entry point script (e.g. "run_p4_mlp_baseline_repro.py")
+    - source_script_copied_from: Path to original Project 4 source script (e.g. "project_4/baselines/...")
+    
+    Returns dict with:
+    - git_hash: Current git commit
+    - timestamp_utc: ISO 8601 UTC timestamp
+    - env: Python, PyTorch, platform, CUDA info
+    - manifest_path (resolved)
+    - manifest_sha256
+    - entrypoint
+    - source_script_copied_from
+    """
+    manifest_path_resolved = Path(manifest_path).resolve()
+    manifest_sha256 = sha256_file(manifest_path_resolved)
+    
+    return {
+        "git_hash": get_git_hash(),
+        "timestamp_utc": utc_now_iso(),
+        "env": get_env_info(),
+        "manifest_path": str(manifest_path_resolved),
+        "manifest_sha256": manifest_sha256,
+        "entrypoint": entrypoint,
+        "source_script_copied_from": source_script_copied_from,
+    }
