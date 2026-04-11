@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural-arithmetic-diagnostics"
+version = "0.1.0"
+description = "Evidence-driven diagnostics toolkit (Project 12 gates) for neural arithmetic research."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "ultramind21" }]
+keywords = ["reproducibility", "neural-networks", "diagnostics", "research", "artifacts"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: Other/Proprietary License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/ultramind21/Neural-Arithmetic-Diagnostics"
+
+[project.scripts]
+nad-check-links = "nad.cli:check_links_main"
+nad-diff-gate = "nad.cli:diff_gate_main"
+
+[tool.setuptools]
+packages = ["nad"]

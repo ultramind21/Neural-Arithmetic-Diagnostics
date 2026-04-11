@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.txt
+          pip install -e .
+          pip install pytest
+
+      - name: Compile
+        run: |
+          python -m compileall -q src nad
+
+      - name: Pytest (restricted to tests/)
+        run: |
+          python -m pytest -q
+
+      - name: CLI smoke
+        run: |
+          nad-check-links --help
+          nad-diff-gate --help
+
+      - name: Deterministic verify (Platform P0)
+        run: |
+          python tools/verify_platform_p0.py
+
+      - name: Large file guard (20MB)
+        run: |
+          python - <<'PY'
+          import os, subprocess
+          MAX_BYTES = 20 * 1024 * 1024
+          files = subprocess.check_output(["git","ls-files","-z"])
+          bad = []
+          for raw in files.split(b"\0"):
+              if not raw:
+                  continue
+              p = raw.decode("utf-8", "replace")
+              if os.path.isfile(p):
+                  sz = os.path.getsize(p)
+                  if sz > MAX_BYTES:
+                      bad.append((p, sz))
+          if bad:
+              for p, sz in bad:
+                  print(f"TOO_LARGE: {p} size={sz}")
+              raise SystemExit(1)
+          print("OK: no tracked files exceed 20MB")
+          PY

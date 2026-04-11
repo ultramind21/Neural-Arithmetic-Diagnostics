@@ -49,6 +49,32 @@ Core message:
 
 ---
 
+## NAD Toolkit (pip package)
+
+### Install (development mode)
+```bash
+pip install -e .
+```
+
+### CLI commands
+Check Markdown relative links in documentation:
+```bash
+nad-check-links project_12/docs
+```
+
+Compare artifacts/test reproducibility:
+```bash
+nad-diff-gate --original artifact_v1.json --repro artifact_v2.json
+```
+
+Help:
+```bash
+nad-check-links --help
+nad-diff-gate --help
+```
+
+---
+
 ## Quick mental model (how to read the repo)
 - **Projects 1–3:** historical research line (what was believed early).
 - **Audit + Projects 4–11:** structured diagnostics, mechanisms, composition, and theory under stress tests.
