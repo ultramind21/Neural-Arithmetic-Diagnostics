@@ -1,298 +1,189 @@
 # STRATEGIC RESEARCH MAP
-## Neural-Arithmetic-Diagnostics — High-Level Research Position
+## Neural-Arithmetic-Diagnostics — High-Level Research Position (with Validation Layer)
 
 **Date:** April 2026  
-**Purpose:** Strategic map of Projects 4–10 after the current completed research arc
+**Purpose:** Strategic map of the post-audit research program, including the evidence validation layer (Project 12).
 
 ---
 
-## 1. Why This Map Exists
+## 0. New status after Project 12 Phase 1 (what changed)
+The program now includes a dedicated validation layer:
 
-The repository now contains more than one completed project or isolated branch.
+- **Project 12 Phase 1** converts parts of the repository into **evidence-locked results** (locked claims → manifests → artifacts → gates).
+- Phase 1 scope covers **Project 11 + Project 4** and produces a paper-ready bundle (draft + figures + checklist).
+- This changes strategy: the program is no longer only "research arcs", but also "validated evidence bundles" that can be published safely.
 
-It contains:
-- a completed trust-recovery audit
-- a completed Project 4
-- a completed Project 5 decomposition branch
-- a completed Project 6 interpretability arc
-- a completed Project 7 local-to-global bridge branch
-- a completed Project 8 architecture-design branch
-- a completed Project 9 higher-dimensional sandbox branch
-- and a completed Project 10 theory-building branch
-
-This means the repository should now be understood as a research program platform with multiple connected completed layers, not as a single active experiment.
+Evidence-first entry:
+- `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`
+- `project_12/docs/PAPER_DRAFT_PHASE1.md`
 
 ---
 
-## 2. Project 4 — Diagnostic Arithmetic Reasoning
+## 1. Why this map exists
+The repository contains multiple completed layers:
+- a completed trust-recovery audit,
+- completed post-audit projects (4–11),
+- and a validation protocol layer (Project 12 Phase 1 complete).
 
+This should be understood as a research program platform, not as a single experiment.
+
+---
+
+## 2. Project 4 — Diagnostic arithmetic reasoning
 ### Status
-**COMPLETE**
+**COMPLETE** (validated in Project 12 Phase 1)
 
 ### Main contribution
-Project 4 established a practical diagnostic framework for distinguishing:
-- distribution-bound fit
-- bounded compositional competence
-- stronger algorithm-like behavior
+A diagnostic framework for distinguishing:
+- distribution-bound fit,
+- bounded compositional competence,
+- stronger algorithm-like behavior.
 
 ### Strongest result
-Intervention gains can be real yet still structurally narrow.
+Intervention gains can be real yet structurally narrow (narrow transfer vs broad robustness).
 
 ### Strategic role
-- methodological foundation
-- reusable diagnostic framework
-- stable benchmark layer for later work
+Methodological foundation and reusable diagnostic benchmark layer.
 
 ---
 
-## 3. Project 5 — Decomposition Robustness Exploration
-
+## 3. Project 5 — Decomposition robustness exploration
 ### Status
 **COMPLETE with bounded conclusions**
 
 ### Main contribution
-Project 5 transformed a broad decomposition intuition into a structured exclusion map.
-
-### Strongest results
-- decomposition works structurally in principle
-- naive learned local decomposition fails
-- explicit carry-conditioned representation helps selectively
-- chunk size and simple local context do not explain the remaining failures
+A structured exclusion map for decomposition intuitions.
 
 ### Strategic role
-- decomposition-focused structural branch
-- exclusion-map asset
-- source of later local-to-global and rescue hypotheses
+Structural branch + hypothesis source for later bridge/rescue work.
 
 ---
 
-## 4. Project 6 — Mechanistic Interpretability Sandbox
-
+## 4. Project 6 — Mechanistic interpretability sandbox
 ### Status
 **COMPLETE**
 
 ### Main contribution
-Project 6 established a strong mechanistic interpretability arc for arithmetic models.
-
-### Strongest results
-- carry-related internal structure is real
-- success/failure cases are internally distinguishable
-- some units are causally important
-- digit and carry can be internally dissociated
-- sequence-level trajectory differences are meaningful
-- subspace-level arithmetic geometry is visible and causally relevant
+A strong mechanistic interpretability arc for arithmetic models.
 
 ### Strategic role
-- strongest completed mechanistic project in the repository
-- main interpretability foundation
-- mature source of publication-grade internal analysis
+Primary interpretability foundation and publication-grade internal analysis source.
 
 ---
 
-## 5. Project 7 — From Local Competence to Global Compositional Failure
-
+## 5. Project 7 — Local-to-global failure bridge
 ### Status
 **COMPLETE with bounded conclusions**
 
 ### Main contribution
-Project 7 established that family-level compositional failures are mechanistically heterogeneous.
-
-### Strongest results
-- recurring local trigger contexts can be identified
-- one family is fully rescue-able through local trigger correction
-- another is not rescued by the same intervention
-- therefore family-level failure is not monolithic
+Family-level compositional failures are mechanistically heterogeneous.
 
 ### Strategic role
-- local-to-global bridge branch
-- strongest source of mechanistic heterogeneity insight
-- major bridge between local competence and global failure theory
+Bridge between local competence and global failure theory.
 
 ---
 
-## 6. Project 8 — Composition Stabilization Architectures
-
+## 6. Project 8 — Composition stabilization architectures
 ### Status
 **COMPLETE**
 
 ### Main contribution
-Project 8 established the first strong architecture-level rescue result built directly on the research line's diagnostic and mechanistic findings.
-
-### Strongest results
-- a discriminative architecture regime was created
-- interface and controller mechanisms were shown to rescue different family-level failures
-- an integrated architecture successfully combined family-sensitive rescue mechanisms
-- architecture design can be informed by prior diagnosis rather than blind expansion
+Family-sensitive rescue mechanisms can be integrated into an architecture informed by diagnostics.
 
 ### Strategic role
-- architecture-design branch
-- strongest current positive design result in the repository
-- major design bridge from diagnosis to rescue
+Strongest current positive architecture-design result.
 
 ---
 
-## 7. Project 9 — High-Dimensional Compositional Sandboxes
-
+## 7. Project 9 — Higher-dimensional compositional sandboxes
 ### Status
 **COMPLETE as first higher-dimensional sandbox phase**
 
 ### Main contribution
-Project 9 established that higher-dimensional arithmetic-like compositional worlds can support topology-sensitive, family-sensitive, and rescue-sensitive local-to-global behavior.
-
-### Strongest results
-- local-to-global propagation exists in the 3D sandbox
-- lattice scaling breaks perturbation symmetry
-- family identity affects perturbation propagation
-- rescue itself is family-sensitive in the 3D world
-- adaptive family-aware rescue can outperform naive rescue logic
+Higher-dimensional structured spaces exhibit topology-sensitive, family-sensitive, and rescue-sensitive behavior.
 
 ### Strategic role
-- higher-dimensional composition branch
-- strongest current extension beyond linear compositional worlds
-- bridge toward a broader theory of compositional state spaces
+Extension beyond linear compositional worlds; bridge toward broader theory of structured state spaces.
 
 ---
 
-## 8. Project 10 — Compositional Failure Laws and Rescue Regime Theory
-
+## 8. Project 10 — Theory-building and rescue regime theory
 ### Status
 **COMPLETE at stable packaged checkpoint**
 
 ### Main contribution
-Project 10 attempted to extract and test higher-level compositional failure laws from Projects 4–9, then subjected those candidate laws to adversarial pressure.
-
-### Strongest results
-- Law 1 received strong support: local competence is not sufficient for global robustness
-- Law 3 received strong but bounded support: rescue mechanisms are family-sensitive rather than universal
-- stronger higher-order necessity claims were weakened under adversarial testing
-- the strongest surviving higher-level result became a threshold-structured regime-space account
-- rescue behavior was shown to depend on regime regions, transition bands, and heterogeneity-dependent boundary geometry
+Higher-order claims are stress-tested under adversarial falsification; the surviving theory is better framed as a threshold-structured regime space.
 
 ### Strategic role
-- theory-building branch
-- strongest higher-level synthesis branch in the repository
-- first branch to convert program-level findings into a post-adversarial regime theory rather than a flat higher-order law
+Theory-and-method contribution about falsification discipline and regime-space accounts.
 
 ---
 
-## 8.5. Project 11 — Efficiency Frontier of Structured Inference
-
+## 8.5. Project 11 — Efficiency frontier of structured inference
 ### Status
-**COMPLETE (efficiency-analysis extension layer)**
+**COMPLETE** (validated/qualified in Project 12 Phase 1)
 
 ### Main contribution
-Project 11 introduces a cost-aware axis into the existing program by studying how structured sampling strategies affect performance in retrieval-based inference systems.
-
-### Strongest results
-- structured sampling (uniform + boundary-aware mixtures) can approximate dense reference performance with significantly fewer samples
-- efficiency-performance trade-offs form a measurable frontier rather than a binary degradation curve
-- k-NN smoothing is not universally beneficial in structured retrieval regimes
-- performance loss under reduced sampling can remain bounded under carefully designed distributions
-- dense NN remains an upper bound, but is not always necessary to approach near-optimal behavior
+Adds a cost-aware axis (structure vs resolution vs sampling) and shows measurable efficiency frontiers.
 
 ### Strategic role
-- introduces efficiency as a first-class axis alongside correctness and compositional structure
-- connects diagnostic structure (Project 4) with scaling behavior in inference cost
-- extends program from "structure-only analysis" to "structure + cost geometry"
+Connects diagnostic structure with scalable inference under constrained computation.
 
 ---
 
-## 9. Highest-Value Scientific Assets Right Now
+## 9. Highest-value scientific assets right now
+Assets (program-level):
+- A — Diagnostic framework (P4)
+- B — Decomposition exclusion map (P5)
+- C — Mechanistic interpretability arc (P6)
+- D — Mechanistic heterogeneity bridge (P7)
+- E — Family-sensitive architecture rescue (P8)
+- F — Higher-dimensional compositional sandbox (P9)
+- G — Threshold-structured rescue regime theory (P10)
+- H — Efficiency frontier of structured inference (P11)
 
-Across Projects 4–10, the strongest current assets are:
-
-### Asset A — Diagnostic framework
-(Project 4)
-
-### Asset B — Decomposition exclusion map
-(Project 5)
-
-### Asset C — Mechanistic interpretability arc
-(Project 6)
-
-### Asset D — Mechanistic heterogeneity bridge
-(Project 7)
-
-### Asset E — Family-sensitive architecture rescue
-(Project 8)
-
-### Asset F — Higher-dimensional compositional sandbox
-(Project 9)
-
-### Asset G — Threshold-structured rescue regime theory
-(Project 10)
-
-### Asset H — Efficiency frontier of structured inference
-(Project 11)
-
-These eight assets together form the current high-value scientific core of the repository.
+Evidence-locked bundle (Phase 1, validated in P12):
+- P4 + P11 (see `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`)
 
 ---
 
-## 10. Closest Thing to a Publishable Core
+## 10. Closest thing to a publishable core (updated)
+There are now two publication-facing layers:
 
-The strongest current publishable nucleus is no longer limited to Projects 4–9.
-
-It now likely includes two major publication-facing paths:
-
-### Path A — Diagnostic / mechanistic / bridge / architecture sequence
+### Layer 1 — Validated evidence bundle (publish-safe now)
 Centered on:
-- Project 4
-- Project 6
-- selected Project 7
-- selected Project 8
+- Project 12 Phase 1 paper bundle (methodology + P11 + P4 case studies)
 
-### Path B — Theory-building and regime-theory path
+### Layer 2 — Domain papers (publish next, after consolidation/validation)
 Centered on:
-- Project 10
-with dependency context from:
-- Projects 5, 7, 8, and 9
-
-Project 10 is now a serious candidate for a theory-facing paper or synthesis section because it does not merely summarize earlier projects; it subjects higher-order claims to adversarial pressure and derives a threshold-structured regime-space account instead.
-
----
-
-## 11. Research Directions Ranked by Strategic Value
-
-### Tier 1 — Highest Value
-1. package Project 10 into a clean outward-facing theory narrative
-2. build a publication-facing synthesis linking Projects 4, 6, 7, 8, and 10
-3. update repository-wide presentation and status consistency after Project 10
-4. formalize efficiency-performance scaling laws from Project 11 and relate them to compositional and retrieval regimes
-
-### Tier 2 — Strong but Secondary
-5. refine the current Project 10 threshold and phase-diagram structure further
-6. return to untested or partially tested candidate laws with the stronger Project 10 falsification discipline
-7. extend higher-dimensional theory links from Project 9 into later work
-
-### Tier 3 — Later
-8. launch a completely new arithmetic branch without first exploiting the current completed theory and packaging foundation
+- P6 mechanistic paper,
+- P5/7/8 bridge+architecture paper,
+- P10 theory-building paper,
+- P9 higher-dimensional sandbox paper (conditional).
 
 ---
 
-## 12. Strongest Current Repository-Wide Position
+## 11. Research directions ranked by strategic value (April 2026)
+### Tier 1 — Highest value
+1) publish the **Project 12 Phase 1** validated evidence bundle (already paper-ready)
+2) package Project 10 into a clean outward-facing theory narrative
+3) package Project 6 into a mechanistic interpretability paper
+4) package Projects 5/7/8 into a bridge + architecture paper
+5) treat Project 9 as a frontier paper line to package when framing is sharp
 
-The strongest current high-level scientific position is:
+### Tier 2 — Strong but secondary
+6) extend Project 12 validation coverage to additional projects (Phase 2: P5–P10)
+7) expand efficiency-scaling studies beyond Project 11 if needed for systems venues
 
-> strong arithmetic behavior can remain narrow, family-sensitive, mechanistically non-uniform, and compositionally fragile; local competence, internal arithmetic structure, and even local causal signals do not automatically scale into globally robust compositional success; rescue can be architecture-sensitive, family-sensitive, and higher-dimensional; and at the highest level, rescue behavior is better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law. The program now also includes an efficiency-aware axis showing that structured sampling strategies can achieve near-optimal performance under reduced computational cost, introducing a cost–performance geometry alongside the previously established structural and mechanistic dimensions.
+---
 
-This is the deepest current result across the full research line.
+## 12. Strongest current repository-wide position (unchanged, but now evidence-aware)
+Strong arithmetic behavior can remain narrow, family-sensitive, mechanistically non-uniform, and compositionally fragile. Local competence and even internal structure do not automatically scale into global compositional robustness. Rescue can be architecture-sensitive, family-sensitive, and higher-dimensional. At the highest level, rescue behavior is better understood through adversarially tested threshold-structured regime theory than through flat universal laws. The program also includes an efficiency-aware axis showing that structured sampling can approach near-optimal performance at lower computational cost.
+
+Project 12 adds the final methodological requirement:
+> claims must be explicitly tied to validated evidence bundles, not only narratives.
 
 ---
 
-## 13. Recommended Strategic Priority
-
-The single strongest recommendation now is:
-
-> consolidate and package the completed research arc through Project 10 before launching major new branch expansion.
-
-This gives the research line:
-- a completed methodological core
-- a completed mechanistic core
-- a completed architecture branch
-- a completed higher-dimensional branch
-- and a completed theory-building branch
-
-That is the strongest strategic position currently available.
-
----
+## 13. Recommended strategic priority
+**Publish Phase 1 (Project 12) first**, then consolidate the remaining axes (P6, P10, P5/7/8, P9) with the same evidence discipline.
