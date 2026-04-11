@@ -2,122 +2,80 @@
 ## Neural-Arithmetic-Diagnostics
 
 **Date:** April 2026  
-**Purpose:** Define the official scientific names for the post-audit projects
+**Purpose:** Define the official scientific names for the post-audit projects (and the validation layer).
 
 ---
 
 ## Rule
+Projects are identified by:
+1) numerical order  
+2) scientific title  
+3) role in the broader research line  
 
-The post-audit projects are identified by:
-
-1. their numerical order
-2. their scientific title
-3. their role in the broader research line
-
-At this stage, these names are treated as:
-- the official scientific display names
-- the names to use in README files, summaries, figures, and future papers
-- not necessarily immediate folder-renaming instructions
+These names are:
+- the official display names for README files, summaries, figures, and papers,
+- not necessarily folder-renaming instructions.
 
 ---
 
-## Official Project Names
+## Official Project Names (Post-audit research line)
 
 ### Project 4
-**Project 4 — Diagnostic Arithmetic Reasoning**
-
-Role:
-- establish the diagnostic framework
-- distinguish narrow gains from broader structural robustness
-
----
+**Project 4 — Diagnostic Arithmetic Reasoning**  
+Role: establish the diagnostic framework; distinguish narrow gains from broader robustness transfer.
 
 ### Project 5
-**Project 5 — Decomposition Robustness Exploration**
-
-Role:
-- test whether decomposition improves structural robustness
-- identify where decomposition succeeds in principle and where learned decomposition fails
-
----
+**Project 5 — Decomposition Robustness Exploration**  
+Role: test decomposition for robustness; map where learned decomposition fails.
 
 ### Project 6
-**Project 6 — Mechanistic Interpretability Sandbox**
-
-Role:
-- identify where arithmetic-relevant internal structure lives
-- move from representation to causal and geometric interpretability
-
----
+**Project 6 — Mechanistic Interpretability Sandbox**  
+Role: locate arithmetic-relevant internal structure; move from representation to causal/geometric evidence.
 
 ### Project 7
-**Project 7 — From Local Competence to Global Compositional Failure**
-
-Role:
-- explain why strong local competence can still fail at the family/global level
-- identify heterogeneous local-to-global failure mechanisms
-
----
+**Project 7 — From Local Competence to Global Compositional Failure**  
+Role: explain why local competence can fail globally; identify heterogeneous family-level mechanisms.
 
 ### Project 8
-**Project 8 — Composition Stabilization Architectures**
-
-Role:
-- design architecture-level mechanisms that can rescue family-specific compositional failures
-- test whether interface and controller mechanisms can be integrated productively
-
----
+**Project 8 — Composition Stabilization Architectures**  
+Role: design family-sensitive rescue mechanisms; integrate interface/controller structure.
 
 ### Project 9
-**Project 9 — High-Dimensional Compositional Sandboxes**
-
-Role:
-- extend the research line into higher-dimensional compositional worlds
-- study topology-sensitive, family-sensitive, and rescue-sensitive behavior in 3D arithmetic-like spaces
-
----
+**Project 9 — High-Dimensional Compositional Sandboxes**  
+Role: extend to higher-dimensional compositional worlds; topology/family/rescue sensitivity in structured 3D spaces.
 
 ### Project 10
-**Project 10 — Compositional Failure Laws and Rescue Regime Theory**
-
-Role:
-- extract and test higher-level compositional failure laws from the post-audit research line
-- subject higher-order theory to adversarial pressure
-- and develop a threshold-structured regime-space account of rescue behavior when stronger flat higher-order claims fail
-
----
+**Project 10 — Compositional Failure Laws and Rescue Regime Theory**  
+Role: extract/test higher-level laws; adversarially stress-test theory; converge on threshold-structured regime-space accounts.
 
 ### Project 11
-**Project 11 — Efficiency Frontier of Structured Inference**
-
-Role:
-- introduce a cost-aware dimension into the post-audit research line
-- study how structured sampling strategies affect performance in retrieval-based inference systems
-- define an efficiency–performance frontier where structured sampling approximates dense representations under reduced computational cost
-- analyze when smoothing (e.g., k-NN) fails or becomes suboptimal under structured regimes
-- extend diagnostic and compositional reasoning into scaling-law and cost-geometry analysis
+**Project 11 — Efficiency Frontier of Structured Inference**  
+Role: introduce cost-aware inference; structured sampling vs dense references; efficiency–performance frontier; kNN limits under structured regimes.
 
 ---
 
-## Usage Policy
+## Official Project Name (Validation layer)
 
-From this point onward, these names should be used consistently in:
-- summaries
-- strategic maps
-- figures
+### Project 12
+**Project 12 — Validation & Consolidation Protocol**  
+Role: convert projects into **validated evidence** via claim locking, manifest-driven execution, standardized artifacts/metadata, copy+patch reproduction with diff gates, and reproduction vs policy checks.  
+Note: Project 12 is a methodology/validation layer, not a new domain-branch like Projects 4–11.
+
+---
+
+## Usage policy
+Use these names consistently in:
+- summaries and strategic maps
+- figures and captions
 - executive descriptions
-- publication-facing narratives
+- publication-facing narratives and papers
 - GitHub presentation text
 
-Folder names may remain unchanged for technical stability unless a later explicit renaming phase is approved.
+Folder names may remain unchanged for technical stability unless an explicit renaming phase is approved.
 
 ---
 
-## Final Principle
-
-The project numbers preserve sequence.
-The scientific names preserve meaning.
-
-Both should be visible.
-
----
+## Final principle
+Project numbers preserve sequence.  
+Scientific names preserve meaning.  
+Both should remain visible.
