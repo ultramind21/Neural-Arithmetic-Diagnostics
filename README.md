@@ -49,10 +49,6 @@ Core message:
 
 ---
 
-!
-
----
-
 ## Quick mental model (how to read the repo)
 - **Projects 1–3:** historical research line (what was believed early).
 - **Audit + Projects 4–11:** structured diagnostics, mechanisms, composition, and theory under stress tests.
