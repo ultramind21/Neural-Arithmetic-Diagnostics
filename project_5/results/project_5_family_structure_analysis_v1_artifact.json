@@ -1,0 +1,211 @@
+{
+  "timestamp_utc": "2026-04-04T22:50:18.547317Z",
+  "experiment": "project_5_family_structure_analysis_v1",
+  "results": {
+    "alternating_carry": {
+      "family": "alternating_carry",
+      "a_first": [
+        9,
+        0,
+        9,
+        0,
+        9,
+        0
+      ],
+      "b_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "carry_seq_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "a_transitions": 5,
+      "b_transitions": 5,
+      "carry_transitions": 5,
+      "pair_diversity": 2,
+      "triple_diversity": 2,
+      "most_common_pairs": [
+        [
+          [
+            9,
+            1
+          ],
+          3
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          3
+        ]
+      ],
+      "most_common_triples": [
+        [
+          [
+            9,
+            1,
+            1
+          ],
+          3
+        ],
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          3
+        ]
+      ],
+      "periodicity_hint": "short_periodic"
+    },
+    "full_propagation_chain": {
+      "family": "full_propagation_chain",
+      "a_first": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "b_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "carry_seq_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "a_transitions": 0,
+      "b_transitions": 0,
+      "carry_transitions": 0,
+      "pair_diversity": 1,
+      "triple_diversity": 1,
+      "most_common_pairs": [
+        [
+          [
+            9,
+            1
+          ],
+          6
+        ]
+      ],
+      "most_common_triples": [
+        [
+          [
+            9,
+            1,
+            1
+          ],
+          6
+        ]
+      ],
+      "periodicity_hint": "uniform"
+    },
+    "block_boundary_stress": {
+      "family": "block_boundary_stress",
+      "a_first": [
+        0,
+        0,
+        9,
+        9,
+        1,
+        0
+      ],
+      "b_first": [
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      "carry_seq_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "a_transitions": 3,
+      "b_transitions": 2,
+      "carry_transitions": 0,
+      "pair_diversity": 3,
+      "triple_diversity": 3,
+      "most_common_pairs": [
+        [
+          [
+            0,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            9,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            8
+          ],
+          1
+        ]
+      ],
+      "most_common_triples": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            9,
+            0,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            1,
+            8,
+            0
+          ],
+          1
+        ]
+      ],
+      "periodicity_hint": "block_or_mixed"
+    }
+  },
+  "notes": [
+    "This analysis compares family structure after chunk-size sensitivity ruled out granularity as the primary explanation.",
+    "Its purpose is to identify what structural differences remain plausible explanatory candidates."
+  ]
+}

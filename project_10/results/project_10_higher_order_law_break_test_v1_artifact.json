@@ -1,0 +1,72 @@
+{
+  "timestamp_utc": "2026-04-07T23:50:27.623015Z",
+  "experiment": "project_10_higher_order_law_break_test_v1",
+  "target": "Higher-Order Candidate (Unverified Chain Hypothesis)",
+  "cases": [
+    {
+      "case_id": "HOT-B1",
+      "project": "Project 7",
+      "setup": "Multiple family-level failures with known heterogeneous trigger structure",
+      "universal_rescue_candidate": "single local trigger correction",
+      "observed_result": "rescues one family but not another",
+      "break_test_role": "supports_chain",
+      "confidence_level": "high",
+      "why_it_matters": "Directly shows that one rescue does not compose across heterogeneous families"
+    },
+    {
+      "case_id": "HOT-B2",
+      "project": "Project 8",
+      "setup": "Integrated architecture tested across distinct family-level failure modes",
+      "universal_rescue_candidate": "single shared rescue component",
+      "observed_result": "different components rescue different families",
+      "break_test_role": "supports_chain",
+      "confidence_level": "high",
+      "why_it_matters": "Direct evidence against one universal rescue mechanism"
+    },
+    {
+      "case_id": "HOT-B3",
+      "project": "Project 9",
+      "setup": "3D compositional sandbox with multiple family-sensitive perturbation regimes",
+      "universal_rescue_candidate": "naive cross-family rescue",
+      "observed_result": "adaptive family-aware rescue outperforms naive rescue",
+      "break_test_role": "supports_chain",
+      "confidence_level": "high",
+      "why_it_matters": "Shows that universal rescue underperforms when family structure matters"
+    },
+    {
+      "case_id": "HOT-B4",
+      "project": "Project 4",
+      "setup": "Intervention improves seen adversarial family",
+      "universal_rescue_candidate": "broad transfer from one intervention",
+      "observed_result": "gain remains narrow and does not transfer broadly",
+      "break_test_role": "partial_supports_chain",
+      "confidence_level": "high",
+      "why_it_matters": "Not a full rescue architecture case, but still pushes against universal rescue logic"
+    },
+    {
+      "case_id": "HOT-B5",
+      "project": "Project 6",
+      "setup": "Strong local mechanistic structure exists",
+      "universal_rescue_candidate": "not directly applicable",
+      "observed_result": "does not directly test rescue universality",
+      "break_test_role": "boundary",
+      "confidence_level": "medium",
+      "why_it_matters": "Important boundary: not every project bears directly on the chain falsification test"
+    }
+  ],
+  "summary": {
+    "counts": {
+      "supports_chain": 3,
+      "partial_supports_chain": 1,
+      "boundary": 1,
+      "weakens_chain": 0,
+      "falsifies_chain": 0
+    },
+    "support_strength_score": 3.5,
+    "overall_verdict": "CHAIN HOLDS UNDER CURRENT BREAK TEST"
+  },
+  "notes": [
+    "This is the first direct break-style test of the higher-order chain hypothesis.",
+    "It evaluates whether universal rescue fails or underperforms under heterogeneous family-level failure structure."
+  ]
+}

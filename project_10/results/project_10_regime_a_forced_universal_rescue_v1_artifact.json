@@ -1,0 +1,90 @@
+{
+  "timestamp_utc": "2026-04-08T00:19:44.379478Z",
+  "experiment": "project_10_regime_a_forced_universal_rescue_v1",
+  "regime": "Regime A \u2014 Forced Universal Rescue",
+  "cases": [
+    {
+      "family": "family_A",
+      "local_competence": 0.93,
+      "base_global_score": 0.48,
+      "shared_failure_factor": 0.42,
+      "family_noise": 0.01
+    },
+    {
+      "family": "family_B",
+      "local_competence": 0.91,
+      "base_global_score": 0.46,
+      "shared_failure_factor": 0.4,
+      "family_noise": -0.01
+    },
+    {
+      "family": "family_C",
+      "local_competence": 0.94,
+      "base_global_score": 0.47,
+      "shared_failure_factor": 0.41,
+      "family_noise": 0.02
+    },
+    {
+      "family": "family_D",
+      "local_competence": 0.92,
+      "base_global_score": 0.45,
+      "shared_failure_factor": 0.39,
+      "family_noise": -0.02
+    }
+  ],
+  "rows": [
+    {
+      "family": "family_A",
+      "local_competence": 0.93,
+      "base_global_score": 0.48,
+      "shared_failure_factor": 0.42,
+      "family_noise": 0.01,
+      "universal_rescue_score": 0.6055,
+      "family_aware_rescue_score": 0.6359,
+      "winner": "family_aware"
+    },
+    {
+      "family": "family_B",
+      "local_competence": 0.91,
+      "base_global_score": 0.46,
+      "shared_failure_factor": 0.4,
+      "family_noise": -0.01,
+      "universal_rescue_score": 0.5795000000000001,
+      "family_aware_rescue_score": 0.6099000000000001,
+      "winner": "family_aware"
+    },
+    {
+      "family": "family_C",
+      "local_competence": 0.94,
+      "base_global_score": 0.47,
+      "shared_failure_factor": 0.41,
+      "family_noise": 0.02,
+      "universal_rescue_score": 0.592,
+      "family_aware_rescue_score": 0.6228,
+      "winner": "family_aware"
+    },
+    {
+      "family": "family_D",
+      "local_competence": 0.92,
+      "base_global_score": 0.45,
+      "shared_failure_factor": 0.39,
+      "family_noise": -0.02,
+      "universal_rescue_score": 0.566,
+      "family_aware_rescue_score": 0.5968,
+      "winner": "family_aware"
+    }
+  ],
+  "summary": {
+    "avg_base_global_score": 0.46499999999999997,
+    "avg_universal_rescue_score": 0.58575,
+    "avg_family_aware_rescue_score": 0.6163500000000001,
+    "universal_wins": 0,
+    "family_aware_wins": 4,
+    "near_ties": 0,
+    "verdict": "SUPPORTS HIGHER-ORDER CANDIDATE"
+  },
+  "notes": [
+    "This is the first adversarial synthetic regime in Project 10.",
+    "It tests whether universal rescue can become competitive when failure structure is intentionally aligned across nominal families."
+  ]
+}

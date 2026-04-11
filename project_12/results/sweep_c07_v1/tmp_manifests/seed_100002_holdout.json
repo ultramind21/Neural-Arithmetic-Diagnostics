@@ -1,0 +1,13 @@
+{
+  "description": "Holdout for sweep seed 100002",
+  "fixed_params": {
+    "holdout_seed": 100002,
+    "holdout_size": 800,
+    "h_min": 0.001,
+    "h_max": 0.02,
+    "p_min": 0.26,
+    "p_max": 0.42,
+    "boundary_pool": 90000
+  },
+  "output_dir": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\tmp_holdouts\\seed_100002"
+}

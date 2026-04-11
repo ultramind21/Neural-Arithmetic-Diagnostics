@@ -1,0 +1,15 @@
+{
+  "test": "phase_d_soft_clamp",
+  "created_date": "2026-04-10",
+  "soft_clamp": {
+    "definition": "soft_clamp(x;k) = softplus(kx)/k - softplus(k(x-1))/k",
+    "k": 15,
+    "note": "Approximate clamp01 with smooth saturation; approximately identity in [0,1]."
+  },
+  "inputs": {
+    "system_path": "project_11/results/transfer_t4_system.json",
+    "holdout_path": "project_11/results/phase_c3_sat_margin/holdout_points.json",
+    "holdout_seed": 223311,
+    "holdout_sha256": "4ede0bb89dd3f4f72b983018956b94a53bda3da74e1e258ddf56118d3812607c"
+  }
+}

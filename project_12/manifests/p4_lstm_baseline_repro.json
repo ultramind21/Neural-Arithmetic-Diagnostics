@@ -1,0 +1,10 @@
+{
+  "sprint": "4B.1",
+  "project": "project_4",
+  "phase": "baseline_reproduction",
+  "architecture": "lstm",
+  "claim_ids": ["P4-C02", "P4-C03", "P4-C05"],
+  "entrypoint": "project_12/scripts/p4/run_p4_lstm_baseline_repro.py",
+  "output_dir": "project_12/results/repro_p4/baselines/lstm",
+  "device": "cpu"
+}

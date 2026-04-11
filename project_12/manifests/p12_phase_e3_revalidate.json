@@ -1,0 +1,15 @@
+{
+  "manifest_version": "2.0",
+  "experiment_id": "p12_phase_e3_revalidate",
+  "phase": "E3",
+  "sprint": "2C",
+  "claim_ids": ["P11-C05"],
+  "description": "Phase E3 re-validation with new holdout + pool + seeds",
+  "entrypoint": "project_12/scripts/run_p11_phase_e3_repro.py",
+  "fixed_params": {
+    "holdout_path": "project_12/results/revalidate/data/holdout_points.json",
+    "pool_path": "project_12/results/revalidate/data/pool_points.json",
+    "seeds": [666, 777, 888, 999, 1010]
+  },
+  "output_dir": "project_12/results/revalidate/phase_e3"
+}

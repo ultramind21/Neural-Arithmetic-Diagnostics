@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-04-04T21:20:21.614826Z",
+  "experiment": "project_5_learned_local_processor_v1",
+  "chunk_size": 2,
+  "length": 6,
+  "num_samples": 64,
+  "local_training_metrics": {
+    "local_digit_acc": 0.4099999964237213,
+    "local_carry_acc": 1.0,
+    "local_exact_acc": 0.4099999964237213
+  },
+  "results": {
+    "alternating_carry": {
+      "exact_match": 0.0
+    },
+    "full_propagation_chain": {
+      "exact_match": 0.0
+    },
+    "block_boundary_stress": {
+      "exact_match": 0.0
+    }
+  },
+  "notes": [
+    "This is the first learned local processor experiment in Project 5.",
+    "It follows the structural-oracle decomposition result.",
+    "Its purpose is to test whether learned carry-interface support can preserve blockwise robustness."
+  ]
+}

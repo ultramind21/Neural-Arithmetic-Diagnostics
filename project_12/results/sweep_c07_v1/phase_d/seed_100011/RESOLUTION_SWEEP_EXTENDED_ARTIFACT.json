@@ -1,0 +1,312 @@
+{
+  "k": 15,
+  "points": 800,
+  "true_dist": {
+    "family-aware region": 108,
+    "transition region": 318,
+    "universal region": 374
+  },
+  "rules": {
+    "V3": {
+      "overall": {
+        "acc": 0.8525,
+        "macro_f1_fixed3": 0.8349360060851504,
+        "macro_f1_present": 0.8349360060851504,
+        "pred_dist": {
+          "family-aware region": 156,
+          "transition region": 200,
+          "universal region": 444
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.95,
+        "macro_f1_fixed3": 0.9020423280423281,
+        "macro_f1_present": 0.9020423280423281,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 111,
+          "transition region": 32,
+          "universal region": 257
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.755,
+        "macro_f1_fixed3": 0.5743643064854264,
+        "macro_f1_present": 0.5743643064854264,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 45,
+          "transition region": 168,
+          "universal region": 187
+        }
+      }
+    },
+    "V3.1": {
+      "overall": {
+        "acc": 0.95625,
+        "macro_f1_fixed3": 0.9560573319517714,
+        "macro_f1_present": 0.9560573319517714,
+        "pred_dist": {
+          "family-aware region": 117,
+          "transition region": 283,
+          "universal region": 400
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.98,
+        "macro_f1_fixed3": 0.9659095157374384,
+        "macro_f1_present": 0.9659095157374384,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 106,
+          "transition region": 44,
+          "universal region": 250
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.9325,
+        "macro_f1_fixed3": 0.7691634745579287,
+        "macro_f1_present": 0.7691634745579287,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 11,
+          "transition region": 239,
+          "universal region": 150
+        }
+      }
+    }
+  },
+  "nn": {
+    "NN11": {
+      "overall": {
+        "acc": 0.89375,
+        "macro_f1_fixed3": 0.8652406989104646,
+        "macro_f1_present": 0.8652406989104646,
+        "pred_dist": {
+          "family-aware region": 146,
+          "transition region": 265,
+          "universal region": 389
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9425,
+        "macro_f1_fixed3": 0.9042539612467525,
+        "macro_f1_present": 0.9042539612467525,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 102,
+          "transition region": 55,
+          "universal region": 243
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.845,
+        "macro_f1_fixed3": 0.6051987582036426,
+        "macro_f1_present": 0.6051987582036426,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 44,
+          "transition region": 210,
+          "universal region": 146
+        }
+      }
+    },
+    "NN21": {
+      "overall": {
+        "acc": 0.96375,
+        "macro_f1_fixed3": 0.9536224942159993,
+        "macro_f1_present": 0.9536224942159993,
+        "pred_dist": {
+          "family-aware region": 113,
+          "transition region": 309,
+          "universal region": 378
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.97,
+        "macro_f1_fixed3": 0.9492153469426197,
+        "macro_f1_present": 0.9492153469426197,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 103,
+          "transition region": 56,
+          "universal region": 241
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.9575,
+        "macro_f1_fixed3": 0.699567598497803,
+        "macro_f1_present": 0.699567598497803,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 10,
+          "transition region": 253,
+          "universal region": 137
+        }
+      }
+    },
+    "NN41": {
+      "overall": {
+        "acc": 0.98,
+        "macro_f1_fixed3": 0.9748258018779302,
+        "macro_f1_present": 0.9748258018779302,
+        "pred_dist": {
+          "family-aware region": 113,
+          "transition region": 310,
+          "universal region": 377
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9825,
+        "macro_f1_fixed3": 0.9685549935025272,
+        "macro_f1_present": 0.9685549935025272,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 107,
+          "transition region": 49,
+          "universal region": 244
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.9775,
+        "macro_f1_fixed3": 0.8040717101438165,
+        "macro_f1_present": 0.8040717101438165,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 6,
+          "transition region": 261,
+          "universal region": 133
+        }
+      }
+    },
+    "NN81": {
+      "overall": {
+        "acc": 0.9925,
+        "macro_f1_fixed3": 0.9897912408086289,
+        "macro_f1_present": 0.9897912408086289,
+        "pred_dist": {
+          "family-aware region": 108,
+          "transition region": 318,
+          "universal region": 374
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9925,
+        "macro_f1_fixed3": 0.9866143020782197,
+        "macro_f1_present": 0.9866143020782197,
+        "true_dist": {
+          "family-aware region": 105,
+          "transition region": 52,
+          "universal region": 243
+        },
+        "pred_dist": {
+          "family-aware region": 105,
+          "transition region": 53,
+          "universal region": 242
+        }
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.9925,
+        "macro_f1_fixed3": 0.8857382225945737,
+        "macro_f1_present": 0.8857382225945737,
+        "true_dist": {
+          "family-aware region": 3,
+          "transition region": 266,
+          "universal region": 131
+        },
+        "pred_dist": {
+          "family-aware region": 3,
+          "transition region": 265,
+          "universal region": 132
+        }
+      }
+    }
+  },
+  "nn_grid_build": {
+    "11": {
+      "n": 11,
+      "grid_points": 121,
+      "build_seconds": 0.0015039443969726562
+    },
+    "21": {
+      "n": 21,
+      "grid_points": 441,
+      "build_seconds": 0.003512859344482422
+    },
+    "41": {
+      "n": 41,
+      "grid_points": 1681,
+      "build_seconds": 0.01607990264892578
+    },
+    "81": {
+      "n": 81,
+      "grid_points": 6561,
+      "build_seconds": 0.053490400314331055
+    }
+  },
+  "p12_metadata": {
+    "git_hash": "e2519c2d94fd658adc79aa719c34d498b93efa46",
+    "timestamp_utc": "2026-04-11T04:51:37.799673+00:00",
+    "env": {
+      "python_version": "3.12.0",
+      "torch_version": "2.5.1+cu121",
+      "cuda_available": true,
+      "platform": "Windows-11-10.0.28000-SP0"
+    },
+    "manifest_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\tmp_manifests\\seed_100011_phase_d.json",
+    "manifest_sha256": "76723b2abbad2c9096abc07a6d3ac987bb630c0f5189f3c0c0b065001eb85c3b",
+    "entrypoint": "run_p11_phase_d_repro.py"
+  }
+}

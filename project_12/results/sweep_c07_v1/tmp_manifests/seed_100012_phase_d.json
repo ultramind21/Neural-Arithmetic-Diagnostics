@@ -1,0 +1,7 @@
+{
+  "description": "Phase D for C07 sweep seed 100012",
+  "fixed_params": {
+    "holdout_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\tmp_holdouts\\seed_100012\\holdout_points.json"
+  },
+  "output_dir": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\phase_d\\seed_100012"
+}

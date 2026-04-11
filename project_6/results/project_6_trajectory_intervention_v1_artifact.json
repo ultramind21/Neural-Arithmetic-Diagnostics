@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-04-05T01:07:14.979188Z",
+  "experiment": "project_6_trajectory_intervention_v1",
+  "alpha": 0.5,
+  "family_results": {
+    "alternating_carry": {
+      "exact_match": 0.0,
+      "trajectory_diff_sequence": [
+        2.995612144470215,
+        1.4978060722351074,
+        2.246708869934082,
+        1.8722574710845947,
+        2.059483051300049
+      ],
+      "trajectory_diff_mean": 2.1343735218048097
+    },
+    "full_propagation_chain": {
+      "exact_match": 1.0,
+      "trajectory_diff_sequence": [
+        0.567997395992279,
+        0.28399866819381714,
+        0.14199936389923096,
+        0.07099967449903488,
+        0.03549983352422714
+      ],
+      "trajectory_diff_mean": 0.22009898722171783
+    },
+    "block_boundary_stress": {
+      "exact_match": 0.0,
+      "trajectory_diff_sequence": [
+        2.9509963989257812,
+        1.5159990787506104,
+        0.7579996585845947,
+        2.600818395614624,
+        1.3004093170166016
+      ],
+      "trajectory_diff_mean": 1.8252445697784423
+    }
+  },
+  "notes": [
+    "This is the first trajectory-level intervention in Project 6.",
+    "It tests whether damped hidden-state evolution improves family-level performance."
+  ]
+}

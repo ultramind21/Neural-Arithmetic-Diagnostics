@@ -1,0 +1,10 @@
+{
+  "entrypoint": "project_12/scripts/run_p11_phase_e2_repro.py",
+  "description": "Phase E2 (sampling efficiency) - Procedure-preserving re-validation",
+  "output_dir": "project_12/results/revalidate_p11proc/phase_e2/",
+  "fixed_params": {
+    "holdout_path": "project_12/results/revalidate_p11proc/data/holdout_points.json",
+    "seeds": [404, 505, 606]
+  },
+  "notes": "Uses holdout from C3 generator (seed=424242). No pool_path → internal RNG generation per Project 11 procedure. Seeds override SEEDS constant."
+}

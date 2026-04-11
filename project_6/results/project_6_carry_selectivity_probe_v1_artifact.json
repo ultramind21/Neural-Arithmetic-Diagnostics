@@ -1,0 +1,82 @@
+{
+  "timestamp_utc": "2026-04-04T23:40:11.673235Z",
+  "experiment": "project_6_carry_selectivity_probe_v1",
+  "device": "cuda",
+  "results": [
+    {
+      "model_name": "simple",
+      "num_units": 32,
+      "num_cases_carry0": 100,
+      "num_cases_carry1": 100,
+      "avg_separability": 0.988624095916748,
+      "top_unit_indices": [
+        6,
+        22,
+        7,
+        16,
+        20
+      ],
+      "top_unit_separability": [
+        2.7300612926483154,
+        2.725867986679077,
+        2.6774682998657227,
+        2.6322033405303955,
+        2.4618520736694336
+      ],
+      "overall_mean_0": [
+        0.9012631177902222,
+        1.003622055053711,
+        0.6338980793952942,
+        5.163881301879883,
+        5.093347072601318
+      ],
+      "overall_mean_1": [
+        0.23086456954479218,
+        0.0,
+        6.841829299926758,
+        4.816441535949707,
+        8.209372520446777
+      ]
+    },
+    {
+      "model_name": "carry_conditioned",
+      "num_units": 32,
+      "num_cases_carry0": 100,
+      "num_cases_carry1": 100,
+      "avg_separability": 1.2485193014144897,
+      "top_unit_indices": [
+        11,
+        31,
+        27,
+        17,
+        24
+      ],
+      "top_unit_separability": [
+        2.977468967437744,
+        2.6650493144989014,
+        2.3306140899658203,
+        2.1263225078582764,
+        2.1155946254730225
+      ],
+      "overall_mean_0": [
+        3.839266300201416,
+        -3.4779207706451416,
+        -5.184225082397461,
+        3.0392279624938965,
+        0.6169221997261047
+      ],
+      "overall_mean_1": [
+        -0.30684876441955566,
+        6.0280680656433105,
+        2.0690345764160156,
+        6.927775859832764,
+        -0.5257666110992432
+      ]
+    }
+  ],
+  "notes": [
+    "First interpretability experiment in Project 6.",
+    "Compares two local processor architectures.",
+    "Measures carry selectivity in hidden activations."
+  ]
+}

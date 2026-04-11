@@ -1,0 +1,11 @@
+{
+  "description": "Holdout generator gate test: seed=223311 (Project 11 original)",
+  "holdout_generator": {
+    "seed": 223311,
+    "N_uniform": 400,
+    "N_boundary": 400,
+    "h_range": [0.001, 0.02],
+    "p_range": [0.26, 0.42]
+  },
+  "output_dir": "project_12/results/gate_test_p11_original_seed/data"
+}

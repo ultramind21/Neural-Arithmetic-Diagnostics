@@ -1,0 +1,23 @@
+{
+  "script": "run_p11_phase_c3_generate_holdout.py",
+  "procedure": "Project 11 Phase C3 (procedure-preserving)",
+  "manifest": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\tmp_manifests\\seed_100014_holdout.json",
+  "output_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\results\\sweep_c07_v1\\tmp_holdouts\\seed_100014\\holdout_points.json",
+  "sha256": "beebc0c8dbd945147487f1d4594f1fe77a4ec3a9b863c5a6d91203a305a301c2",
+  "generated_at": "2026-04-11T04:51:50.674995Z",
+  "parameters": {
+    "seed": 100014,
+    "n_total": 800,
+    "n_uniform": 400,
+    "n_boundary": 400,
+    "h_range": [
+      0.001,
+      0.02
+    ],
+    "p_range": [
+      0.26,
+      0.42
+    ],
+    "boundary_pool_size": 90000
+  }
+}

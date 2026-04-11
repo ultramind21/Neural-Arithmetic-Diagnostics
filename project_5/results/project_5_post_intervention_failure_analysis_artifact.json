@@ -1,0 +1,193 @@
+{
+  "timestamp_utc": "2026-04-04T21:54:42.888172Z",
+  "experiment": "project_5_post_intervention_failure_analysis",
+  "results": {
+    "alternating_carry": {
+      "digit_acc": 0.8333333333333334,
+      "carry_acc": 1.0,
+      "exact_acc": 0.8333333333333334,
+      "position_digit_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "position_carry_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position_exact_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "digit_true_first": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "carry_true_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "digit_pred_first": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "carry_pred_first": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    "full_propagation_chain": {
+      "digit_acc": 1.0,
+      "carry_acc": 1.0,
+      "exact_acc": 1.0,
+      "position_digit_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position_carry_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position_exact_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "digit_true_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "carry_true_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "digit_pred_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "carry_pred_first": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "block_boundary_stress": {
+      "digit_acc": 0.5,
+      "carry_acc": 1.0,
+      "exact_acc": 0.5,
+      "position_digit_acc": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "position_carry_acc": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "position_exact_acc": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "digit_true_first": [
+        0,
+        0,
+        9,
+        9,
+        9,
+        0
+      ],
+      "carry_true_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "digit_pred_first": [
+        1,
+        1,
+        9,
+        9,
+        9,
+        1
+      ],
+      "carry_pred_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "notes": [
+    "This analysis follows the explicit carry representation result.",
+    "Its goal is to compare the rescued and still-failing families position by position."
+  ]
+}

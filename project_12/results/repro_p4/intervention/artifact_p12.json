@@ -1,0 +1,88 @@
+{
+  "p12_metadata": {
+    "git_hash": "cf81c22f266f78da79b3291e9d81b1b0888e1d5a",
+    "timestamp_utc": "2026-04-11T08:45:28.992103+00:00",
+    "env": {
+      "python_version": "3.12.0",
+      "torch_version": "2.11.0+cpu",
+      "cuda_available": false,
+      "platform": "Windows-11-10.0.28000-SP0"
+    },
+    "manifest_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\manifests\\p4_adversarial_training_repro_manifest.json",
+    "manifest_sha256": "7531255a02ae7ec9558b5d98286bbfe0d84e08436fdfcbd0dd5b7bf0f30dc374",
+    "entrypoint": "run_p4_adversarial_training_repro.py",
+    "source_script_copied_from": "project_4/interventions/adversarial_training/project_4_adversarial_training.py"
+  },
+  "baseline_exact_match_reference": {
+    "alternating_carry": 0.0,
+    "full_propagation_chain": 0.0,
+    "block_boundary_stress": 1.0
+  },
+  "adversarial_training_gains": {
+    "alternating_carry": {
+      "pre": 0.0,
+      "post": 1.0,
+      "gain": 1.0
+    },
+    "full_propagation_chain": {
+      "pre": 0.0,
+      "post": 0.0,
+      "gain": 0.0
+    },
+    "block_boundary_stress": {
+      "pre": 1.0,
+      "post": 0.0,
+      "gain": -1.0
+    }
+  },
+  "original_project4_artifact": {
+    "timestamp_utc": "2026-04-11T08:45:28.931596Z",
+    "framework_version": "1.0",
+    "intervention_type": "adversarial_training",
+    "base_model_family": "phase30_mlp",
+    "seen_families": [
+      "alternating_carry",
+      "full_propagation_chain"
+    ],
+    "heldout_family": [
+      "block_boundary_stress"
+    ],
+    "in_distribution": {
+      "digit_acc": 0.5875000135274604,
+      "carry_acc": 0.9515625026542693,
+      "combined_acc": 0.5875000135274604,
+      "exact_match": 0.046875
+    },
+    "seen_results": {
+      "alternating_carry": {
+        "digit_acc": 1.0,
+        "carry_acc": 1.0,
+        "combined_acc": 1.0,
+        "exact_match": 1.0
+      },
+      "full_propagation_chain": {
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
+        "exact_match": 0.0
+      }
+    },
+    "heldout_results": {
+      "block_boundary_stress": {
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 0.800000011920929,
+        "combined_acc": 0.6000000238418579,
+        "exact_match": 0.0
+      }
+    },
+    "baseline_reference": {
+      "in_distribution": "compare against PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md",
+      "block_boundary_stress": "compare against stable baseline matrix"
+    },
+    "notes": [
+      "Seen-family gains alone do not establish robust transfer.",
+      "Held-out-family behavior is the key Project 4 MVP discriminator.",
+      "This artifact should be followed by validation reruns if retained."
+    ]
+  }
+}

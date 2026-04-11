@@ -1,0 +1,99 @@
+{
+  "test": "phase_e1_adaptive_nn",
+  "metrics": {
+    "true_dist": {
+      "family-aware region": 127,
+      "transition region": 310,
+      "universal region": 363
+    },
+    "V3.1": {
+      "overall": {
+        "acc": 0.93,
+        "macro_f1_present": 0.9352584140643304,
+        "pred_dist": {
+          "family-aware region": 134,
+          "transition region": 256,
+          "universal region": 410
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9725,
+        "macro_f1_present": 0.9490385986891386
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.8875,
+        "macro_f1_present": 0.8693061378484614
+      }
+    },
+    "NN_adaptive_2000": {
+      "overall": {
+        "acc": 0.98,
+        "macro_f1_present": 0.9752409628307511,
+        "pred_dist": {
+          "family-aware region": 119,
+          "transition region": 322,
+          "universal region": 359
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.975,
+        "macro_f1_present": 0.9589099172432506
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.985,
+        "macro_f1_present": 0.9052741151977793
+      },
+      "ref_points": 2000
+    },
+    "NN41": {
+      "overall": {
+        "acc": 0.97,
+        "macro_f1_present": 0.9673707467962881,
+        "pred_dist": {
+          "family-aware region": 123,
+          "transition region": 310,
+          "universal region": 367
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9875,
+        "macro_f1_present": 0.9787457754686318
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.9525,
+        "macro_f1_present": 0.8624817135455434
+      },
+      "seconds": 0.5018713474273682,
+      "grid_points": 1681
+    },
+    "NN81": {
+      "overall": {
+        "acc": 0.98625,
+        "macro_f1_present": 0.9847195725541383,
+        "pred_dist": {
+          "family-aware region": 124,
+          "transition region": 313,
+          "universal region": 363
+        }
+      },
+      "uniform": {
+        "n": 400,
+        "acc": 0.9925,
+        "macro_f1_present": 0.9872249661089866
+      },
+      "boundary": {
+        "n": 400,
+        "acc": 0.98,
+        "macro_f1_present": 0.9290770492279113
+      },
+      "seconds": 2.3717658519744873,
+      "grid_points": 6561
+    }
+  }
+}

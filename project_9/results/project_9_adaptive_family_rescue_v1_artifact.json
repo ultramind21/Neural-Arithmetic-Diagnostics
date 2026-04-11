@@ -1,0 +1,95 @@
+{
+  "timestamp_utc": "2026-04-07T20:10:54.283741Z",
+  "experiment": "project_9_adaptive_family_rescue_v1",
+  "shape": [
+    3,
+    2,
+    2
+  ],
+  "family_map": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  ],
+  "rescue_results": [
+    {
+      "target_position": [
+        0,
+        0,
+        0
+      ],
+      "target_family": 0,
+      "base_changed_count": 4,
+      "same_family_changed_count": 4,
+      "other_family_changed_count": 7,
+      "adaptive_changed_count": 4,
+      "base_carry_count": 2,
+      "same_family_carry_count": 3,
+      "other_family_carry_count": 2,
+      "adaptive_carry_count": 3
+    },
+    {
+      "target_position": [
+        1,
+        0,
+        0
+      ],
+      "target_family": 1,
+      "base_changed_count": 5,
+      "same_family_changed_count": 5,
+      "other_family_changed_count": 5,
+      "adaptive_changed_count": 5,
+      "base_carry_count": 3,
+      "same_family_carry_count": 3,
+      "other_family_carry_count": 3,
+      "adaptive_carry_count": 3
+    },
+    {
+      "target_position": [
+        2,
+        0,
+        0
+      ],
+      "target_family": 2,
+      "base_changed_count": 4,
+      "same_family_changed_count": 4,
+      "other_family_changed_count": 7,
+      "adaptive_changed_count": 4,
+      "base_carry_count": 3,
+      "same_family_carry_count": 4,
+      "other_family_carry_count": 3,
+      "adaptive_carry_count": 4
+    }
+  ],
+  "notes": [
+    "This is the first adaptive rescue experiment in Project 9.",
+    "It compares same-family, cross-family, and family-aware adaptive rescue policies."
+  ]
+}

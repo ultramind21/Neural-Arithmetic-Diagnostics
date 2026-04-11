@@ -1,0 +1,13 @@
+{
+  "manifest_version": "2.0",
+  "experiment_id": "p12_phase_d_revalidate",
+  "phase": "D",
+  "sprint": "2C",
+  "claim_ids": ["P11-C01", "P11-C02", "P11-C07", "P11-C08"],
+  "description": "Phase D re-validation with new holdout (independent seeds)",
+  "entrypoint": "project_12/scripts/run_p11_phase_d_repro.py",
+  "fixed_params": {
+    "holdout_path": "project_12/results/revalidate/data/holdout_points.json"
+  },
+  "output_dir": "project_12/results/revalidate/phase_d"
+}

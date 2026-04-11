@@ -1,0 +1,477 @@
+{
+  "timestamp_utc": "2026-04-08T01:02:32.350007Z",
+  "experiment": "project_10_phase2_threshold_matrix_v1",
+  "target": "Revised higher-order candidate V1",
+  "cells": [
+    {
+      "heterogeneity": "low",
+      "universal_power": "baseline",
+      "residual_abs": 0.003,
+      "universal_power_value": 0.3,
+      "avg_universal_score": 0.5914999999999999,
+      "avg_family_aware_score": 0.5938999999999999,
+      "gap_family_minus_universal": 0.0023999999999999577,
+      "universal_wins": 0,
+      "family_aware_wins": 0,
+      "near_ties": 4,
+      "verdict": "boundary / mixed",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.603,
+          "family_aware_score": 0.6053999999999999,
+          "winner": "near_tie"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.59,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "near_tie"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.583,
+          "family_aware_score": 0.5853999999999999,
+          "winner": "near_tie"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.59,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "near_tie"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "low",
+      "universal_power": "moderate",
+      "residual_abs": 0.003,
+      "universal_power_value": 0.36,
+      "avg_universal_score": 0.6158,
+      "avg_family_aware_score": 0.5938999999999999,
+      "gap_family_minus_universal": -0.02190000000000014,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.6275999999999999,
+          "family_aware_score": 0.6053999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.614,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.6076,
+          "family_aware_score": 0.5853999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.614,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "universal"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "low",
+      "universal_power": "strong",
+      "residual_abs": 0.003,
+      "universal_power_value": 0.42,
+      "avg_universal_score": 0.6401,
+      "avg_family_aware_score": 0.5938999999999999,
+      "gap_family_minus_universal": -0.04620000000000013,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.6522,
+          "family_aware_score": 0.6053999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.638,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.003,
+          "universal_score": 0.6322,
+          "family_aware_score": 0.5853999999999999,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.003,
+          "universal_score": 0.638,
+          "family_aware_score": 0.5923999999999999,
+          "winner": "universal"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "medium",
+      "universal_power": "baseline",
+      "residual_abs": 0.009,
+      "universal_power_value": 0.3,
+      "avg_universal_score": 0.5914999999999999,
+      "avg_family_aware_score": 0.5987,
+      "gap_family_minus_universal": 0.007200000000000095,
+      "universal_wins": 0,
+      "family_aware_wins": 4,
+      "near_ties": 0,
+      "verdict": "supports revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.603,
+          "family_aware_score": 0.6102,
+          "winner": "family_aware"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.59,
+          "family_aware_score": 0.5972,
+          "winner": "family_aware"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.583,
+          "family_aware_score": 0.5902,
+          "winner": "family_aware"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.59,
+          "family_aware_score": 0.5972,
+          "winner": "family_aware"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "medium",
+      "universal_power": "moderate",
+      "residual_abs": 0.009,
+      "universal_power_value": 0.36,
+      "avg_universal_score": 0.6158,
+      "avg_family_aware_score": 0.5987,
+      "gap_family_minus_universal": -0.017100000000000004,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.6275999999999999,
+          "family_aware_score": 0.6102,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.614,
+          "family_aware_score": 0.5972,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.6076,
+          "family_aware_score": 0.5902,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.614,
+          "family_aware_score": 0.5972,
+          "winner": "universal"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "medium",
+      "universal_power": "strong",
+      "residual_abs": 0.009,
+      "universal_power_value": 0.42,
+      "avg_universal_score": 0.6401,
+      "avg_family_aware_score": 0.5987,
+      "gap_family_minus_universal": -0.04139999999999999,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.6522,
+          "family_aware_score": 0.6102,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.638,
+          "family_aware_score": 0.5972,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.009,
+          "universal_score": 0.6322,
+          "family_aware_score": 0.5902,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.009,
+          "universal_score": 0.638,
+          "family_aware_score": 0.5972,
+          "winner": "universal"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "high",
+      "universal_power": "baseline",
+      "residual_abs": 0.015,
+      "universal_power_value": 0.3,
+      "avg_universal_score": 0.5914999999999999,
+      "avg_family_aware_score": 0.6034999999999999,
+      "gap_family_minus_universal": 0.01200000000000001,
+      "universal_wins": 0,
+      "family_aware_wins": 4,
+      "near_ties": 0,
+      "verdict": "supports revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.603,
+          "family_aware_score": 0.615,
+          "winner": "family_aware"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.59,
+          "family_aware_score": 0.602,
+          "winner": "family_aware"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.583,
+          "family_aware_score": 0.595,
+          "winner": "family_aware"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.59,
+          "family_aware_score": 0.602,
+          "winner": "family_aware"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "high",
+      "universal_power": "moderate",
+      "residual_abs": 0.015,
+      "universal_power_value": 0.36,
+      "avg_universal_score": 0.6158,
+      "avg_family_aware_score": 0.6034999999999999,
+      "gap_family_minus_universal": -0.012300000000000089,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.6275999999999999,
+          "family_aware_score": 0.615,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.614,
+          "family_aware_score": 0.602,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.6076,
+          "family_aware_score": 0.595,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.614,
+          "family_aware_score": 0.602,
+          "winner": "universal"
+        }
+      ]
+    },
+    {
+      "heterogeneity": "high",
+      "universal_power": "strong",
+      "residual_abs": 0.015,
+      "universal_power_value": 0.42,
+      "avg_universal_score": 0.6401,
+      "avg_family_aware_score": 0.6034999999999999,
+      "gap_family_minus_universal": -0.03660000000000008,
+      "universal_wins": 4,
+      "family_aware_wins": 0,
+      "near_ties": 0,
+      "verdict": "weakens revised candidate",
+      "rows": [
+        {
+          "family": "A",
+          "base_global": 0.48,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.6522,
+          "family_aware_score": 0.615,
+          "winner": "universal"
+        },
+        {
+          "family": "B",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.638,
+          "family_aware_score": 0.602,
+          "winner": "universal"
+        },
+        {
+          "family": "C",
+          "base_global": 0.46,
+          "shared_failure": 0.41,
+          "residual_family_factor": 0.015,
+          "universal_score": 0.6322,
+          "family_aware_score": 0.595,
+          "winner": "universal"
+        },
+        {
+          "family": "D",
+          "base_global": 0.47,
+          "shared_failure": 0.4,
+          "residual_family_factor": -0.015,
+          "universal_score": 0.638,
+          "family_aware_score": 0.602,
+          "winner": "universal"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "counts": {
+      "supports revised candidate": 2,
+      "boundary / mixed": 1,
+      "weakens revised candidate": 6
+    }
+  },
+  "notes": [
+    "This is the first threshold matrix in Project 10 Phase 2.",
+    "It maps revised-candidate behavior across heterogeneity and universal-power levels."
+  ]
+}

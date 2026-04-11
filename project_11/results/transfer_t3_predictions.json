@@ -1,0 +1,30 @@
+{
+  "test": "transfer_t3_rule_v3",
+  "created_date": "2026-04-10",
+  "lock_note": "Predictions must not be edited after this file is saved/locked.",
+  "predictions": [
+    { "id": "t3_p01", "H": 0.0025, "P": 0.285, "predicted_region": "family-aware region", "confidence": "high" },
+    { "id": "t3_p02", "H": 0.0050, "P": 0.285, "predicted_region": "family-aware region", "confidence": "high" },
+    { "id": "t3_p03", "H": 0.0095, "P": 0.285, "predicted_region": "family-aware region", "confidence": "high" },
+    { "id": "t3_p04", "H": 0.0130, "P": 0.285, "predicted_region": "family-aware region", "confidence": "high" },
+    { "id": "t3_p05", "H": 0.0180, "P": 0.285, "predicted_region": "family-aware region", "confidence": "high" },
+
+    { "id": "t3_p06", "H": 0.0025, "P": 0.305, "predicted_region": "transition region", "confidence": "high" },
+    { "id": "t3_p07", "H": 0.0050, "P": 0.305, "predicted_region": "transition region", "confidence": "high" },
+    { "id": "t3_p08", "H": 0.0095, "P": 0.305, "predicted_region": "transition region", "confidence": "medium" },
+    { "id": "t3_p09", "H": 0.0130, "P": 0.305, "predicted_region": "family-aware region", "confidence": "high" },
+    { "id": "t3_p10", "H": 0.0180, "P": 0.305, "predicted_region": "family-aware region", "confidence": "high" },
+
+    { "id": "t3_p11", "H": 0.0025, "P": 0.335, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p12", "H": 0.0050, "P": 0.335, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p13", "H": 0.0095, "P": 0.335, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p14", "H": 0.0130, "P": 0.335, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p15", "H": 0.0180, "P": 0.335, "predicted_region": "universal region", "confidence": "high" },
+
+    { "id": "t3_p16", "H": 0.0025, "P": 0.365, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p17", "H": 0.0050, "P": 0.365, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p18", "H": 0.0095, "P": 0.365, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p19", "H": 0.0130, "P": 0.365, "predicted_region": "universal region", "confidence": "high" },
+    { "id": "t3_p20", "H": 0.0180, "P": 0.365, "predicted_region": "universal region", "confidence": "high" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "manifest_version": "1.0",
+  "experiment_id": "p11_phase_d_repro",
+  "phase": "D",
+  "sprint": "2B",
+  "claim_ids": ["P11-C01", "P11-C02", "P11-C07"],
+  
+  "entrypoint": "project_12/scripts/run_p11_phase_d_repro.py",
+  
+  "fixed_params": {
+    "k": 15,
+    "holdout_size": 800,
+    "holdout_path": "../project_11/results/phase_c3_sat_margin/holdout_points.json",
+    "pool_size": null,
+    "system_hard_path": "../project_11/results/transfer_t4_system.json",
+    "system_soft_path": "../project_11/results/phase_d_soft_clamp/system_soft_clamp.json"
+  },
+  
+  "seeds": {
+    "type": "deterministic",
+    "values": [223311]
+  },
+  
+  "output_dir": "project_12/results/repro/phase_d",
+  
+  "expected_outputs": [
+    "RESOLUTION_SWEEP_EXTENDED_ARTIFACT.json",
+    "RESOLUTION_SWEEP_EXTENDED.md",
+    "manifest_execution_log.json"
+  ],
+  
+  "notes": "Sprint 2B reproduction: Run Phase D (Soft Clamp Resolution Sweep) with identical parameters to Project 11. Outputs go to project_12/results/repro/phase_d/. Single deterministic run (holdout seed 223311).",
+  
+  "validation_targets": {
+    "claims_this_validates": ["P11-C01", "P11-C02", "P11-C07"],
+    "acceptance_criteria": "See FORMAL_CLAIMS.md P11-C01 (soft clamp mechanism), P11-C02 (NN resolution), P11-C07 (boundary improvement) sections"
+  }
+}
