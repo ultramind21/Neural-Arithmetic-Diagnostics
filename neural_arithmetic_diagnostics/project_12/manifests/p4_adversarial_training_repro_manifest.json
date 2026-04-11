@@ -1,0 +1,18 @@
+{
+  "sprint": "4B.2C",
+  "project": "project_4",
+  "phase": "intervention_reproduction",
+  "claim_ids": ["P4-C04"],
+  "entrypoint": "project_12/scripts/p4/run_p4_adversarial_training_repro.py",
+  "output_dir": "project_12/results/repro_p4/intervention/",
+  "base_arch": "mlp",
+  "baseline_artifact_path": "project_12/results/repro_p4/baselines/mlp/artifact.json",
+  "seen_families": ["alternating_carry", "full_propagation_chain"],
+  "heldout_families": ["block_boundary_stress"],
+  "acceptance": {
+    "min_gap": 0.10,
+    "require_ordering": true
+  },
+  "device": "cpu",
+  "notes": "Procedure-preserving intervention reproduction for P4-C04. Baseline family metrics taken from validated P12 baseline repro artifact for MLP."
+}

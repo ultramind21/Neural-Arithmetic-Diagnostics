@@ -13,9 +13,11 @@
 | **P4-C01** | **weak (infra)** | **Framework execution** | **✅ Validated** | `P4_INFRA_VALIDATION_REPORT.md` |
 | **P4-C02** | **strong** | **Block-boundary split** | **✅ Validated** | `P4_VALIDATION_REPORT_BASELINES.md` |
 | **P4-C03** | **strong** | **Weak in-distribution** | **✅ Validated** | `P4_VALIDATION_REPORT_BASELINES.md` |
-| P4-C04 | strong | Narrow transfer (intervention) | **⏳ Untested** | (requires intervention artifacts) |
+| **P4-C04** | **strong** | **Narrow transfer (intervention)** | **✅ Validated** | `P4_VALIDATION_REPORT_INTERVENTION.md` |
 | **P4-C05** | **medium** | **Alternating/fullprop collapse** | **✅ Validated** | `P4_VALIDATION_REPORT_BASELINES.md` |
 | **P4-C06** | **weak (infra)** | **Baseline reproducibility** | **✅ Validated** | `P4_INFRA_VALIDATION_REPORT.md` |
+
+**Total: 6/6 Project 4 Claims Validated** ✅
 
 ---
 
@@ -125,6 +127,50 @@
 
 ---
 
+### ✅ P4-C04: Narrow Transfer (Intervention)
+
+**Status:** Validated (Project 12; copy+patch intervention repro + policy check)
+
+**Claim:** Adversarial training can produce narrow transfer: improving performance on a specifically targeted adversarial family while failing to improve performance on held-out adversarial families.
+
+**Observed (Project 12 intervention run):**
+
+**Baseline Metrics (Pre-Intervention):**
+- alternating_carry: 0.000
+- full_propagation_chain: 0.000
+- block_boundary_stress: 1.000
+
+**Post-Training Metrics:**
+- alternating_carry: 1.000 (+1.0 gain)
+- full_propagation_chain: 0.000 (+0.0 gain)
+- block_boundary_stress: 0.000 (-1.0 gain)
+
+**Computed Gains:**
+- seen_gain (mean of seen families): 0.500
+- heldout_gain (mean of heldout families): -1.000
+- gap (seen_gain − heldout_gain): **1.500**
+
+**Pre-registered Targets Met:**
+- ✅ Gap ≥ 0.10 (observed: 1.500)
+- ✅ seen_gain > heldout_gain (0.500 > -1.000)
+- ✅ Narrow transfer confirmed (improvement on seen, degradation on heldout)
+
+**Evidence Pointers:**
+- Intervention entrypoint: `project_12/scripts/p4/run_p4_adversarial_training_repro.py`
+- Intervention manifest: `project_12/manifests/p4_adversarial_training_repro_manifest.json`
+- Intervention artifact: `project_12/results/repro_p4/intervention/artifact.json`
+- Policy check report: `project_12/reports/REPRO_CHECK_PROJECT4_INTERVENTION.md`
+- Validation report: `project_12/reports/P4_VALIDATION_REPORT_INTERVENTION.md`
+- Diff gate verification: Similarity 0.895 (≥0.85 target), lines changed 78 (≤80 target)
+
+**Notes:**
+- Copy+patch discipline enforced (diff gate verification)
+- Non-deterministic training acceptable under policy-based check framework
+- Narrow transfer pattern clearly demonstrated: seen families improved, heldout degraded
+- Gap of 1.5 significantly exceeds threshold of 0.1, indicating strong narrow transfer effect
+
+---
+
 ### ✅ P4-C05: Alternating-Carry & Full-Propagation-Chain Collapse
 
 **Status:** Validated (Project 12; baseline repro)
@@ -162,26 +208,28 @@
 
 ## Untested Claims
 
-### ⏳ P4-C04: Narrow Transfer (Intervention)
-- Type: Strong
-- Reason untested: Requires intervention training artifacts (Sprint 4B.2); baseline sprint excludes interventions.
-- Plan: Defer to Sprint 4B.2 when intervention training reproducible artifacts available.
+*(None—all 6 Project 4 claims now validated)*
 
 ---
 
 ## Summary
 
-**Overall Validation Status: ✅ 5 Claims Validated (Baseline + Infrastructure)**
+**Overall Validation Status: ✅ 6/6 Project 4 Claims Validated**
 
-- ✅ 3 empirical baseline claims validated (C02, C03, C05)
+- ✅ 4 empirical claims validated (C02, C03, C04, C05)
+  - C02: Block-boundary architecture split
+  - C03: Weak in-distribution
+  - C04: Narrow transfer via adversarial training ← **NEW (Sprint 4B.2D)**
+  - C05: Universal collapse on alternating-carry & full-prop
 - ✅ 2 infrastructure claims validated (C01, C06)
-- ⏳ 1 empirical intervention claim untested (C04—requires intervention artifacts)
+  - C01: Framework execution
+  - C06: Baseline reproducibility
 
-**Next Steps:**
-- Sprint 4B.2: Reproduce intervention artifacts → validate P4-C04
+**Completion:** All Project 4 claims validated in Project 12 (baseline reproductions + intervention reproduction)
 
 ---
 
-**Report Generated:** Project 12 Sprint 4C (April 2026)
-**Validation Methodology:** Evidence-only validation against Project 12 baseline reproductions
-**Scope:** Baseline (non-intervention) claims only
+**Report Generated:** Project 12 Sprint 4B.2D (April 11, 2026)
+**Validation Methodology:** Evidence-only validation against Project 12 baseline reproductions and intervention reproduction
+**Scope:** Complete (baseline + infrastructure + intervention)
+

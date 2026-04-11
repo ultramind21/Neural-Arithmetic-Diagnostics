@@ -1,0 +1,50 @@
+{
+  "timestamp_utc": "2026-04-11T08:47:19.799946Z",
+  "framework_version": "1.0",
+  "intervention_type": "adversarial_training",
+  "base_model_family": "phase30_mlp",
+  "seen_families": [
+    "alternating_carry",
+    "full_propagation_chain"
+  ],
+  "heldout_family": [
+    "block_boundary_stress"
+  ],
+  "in_distribution": {
+    "digit_acc": 0.5875000135274604,
+    "carry_acc": 0.9515625026542693,
+    "combined_acc": 0.5875000135274604,
+    "exact_match": 0.046875
+  },
+  "seen_results": {
+    "alternating_carry": {
+      "digit_acc": 1.0,
+      "carry_acc": 1.0,
+      "combined_acc": 1.0,
+      "exact_match": 1.0
+    },
+    "full_propagation_chain": {
+      "digit_acc": 0.6000000238418579,
+      "carry_acc": 1.0,
+      "combined_acc": 0.6000000238418579,
+      "exact_match": 0.0
+    }
+  },
+  "heldout_results": {
+    "block_boundary_stress": {
+      "digit_acc": 0.6000000238418579,
+      "carry_acc": 0.800000011920929,
+      "combined_acc": 0.6000000238418579,
+      "exact_match": 0.0
+    }
+  },
+  "baseline_reference": {
+    "in_distribution": "compare against PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md",
+    "block_boundary_stress": "compare against stable baseline matrix"
+  },
+  "notes": [
+    "Seen-family gains alone do not establish robust transfer.",
+    "Held-out-family behavior is the key Project 4 MVP discriminator.",
+    "This artifact should be followed by validation reruns if retained."
+  ]
+}
