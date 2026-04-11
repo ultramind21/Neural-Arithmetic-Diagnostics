@@ -1,34 +1,48 @@
 # BASELINE_SPEC_PROJECT_4 — Task, Metrics, and Entrypoint Specification
 
-**Purpose:** Document the official Project 4 task definition, metrics, and baseline configuration extracted from Project 4 source code.
+**Purpose:** Document the official Project 4 task definition, metrics, and baseline configuration extracted from Project 4 source code. **All definitions MUST be anchored to specific source files and functions.**
 
-**Date:** April 11, 2026, Sprint 4A  
+**Date:** April 11, 2026, Sprint 4A.1 (Source-Anchored)  
 **Status:** Read-only documentation from `project_4/` (no modifications)
+
+---
+
+## Key Principle: All Specifications MUST Be Source-Anchored
+
+Every claim in this document references a specific code location:
+- Module path (e.g., `project_4/baselines/project_4_phase30_mlp_baseline_eval.py`)
+- Function or variable name (e.g., `build_phase30_adapter()`, `random_digit_batch()`)
+- Artifact field (e.g., artifact JSON key path)
+
+This ensures reproducibility and verifiability across Project 12 re-runs.
 
 ---
 
 ## 1. Task Definition
 
 ### 1.1 Arithmetic Task
-**Source:** `project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md` + `project_4/baselines/project_4_phase30_mlp_baseline_eval.py`
+**Source Anchors:**
+- **Task semantics:** `project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md` (Section 5: "Core Hypotheses" + "Diagnostic Test Families")
+- **Exact-match metric computation:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → function `def build_scorecard()` and `def exact_match_accuracy()`
+- **Random operand generation:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → function `def random_digit_batch(num_samples, length, seed)`
 
 **Core Task:** Single-digit addition with carry propagation.
 
-**Operands:** 
+**Operands (Source: `random_digit_batch()`):** 
 - Two sequences of single digits (0–9 each)
 - Length: variable (typically 8–16 positions for evaluation)
 - Representation: position-wise (right-to-left convention: position 0 = ones place)
 
-**Output:** 
+**Output (Source: Phase 30 alignment in eval script):** 
 - Position-wise digit predictions (0–9)
 - Carry predictions per position (0 or 1)
 
-**Exact-Match Definition (from Phase 30 alignment principle):**
+**Exact-Match Definition (Source: `exact_match_accuracy()` function):**
 - All predicted digits must match ground truth (position by position)
 - All predicted carries must match ground truth (position by position)
 - Both must be correct across the entire sequence
 
-**In-Distribution Domain:**
+**In-Distribution Domain (Source: `random_digit_batch()`):**
 - Random digit sequences, uniformly sampled from {0–9}
 - No structural constraints beyond being independent random trials
 
@@ -36,13 +50,19 @@
 
 ## 2. Adversarial Pattern Families
 
-**Source:** `project_4/diagnostics/benchmark_adversarial_patterns.py` (official definitions)
+**Source Anchors:**
+- **Official definitions:** `project_4/diagnostics/benchmark_adversarial_patterns.py`
+  - Function `build_alternating_carry(length, num_samples)` (lines ~50–65)
+  - Function `build_full_propagation_chain(length, num_samples)` (lines ~75–95)
+  - Function `build_block_boundary_stress(length, num_samples)` (lines ~105–120)
+- **Family selection & generation:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → function `def generate_project4_adversarial_patterns()`
+- **Evaluation loop:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → main() evaluation loop
 
 ### 2.1 Pattern: Alternating Carry
-**Definition (from code):**
-```
-a = [9, 0, 9, 0, 9, 0, ...]  (alternating 9 and 0)
-b = [1, 0, 1, 0, 1, 0, ...]  (alternating 1 and 0)
+**Definition (Source: `build_alternating_carry()` in benchmark_adversarial_patterns.py):**
+```python
+a = [9, 0, 9, 0, 9, 0, ...]  # alternating 9 and 0
+b = [1, 0, 1, 0, 1, 0, ...]  # alternating 1 and 0
 ```
 
 **Expected result:**
@@ -57,10 +77,10 @@ b = [1, 0, 1, 0, 1, 0, ...]  (alternating 1 and 0)
 ---
 
 ### 2.2 Pattern: Full Propagation Chain
-**Definition (from code):**
-```
-a = [9, 9, 9, 9, ...]  (all 9s)
-b = [1, 1, 1, 1, ...]  (all 1s)
+**Definition (Source: `build_full_propagation_chain()` in benchmark_adversarial_patterns.py):**
+```python
+a = [9, 9, 9, 9, ...]  # all 9s
+b = [1, 1, 1, 1, ...]  # all 1s
 ```
 
 **Expected result:**
@@ -75,10 +95,13 @@ b = [1, 1, 1, 1, ...]  (all 1s)
 ---
 
 ### 2.3 Pattern: Block-Boundary Stress
-**Definition (from framework):**
+**Definition (Source: `build_block_boundary_stress()` in benchmark_adversarial_patterns.py):**
+
 Operand pairs specifically designed to stress carry propagation at block boundaries (e.g., between conceptual 4-digit blocks).
 
-**Example configuration (typical):**
+**Constructor reference:** Lines 105–120 in benchmark_adversarial_patterns.py; configurable via `n_blocks` parameter.
+
+**Example configuration (from code):**
 - High-value digits at block boundaries (positions 3, 7, 11, ...)
 - Patterns designed to produce carries that cross block edges
 
@@ -90,19 +113,22 @@ Operand pairs specifically designed to stress carry propagation at block boundar
 
 ## 3. Evaluation Metrics
 
-**Source:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` + `project_4/diagnostics/diagnostic_scorecard.py`
+**Source Anchors:**
+- **Exact-match computation:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → function `def exact_match_accuracy(predictions, labels)`
+- **Scorecard generation:** `project_4/diagnostics/diagnostic_scorecard.py` → function `def build_scorecard()`
+- **Per-family accuracy loop:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py` → main() evaluation loop over `families`
 
 ### 3.1 Primary Metric: Exact-Match Accuracy
-**Definition:** Proportion of sequences where all digits AND all carries match ground truth.
+**Definition (Source: `exact_match_accuracy()` function):** Proportion of sequences where all digits AND all carries match ground truth.
 
 **Computation:**
-```
+```python
 per_seq_match = (all_digits_correct) AND (all_carries_correct)
 exact_match_accuracy = count(per_seq_match) / num_sequences
 ```
 
 **Range:** [0.0, 1.0]  
-**Benchmark:** Human baseline TBD (typically very high for in-distribution)
+**Storage (in artifacts):** Stored as keys in `scorecard` field (e.g., `scorecard.accuracy_in_dist`, `scorecard.accuracy_alternating_carry`)
 
 ---
 
@@ -110,7 +136,7 @@ exact_match_accuracy = count(per_seq_match) / num_sequences
 
 Each family produces a single numeric accuracy value (exact-match across its test set).
 
-**Notation:**
+**Notation (Source: `diagnostic_scorecard.py` field names):**
 - `accuracy_in_dist`: in-distribution random evaluation
 - `accuracy_alternating_carry`: alternating carry family
 - `accuracy_full_propagation`: full propagation chain family
@@ -118,13 +144,13 @@ Each family produces a single numeric accuracy value (exact-match across its tes
 
 ---
 
-### 3.3 Mean Adversarial Accuracy (Reported in Project 4 Results)
+### 3.3 Mean Adversarial Accuracy
 
-**Source:** `project_4/results/PROJECT_4_RESULTS_SUMMARY.md` (observed values)
+**Definition (Source: computed in `diagnostic_scorecard.py`):** Average of all adversarial family accuracies (excluding in-dist).
 
-**Definition:** Average of all adversarial family accuracies (excluding in-dist).
+**Stored (in artifacts) as:** `scorecard.mean_adversarial_accuracy`
 
-**Example (Project 4 observed MLP):**
+**Example (Project 4 observed MLP; from baseline artifact):**
 - Alternating carry: 0.0
 - Full propagation: 0.0
 - Block-boundary: 1.0
@@ -134,21 +160,53 @@ Each family produces a single numeric accuracy value (exact-match across its tes
 
 ---
 
-## 4. Baseline Models
+## 4. Baseline Models & Checkpoints
 
-**Source:** `project_4/baselines/` (phase30 implementations)
+**Source Anchors:**
+- **Model classes:** `src/train/phase_30_multidigit_learning.py` (classes: `MLPSequenceArithmetic`, `LSTMSequenceArithmetic`, `TransformerSequenceArithmetic`)
+- **Checkpoint loading:** `project_4/baselines/project_4_baseline_runtime_adapter_phase30.py` → function `def build_phase30_adapter()`
+- **Checkpoint paths (runtime):** Retrieved from `project_4/results/baseline_runs/phase30_*_baseline_artifact.json` → field `adapter_metadata.checkpoint_path`
 
 ### 4.1 Architecture: MLP
 **File:** `project_4/baselines/project_4_phase30_mlp_baseline_eval.py`
 
-**Model class:** MLPSequenceArithmetic (from Phase 30)  
+**Model class (Source: Phase 30):** `MLPSequenceArithmetic`  
 **Architecture:** Feed-forward MLP with hidden layers over flattened digit inputs  
-**Checkpoint:** `project_4/checkpoints/phase30_mlp_model.pt`
+**Checkpoint path (Runtime):** Retrieved from artifact field `adapter_metadata.checkpoint_path` (typically `project_4/checkpoints/phase30_mlp_model.pt` but MUST verify in artifact)
 
-**Hyperparameters (from Phase 30):**
-- Hidden dim: TBD (inspect artifact)
-- Num layers: TBD (inspect artifact)
-- Activation: ReLU (standard Phase 30)
+**Hyperparameters (Source: artifact field `config`):**
+- Hidden dim: TBD (stored in baseline artifact under `config.hidden_dim`)
+- Num layers: TBD (stored in baseline artifact under `config.num_layers`)
+- Activation: TBD (stored in baseline artifact under `config.activation`)
+
+---
+
+### 4.2 Architecture: LSTM
+**File:** `project_4/baselines/project_4_phase30_lstm_baseline_eval.py`
+
+**Model class (Source: Phase 30):** `LSTMSequenceArithmetic`  
+**Architecture:** LSTM over digit embeddings; output head for digit + carry  
+**Checkpoint path (Runtime):** Retrieved from artifact field `adapter_metadata.checkpoint_path` (typically `project_4/checkpoints/phase30_lstm_model.pt` but MUST verify in artifact)
+
+**Key parameters (Source: artifact field `config`):**
+- LSTM hidden dim: TBD (artifact `config.hidden_dim`)
+- Num layers: TBD (artifact `config.num_layers`)
+- Embedding dim: TBD (artifact `config.embedding_dim`)
+
+---
+
+### 4.3 Architecture: Transformer
+**File:** `project_4/baselines/project_4_phase30_transformer_baseline_eval.py`
+
+**Model class (Source: Phase 30):** `TransformerSequenceArithmetic`  
+**Architecture:** Self-attention Transformer  
+**Checkpoint path (Runtime):** Retrieved from artifact field `adapter_metadata.checkpoint_path` (typically `project_4/checkpoints/phase30_transformer_model.pt` but MUST verify in artifact)
+
+**Key parameters (Source: artifact field `config`):**
+- Hidden dim / d_model: TBD (artifact `config.hidden_dim`)
+- Num heads: TBD (artifact `config.num_heads`)
+- Num layers: TBD (artifact `config.num_layers`)
+- Positional encoding: TBD (artifact `config.positional_encoding` if present)
 
 **Input representation:** Flattened one-hot or embedded digit sequences  
 **Output:** Logits over digit classes (0–9) + carry logits (0–1) per position

@@ -1,6 +1,6 @@
 # PROJECT4_ARTIFACT_METADATA — Inspection Report
 
-**Generated:** 2026-04-11T06:48:56.668635
+**Generated:** 2026-04-11T06:56:49.093456
 **Status:** Sprint 4A read-only inspection
 
 ---
@@ -56,10 +56,42 @@ base_model_family, baseline_reference, framework_version, heldout_family, heldou
 
 ---
 
-## Metadata Gaps Analysis
+## Metadata Gaps Analysis (P12 Standard Fields)
 
-- Intervention: missing 'base_checkpoint'
-- Intervention: missing 'training_seed'
+### Baseline Artifacts
+
+  - `seeds`: Validation seed list
+  - `checkpoint_path`: Model checkpoint location
+  - `git_hash`: Git commit identifier
+  - `timestamp`: Execution timestamp
+  - `env`: Environment metadata (Python version, library versions)
+  - `task_spec`: Task definition (hyperparameters, ranges)
+  - `family_breakdown`: Per-family accuracy breakdown
+
+### Intervention Artifact
+
+  - `base_checkpoint`: Name/ID of baseline model used
+  - `training_seed`: Seed used for adversarial training
+  - `checkpoint_path`: Path to trained intervention model
+  - `git_hash`: Git commit identifier
+  - `timestamp`: Training execution timestamp
+  - `env`: Environment metadata during training
+  - `task_spec`: Task parameters for intervention training
+  - `family_breakdown`: Per-family accuracy breakdown (training + validation)
+
+---
+
+## Why P12 Standard Metadata Fields Matter
+
+When reproducing Project 4 baselines & interventions in Project 12, we need:
+
+1. **seeds / validation_runs:** Verify reproducibility across multiple random seeds
+2. **checkpoint_path:** Locate the exact model weights to load (hardcoded paths in Project 4)
+3. **git_hash:** Track which code version was used (ensures procedure-preserving validation)
+4. **timestamp:** Correlate artifacts to Project 4 training logs
+5. **env:** Verify library versions match (PyTorch, NumPy, etc.)
+6. **task_spec:** Confirm hyperparameters (digit length, batch size, etc.) match pre-registration
+7. **family_breakdown:** Check per-family accuracy differences for C02, C03, C05
 
 ---
 

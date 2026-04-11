@@ -94,31 +94,79 @@ def inspect_json_structure(obj: Dict[str, Any]) -> Dict[str, Any]:
     return structure
 
 
-def report_metadata_gaps(baseline_obj: Dict[str, Any], intervention_obj: Optional[Dict[str, Any]]) -> List[str]:
-    """Identify critical metadata gaps for Project 12 re-runs."""
-    gaps = []
+def report_metadata_gaps(baseline_obj: Dict[str, Any], intervention_obj: Optional[Dict[str, Any]]) -> Dict[str, List[str]]:
+    """
+    Identify critical metadata gaps for Project 12 re-runs.
     
-    # Check baselines
-    if baseline_obj and "runs" in baseline_obj:
-        runs = baseline_obj["runs"]
-        if isinstance(runs, list) and len(runs) > 0:
-            first_run = runs[0]
-            required_keys = ["seed", "checkpoint_path", "git_hash", "timestamp"]
-            for key in required_keys:
-                if key not in first_run:
-                    gaps.append(f"Baseline: missing '{key}' in run metadata")
+    P12 Standard Metadata Fields Expected in Project 4 Artifacts:
+    - seeds / validation_runs: List of seed values used for validation robustness checks
+    - checkpoint_path: Artifact model location (for reproducibility)
+    - git_hash: Git commit for reproducibility tracking
+    - timestamp: Execution time metadata
+    - env: Environment variables / config (Python version, library versions, etc.)
+    - task_spec: Task definition stored with results (hyperparameters, digit ranges, etc.)
+    - family_breakdown: Per-family metric storage (accuracy per adversarial family)
     
-    # Check intervention
-    if intervention_obj:
-        required_keys = ["base_checkpoint", "training_seed", "seen_families", "heldout_family"]
-        for key in required_keys:
-            if key not in intervention_obj:
-                gaps.append(f"Intervention: missing '{key}'")
+    Returns dict mapping artifact type to list of missing fields.
+    """
+    gaps_report = {}
     
-    if not gaps:
-        gaps.append("No critical gaps detected")
+    # Check baseline artifact structure
+    if baseline_obj and "error" not in baseline_obj:
+        baseline_gaps = []
+        baseline_keys = set(baseline_obj.keys())
+        
+        # P12 standard fields for baseline
+        p12_standard = {
+            "seeds": "Validation seed list",
+            "checkpoint_path": "Model checkpoint location",
+            "git_hash": "Git commit identifier",
+            "timestamp": "Execution timestamp",
+            "env": "Environment metadata (Python version, library versions)",
+            "task_spec": "Task definition (hyperparameters, ranges)",
+            "family_breakdown": "Per-family accuracy breakdown"
+        }
+        
+        for field, description in p12_standard.items():
+            if field not in baseline_keys:
+                baseline_gaps.append(f"  - `{field}`: {description}")
+        
+        if baseline_gaps:
+            gaps_report["baseline"] = baseline_gaps
+        else:
+            gaps_report["baseline"] = ["✅ No P12 standard gaps detected"]
+    else:
+        gaps_report["baseline"] = ["⚠️  Artifact missing or unreadable"]
     
-    return gaps
+    # Check intervention artifact structure
+    if intervention_obj and "error" not in intervention_obj:
+        intervention_gaps = []
+        intervention_keys = set(intervention_obj.keys())
+        
+        # P12 standard fields for intervention
+        p12_standard = {
+            "base_checkpoint": "Name/ID of baseline model used",
+            "training_seed": "Seed used for adversarial training",
+            "checkpoint_path": "Path to trained intervention model",
+            "git_hash": "Git commit identifier",
+            "timestamp": "Training execution timestamp",
+            "env": "Environment metadata during training",
+            "task_spec": "Task parameters for intervention training",
+            "family_breakdown": "Per-family accuracy breakdown (training + validation)"
+        }
+        
+        for field, description in p12_standard.items():
+            if field not in intervention_keys:
+                intervention_gaps.append(f"  - `{field}`: {description}")
+        
+        if intervention_gaps:
+            gaps_report["intervention"] = intervention_gaps
+        else:
+            gaps_report["intervention"] = ["✅ No P12 standard gaps detected"]
+    else:
+        gaps_report["intervention"] = ["⚠️  Artifact missing or unreadable"]
+    
+    return gaps_report
 
 
 # ============================================================================
@@ -217,13 +265,48 @@ def main():
     report_lines.extend([
         "---",
         "",
-        "## Metadata Gaps Analysis",
+        "## Metadata Gaps Analysis (P12 Standard Fields)",
+        "",
+        "### Baseline Artifacts",
         "",
     ])
     
-    gaps = report_metadata_gaps(baseline_mlp or {}, intervention)
-    report_lines.extend([f"- {gap}" for gap in gaps])
+    gaps_report = report_metadata_gaps(baseline_mlp or {}, intervention)
+    
+    # Format baseline gaps
+    if "baseline" in gaps_report:
+        for gap_item in gaps_report["baseline"]:
+            report_lines.append(f"{gap_item}")
     report_lines.append("")
+    
+    # Format intervention gaps
+    report_lines.extend([
+        "### Intervention Artifact",
+        "",
+    ])
+    
+    if "intervention" in gaps_report:
+        for gap_item in gaps_report["intervention"]:
+            report_lines.append(f"{gap_item}")
+    report_lines.append("")
+    
+    # Important: Explanation of why P12 standard fields matter
+    report_lines.extend([
+        "---",
+        "",
+        "## Why P12 Standard Metadata Fields Matter",
+        "",
+        "When reproducing Project 4 baselines & interventions in Project 12, we need:",
+        "",
+        "1. **seeds / validation_runs:** Verify reproducibility across multiple random seeds",
+        "2. **checkpoint_path:** Locate the exact model weights to load (hardcoded paths in Project 4)",
+        "3. **git_hash:** Track which code version was used (ensures procedure-preserving validation)",
+        "4. **timestamp:** Correlate artifacts to Project 4 training logs",
+        "5. **env:** Verify library versions match (PyTorch, NumPy, etc.)",
+        "6. **task_spec:** Confirm hyperparameters (digit length, batch size, etc.) match pre-registration",
+        "7. **family_breakdown:** Check per-family accuracy differences for C02, C03, C05",
+        "",
+    ])
     
     # Path verification
     report_lines.extend([
