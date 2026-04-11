@@ -1,0 +1,15 @@
+{
+  "entrypoint": "project_12/scripts/run_p11_phase_c3_generate_holdout.py",
+  "description": "Phase C3 Holdout Generator (Project 11 procedure, procedure-preserving re-validation)",
+  "output_dir": "project_12/results/revalidate_p11proc/data/",
+  "fixed_params": {
+    "holdout_seed": 424242,
+    "holdout_size": 800,
+    "h_min": 0.0010,
+    "h_max": 0.0200,
+    "p_min": 0.2600,
+    "p_max": 0.4200,
+    "boundary_pool": 90000
+  },
+  "notes": "Generates holdout with Project 11's exact v3_boundary_score logic. No procedure changes. Seed differs from Project 11 (424242 vs 223311) to ensure independent holdout."
+}

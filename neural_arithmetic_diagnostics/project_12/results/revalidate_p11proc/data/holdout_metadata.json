@@ -1,0 +1,23 @@
+{
+  "script": "run_p11_phase_c3_generate_holdout.py",
+  "procedure": "Project 11 Phase C3 (procedure-preserving)",
+  "manifest": "project_12\\manifests\\p12p11proc_generate_holdout.json",
+  "output_path": "project_12\\results\\revalidate_p11proc\\data\\holdout_points.json",
+  "sha256": "a4711d7ee8095f866b424c68862fe5cf4e85f5ef5f7d9a6f0f18cc355e761896",
+  "generated_at": "2026-04-11T03:03:52.186283Z",
+  "parameters": {
+    "seed": 424242,
+    "n_total": 800,
+    "n_uniform": 400,
+    "n_boundary": 400,
+    "h_range": [
+      0.001,
+      0.02
+    ],
+    "p_range": [
+      0.26,
+      0.42
+    ],
+    "boundary_pool_size": 90000
+  }
+}

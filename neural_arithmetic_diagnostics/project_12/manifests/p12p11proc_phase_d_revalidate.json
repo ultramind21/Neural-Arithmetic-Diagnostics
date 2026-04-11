@@ -1,0 +1,9 @@
+{
+  "entrypoint": "project_12/scripts/run_p11_phase_d_repro.py",
+  "description": "Phase D (soft clamp resolution sweep) - Procedure-preserving re-validation",
+  "output_dir": "project_12/results/revalidate_p11proc/phase_d/",
+  "fixed_params": {
+    "holdout_path": "project_12/results/revalidate_p11proc/data/holdout_points.json"
+  },
+  "notes": "Uses holdout from C3 generator (seed=424242). No external pool_path → internal RNG generation. Procedure identical to Project 11."
+}
