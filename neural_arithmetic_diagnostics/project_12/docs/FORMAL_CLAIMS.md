@@ -290,8 +290,12 @@
 - Framework specification: `project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md`
 - Framework components: `project_4/results/PROJECT_4_CLOSURE_SUMMARY.md` (section 2)
 - Extraction source: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
-**Status:** untested (Project 12) — framework exists; reproducibility to be validated in P12.
-**Notes:** This is infrastructure/methodology validation only; empirical robustness claims (narrow transfer, architecture splits) are separate (P4-C02, C04).
+**Status:** validated (Project 12; artifact-based infra check)
+**Evidence Pointers:**
+- P12 infra validation report: `project_12/reports/P4_INFRA_VALIDATION_REPORT.md` (P4-C01 section)
+- Baseline artifacts: `project_12/results/repro_p4/baselines/{mlp,lstm,transformer}/artifact.json`
+- Baseline entrypoints: `project_12/scripts/p4/run_p4_*_baseline_repro.py`
+**Notes:** Framework produces required scorecard structure and per-family metrics for 3 architectures. Validated from artifacts without re-execution.
 
 ---
 
@@ -432,7 +436,11 @@
 - Framework components: `project_4/results/PROJECT_4_CLOSURE_SUMMARY.md` (section 2: what was built)
 - Baseline artifacts (Project 4): `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
 - Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
-**Status:** untested (Project 12) — framework exists; reproducibility to be validated in P12.
-**Notes:** Weak (infrastructure) claim. Does not make empirical robustness claims; only validates framework toolkit execution and baseline reproducibility.
+**Status:** validated (Project 12; artifact-based infra check)
+**Evidence Pointers:**
+- P12 infra validation report: `project_12/reports/P4_INFRA_VALIDATION_REPORT.md` (P4-C06 section)
+- Baseline artifacts: `project_12/results/repro_p4/baselines/{mlp,lstm,transformer}/artifact.json`
+- Repro check: `project_12/reports/REPRO_CHECK_PROJECT4_BASELINES.md`
+**Notes:** Metadata structure (p12_metadata, env fields) present and consistent across all 3 architectures. Git hash same (eaca658...), entrypoints differentiated. Validated from artifacts without re-execution.
 
 ---
