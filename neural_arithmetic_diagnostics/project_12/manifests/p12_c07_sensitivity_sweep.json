@@ -1,0 +1,17 @@
+{
+  "experiment_id": "p12_c07_sensitivity_sweep_v1",
+  "description": "Procedure-preserving holdout seed sweep for C07 boundary sensitivity analysis",
+  "holdout_seeds": [100001, 100002, 100003, 100004, 100005, 100006, 100007, 100008, 100009, 100010, 100011, 100012, 100013, 100014, 100015, 100016, 100017, 100018, 100019, 100020],
+  "holdout_config": {
+    "size": 800,
+    "n_uniform": 400,
+    "n_boundary": 400,
+    "h_range": [0.001, 0.02],
+    "p_range": [0.26, 0.42]
+  },
+  "phase_d_entrypoint": "project_12/scripts/run_p11_phase_d_repro.py",
+  "holdout_entrypoint": "project_12/scripts/run_p11_phase_c3_generate_holdout.py",
+  "output_root": "project_12/results/sweep_c07_v1",
+  "keep_temporary_holdouts": false,
+  "notes": "Single Phase D run per seed (deterministic, no pool/E2/E3 variance introduced)"
+}
