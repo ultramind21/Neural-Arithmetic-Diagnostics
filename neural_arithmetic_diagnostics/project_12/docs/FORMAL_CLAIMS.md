@@ -212,8 +212,15 @@
 - Validation (P12 procedure-preserving): `project_12/results/revalidate_p11proc/phase_d/RESOLUTION_SWEEP_EXTENDED_ARTIFACT.json`
 - Report: `project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md`
 - Gate analysis: `project_12/docs/HOLDOUT_GENERATOR_GATE.md`
-**Status:** partial (Project 12, procedure-preserving) — fails absolute threshold (V3.1_boundary 0.759 < 0.85); passes relative improvement and proximity-to-NN conditions; sensitive to holdout distribution
-**Notes:** Soft clamp mechanism is effective (relative gain 0.162 ≥ 0.15 ✓); V3.1 competitive with NN81 (gap -0.001 ✓); absolute target fails on more challenging boundary subset in seed=424242. Suggests threshold may be holdout-specific rather than universal constraint.
+**Status:** ❌ rejected (Project 12, procedure-preserving) — absolute threshold not robust across seed-varied holdouts
+**Evidence (New - Sprint 2E.2 Sensitivity Sweep):**
+- Sweep scope: 20 independent seed-generated holdouts (seeds 100001-100020)  
+- Result: V3.1_boundary ≥ 0.85 passes **1 of 20 seeds (5%)**; mean=0.7854, range=[0.6877, 0.8558]
+- Mechanism targets (relative): ✓ PASS — improvement ≥ 0.15 and gap ≤ 0.10 remain robust
+- Threshold robustness: ❌ FAIL — 0.85 absolute target is not procedure-preserving; realistic robust threshold ≤ 0.78
+- Report: `project_12/reports/SPRINT_2E2_FINAL_ANALYSIS.md`
+
+**Notes:** Soft clamp mechanism is effective and relative conditions hold across all seeds; however, absolute V3.1_boundary ≥ 0.85 threshold is holdout-dependent, not universal. Claim requires revision to either: (A) remove absolute threshold (mechanism-based), or (B) lower threshold to ≤0.78 (data-driven). See `project_12/docs/C07_REVISED_CLAIM.md` for revision options.
 
 ---
 

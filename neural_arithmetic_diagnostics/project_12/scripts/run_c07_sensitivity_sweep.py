@@ -103,13 +103,15 @@ def main():
         
         # 1. Generate holdout
         holdout_manifest = {
-            "description": f"Gate test seed {seed}",
-            "holdout_generator": {
-                "seed": seed,
-                "N_uniform": 400,
-                "N_boundary": 400,
-                "h_range": manifest["holdout_config"]["h_range"],
-                "p_range": manifest["holdout_config"]["p_range"]
+            "description": f"Holdout for sweep seed {seed}",
+            "fixed_params": {
+                "holdout_seed": seed,  # ← Correct location for generator script
+                "holdout_size": 800,
+                "h_min": manifest["holdout_config"]["h_range"][0],
+                "h_max": manifest["holdout_config"]["h_range"][1],
+                "p_min": manifest["holdout_config"]["p_range"][0],
+                "p_max": manifest["holdout_config"]["p_range"][1],
+                "boundary_pool": 90000
             },
             "output_dir": str(holdout_file.parent)
         }
@@ -131,7 +133,9 @@ def main():
         # 2. Run Phase D
         phase_d_manifest = {
             "description": f"Phase D for C07 sweep seed {seed}",
-            "holdout_path": str(holdout_file),
+            "fixed_params": {
+                "holdout_path": str(holdout_file)
+            },
             "output_dir": str(seed_dir)
         }
         
