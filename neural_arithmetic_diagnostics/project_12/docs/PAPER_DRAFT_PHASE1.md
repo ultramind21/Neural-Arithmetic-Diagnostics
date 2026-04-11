@@ -32,48 +32,36 @@ Project 12 is designed to transform a repository of experimental outcomes into a
 See: `project_12/paper_assets/table1_protocol_checklist.md`
 
 ## 3. Case Study A — Project 11 (Soft clamp + sampling/retrieval)
+
 ### 3.1 Setup
-- Task/metric: macroF1_present (as defined in Project 11 artifacts).
-- Systems: V3, V3.1, NN11/21/41/81; sampling regimes.
+Project 11 studies a regime-structured arithmetic diagnostic setting where performance depends on how decision boundaries and transitions are represented and sampled. The evaluated systems include compact interpretable rule baselines (V3, V3.1), dense nearest-neighbor references at multiple resolutions (NN11/NN21/NN41/NN81), and structured sampling strategies (uniform, boundary-focused, and mixed). Evaluation is reported using macroF1_present and related per-subset breakdowns as recorded in the Project 12 artifacts.
 
-### 3.2 Validated claims (Phase 1)
-Summarize:
-- P11-C01..C06, C08 validated
-- P11-C07 rejected-as-stated (absolute threshold)
-- P11-C07R validated (mechanism-based)
+### 3.2 Validated findings (P11-C01 to P11-C06, P11-C08)
+Across procedure-preserving re-validation, soft clamp enables a competitive interpretable rule baseline overall (P11-C01). Dense nearest-neighbor performance improves with resolution, providing a strong upper-performance reference (P11-C02), illustrated by the monotonic trend in the resolution sweep (Fig. 1). Sampling strategy matters: boundary-only sampling underperforms substantially, while mixed sampling that combines global coverage with boundary emphasis achieves near-dense performance at much lower reference cost (P11-C03, P11-C04), summarized in the sample-efficiency curve (Fig. 2). A ratio + kNN sweep further supports that intermediate mixing ratios are competitive and that kNN settings can change performance in structured ways (P11-C05). Finally, increasing reference set size beyond N=1000 yields diminishing returns under the mixed strategy in this setting (P11-C06). Engineering/protocol checks (P11-C08) confirm that the reference construction and evaluation procedure meet the specified efficiency and leakage-prevention requirements under the Project 12 run discipline.
 
-**Figure 1 (NN resolution sweep):**  
-`project_12/paper_assets/fig1_nn_resolution.png`
+### 3.3 Brittle absolute threshold → mechanism-based revision (P11-C07 → P11-C07R)
+A key contribution of Project 12 is making "threshold brittleness" observable. Project 11 originally included an absolute boundary-performance threshold claim (P11-C07). Under a procedure-preserving holdout-seed sweep, this absolute threshold is not robust: only 1/20 seeds satisfies the V3.1 boundary ≥ 0.85 requirement (Fig. 3). Importantly, the same set of experiments supports a stronger, mechanism-based conclusion: relative improvement of V3.1 over V3 on boundary subsets and closeness of V3.1 to NN81 remain robust across holdout seeds (P11-C07R). Project 12 therefore rejects the absolute-threshold claim as stated while validating the mechanism-based revision, demonstrating how the protocol separates brittle numeric thresholds from stable structural effects.
 
-**Figure 2 (sample efficiency):**  
-`project_12/paper_assets/fig2_sample_efficiency.png`
-
-**Figure 3 (C07 sweep distribution):**  
-`project_12/paper_assets/fig3_c07_sweep_distribution.png`
-
-**Table 2 (P11 evidence summary):**  
-See: `project_12/paper_assets/table2_p11_evidence_summary.md`
+**Figures and tables.**
+- Fig. 1: NN resolution sweep (P11-C02).
+- Fig. 2: Sample efficiency across strategies (P11-C03, P11-C04, P11-C06).
+- Fig. 3: Boundary-threshold sensitivity sweep (P11-C07 rejected-as-stated; P11-C07R validated).
+- Table 2: P11 claim-to-evidence summary.
 
 ## 4. Case Study B — Project 4 (Baselines + adversarial training)
-### 4.1 Baseline reproduction + validated baseline claims
-- P4-C01/C06 infra validation (artifact-based)
-- P4-C02 architecture split (block-boundary)
-- P4-C03 weak in-dist
-- P4-C05 universal collapse on alternating/full-prop
 
-**Figure 4 (P4 baseline family table):**  
-`project_12/paper_assets/fig4_p4_baseline_family_table.png`
+### 4.1 Baseline reproduction and validated baseline claims (P4-C01, P4-C02, P4-C03, P4-C05, P4-C06)
+Project 4 provides a diagnostic framework that evaluates multiple model architectures (MLP, LSTM, Transformer) across structured adversarial families. Project 12 first reproduces baseline artifacts under a strict copy+patch discipline and validates baseline claims using per-family exact-match metrics recorded in standardized artifacts. Baseline diagnostics show a clear architecture-dependent split on block-boundary stress: MLP and Transformer succeed while LSTM fails (P4-C02). At the same time, in-distribution exact-match remains weak across all three architectures under the bounded evaluation path (P4-C03). Two adversarial families—alternating carry and full-propagation chain—produce universal collapse across architectures (P4-C05). Infrastructure claims are validated artifact-based: the framework outputs contain the required per-family scorecard structure (P4-C01), and artifact schemas and metadata are consistent under Project 12 execution discipline (P4-C06). The baseline family pattern table is summarized in Fig. 4.
 
-### 4.2 Intervention: narrow transfer (P4-C04)
-- Formal definition of seen/held-out gains (baseline artifact + post-training artifact).
-- Policy-based validation.
-- Multi-seed smoke check (3 seeds).
+### 4.2 Intervention: adversarial training yields narrow transfer (P4-C04)
+Project 4 also tests an adversarial-training intervention intended to improve performance on specifically targeted adversarial families. Because training is stochastic, Project 12 validates the intervention claim using policy-based criteria rather than exact numeric reproduction: improvements are evaluated as gains relative to baseline per-family exact-match under a locked definition of seen vs held-out families. The reproduced intervention shows strong improvement on seen families (notably alternating carry) while degrading held-out structure (block-boundary stress), producing a large positive gap between seen and held-out gains and satisfying the P4-C04 acceptance criteria. Fig. 5 visualizes the pre/post shift per family.
 
-**Figure 5 (P4 pre vs post):**  
-`project_12/paper_assets/fig5_p4_pre_post_intervention.png`
+To strengthen confidence beyond a single run, Project 12 additionally performs a 3-seed manifest-driven smoke check: all three seeds satisfy the policy acceptance criteria (Fig. 6). While this does not fully characterize variance, it provides evidence that the narrow-transfer conclusion is not an isolated artifact of a single random seed.
 
-**Figure 6 (P4 3-seed sweep summary):**  
-`project_12/paper_assets/fig6_p4_seed_sweep_summary.png`
+**Figures.**
+- Fig. 4: Baseline family table across architectures (P4-C02, P4-C03, P4-C05).
+- Fig. 5: Pre vs post intervention by family (P4-C04).
+- Fig. 6: 3-seed stability smoke check for P4-C04.
 
 ## 5. Threats to Validity
 See: `project_12/docs/PAPER_READY_PHASE1_THREATS_TO_VALIDITY.md`
