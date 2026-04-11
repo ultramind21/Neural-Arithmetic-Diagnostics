@@ -64,16 +64,36 @@ To strengthen confidence beyond a single run, Project 12 additionally performs a
 - Fig. 6: 3-seed stability smoke check for P4-C04.
 
 ## 5. Threats to Validity
-See: `project_12/docs/PAPER_READY_PHASE1_THREATS_TO_VALIDITY.md`
+
+**Stochastic interventions.** Training-based interventions are inherently stochastic. Project 12 therefore validates such claims via policy checks (pre-registered ordering/gap criteria evaluated on recorded artifacts) rather than requiring exact numeric reproduction. For Phase 1, the P4 intervention conclusion is additionally supported by a limited 3-seed smoke check; this increases confidence that the effect is not a single-run artifact but does not fully characterize variance.
+
+**Finite seed sweeps.** Sensitivity analyses are necessarily limited to a finite set of seeds. In Project 11, the C07 boundary-threshold brittleness conclusion is supported by a 20-seed holdout sweep; while this is strong evidence against universal absolute thresholds, it does not exhaustively map all possible holdout regimes.
+
+**Artifact schema dependence.** The protocol assumes that artifacts encode the metrics needed to evaluate locked claims (e.g., per-family exact-match or macroF1_present). We mitigate this by (i) enforcing standardized Project 12 metadata and (ii) using explicit schema probes and fail-fast extraction rules to avoid silent misparsing.
+
+**Scope limitations.** Phase 1 validates two case-study projects (P11 and P4). The protocol is intended to generalize, but empirical generalization to additional tasks, architectures, or arithmetic regimes remains future work.
 
 ## 6. Practical guidance (how to reuse this protocol)
-- Minimal steps to convert a "project of ideas" into evidence.
-- Common failure modes (target calibration, rewrites, missing metadata).
+
+Phase 1 suggests a practical recipe for converting a research repository into a reproducible evidence system:
+
+1) **Lock claims early.** Write operational claims with IDs, explicit scope, and pass/fail targets. Separate historical observations from validation targets to avoid calibration on outcomes.
+
+2) **Start with baselines.** Ensure every claim is baseline-grounded ("better than something known") and uses unified metrics that include failure-family breakdowns, not only aggregate accuracy.
+
+3) **Make execution manifest-driven.** Encode every run in a JSON manifest (inputs, seeds, output_dir, claim IDs). Require that all outputs are written under a dedicated results directory.
+
+4) **Enforce copy+patch reproduction.** When reproducing legacy scripts, copy them verbatim and apply minimal patches only (manifest input, output routing, metadata). Use a diff gate to prevent silent rewrites.
+
+5) **Choose the right validation mode.** Use strict reproduction checks for deterministic procedures; use policy checks for stochastic interventions, optionally strengthened with limited seed sweeps.
+
+6) **Compress results.** Maintain an evidence-only snapshot that lists validated, partial/conditional, and rejected-as-stated claims, with direct paths to artifacts and reports.
+
+These steps are lightweight enough to apply incrementally while being strict enough to prevent narrative drift and irreproducible conclusions.
 
 ## 7. Conclusion
-- Phase 1 shows: brittle absolute thresholds vs robust mechanism claims (P11-C07 → P11-C07R).
-- Adversarial training can produce narrow transfer and negative transfer (P4-C04).
-- Project 12 protocol makes these conclusions trustworthy.
+
+Project 12 Phase 1 demonstrates that validation discipline can be treated as a deliverable rather than an afterthought. In Project 11, the protocol distinguishes a brittle absolute boundary threshold (rejected-as-stated) from a robust mechanism-based alternative (validated), showing how seed sensitivity can invalidate numeric guarantees while preserving meaningful structural conclusions. In Project 4, the protocol validates that adversarial training can yield narrow transfer—large improvements on seen families coupled with degradation on held-out structure—under policy-based checks and a multi-seed smoke test. Together, these case studies show how a reproducibility-first workflow can turn a system of ideas into a system of evidence and produce publication-safe claims with explicit provenance.
 
 ## Appendix: Evidence pointers
 - Master snapshot: `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`
