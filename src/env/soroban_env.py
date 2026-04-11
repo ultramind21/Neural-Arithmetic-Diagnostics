@@ -43,9 +43,11 @@ class SorobanEnv:
         lower:     0-4
         is_cursor: 0 or 1
         b_digit:   0-9  (what to add at this column)
+        b_done_mask: 0 or 1 (has all been added to this column?)
+        is_active_col: 0 or 1 (are we working on this column now?)
     
     Shape: (num_columns, F) where F is defined by _obs() implementation.
-    Current implementation: F=4 (upper, lower, is_cursor, b_digit).
+    Current implementation: F=6 (upper, lower, is_cursor, b_digit, b_done_mask, is_active_col).
     """
 
     def __init__(self, config: SorobanConfig = None):
