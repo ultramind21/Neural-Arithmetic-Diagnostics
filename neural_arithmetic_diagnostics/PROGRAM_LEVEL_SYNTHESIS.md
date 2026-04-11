@@ -1,292 +1,161 @@
 # PROGRAM LEVEL SYNTHESIS
-## Neural-Arithmetic-Diagnostics — Research Program Position
+## Neural-Arithmetic-Diagnostics — Program Position (with Phase-1 Validation Overlay)
 
 **Date:** April 2026  
-**Status:** CURRENT PROGRAM SYNTHESIS
+**Status:** Current program synthesis (post-audit) + Project 12 Phase 1 validation overlay
+
+---
+
+## TL;DR
+This repository is a research program on arithmetic reasoning in neural networks. A central lesson persists across the line:
+
+> High arithmetic performance alone is not sufficient evidence of robust reasoning.
+
+**Project 12** adds a validation layer that converts selected results into **reproducible evidence** (locked claims → manifests → artifacts → gates).  
+Phase 1 of Project 12 validates **Project 11 + Project 4**; Projects 5–10 remain part of the post-audit research synthesis but are not yet consolidated under Project 12.
 
 ---
 
 ## 1. Purpose
+This document states the current program-level position across the post-audit research line (Projects 4–11), while explicitly distinguishing:
 
-This document synthesizes the current position of the post-audit research program across Projects 4–11.
+- **Validated evidence (Project 12 Phase 1):** what is supported by reproducible gates today
+- **Research synthesis (Projects 5–10):** the strongest current narrative position, pending full Project 12 consolidation
 
-The goal is not to repeat each project separately, but to state clearly:
-
-- what the program now knows
-- what each project contributed
-- how the projects connect
-- and what the strongest current scientific position is
+This is a program position document, not a per-project repetition.
 
 ---
 
-## 2. The Program Arc
+## 2. What is validated vs. what is synthesis (important)
+### 2.1 Validated evidence (Project 12 Phase 1)
+Phase 1 produces a paper-ready evidence bundle for:
+- **Project 11:** validated claims + one rejected-as-stated threshold claim + a validated mechanism-based revision
+- **Project 4:** baseline diagnostics + adversarial-training narrow transfer, validated via policy checks and a 3-seed smoke check
 
-The post-audit research line developed through seven major projects:
+**Primary evidence pointers:**
+- Master snapshot: `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`
+- Claim registry: `project_12/docs/FORMAL_CLAIMS.md`
+- Paper draft: `project_12/docs/PAPER_DRAFT_PHASE1.md`
+- Evidence index: `project_12/docs/PAPER_READY_PHASE1_EVIDENCE_INDEX.md`
 
-### Project 4 — Diagnostic Arithmetic Reasoning
-Established the framework for distinguishing:
+### 2.2 Program synthesis (post-audit line, not fully consolidated yet)
+Projects 5–10 contribute strongly to the program arc (decomposition, interpretability, local-to-global bridge, architecture design, higher-dimensional sandboxes, theory-building under falsification pressure). Their conclusions are documented and internally consistent, but they are not yet fully revalidated under Project 12 Phase 1 gates.
+
+---
+
+## 3. The post-audit program arc (Projects 4–11)
+### Project 4 — Diagnostic Arithmetic Reasoning (validated in Project 12 Phase 1)
+Established a diagnostic framework to distinguish:
 - distribution-bound fit
 - bounded compositional competence
 - stronger algorithm-like behavior
 
-### Project 5 — Decomposition Robustness Exploration
-Showed that:
-- decomposition can work structurally
-- learned decomposition fails selectively
-- and several simple explanations of failure can be ruled out
+Also provides a validated intervention result: adversarial training can yield narrow transfer (see Section 6).
 
-### Project 6 — Mechanistic Interpretability Sandbox
-Showed that:
-- arithmetic-relevant internal structure is real
-- internal behavior can be probed
-- unit-level and subspace-level signals are meaningful
-- causal and geometric evidence can be obtained
+### Project 5 — Decomposition Robustness Exploration (synthesis)
+Showed that decomposition can work structurally, but failures can be selective and not explained by simple one-factor stories.
 
-### Project 7 — From Local Competence to Global Compositional Failure
-Showed that:
-- local-to-global failure is not monolithic
-- some family-level failures are trigger-correctable
-- others are not
-- and bridge failure is mechanistically heterogeneous
+### Project 6 — Mechanistic Interpretability Sandbox (synthesis)
+Showed arithmetic-relevant internal structure is measurable: carry-sensitive signals, subspaces, unit-level probes, and causal/geometric evidence can be collected.
 
-### Project 8 — Composition Stabilization Architectures
-Showed that:
-- family-sensitive rescue mechanisms can be architecturally integrated
-- interface and controller structure can jointly support global composition
-- architecture can be designed on top of prior diagnosis rather than blind trial-and-error
+### Project 7 — Local-to-global bridge (synthesis)
+Showed local-to-global failure is heterogeneous: some family-level failures are trigger-correctable, others are not.
 
-### Project 9 — High-Dimensional Compositional Sandboxes
-Showed that:
-- local-to-global propagation remains meaningful in higher-dimensional arithmetic-like spaces
-- topology-sensitive and family-sensitive behavior can emerge in 3D compositional worlds
-- adaptive family-aware rescue policies can become meaningful in those higher-dimensional spaces
+### Project 8 — Composition stabilization architectures (synthesis)
+Showed architecture can be designed on top of diagnosis: family-sensitive rescue mechanisms can be integrated rather than discovered by blind scaling.
 
-### Project 10 — Compositional Failure Laws and Rescue Regime Theory
-Showed that:
-- some lower-level law candidates can receive strong support
-- stronger higher-order necessity claims can fail under adversarial pressure
-- theory can improve through falsification rather than decorative defense
-- and the stronger surviving higher-level result may be a threshold-structured regime-space account with transition bands and heterogeneity-dependent boundary geometry
+### Project 9 — High-dimensional compositional sandboxes (synthesis)
+Showed local-to-global propagation remains meaningful in richer arithmetic-like spaces, where topology- and family-sensitive behavior can emerge.
 
-### Project 11 — Structure vs Resolution vs Adaptive Sampling (Efficiency Layer)
-Showed that:
-- structured sampling (uniform + boundary mixture) can approximate dense representation performance with significantly fewer reference points
-- efficiency-performance trade-offs form a meaningful new axis in the program
-- k-NN smoothing does not universally improve retrieval-based inference in this regime
-- there exists a measurable efficiency frontier between accuracy and reference cost
-- dense NN remains the upper bound, but can be approximated at reduced cost via structured sampling strategies
+### Project 10 — Law testing + rescue regime theory (synthesis)
+Showed that higher-order unifications must be adversarially tested; when necessity claims fail, the surviving higher-level result may be threshold-structured regime-space behavior rather than a flat universal law.
+
+### Project 11 — Structure vs resolution vs sampling (validated in Project 12 Phase 1)
+Adds an efficiency axis: structured sampling can approximate dense reference performance at reduced cost, with boundary behavior and mechanism details shaping outcomes.
 
 ---
 
-## 3. What the Program Has Established
+## 4. What the program has established (current best-supported position)
+The post-audit line supports the following high-level claims:
 
-Taken together, the program now establishes the following:
+A) **High arithmetic performance is not sufficient.**  
+Models can look strong under standard tests while failing under structured family diagnostics.
 
-### A. High arithmetic accuracy is not sufficient
-This was the foundational lesson carried forward from the earlier research line and formalized in the post-audit program.
+B) **Failure is structured.**  
+Failures are family-specific, architecture-sensitive, and composition-sensitive rather than uniform "works/fails" behavior.
 
-### B. Failure is structured
-Arithmetic models do not simply "work" or "fail."
-They fail in family-specific, architecture-specific, composition-specific, and even topology-sensitive ways.
+C) **Local competence and global robustness differ.**  
+Local or partial competence does not automatically scale to global compositional robustness.
 
-### C. Local competence and global robustness are different
-A system can:
-- have strong local arithmetic competence
-- have meaningful internal arithmetic structure
-- and still fail compositionally at the family or sequence level
+D) **Internal structure is real and usable (synthesis).**  
+Mechanistic signals can be probed and linked to outcomes, even when they do not yield a single unified explanation.
 
-### D. Internal structure is real and usable
-Carry-sensitive signals, success/failure contrasts, causal units, low-dimensional directions, and sequence-level internal dynamics can all be identified and studied meaningfully.
+E) **Global failure is heterogeneous.**  
+Different failure families can arise from different mechanisms.
 
-### E. Global failure is mechanistically heterogeneous
-Different family-level failures are not driven by one shared mechanism.
+F) **Design can respond to diagnosis (synthesis).**  
+Architecture-level interventions can be targeted to distinct failure modes.
 
-### F. Design can respond to diagnosis
-Architecture can be improved not by random expansion, but by targeted support for the distinct failure modes revealed by diagnosis.
+G) **Higher-level theory must survive adversarial pressure (synthesis).**  
+Theory improves via falsification; a regime-space / threshold-structured account can be more defensible than a universal-law framing.
 
-### G. Higher-dimensional composition opens a new layer
-The local-to-global problem does not disappear in richer spaces.
-Instead, it acquires new topology-sensitive and family-sensitive forms.
-
-### H. Higher-level theory itself must be adversarially tested
-Project 10 established that even higher-order unifications should not be protected from pressure.
-When stronger necessity claims fail, the better surviving result may be a regime-space and threshold-structure account rather than a flat universal law.
-
-### I. Efficiency is a first-class axis of analysis
-Beyond correctness and structural understanding, the program now shows that:
-- performance can be preserved under significant reduction in computational or representational cost
-- sampling strategy is a key determinant of this efficiency frontier
-- dense representation is not always necessary to approach near-optimal performance
-
-This is now a strong and coherent scientific position.
+H) **Efficiency is a first-class axis (validated for Project 11 in Phase 1).**  
+Near-dense performance can be approached with structured sampling at lower reference cost; dense NN remains a useful upper-performance reference.
 
 ---
 
-## 4. The Deepest Program Insight
+## 5. Deepest program insight (calibrated)
+A defensible program-level thread is:
 
-The deepest current insight of the program is:
+> Robust arithmetic behavior is not explained by a single missing ingredient. It is mechanistically layered, failure-structured, and often sensitive to regime boundaries; some statements are brittle as absolute thresholds but stable as mechanism-based criteria.
 
-> robust arithmetic behavior is not blocked by one simple missing ingredient, and its higher-level explanation is not necessarily compressible into one simple universal law.
-
-Instead, the path from:
-- local competence
-to
-- global robust composition
-depends on:
-- structure-aware diagnosis
-- family-sensitive interpretation
-- mechanistic internal analysis
-- architecture-level support designed for heterogeneous failure modes
-- the geometry of the compositional state space
-- and, at the highest level, threshold-structured regime behavior whose boundaries may themselves shift with other variables
-
-This is the strongest scientific thread that now runs through the whole program.
+This is illustrated concretely in Phase 1:
+- **Project 11:** one absolute boundary-threshold claim is rejected-as-stated under holdout-seed variation, while a mechanism-based revision remains validated (C07 → C07R).
+- **Project 4:** adversarial training can yield narrow transfer and negative transfer (policy-validated, with a 3-seed smoke check).
 
 ---
 
-## 5. What Each Project Added
+## 6. Phase 1 validated highlights (Project 12 overlay)
+### Project 11 (validated)
+- Soft clamp enables a competitive interpretable baseline overall (vs hard clamp baseline).
+- Dense NN improves with resolution (upper-performance reference).
+- Boundary-only sampling underperforms; mixed/global coverage is necessary.
+- Mixed sampling at N=1000 achieves near-dense performance with fewer points.
+- Absolute boundary threshold claim is brittle (rejected-as-stated); mechanism-based revision is robust (validated).
 
-### Project 4 added:
-- a language and framework for diagnosing narrow gains vs broader robustness
+### Project 4 (validated)
+- Baseline diagnostics show architecture-dependent behavior on block-boundary stress and universal collapse on certain adversarial families.
+- Adversarial training validates narrow transfer: improvement on seen families coupled with degradation on held-out structure (policy-based validation + 3-seed smoke check).
 
-### Project 5 added:
-- a decomposition-focused exclusion map
-
-### Project 6 added:
-- a credible mechanistic interpretability platform
-
-### Project 7 added:
-- a precise local-to-global bridge analysis
-
-### Project 8 added:
-- the first strong architecture-level rescue result based on family-sensitive design
-
-### Project 9 added:
-- the first higher-dimensional compositional sandbox showing that topology, family identity, and rescue can all matter inside richer arithmetic-like worlds
-
-### Project 10 added:
-- the first program-level law-testing and post-adversarial theory branch, culminating in a threshold-structured rescue regime theory rather than a simple surviving higher-order law
-
-### Project 11 added:
-- the efficiency frontier of retrieval-based inference
-- structure-guided sampling (uniform + boundary) as a principled alternative to dense reference sets
-- empirical evidence that 3× cost reduction can be achieved with small performance loss
-- evidence that smoothing (k-NN) is not universally beneficial in structured retrieval regimes
-
-Each project therefore contributed a different layer of understanding rather than repeating the same result.
+Primary evidence pointers:
+- `project_12/docs/VALIDATED_RESULTS_P11_PROJECT12.md`
+- `project_12/docs/VALIDATED_RESULTS_P4_PROJECT12.md`
 
 ---
 
-## 6. Current Strongest Scientific Position
-
-The strongest current program-level position is:
-
-> arithmetic reasoning in neural models is structured, non-uniform, and mechanistically layered: high performance can remain narrow, local competence does not automatically scale globally, family-level failures are heterogeneous, successful rescue may require architecture that explicitly supports different failure families through different mechanisms, these same issues can persist in richer higher-dimensional compositional spaces, and at the highest level rescue behavior may be better understood through adversarially tested threshold-structured regime theory than through one flat higher-order law.
->
-> The program now also includes a second axis of understanding: efficiency of structured inference. This axis shows that near-optimal performance can be achieved through carefully designed sampling distributions rather than purely increasing resolution, introducing a cost-aware dimension to the previously structure-centric theory of arithmetic reasoning.
-
-This is now the best-supported scientific position across the full research program.
+## 7. Strongest current assets (practical)
+1) **Project 12 validation layer (Phase 1)** — claims → evidence workflow, paper-ready bundle  
+2) **Project 11 packaged results** — reader-friendly evidence tables + efficiency axis  
+3) **Project 4 diagnostic framework** — family-level diagnostics + validated narrow-transfer intervention  
+4) **Projects 5–10 synthesis** — decomposition, mechanistic probes, bridge heterogeneity, targeted design, higher-dimensional exploration, falsification-driven theory-building
 
 ---
 
-## 7. Strongest Current Assets
-
-The current strongest research assets are:
-
-1. **Project 4 framework**
-   - diagnostic benchmark and interpretation backbone
-
-2. **Project 5 decomposition map**
-   - principled exclusion of simple decomposition explanations
-
-3. **Project 6 mechanistic platform**
-   - internal arithmetic representation, causal units, trajectories, subspaces
-
-4. **Project 7 heterogeneity result**
-   - not all local-to-global failures are the same
-
-5. **Project 8 architecture success**
-   - family-sensitive rescue mechanisms can be integrated successfully
-
-6. **Project 9 higher-dimensional sandbox**
-   - compositional structure remains meaningful beyond linear sequence settings
-
-7. **Project 10 rescue regime theory**
-   - threshold structure, transition bands, and heterogeneity-dependent boundary geometry at the theory level
-
-These seven assets together make the program unusually rich.
+## 8. What the program does NOT yet claim
+- A final universal arithmetic architecture
+- A complete mechanistic theory of all failure families
+- A single universal higher-order law that generalizes without qualification
+- Fully consolidated Project 12 validation for Projects 5–10 (Phase 1 covers P11 + P4 only)
 
 ---
 
-## 8. What the Program Does NOT Yet Claim
-
-The program still does not claim:
-
-- a final universal arithmetic architecture
-- a full mechanistic theory of all arithmetic failures
-- a complete local-to-global causal closure
-- a final theory that should be generalized to all domains without care
-- a complete higher-dimensional compositional theory
-- or one final universal higher-order law of rescue behavior
-
-Those remain future directions.
-
-But this does not weaken the program.
-It defines the boundary of its current strength.
+## 9. Best next macro-directions
+A) **Publication synthesis:** expand paper-ready packaging from Phase 1 to additional projects (5–10) under the same validation discipline  
+B) **Project 10 theory packaging:** produce a cleaner outward narrative with explicit falsification checkpoints  
+C) **Extended validation:** apply Project 12 protocols to Projects 5–10 (claim locking → baselines → manifests → evidence snapshots)  
+D) **Domain transfer:** test whether the diagnostic + validation logic extends beyond arithmetic
 
 ---
 
-## 9. Strategic Position Now
-
-At this point, the research program has moved beyond:
-- benchmark chasing
-- simple post-hoc interpretation
-- or isolated project-level stories
-
-It now stands as:
-
-- a diagnostic framework
-- a decomposition research line
-- a mechanistic interpretability platform
-- a local-to-global bridge analysis
-- a design-oriented architecture program
-- a higher-dimensional compositional sandbox program
-- and a theory-building branch that subjects higher-level claims to adversarial revision
-
-That is already a serious research program.
-
----
-
-## 10. Best Next Macro-Directions
-
-The strongest next macro-directions are now likely to be one of:
-
-### A. Publication synthesis
-Package the strongest subset of Projects 4–10 into publication-ready papers
-
-### B. Project 10 theory packaging
-Turn the Project 10 cycle into a cleaner theory-facing outward narrative
-
-### C. Threshold / phase refinement
-Refine the current Project 10 regime-space and boundary-geometry structure further
-
-### D. New candidate-law testing
-Return to other candidate laws with the stronger falsification discipline established in Project 10
-
-### E. New domain transfer
-Test whether the program's logic extends beyond arithmetic
-
-### F. Efficiency-aware scaling laws
-Study how structure + sampling strategies define performance/cost scaling curves across retrieval-based inference systems
-
----
-
-## 11. Final Program Position
-
-The most defensible high-level statement is:
-
-> Neural-Arithmetic-Diagnostics has evolved into a full research program showing that arithmetic reasoning in neural models cannot be understood through benchmark accuracy alone. It requires diagnostic structure, decomposition analysis, mechanistic interpretability, local-to-global bridge reasoning, architecture-level design sensitive to heterogeneous failure modes, higher-dimensional compositional exploration, and — at the highest level — adversarially tested threshold-structured regime theory rather than decorative universal law language.
-
-This is the current strongest statement the program can make.
-
----
+## 10. Final program position (concise)
+Neural-Arithmetic-Diagnostics is a research program arguing that arithmetic reasoning in neural models cannot be justified by benchmark performance alone. It requires structured diagnostics, mechanistic analysis, family-sensitive interpretations, and—critically—validation discipline that converts experimental outcomes into reproducible evidence. Project 12 Phase 1 demonstrates this conversion for Projects 11 and 4, including a concrete example of rejecting a brittle absolute threshold while validating a mechanism-based revision.
