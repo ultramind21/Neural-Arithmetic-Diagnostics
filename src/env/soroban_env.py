@@ -44,7 +44,8 @@ class SorobanEnv:
         is_cursor: 0 or 1
         b_digit:   0-9  (what to add at this column)
     
-    Shape: (num_columns, 4)
+    Shape: (num_columns, F) where F is defined by _obs() implementation.
+    Current implementation: F=4 (upper, lower, is_cursor, b_digit).
     """
 
     def __init__(self, config: SorobanConfig = None):
@@ -168,6 +169,14 @@ class SorobanEnv:
                     info["correct"] = False
                     info["result"] = result
                     info["expected"] = self.target
+
+        else:
+            # Unknown action (not GOTO, ADD1, ADD5, or DONE)
+            self.done = True
+            reward = -1.0
+            info["illegal"] = True
+            info["illegal_reason"] = "unknown_action"
+            info["correct"] = False
 
         # Timeout guard
         if self.steps >= self.config.max_steps and not self.done:
