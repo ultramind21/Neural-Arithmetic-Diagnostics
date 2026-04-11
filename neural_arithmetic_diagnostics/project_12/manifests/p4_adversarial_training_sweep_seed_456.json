@@ -1,0 +1,12 @@
+{
+  "baseline_artifact_path": "project_12/results/repro_p4/baselines/mlp/artifact.json",
+  "output_dir": "project_12/results/repro_p4/intervention_sweep/seed_456",
+  "seed": 456,
+  "seen_families": ["alternating_carry", "full_propagation_chain"],
+  "heldout_families": ["block_boundary_stress"],
+  "acceptance": {
+    "min_gap": 0.1,
+    "require_ordering": true
+  },
+  "base_arch": "mlp"
+}

@@ -1,0 +1,47 @@
+{
+  "base_arch": "mlp",
+  "seen_families": [
+    "alternating_carry",
+    "full_propagation_chain"
+  ],
+  "heldout_families": [
+    "block_boundary_stress"
+  ],
+  "pre_exact_match": {
+    "alternating_carry": 0.0,
+    "full_propagation_chain": 0.0,
+    "block_boundary_stress": 1.0
+  },
+  "post_exact_match": {
+    "alternating_carry": 1.0,
+    "full_propagation_chain": 0.0,
+    "block_boundary_stress": 0.0
+  },
+  "computed_gains": {
+    "pre_seen_mean": 0.0,
+    "post_seen_mean": 0.5,
+    "pre_heldout_mean": 1.0,
+    "post_heldout_mean": 0.0,
+    "seen_gain": 0.5,
+    "heldout_gain": -1.0,
+    "gap": 1.5
+  },
+  "acceptance": {
+    "min_gap": 0.1,
+    "require_ordering": true
+  },
+  "p12_metadata": {
+    "git_hash": "dd652591e432799133377ebbad3be182009b5321",
+    "timestamp_utc": "2026-04-11T09:08:30.230329+00:00",
+    "env": {
+      "python_version": "3.12.0",
+      "torch_version": "2.5.1+cu121",
+      "cuda_available": true,
+      "platform": "Windows-11-10.0.28000-SP0"
+    },
+    "manifest_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\manifests\\p4_adversarial_training_sweep_seed_42.json",
+    "manifest_sha256": "3de4addfd07dc5b5551b537f89a8557e5d8e8475019e1450d6a32af4addbb60e",
+    "entrypoint": "run_p4_adversarial_training_repro.py",
+    "source_script_copied_from": "project_4/interventions/adversarial_training/project_4_adversarial_training.py"
+  }
+}

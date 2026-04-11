@@ -365,12 +365,15 @@ def main():
     )
     args = parser.parse_args()
     
-    # Load manifest to extract output directory and baseline artifact path
+    # Load manifest to extract output directory, baseline artifact path, and seed
     manifest = load_manifest(args.manifest)
     output_dir_relative = manifest.get("output_dir", "project_12/results/repro_p4/adversarial")
     output_dir = Path(output_dir_relative)
     ensure_output_dir_is_safe(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Extract seed (default 42 if not in manifest)
+    seed = manifest.get("seed", 42)
     
     # PATCH C: Extract baseline exact_match from manifest-specified baseline artifact
     baseline_exact_match = {}
@@ -397,7 +400,7 @@ def main():
     module = load_phase30_module()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    model = train_mlp_with_adversarial_augmentation(module, device=device, seed=42)
+    model = train_mlp_with_adversarial_augmentation(module, device=device, seed=seed)
     print("✓ Adversarially trained MLP model ready")
 
     # Baseline-like in-distribution evaluation

@@ -21,6 +21,7 @@ from pathlib import Path
 from typing import Dict, Any
 import json
 import sys
+import argparse
 
 
 def load_intervention_artifact(path: Path) -> Dict[str, Any]:
@@ -196,7 +197,19 @@ def render_report(
 
 
 def main():
-    artifact_path = Path("project_12/results/repro_p4/intervention/artifact.json")
+    # Parse arguments
+    parser = argparse.ArgumentParser(
+        description="Project 4 intervention reproduction policy check (P4-C04)"
+    )
+    parser.add_argument(
+        "--artifact",
+        type=str,
+        default="project_12/results/repro_p4/intervention/artifact.json",
+        help="Path to intervention artifact JSON (default: project_12/results/repro_p4/intervention/artifact.json)",
+    )
+    args = parser.parse_args()
+    
+    artifact_path = Path(args.artifact)
     report_path = Path("project_12/reports/REPRO_CHECK_PROJECT4_INTERVENTION.md")
     
     print(f"\n{'=' * 80}")
