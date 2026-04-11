@@ -41,27 +41,43 @@ def check_paths(base_dir: Path, paths: List[str]) -> Tuple[List[str], List[str]]
 def main():
     # Paths
     project_root = Path(__file__).parent.parent.parent  # neural_arithmetic_diagnostics/
-    validated_results = project_root / "project_12" / "docs" / "VALIDATED_RESULTS_P11_PROJECT12.md"
+    validated_results_p11 = project_root / "project_12" / "docs" / "VALIDATED_RESULTS_P11_PROJECT12.md"
+    validated_results_p4 = project_root / "project_12" / "docs" / "VALIDATED_RESULTS_P4_PROJECT12.md"
     report_path = project_root / "project_12" / "reports" / "VALIDATED_RESULTS_LINK_CHECK.md"
     
-    # Extract paths
-    print(f"Reading: {validated_results}")
-    if not validated_results.exists():
-        print(f"ERROR: {validated_results} not found!")
+    # Extract paths from both documents
+    print(f"Reading: {validated_results_p11}")
+    print(f"Reading: {validated_results_p4}")
+    
+    all_paths = []
+    all_paths.extend(extract_paths_from_markdown(validated_results_p11))
+    all_paths.extend(extract_paths_from_markdown(validated_results_p4))
+    all_paths = sorted(list(set(all_paths)))  # Deduplicate and sort
+    
+    if not validated_results_p11.exists():
+        print(f"ERROR: {validated_results_p11} not found!")
         return
     
-    paths = extract_paths_from_markdown(validated_results)
-    print(f"Found {len(paths)} unique path references")
+    if not validated_results_p4.exists():
+        print(f"ERROR: {validated_results_p4} not found!")
+        return
+    
+    print(f"Found {len(all_paths)} unique path references (combined)")
     
     # Check paths
-    existing, missing = check_paths(project_root, paths)
+    existing, missing = check_paths(project_root, all_paths)
     
     # Generate report
     report_lines = []
-    report_lines.append("# VALIDATED_RESULTS_P11_PROJECT12.md — Link Integrity Check")
+    report_lines.append("# VALIDATED_RESULTS_LINK_CHECK — Link Integrity Check")
     report_lines.append("")
-    report_lines.append(f"**Check Date:** {Path(validated_results).stat().st_mtime}")
-    report_lines.append(f"**Total paths found:** {len(paths)}")
+    report_lines.append("**Purpose:** Verify that all paths referenced in VALIDATED_RESULTS documents exist on disk.")
+    report_lines.append("")
+    report_lines.append(f"**Documents Checked:**")
+    report_lines.append(f"- VALIDATED_RESULTS_P11_PROJECT12.md")
+    report_lines.append(f"- VALIDATED_RESULTS_P4_PROJECT12.md")
+    report_lines.append("")
+    report_lines.append(f"**Total paths found:** {len(all_paths)}")
     report_lines.append(f"**Existing:** {len(existing)}")
     report_lines.append(f"**Missing:** {len(missing)}")
     report_lines.append("")

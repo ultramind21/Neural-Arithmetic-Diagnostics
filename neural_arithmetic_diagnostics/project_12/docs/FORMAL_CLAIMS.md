@@ -317,8 +317,12 @@
 - Baseline classification summary: `project_4/baselines/PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md` (stable baseline matrix)
 - Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
 - Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
-**Status:** untested (Project 12) — observed in Project 4; requires Project 12 re-validation.
-**Notes:** This is the clearest stable cross-model difference in Project 4. Targets are independent/rounded, not calibrated to Project 4 observed values.
+**Status:** validated (Project 12; baseline repro)
+**Evidence Pointers:**
+- P12 validation report: `project_12/reports/P4_VALIDATION_REPORT_BASELINES.md` (P4-C02 section)
+- Baseline artifacts: `project_12/results/repro_p4/baselines/{mlp,lstm,transformer}/artifact.json`
+- Repro check: `project_12/reports/REPRO_CHECK_PROJECT4_BASELINES.md`
+**Notes:** All targets met in Project 12 baseline repro. MLP/Transformer block-boundary=1.0, LSTM=0.0, gap=1.0 (exceeds threshold of 0.50).
 
 ---
 
@@ -343,8 +347,12 @@
 - Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
 - Results summary: `project_4/results/PROJECT_4_RESULTS_SUMMARY.md`
 - Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
-**Status:** untested (Project 12) — observed in Project 4; requires Project 12 confirmation.
-**Notes:** Establishes baseline weakness threshold for subsequent robustness claims. Independent target (0.20) chosen as rounded weakness ceiling, not calibrated to observed values.
+**Status:** validated (Project 12; baseline repro)
+**Evidence Pointers:**
+- P12 validation report: `project_12/reports/P4_VALIDATION_REPORT_BASELINES.md` (P4-C03 section)
+- Baseline artifacts: `project_12/results/repro_p4/baselines/{mlp,lstm,transformer}/artifact.json`
+- Repro check: `project_12/reports/REPRO_CHECK_PROJECT4_BASELINES.md`
+**Notes:** All three architectures confirmed weak: MLP=0.0625, LSTM=0.0391, Transformer=0.0391 (all ≤ 0.20 threshold).
 
 ---
 
@@ -395,8 +403,12 @@
 - Baseline classification: `project_4/baselines/PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md` (alternating carry & full propagation chain rows)
 - Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
 - Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
-**Status:** untested (Project 12) — observed in Project 4; requires confirmation.
-**Notes:** Contrast with P4-C02 (block-boundary shows architecture split). These two families establish a universal-collapse pattern as context for intervention effectiveness baseline.
+**Status:** validated (Project 12; baseline repro)
+**Evidence Pointers:**
+- P12 validation report: `project_12/reports/P4_VALIDATION_REPORT_BASELINES.md` (P4-C05 section)
+- Baseline artifacts: `project_12/results/repro_p4/baselines/{mlp,lstm,transformer}/artifact.json`
+- Repro check: `project_12/reports/REPRO_CHECK_PROJECT4_BASELINES.md`
+**Notes:** Both families universally collapsed: alternating-carry max=0.0, full-propagation-chain max=0.0 (both ≤ 0.10 threshold), no architecture split (gap=0 for both).
 
 ---
 
