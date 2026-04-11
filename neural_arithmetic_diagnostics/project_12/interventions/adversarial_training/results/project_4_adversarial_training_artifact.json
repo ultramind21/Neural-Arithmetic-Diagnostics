@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-04-11T08:47:19.799946Z",
+  "timestamp_utc": "2026-04-11T09:09:01.645649Z",
   "framework_version": "1.0",
   "intervention_type": "adversarial_training",
   "base_model_family": "phase30_mlp",
@@ -11,10 +11,10 @@
     "block_boundary_stress"
   ],
   "in_distribution": {
-    "digit_acc": 0.5875000135274604,
-    "carry_acc": 0.9515625026542693,
-    "combined_acc": 0.5875000135274604,
-    "exact_match": 0.046875
+    "digit_acc": 0.550000011920929,
+    "carry_acc": 0.9531250025611371,
+    "combined_acc": 0.550000011920929,
+    "exact_match": 0.078125
   },
   "seen_results": {
     "alternating_carry": {
@@ -32,9 +32,9 @@
   },
   "heldout_results": {
     "block_boundary_stress": {
-      "digit_acc": 0.6000000238418579,
-      "carry_acc": 0.800000011920929,
-      "combined_acc": 0.6000000238418579,
+      "digit_acc": 0.800000011920929,
+      "carry_acc": 1.0,
+      "combined_acc": 0.800000011920929,
       "exact_match": 0.0
     }
   },

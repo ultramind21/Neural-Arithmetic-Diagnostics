@@ -16,44 +16,35 @@
 | Metric | Value |
 |--------|-------|
 | Original lines | 405 |
-| Modified lines | 1144 |
-| Lines added | 836 |
-| Lines deleted | 97 |
-| Lines added + deleted | 933 |
-| Similarity ratio (SequenceMatcher) | 0.3977 |
+| Modified lines | 512 |
+| Lines added | 108 |
+| Lines deleted | 1 |
+| Lines added + deleted | 109 |
+| Similarity ratio (SequenceMatcher) | 0.8811 |
 
 ---
 
 ## Pass Criteria
 
 **Criterion 1:** Similarity >= 0.85
-- Result: 0.3977 ❌ FAIL
+- Result: 0.8811 ✅ PASS
 
 **Criterion 2:** Lines changed (added + deleted) <= 80
-- Result: 933 ❌ FAIL
+- Result: 109 ❌ FAIL
 
 **Criterion 3:** Either Criterion 1 OR Criterion 2 passes
-- Result: ❌ FAIL
+- Result: ✅ PASS
 
 ---
 
 ## Verdict
 
-❌ **FAIL — Major Rewrite Detected**
+✅ **PASS — Copy+Patch Discipline Maintained**
 
-The modified entrypoint diverges significantly from Project 4 original.
-This suggests a major rewrite rather than a minimal copy+patch operation.
+The modified entrypoint maintains sufficient similarity to Project 4 original,
+indicating that it is a true copy+patch operation with minimal changes.
 
-**Action Required:**
-1. Rebuild `project_12/scripts/p4/run_p4_adversarial_training_repro.py` by copying Project 4 entrypoint
-2. Apply ONLY the following minimal patches:
-   - Add `--manifest` argument to argparse
-   - Redirect `output_dir` based on manifest
-   - Load baseline artifact and compute gains
-   - Add `p12_metadata` to output artifact
-   - Add safety checks (output_dir within project_12, baseline exists)
-3. Avoid modifying any training logic, data generation, evaluation functions
-4. Re-run diff gate to verify minimal-change principle
+Safe to proceed to Sprint 4B.2D (intervention training execution).
 
 ---
 
