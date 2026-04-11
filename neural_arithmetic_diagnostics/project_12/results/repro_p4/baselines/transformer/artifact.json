@@ -1,6 +1,6 @@
 {
   "model_name": "phase30_transformer_baseline",
-  "timestamp_utc": "2026-04-11T06:16:02.380860Z",
+  "timestamp_utc": "2026-04-11T06:30:58.039101Z",
   "config": {
     "manifest": "project_12/manifests/p4_transformer_baseline_repro.json",
     "model_name": "phase30_transformer_baseline",
@@ -45,43 +45,43 @@
   ],
   "raw_metrics": {
     "in_distribution": {
-      "digit_acc": 0.1359375024912879,
-      "carry_acc": 0.5343750123865902,
-      "combined_acc": 0.07187500107102096,
-      "exact_match": 0.0
+      "digit_acc": 0.44375000963918865,
+      "carry_acc": 0.9390625033993274,
+      "combined_acc": 0.428125009406358,
+      "exact_match": 0.0390625
     },
     "adversarial": {
       "alternating_carry": {
-        "digit_acc": 0.0,
-        "carry_acc": 0.6000000238418579,
-        "combined_acc": 0.0,
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
         "exact_match": 0.0
       },
       "full_propagation_chain": {
-        "digit_acc": 0.0,
+        "digit_acc": 0.20000000298023224,
         "carry_acc": 1.0,
-        "combined_acc": 0.0,
+        "combined_acc": 0.20000000298023224,
         "exact_match": 0.0
       },
       "block_boundary_stress": {
-        "digit_acc": 0.20000000298023224,
-        "carry_acc": 0.0,
-        "combined_acc": 0.0,
-        "exact_match": 0.0
+        "digit_acc": 1.0,
+        "carry_acc": 1.0,
+        "combined_acc": 1.0,
+        "exact_match": 1.0
       }
     },
     "lengths": {
       "5": {
-        "digit_acc": 0.10625000158324838,
-        "carry_acc": 0.5015625123633072,
-        "combined_acc": 0.048437500721774995,
+        "digit_acc": 0.47187501133885235,
+        "carry_acc": 0.9281250042840838,
+        "combined_acc": 0.4500000108964741,
         "exact_match": 0.0
       }
     },
     "rounding": {
       "status": "placeholder",
-      "with_rounding": 0.0,
-      "without_rounding": 0.0,
+      "with_rounding": 0.0390625,
+      "without_rounding": 0.0390625,
       "sensitivity": 0.0,
       "qualification": "alternate decode path not yet implemented in aligned Phase 30 Project 4 path"
     },
@@ -94,24 +94,24 @@
         0.5
       ],
       "accuracies": {
-        "0.0": 0.0,
-        "0.1": 0.0,
-        "0.2": 0.0,
-        "0.5": 0.0
+        "0.0": 0.0390625,
+        "0.1": 0.0390625,
+        "0.2": 0.0390625,
+        "0.5": 0.0390625
       },
       "qualification": "carry corruption intervention not yet directly wired into aligned Phase 30 Project 4 path"
     }
   },
   "scorecard": {
     "model_name": "phase30_transformer_baseline",
-    "in_distribution_accuracy": 0.0,
-    "mean_adversarial_accuracy": 0.0,
+    "in_distribution_accuracy": 0.0390625,
+    "mean_adversarial_accuracy": 0.3333333333333333,
     "worst_case_pattern_accuracy": 0.0,
     "rounding_sensitivity": 0.0,
     "pattern_breakdown": {
       "alternating_carry": 0.0,
       "full_propagation_chain": 0.0,
-      "block_boundary_stress": 0.0
+      "block_boundary_stress": 1.0
     },
     "length_summary": {
       "training_max_length": 5,
@@ -121,11 +121,11 @@
       "accuracies": [
         0.0
       ],
-      "reference_accuracy": 0.0,
+      "reference_accuracy": 0.0390625,
       "relative_drops": [
-        0.0
+        1.0
       ],
-      "trend_label": "stable"
+      "trend_label": "sharp_collapse"
     },
     "carry_corruption_summary": {
       "corruption_levels": [
@@ -135,12 +135,12 @@
         0.5
       ],
       "accuracies": [
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        0.0390625,
+        0.0390625,
+        0.0390625,
+        0.0390625
       ],
-      "baseline_accuracy": 0.0,
+      "baseline_accuracy": 0.0390625,
       "degradation": [
         0.0,
         0.0,
@@ -172,30 +172,37 @@
       "low_mean_adversarial_accuracy",
       "poor_worst_case_pattern_accuracy",
       "pattern_specific_collapse_present",
+      "sharp_length_collapse",
       "flat_carry_corruption_response"
     ],
     "regime_2_signals": [],
     "regime_3_signals": [
-      "low_rounding_sensitivity",
-      "stable_length_behavior"
+      "low_rounding_sensitivity"
     ],
     "cautions": [
       "carry_corruption_requires_joint_interpretation",
       "final_regime_assignment_must_not_be_single_metric_based"
     ],
     "rationale": [
-      "in-distribution accuracy is weak (0.0000)",
-      "mean adversarial accuracy is low (0.0000)",
+      "in-distribution accuracy is weak (0.0391)",
+      "mean adversarial accuracy is low (0.3333)",
       "worst-case pattern accuracy is poor (0.0000)",
-      "low-performing adversarial patterns detected: ['alternating_carry', 'full_propagation_chain', 'block_boundary_stress']",
+      "low-performing adversarial patterns detected: ['alternating_carry', 'full_propagation_chain']",
       "rounding sensitivity is low (0.0000)",
-      "length extrapolation is stable",
+      "length extrapolation shows sharp collapse",
       "carry corruption shows flat response"
     ]
   },
+  "checkpoint_metadata": {
+    "checkpoint_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_4\\checkpoints\\phase30_transformer_project4_ready.pt",
+    "checkpoint_exists": true,
+    "checkpoint_readable": true,
+    "state_dict_num_keys": 5,
+    "param_norm_estimate": 0.0
+  },
   "p12_metadata": {
-    "git_hash": "6832904b76ff964bf08b38eaf15cd7bb94d842fb",
-    "timestamp_utc": "2026-04-11T06:16:02.346573+00:00",
+    "git_hash": "eaca6585db1d094a59c866eb56b8f6fa3ba3be77",
+    "timestamp_utc": "2026-04-11T06:30:58.004310+00:00",
     "env": {
       "python_version": "3.12.0",
       "torch_version": "2.11.0+cpu",

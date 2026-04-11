@@ -178,3 +178,37 @@ def build_p12_metadata(
         "entrypoint": entrypoint,
         "source_script_copied_from": source_script_copied_from,
     }
+
+
+def find_repo_root() -> Path:
+    """
+    Find the repository root by searching upward for:
+    1. A directory containing .git/
+    2. A directory named 'neural_arithmetic_diagnostics'
+    
+    Returns Path to the neural_arithmetic_diagnostics folder.
+    Raises ValueError if not found.
+    """
+    current = Path(__file__).resolve().parents[2]  # Start from project_12 level
+    
+    # Search upward
+    for parent in [current] + list(current.parents):
+        # Check for .git (repo root)
+        if (parent / ".git").exists():
+            # Found repo root; now look for neural_arithmetic_diagnostics
+            repo_root = parent
+            if repo_root.name == "neural_arithmetic_diagnostics":
+                return repo_root
+            # If repo_root is parent of neural_arithmetic_diagnostics
+            if (repo_root / "neural_arithmetic_diagnostics").exists():
+                return repo_root / "neural_arithmetic_diagnostics"
+            return repo_root
+        
+        # Check for neural_arithmetic_diagnostics folder
+        if parent.name == "neural_arithmetic_diagnostics":
+            return parent
+    
+    raise ValueError(
+        f"Could not find repository root or neural_arithmetic_diagnostics folder "
+        f"starting from {current}"
+    )

@@ -37,14 +37,26 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List
 
-# Add project root to path BEFORE importing project_4 modules
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(PROJECT_ROOT))
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
 import numpy as np
 import torch
+
+# Setup paths - add scripts directory to sys.path FIRST
+scripts_dir = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(scripts_dir))
+
+# NOW import p12_runlib to get find_repo_root
 import p12_runlib
+from p12_runlib import (
+    load_manifest,
+    ensure_output_dir_is_safe,
+    build_p12_metadata,
+    write_json,
+    write_text,
+    find_repo_root,
+)
+
+PROJECT_ROOT = find_repo_root()
+sys.path.insert(0, str(PROJECT_ROOT))
 
 # Import Project 4 baseline components
 from project_4.baselines.project_4_baseline_runtime_adapter_phase30 import build_phase30_adapter
@@ -54,11 +66,12 @@ from project_4.diagnostics.regime_classification import classify_regime
 
 
 # ============================================================================
-# PATHS
+# PATHS (using find_repo_root for robust resolution)
 # ============================================================================
 
 PROJECT_4_ROOT = PROJECT_ROOT / "project_4"
 SOURCE_SCRIPT = PROJECT_4_ROOT / "baselines" / "project_4_phase30_lstm_baseline_eval.py"
+CHECKPOINT_PATH = PROJECT_4_ROOT / "checkpoints" / "phase30_lstm_project4_ready.pt"
 
 
 # ============================================================================
@@ -233,6 +246,40 @@ def evaluate_carry_corruption_placeholder(
     }
 
 
+def validate_checkpoint(ckpt_path: Path, device: torch.device) -> Dict[str, Any]:
+    """Validate and probe checkpoint loading."""
+    result = {
+        "checkpoint_path": str(ckpt_path),
+        "checkpoint_exists": ckpt_path.exists(),
+        "checkpoint_readable": False,
+        "state_dict_num_keys": 0,
+        "param_norm_estimate": 0.0,
+    }
+
+    assert ckpt_path.exists(), f"Checkpoint not found: {ckpt_path}"
+
+    try:
+        state_dict = torch.load(ckpt_path, map_location=device)
+        if isinstance(state_dict, dict):
+            result["state_dict_num_keys"] = len(state_dict)
+            norms = []
+            for key, val in state_dict.items():
+                if isinstance(val, torch.Tensor):
+                    norms.append(val.norm().item())
+            if norms:
+                result["param_norm_estimate"] = (sum(n**2 for n in norms)) ** 0.5
+            result["checkpoint_readable"] = True
+            print(f"  ✓ Checkpoint readable: {result['state_dict_num_keys']} keys, "
+                  f"param norm={result['param_norm_estimate']:.6f}")
+        else:
+            raise ValueError(f"Unexpected checkpoint object type: {type(state_dict)}")
+    except Exception as e:
+        print(f"  ✗ Checkpoint load failed: {e}")
+        raise AssertionError(f"Checkpoint loading failed for {ckpt_path}: {e}")
+
+    return result
+
+
 # ============================================================================
 # MAIN
 # ============================================================================
@@ -336,8 +383,12 @@ def main():
 
     device = torch.device(args.device)
 
+    # Validate checkpoint before building adapter
+    print(f"Validating checkpoint...")
+    ckpt_metadata = validate_checkpoint(CHECKPOINT_PATH, device)
+
     # Get checkpoint (if specified, use it; otherwise use default from adapter)
-    checkpoint_path = args.checkpoint if args.checkpoint else None
+    checkpoint_path = args.checkpoint if args.checkpoint else str(CHECKPOINT_PATH)
     
     print(f"Building adapter (LSTM)...")
     adapter = build_phase30_adapter(
@@ -435,6 +486,7 @@ def main():
         "raw_metrics": raw_metrics,
         "scorecard": scorecard_dict,
         "regime_guidance": regime_guidance,
+        "checkpoint_metadata": ckpt_metadata,
         "p12_metadata": p12_metadata,
     }
 

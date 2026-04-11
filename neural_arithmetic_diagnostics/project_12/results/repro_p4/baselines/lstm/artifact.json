@@ -1,6 +1,6 @@
 {
   "model_name": "phase30_lstm_baseline",
-  "timestamp_utc": "2026-04-11T06:14:15.194897Z",
+  "timestamp_utc": "2026-04-11T06:30:26.271767Z",
   "config": {
     "manifest": "project_12/manifests/p4_lstm_baseline_repro.json",
     "model_name": "phase30_lstm_baseline",
@@ -45,43 +45,43 @@
   ],
   "raw_metrics": {
     "in_distribution": {
-      "digit_acc": 0.09062500146683306,
-      "carry_acc": 0.49843751231674105,
-      "combined_acc": 0.06406250107102096,
-      "exact_match": 0.0
+      "digit_acc": 0.4203125088242814,
+      "carry_acc": 0.9406250030733645,
+      "combined_acc": 0.4203125088242814,
+      "exact_match": 0.0390625
     },
     "adversarial": {
       "alternating_carry": {
-        "digit_acc": 0.0,
-        "carry_acc": 0.4000000059604645,
-        "combined_acc": 0.0,
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
         "exact_match": 0.0
       },
       "full_propagation_chain": {
-        "digit_acc": 0.0,
-        "carry_acc": 0.0,
-        "combined_acc": 0.0,
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
         "exact_match": 0.0
       },
       "block_boundary_stress": {
-        "digit_acc": 0.0,
+        "digit_acc": 0.800000011920929,
         "carry_acc": 1.0,
-        "combined_acc": 0.0,
+        "combined_acc": 0.800000011920929,
         "exact_match": 0.0
       }
     },
     "lengths": {
       "5": {
-        "digit_acc": 0.08906250132713467,
-        "carry_acc": 0.509375010500662,
-        "combined_acc": 0.06093750090803951,
-        "exact_match": 0.0
+        "digit_acc": 0.4515625098720193,
+        "carry_acc": 0.9328125040046871,
+        "combined_acc": 0.4515625098720193,
+        "exact_match": 0.03125
       }
     },
     "rounding": {
       "status": "placeholder",
-      "with_rounding": 0.0,
-      "without_rounding": 0.0,
+      "with_rounding": 0.0390625,
+      "without_rounding": 0.0390625,
       "sensitivity": 0.0,
       "qualification": "alternate decode path not yet implemented in aligned Phase 30 Project 4 path"
     },
@@ -94,17 +94,17 @@
         0.5
       ],
       "accuracies": {
-        "0.0": 0.0,
-        "0.1": 0.0,
-        "0.2": 0.0,
-        "0.5": 0.0
+        "0.0": 0.0390625,
+        "0.1": 0.0390625,
+        "0.2": 0.0390625,
+        "0.5": 0.0390625
       },
       "qualification": "carry corruption intervention not yet directly wired into aligned Phase 30 Project 4 path"
     }
   },
   "scorecard": {
     "model_name": "phase30_lstm_baseline",
-    "in_distribution_accuracy": 0.0,
+    "in_distribution_accuracy": 0.0390625,
     "mean_adversarial_accuracy": 0.0,
     "worst_case_pattern_accuracy": 0.0,
     "rounding_sensitivity": 0.0,
@@ -119,13 +119,13 @@
         5
       ],
       "accuracies": [
-        0.0
+        0.03125
       ],
-      "reference_accuracy": 0.0,
+      "reference_accuracy": 0.0390625,
       "relative_drops": [
-        0.0
+        0.2
       ],
-      "trend_label": "stable"
+      "trend_label": "sharp_collapse"
     },
     "carry_corruption_summary": {
       "corruption_levels": [
@@ -135,12 +135,12 @@
         0.5
       ],
       "accuracies": [
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        0.0390625,
+        0.0390625,
+        0.0390625,
+        0.0390625
       ],
-      "baseline_accuracy": 0.0,
+      "baseline_accuracy": 0.0390625,
       "degradation": [
         0.0,
         0.0,
@@ -172,30 +172,37 @@
       "low_mean_adversarial_accuracy",
       "poor_worst_case_pattern_accuracy",
       "pattern_specific_collapse_present",
+      "sharp_length_collapse",
       "flat_carry_corruption_response"
     ],
     "regime_2_signals": [],
     "regime_3_signals": [
-      "low_rounding_sensitivity",
-      "stable_length_behavior"
+      "low_rounding_sensitivity"
     ],
     "cautions": [
       "carry_corruption_requires_joint_interpretation",
       "final_regime_assignment_must_not_be_single_metric_based"
     ],
     "rationale": [
-      "in-distribution accuracy is weak (0.0000)",
+      "in-distribution accuracy is weak (0.0391)",
       "mean adversarial accuracy is low (0.0000)",
       "worst-case pattern accuracy is poor (0.0000)",
       "low-performing adversarial patterns detected: ['alternating_carry', 'full_propagation_chain', 'block_boundary_stress']",
       "rounding sensitivity is low (0.0000)",
-      "length extrapolation is stable",
+      "length extrapolation shows sharp collapse",
       "carry corruption shows flat response"
     ]
   },
+  "checkpoint_metadata": {
+    "checkpoint_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_4\\checkpoints\\phase30_lstm_project4_ready.pt",
+    "checkpoint_exists": true,
+    "checkpoint_readable": true,
+    "state_dict_num_keys": 5,
+    "param_norm_estimate": 0.0
+  },
   "p12_metadata": {
-    "git_hash": "6832904b76ff964bf08b38eaf15cd7bb94d842fb",
-    "timestamp_utc": "2026-04-11T06:14:15.161460+00:00",
+    "git_hash": "eaca6585db1d094a59c866eb56b8f6fa3ba3be77",
+    "timestamp_utc": "2026-04-11T06:30:26.238465+00:00",
     "env": {
       "python_version": "3.12.0",
       "torch_version": "2.11.0+cpu",

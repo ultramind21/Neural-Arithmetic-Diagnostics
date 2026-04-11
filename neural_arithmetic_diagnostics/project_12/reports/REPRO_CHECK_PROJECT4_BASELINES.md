@@ -11,16 +11,13 @@
 ---
 
 ## MLP Baseline
-**Status:** ❌ FAIL
+**Status:** ✅ PASS
 
-**Metric Differences:**
-  - `in_distribution_accuracy`: historical=0.06250000, p12=0.00000000, diff=6.25e-02
-  - `mean_adversarial_accuracy`: historical=0.33333333, p12=0.00000000, diff=3.33e-01
-  - `pattern_block_boundary_stress`: historical=1.00000000, p12=0.00000000, diff=1.00e+00
+All load-bearing metrics match within tolerance (1e-6).
 
 **P12 Metadata:**
-- Git Hash: `6832904b76ff964bf08b38eaf15cd7bb94d842fb`
-- Timestamp: 2026-04-11T06:13:44.761535+00:00
+- Git Hash: `eaca6585db1d094a59c866eb56b8f6fa3ba3be77`
+- Timestamp: 2026-04-11T06:30:17.831094+00:00
 - Entrypoint: `run_p4_mlp_baseline_repro.py`
 - Python Version: 3.12.0
 - PyTorch Version: 2.11.0+cpu
@@ -28,14 +25,13 @@
 ---
 
 ## LSTM Baseline
-**Status:** ❌ FAIL
+**Status:** ✅ PASS
 
-**Metric Differences:**
-  - `in_distribution_accuracy`: historical=0.03906250, p12=0.00000000, diff=3.91e-02
+All load-bearing metrics match within tolerance (1e-6).
 
 **P12 Metadata:**
-- Git Hash: `6832904b76ff964bf08b38eaf15cd7bb94d842fb`
-- Timestamp: 2026-04-11T06:14:15.161460+00:00
+- Git Hash: `eaca6585db1d094a59c866eb56b8f6fa3ba3be77`
+- Timestamp: 2026-04-11T06:30:26.238465+00:00
 - Entrypoint: `run_p4_lstm_baseline_repro.py`
 - Python Version: 3.12.0
 - PyTorch Version: 2.11.0+cpu
@@ -43,16 +39,13 @@
 ---
 
 ## TRANSFORMER Baseline
-**Status:** ❌ FAIL
+**Status:** ✅ PASS
 
-**Metric Differences:**
-  - `in_distribution_accuracy`: historical=0.03906250, p12=0.00000000, diff=3.91e-02
-  - `mean_adversarial_accuracy`: historical=0.33333333, p12=0.00000000, diff=3.33e-01
-  - `pattern_block_boundary_stress`: historical=1.00000000, p12=0.00000000, diff=1.00e+00
+All load-bearing metrics match within tolerance (1e-6).
 
 **P12 Metadata:**
-- Git Hash: `6832904b76ff964bf08b38eaf15cd7bb94d842fb`
-- Timestamp: 2026-04-11T06:16:02.346573+00:00
+- Git Hash: `eaca6585db1d094a59c866eb56b8f6fa3ba3be77`
+- Timestamp: 2026-04-11T06:30:58.004310+00:00
 - Entrypoint: `run_p4_transformer_baseline_repro.py`
 - Python Version: 3.12.0
 - PyTorch Version: 2.11.0+cpu
@@ -61,12 +54,9 @@
 
 ## Summary
 
-**Overall Status:** ❌ SOME ARCHITECTURES FAILED REPRO CHECK
+**Overall Status:** ✅ ALL ARCHITECTURES PASS REPRO CHECK
 
-Failures:
-- **MLP**: 3 metric(s) differ beyond tolerance
-- **LSTM**: 1 metric(s) differ beyond tolerance
-- **TRANSFORMER**: 3 metric(s) differ beyond tolerance
+All Project 12 baseline reproductions match Project 4 historical artifacts within tolerance.
 
 ---
 
