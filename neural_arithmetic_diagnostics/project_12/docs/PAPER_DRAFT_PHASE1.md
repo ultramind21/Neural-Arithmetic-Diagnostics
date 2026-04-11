@@ -3,12 +3,17 @@ Date: 2026-04-11
 Branch: project12-validation  
 
 ## Abstract
-[Write 150–200 words: problem → protocol → results P11/P4 → conclusion.]
+Research codebases in neural arithmetic often accumulate compelling results without a clear separation between observations, claims, and reproducible evidence. In this work we present Project 12, a reproducibility-first validation protocol that converts a "system of ideas" into a "system of evidence" via (i) claim locking with pre-registered targets, (ii) baseline-grounded metrics and failure-family breakdowns, (iii) manifest-driven execution with standardized artifacts and metadata, and (iv) copy+patch reproduction enforced by diff gates, complemented by policy-based validation for stochastic interventions. We apply the protocol to two case studies. For Project 11 (soft clamp + sampling/retrieval diagnostics), we validate eight claims and reject one absolute boundary-threshold claim as brittle under holdout-seed variation, replacing it with a mechanism-based revised claim that remains robust across a 20-seed sweep. For Project 4 (baseline diagnostics + adversarial training), we reproduce baseline artifacts and validate that adversarial training yields narrow transfer: strong improvement on seen adversarial families coupled with degradation on held-out structure, supported by a 3-seed smoke check. Overall, the protocol provides a practical blueprint for trustworthy evaluation and claim revision in neural arithmetic diagnostics.
 
 ## 1. Introduction
 - Why neural arithmetic diagnostics tends to produce brittle claims.
 - Why "accuracy-only" and "single-run" conclusions fail.
 - What this paper contributes: a reproducibility-first protocol (Project 12).
+
+## Key Contributions
+1. **Practical protocol:** Claim locking + manifests + standardized metadata + diff gates + reproducibility and policy-based validation checks.
+2. **Methodological insight from Project 11:** Absolute thresholds are brittle under holdout-seed variation; mechanism-based claims remain robust (C07 → C07R across 20-seed sweep).
+3. **Intervention validation from Project 4:** Adversarial training yields narrow transfer—strong improvement on seen adversarial families coupled with degradation on held-out structure (policy-validated with 3-seed smoke check).
 
 ## 2. Project 12 Validation Protocol
 ### 2.1 Claim locking
