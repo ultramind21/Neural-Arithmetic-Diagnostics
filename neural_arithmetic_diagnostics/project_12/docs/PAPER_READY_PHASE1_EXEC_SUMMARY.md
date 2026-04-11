@@ -21,29 +21,31 @@
 
 ---
 
-## II. Project 11 Results (Soft Label Regime Interpretation)
+## II. Project 11 Results (Soft Clamp + Sampling/Retrieval Diagnostics)
 
-**Claim landscape:**
+**Claim landscape (Project 12 Phase 1):**
 
-| Claim ID | Original | Status | Resolution |
-|----------|----------|--------|-----------|
-| C01 | Soft clamp smooths regime | ✅ VALIDATED | V3.1 macroF1=0.9353 vs V3=0.8435 |
-| C02 | NN resolution as upper bound | ✅ VALIDATED | NN81=0.9847, monotonic ordering held |
-| C03 | Boundary insufficient alone | ✅ VALIDATED | boundary-only=0.701 vs mixed=0.978 |
-| C04 | Sampling efficiency @ 1000 samples | ✅ VALIDATED | mixed approach achieves near-dense without density |
-| C05 | Soft clamp recovery mechanism | ✅ VALIDATED | regime structure measurable via metric stability |
-| C06 | Resolution sweep reproducible | ✅ VALIDATED | P12 replication matches P11 exact outputs |
-| C08 | Soft label initialization benefit | ✅ VALIDATED | learning curves show acceleration |
-| C07 | Absolute threshold (V3.1 ≥ 0.93) | ❌ REJECTED-AS-STATED | Brittle: fails at seeds 101/303, passes seed 202 |
-| C07R | Ordering robust, thresholds not | ✅ VALIDATED | (V3.1 − V3) ≥ gap-robust; absolute fragile |
+| Claim ID | Status (P12) | One-line meaning |
+|----------|---|---|
+| P11-C01 | ✅ Validated | Soft clamp enables competitive rule baseline overall (V3.1 vs V3 hard clamp). |
+| P11-C02 | ✅ Validated | Dense NN improves with resolution (NN81 as upper-performance reference). |
+| P11-C03 | ✅ Validated | Boundary-only sampling underperforms; global coverage (mixed) is necessary. |
+| P11-C04 | ✅ Validated | Mixed sampling at N=1000 achieves near-dense performance with significantly reduced reference cost. |
+| P11-C05 | ✅ Validated | Ratio frac≈0.5 competitive; 1-NN outperforms 3-NN under structured boundary concentration. |
+| P11-C06 | ✅ Validated | Diminishing returns beyond N=1000 (mixed is competitive with larger N). |
+| P11-C07 | ❌ Rejected-as-stated | Absolute boundary threshold (V3.1_boundary ≥ 0.85) not robust across procedure-preserving holdout seeds (1/20 pass in sweep). |
+| P11-C07R | ✅ Validated | Mechanism-based boundary competence: relative improvement ≥0.15 and NN81 gap ≤0.10 are robust across seed variation. |
+| P11-C08 | ✅ Validated | Reference set retrieval efficient (build time <0.10s); pool-based design supports no leakage. |
 
-**Key meta-finding:** Absolute numeric thresholds collapse under seed/sampling variance; relative ordering and mechanism detection more robust.
+**Key meta-finding:** Absolute numeric thresholds (e.g., V3.1_boundary ≥ 0.85) collapse under holdout seed variance; relative ordering and mechanism-based criteria more robust.
 
-**Evidence paths:**
-- Baseline validation: project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md
-- C07 sensitivity sweep: project_12/reports/C07_SENSITIVITY_SWEEP_REPORT.md
-- Per-seed metrics: project_12/results/sweep_c07_v1/summary/per_seed_metrics.csv
-- Closure document: project_12/docs/PROJECT_11_CLOSURE_VALIDATION.md
+**Evidence paths (Primary):**
+- project_12/docs/VALIDATED_RESULTS_P11_PROJECT12.md
+- project_12/docs/FORMAL_CLAIMS.md (claims P11-C01 through P11-C08)
+- project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md
+- project_12/reports/C07_SENSITIVITY_SWEEP_REPORT.md (C07 rejection + C07R validation)
+- project_12/results/sweep_c07_v1/summary/per_seed_metrics.csv (20-seed sweep data)
+- project_12/docs/PROJECT_11_CLOSURE_VALIDATION.md
 
 ---
 
