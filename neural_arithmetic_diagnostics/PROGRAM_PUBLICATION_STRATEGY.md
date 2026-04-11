@@ -1,299 +1,167 @@
 # PROGRAM PUBLICATION STRATEGY
-## Neural-Arithmetic-Diagnostics
+## Neural-Arithmetic-Diagnostics (Post-Audit Program + Project 12 Validation Layer)
 
 **Date:** April 2026  
-**Purpose:** Define the publication strategy for the post-audit research program
+**Purpose:** Define a publication strategy that separates (a) validated evidence bundles from (b) program-level research synthesis.
 
 ---
 
-## 1. Why This Document Exists
+## TL;DR
+The repository is no longer "a project"; it is a research program with multiple paper directions.  
+**Project 12 Phase 1** changes the publication strategy materially: it produces a **paper-ready, validated evidence bundle** (P11 + P4) and provides a reusable validation protocol.
 
-The research program has now moved beyond isolated project results.
-
-It contains:
-- a strong audit backbone
-- a full diagnostic framework
-- decomposition findings
-- mechanistic interpretability results
-- local-to-global bridge findings
-- a strong architecture-design result
-- a higher-dimensional compositional sandbox branch
-- and a completed Project 10 theory-building branch
-
-This creates a new strategic need:
-
-> not only to continue research, but to decide how to package and publish the strongest scientific contributions.
+**Core rule:** publish coherent narratives, one question per paper, with explicit evidence boundaries.
 
 ---
 
-## 2. Core Publication Principle
+## 1) Why this document exists
+The post-audit program contains:
+- a diagnostic framework (Project 4),
+- decomposition and failure-structure work (Project 5),
+- mechanistic interpretability results (Project 6),
+- local-to-global bridge findings (Project 7),
+- architecture-level rescue design (Project 8),
+- higher-dimensional compositional sandboxes (Project 9),
+- theory-building under falsification pressure (Project 10),
+- and an efficiency/sampling frontier (Project 11).
 
-The repository should not be forced into one giant paper if that weakens clarity.
-
-Instead, publication should follow this rule:
-
-- publish the strongest coherent narratives
-- keep each paper centered on one scientific question
-- avoid mixing too many contributions into one confused story
-
-This means the program may yield:
-- one paper first
-- and additional papers later
+Project 12 adds a new need:
+> separate "research synthesis" from "validated evidence", and publish the validated bundles first.
 
 ---
 
-## 3. Strongest Current Publication Axes
+## 2) Publication principle (non-negotiable)
+Do not force Projects 4–10 into one giant paper.
 
-There are now at least five serious publication axes.
+Instead:
+- publish the strongest coherent narratives,
+- keep each paper centered on one scientific question,
+- explicitly state what is validated vs what is synthesis.
 
-### Axis A — Diagnostic Framework
+---
+
+## 3) Two publication lanes (new, after Project 12)
+### Lane 1 — Validation / methodology (evidence-first)
+Goal: publish the validation protocol itself as a scientific contribution, using case studies.
+
+**Already paper-ready (Phase 1):**
+- Draft: `project_12/docs/PAPER_DRAFT_PHASE1.md`
+- Figures/tables: `project_12/paper_assets/`
+- Submission checklist: `project_12/docs/SUBMISSION_CHECKLIST_PHASE1.md`
+- PDF build: `project_12/paper_build/README.md`
+- Master snapshot: `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`
+
+### Lane 2 — Domain papers (diagnostics, mechanisms, architecture, theory)
+Goal: publish deeper domain-facing papers once each narrative is consolidated and (ideally) validated under Project 12 in later phases.
+
+---
+
+## 4) Current publication axes (updated)
+### Axis V (NEW) — Validation protocol as a scientific layer
 Centered on:
-- Project 4
-- selected Project 5 context
-- and the methodological distinction between narrow gains and broader robustness transfer
+- Project 12 methodology (claim locking, manifests, diff gates, repro vs policy checks)
+- Phase 1 validated case studies: Project 11 + Project 4
 
-### Axis B — Mechanistic Interpretability
+This axis is now the fastest path to a publication-safe paper.
+
+### Axis A — Diagnostic framework & narrow vs broad robustness
 Centered on:
-- Project 6
-- selected Project 7 bridge results
-- and the internal arithmetic structure story
+- Project 4 (framework + baselines + intervention)
+- Context from later projects as needed (but keep scope tight)
 
-### Axis C — Local-to-Global Composition and Architecture
+### Axis B — Mechanistic interpretability
 Centered on:
-- Project 5
-- Project 7
-- Project 8
-- and the transition from diagnosis to family-sensitive architectural rescue
+- Project 6 (carry selectivity, dissociation, causal evidence)
+- Selected Project 7 bridge findings (only if essential)
 
-### Axis D — Higher-Dimensional Compositional Worlds
+### Axis C — Local-to-global composition and architecture rescue
 Centered on:
-- Project 9
-- topology-sensitive sandbox behavior
-- family-sensitive propagation in higher-dimensional spaces
-- and adaptive rescue in 3D compositional environments
+- Projects 5, 7, 8 (bridge heterogeneity → family-sensitive design)
 
-### Axis E — Theory-Building and Rescue Regime Theory
+### Axis D — Higher-dimensional compositional worlds
 Centered on:
-- Project 10
-- law extraction and law testing
-- adversarial weakening of higher-order claims
-- threshold-structured rescue regime theory
-- and heterogeneity-dependent boundary geometry
+- Project 9 (3D sandbox, topology-sensitive structure, family-aware rescue)
+
+### Axis E — Theory-building and rescue regime theory
+Centered on:
+- Project 10 (law testing under adversarial pressure → regime-space / threshold structure)
+
+### Axis F — Efficiency frontier of structured inference
+Centered on:
+- Project 11 (sampling vs resolution vs retrieval cost; efficiency frontier)
+Note: Phase 1 already validates key P11 claims via Project 12.
 
 ---
 
-## 4. Recommended Publication Order
-
-### First recommended paper
-**Project 4-centered framework paper**
-
+## 5) Recommended publication order (calibrated for April 2026)
+### Paper 1 (recommended first): Project 12 Phase 1 (Validation + case studies)
 Reason:
-- already conceptually mature
-- already drafted
-- cleaner boundary
-- easiest to package first
+- already paper-ready and evidence-locked,
+- provides a reusable methodology contribution,
+- includes two strong case studies (P11 + P4),
+- explicitly separates validated vs rejected-as-stated vs revised claims.
 
-### Second recommended paper
-**Project 6-centered mechanistic paper**
+Primary pointers:
+- `project_12/docs/PAPER_DRAFT_PHASE1.md`
+- `project_12/docs/VALIDATED_RESULTS_MASTER_PHASE1.md`
 
+### Paper 2: Project 4 domain paper (diagnostic framework)
 Reason:
-- strongest internal scientific novelty
-- rich mechanistic arc
-- can likely stand on its own with selected Project 7 support
+- conceptually clean and already validated in Phase 1,
+- can be written more domain-forward without spending space explaining validation machinery.
 
-### Third recommended paper
-**Projects 5/7/8 bridge-and-architecture paper**
-
+### Paper 3: Project 6 mechanistic paper
 Reason:
-- strongest local-to-global and architecture-design story
-- now fully completed as a branch sequence
-- high upside once narrative is sharply consolidated
+- strongest mechanistic novelty,
+- stands well as a self-contained interpretability sandbox contribution.
 
-### Fourth recommended paper
-**Project 10 theory-building paper or theory-facing synthesis note**
-
+### Paper 4: Projects 5/7/8 (bridge + architecture)
 Reason:
-- conceptually distinctive
-- adds something not covered by the earlier empirical branches
-- shows how higher-order claims should be stress-tested rather than merely asserted
-- culminates in a threshold-structured regime-space account rather than a decorative universal law
+- high upside, but narrative must be tight (avoid "collection of results").
 
-### Fifth potential paper
-**Project 9 higher-dimensional sandbox paper**
-
+### Paper 5: Project 10 theory-building paper / synthesis note
 Reason:
-- conceptually fresh
-- highly original
-- can stand as its own frontier line
-- but may still benefit from selective maturation or sharper framing depending on venue strategy
+- distinctive contribution about falsification discipline and regime-space theory framing.
+
+### Paper 6 (conditional): Project 9 higher-dimensional sandbox
+Reason:
+- highly original, but should be packaged when framing is sharp and validated enough for the intended venue.
 
 ---
 
-## 5. Recommended First Paper
+## 6) What should be explicit in every paper package
+For each paper:
+- claim list (what is asserted)
+- evidence pointers (where artifacts/reports live)
+- validation mode used:
+  - reproduction check (strict/tolerance) vs
+  - policy check (stochastic interventions)
+- threats to validity
+- clear boundary of what is not claimed
 
-### Title direction
-A diagnostic framework paper based mainly on Project 4
-
-### Core claim
-High arithmetic accuracy is insufficient as evidence of robust reasoning, and structured diagnostics are needed to distinguish narrow gains from broader robustness transfer.
-
-### Supporting assets
-- Project 4 framework
-- stable baseline matrix
-- first adversarial-training intervention
-- audit-backed credibility
-
-### Why first
-This remains the safest, cleanest, and most publishable first paper path.
+Phase 1 already implements this discipline (see `project_12/docs/SUBMISSION_CHECKLIST_PHASE1.md`).
 
 ---
 
-## 6. Recommended Second Paper
-
-### Title direction
-A mechanistic interpretability sandbox paper based mainly on Project 6
-
-### Core claim
-Arithmetic-relevant internal structure can be measured, behaviorally linked, partially dissociated, and causally perturbed in a controlled sandbox, but local mechanistic structure is not yet sufficient for complete family-level explanation.
-
-### Supporting assets
-- carry selectivity
-- success/failure contrast
-- unit ablation
-- digit/carry dissociation
-- sequence-level trajectory findings
-- subspace-level causal evidence
-
-### Why second
-This is still likely the strongest mechanistic contribution currently available in the program.
+## 7) What should NOT be done
+- Do not merge Projects 4–10 into one monolith.
+- Do not use "grand narrative" tone without evidence pointers.
+- Do not report stochastic training outcomes as exact-reproducible numeric claims.
 
 ---
 
-## 7. Recommended Third Paper
+## 8) Strategic position now (best statement)
+The repository is now:
+- a research program,
+- plus a validation layer that converts parts of the program into publication-safe evidence.
 
-### Title direction
-A local-to-global and architecture-design paper based on Projects 5, 7, and 8
-
-### Core claim
-Local competence, local mechanistic structure, and global compositional success do not align automatically; family-level failures are mechanistically heterogeneous, and family-sensitive architecture design can rescue different failure modes within a unified composition system.
-
-### Supporting assets
-- Project 5 exclusion map
-- Project 7 trigger-correctable vs trigger-insensitive families
-- Project 8 integrated architecture rescue
-
-### Why third
-This remains one of the highest-upside papers in the program, but it is also structurally ambitious. It should be packaged when its narrative is tighter than a simple collection of strong results.
+Project 12 Phase 1 demonstrates that:
+- some claims are robust only in mechanism-based form (P11-C07 → P11-C07R),
+- adversarial training can produce narrow transfer with negative transfer (P4-C04),
+- and a reproducibility-first workflow can prevent narrative drift while preserving strong discoveries.
 
 ---
 
-## 8. Recommended Fourth Paper
-
-### Title direction
-A theory-building paper or synthesis note based on Project 10
-
-### Core claim
-Higher-order compositional rescue claims should be subjected to adversarial law testing; when stronger necessity-style formulations fail, the better surviving theory may be a threshold-structured regime-space account with transition bands and heterogeneity-dependent boundary geometry.
-
-### Supporting assets
-- Project 10 law-testing framework
-- Law 1 strong support
-- Law 3 bounded strong support
-- adversarial falsification cycle
-- threshold refinement
-- phase-diagram and boundary-geometry result
-
-### Why fourth
-This is one of the most distinctive current contributions in the program. It is not merely another empirical branch; it is a theory-and-method contribution about how higher-level claims should survive pressure.
-
----
-
-## 8.5. Project 11 — Efficiency Frontier of Structured Inference
-
-### Status
-**COMPLETE (efficiency-analysis extension layer)**
-
-### Main contribution
-Project 11 introduces a cost-aware dimension into the publication strategy by analyzing how structured sampling strategies affect performance in retrieval-based inference systems.
-
-### Strongest results
-- structured sampling (uniform + boundary-aware mixtures) can approximate dense reference performance with significantly fewer samples
-- efficiency-performance trade-offs form a continuous frontier rather than a discrete degradation regime
-- k-NN smoothing is not universally beneficial under structured retrieval regimes
-- performance remains bounded under controlled sampling reduction strategies
-- dense representations define an upper performance bound but are not strictly required for near-optimal behavior in all regimes
-
-### Strategic role (publication context)
-- introduces a cost–performance axis complementary to structural and mechanistic axes
-- strengthens the program's positioning for systems-level evaluation narratives
-- connects diagnostic reasoning (Project 4) with scalable inference behavior under constrained computation
-
----
-
-## 9. Recommended Fifth Paper (Conditional)
-
-### Title direction
-A higher-dimensional compositional sandbox paper based on Project 9
-
-### Core claim
-When arithmetic-like composition is embedded in a higher-dimensional structured space, local-to-global behavior becomes sensitive not only to topology but also to family identity and rescue-policy alignment.
-
-### Supporting assets
-- Project 9 initial 3D sandbox
-- topology-sensitive perturbation map
-- family-sensitive propagation
-- family-sensitive rescue
-- adaptive rescue logic
-
-### Why conditional
-This paper could become highly original, but may still benefit from selective maturation depending on whether the strategy favors immediate packaging or further extension.
-
----
-
-## 10. What Should NOT Be Done
-
-Do not immediately force:
-- Projects 4–10
-into one massive paper.
-
-That would likely:
-- blur the core messages
-- weaken clarity
-- and reduce publication quality
-
-The current program is strong because its lines are distinct.
-The publication strategy should preserve that.
-
----
-
-## 11. Current Best Strategy
-
-The strongest current publication strategy is:
-
-1. finalize and package the Project 4 paper first
-2. preserve Project 6 as the next major mechanistic paper candidate
-3. package Projects 5/7/8 into a strong local-to-global and architecture paper
-4. package Project 10 as a theory-facing law-testing and regime-theory contribution
-5. treat Project 9 as a high-potential frontier paper line, to be packaged at the right strategic moment
-6. formalize Project 11 efficiency-performance scaling laws for inclusion in publication-level synthesis alongside compositional and mechanistic results
-
-This gives the program both:
-- a near-term paper path
-- and a strong long-term high-value paper pipeline
-
----
-
-## 12. Strategic Position
-
-The repository is no longer just "a project."
-
-It is now:
-- a publication pipeline
-- with multiple coherent paper directions
-- and enough separation between contributions to avoid forcing one overloaded manuscript
-
-Project 10 strengthens that position further by adding a theory-building publication path rather than only another empirical branch. Project 11 extends the program's publication reach by introducing a cost-aware perspective in which structured sampling strategies define a measurable efficiency frontier, complementing the previously established structural, mechanistic, and regime-theoretic dimensions.
-
-That is a strong strategic position.
-
----
+## 9) Next macro-direction (after Phase 1)
+- Phase 2: extend Project 12 consolidation to additional projects (5–10), project by project.
+- Continue producing "validated result snapshots" and paper-ready bundles per coherent axis.
