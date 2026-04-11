@@ -212,8 +212,32 @@
 - Validation (P12 procedure-preserving): `project_12/results/revalidate_p11proc/phase_d/RESOLUTION_SWEEP_EXTENDED_ARTIFACT.json`
 - Report: `project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md`
 - Gate analysis: `project_12/docs/HOLDOUT_GENERATOR_GATE.md`
-**Status:** partial (Project 12, procedure-preserving) — fails absolute threshold (V3.1_boundary 0.759 < 0.85); passes relative improvement and proximity-to-NN conditions; sensitive to holdout distribution
-**Notes:** Soft clamp mechanism is effective (relative gain 0.162 ≥ 0.15 ✓); V3.1 competitive with NN81 (gap -0.001 ✓); absolute target fails on more challenging boundary subset in seed=424242. Suggests threshold may be holdout-specific rather than universal constraint.
+- Sensitivity sweep (Project 12): `project_12/reports/C07_SENSITIVITY_SWEEP_REPORT.md`
+- Sweep metrics (20 seeds): `project_12/results/sweep_c07_v1/summary/per_seed_metrics.csv`
+**Status:** rejected-as-stated (Project 12) — absolute threshold V3.1_boundary ≥ 0.85 not robust across holdout seeds (1/20 pass in procedure-preserving sweep). Mechanism-based revision exists: P11-C07R.
+**Notes:** Seed-sweep analysis (20 procedure-preserving holdouts, seeds 100001–100020) reveals absolute threshold is seed-sensitive despite procedure-preserving generation. Mean V3.1_boundary ≈ 0.7854 with only 1 seed ≥ 0.85. Mechanism-only conditions (relative improvement ≥ 0.15, NN81 gap ≤ 0.10) remain robust. Full analysis: `project_12/reports/SPRINT_2E2_FINAL_ANALYSIS.md`.
+
+---
+
+### ID: P11-C07R
+**Project source:** project_11
+**Type:** strong
+**Claim:** Under soft clamp (k=15), the compact rule baseline (V3.1) is boundary-competent in a *mechanistic* sense: it (a) substantially improves boundary performance vs. V3, and (b) remains close to the dense NN81 boundary upper bound, across procedure-preserving holdout seed variation.
+**Scope/Conditions:** Soft labels (k=15). Boundary subset defined by Phase D evaluation on Phase C3-generated holdouts (procedure-preserving).
+**Baselines:** V3 (hard clamp rule), NN81 (dense grid NN).
+**Metrics:** boundary macroF1_present for V3, V3.1, NN81; derived gaps.
+**Observed (Project 12; key evidence):**
+- See: `project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md` (seed=424242) and `project_12/results/sweep_c07_v1/summary/per_seed_metrics.csv` (seed sweep).
+**Validation targets (Project 12; pre-registered):**
+- (V3.1_boundary − V3_boundary) ≥ 0.15
+- (NN81_boundary − V3.1_boundary) ≤ 0.10
+**Runs:** Seed sweep (20 holdout seeds, procedure-preserving) + independent re-validation run(s).
+**Evidence:**
+- `project_12/reports/C07_SENSITIVITY_SWEEP_REPORT.md`
+- `project_12/results/sweep_c07_v1/summary/per_seed_metrics.csv`
+- `project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md`
+**Status:** validated (Project 12; seed-sweep + procedure-preserving)
+**Notes:** This revision intentionally drops an absolute boundary threshold (e.g., 0.85) because the sweep shows that absolute thresholds are seed-sensitive even under procedure-preserving generation.
 
 ---
 
