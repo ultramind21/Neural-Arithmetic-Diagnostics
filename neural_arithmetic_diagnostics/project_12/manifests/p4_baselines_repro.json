@@ -1,0 +1,56 @@
+{
+  "claim_ids": ["P4-C02", "P4-C03", "P4-C05", "P4-C06"],
+  "description": "Project 4 baseline re-runs under Project 12 framework",
+  "scope": "Validate baseline stability and per-family accuracy breakdown",
+  "baselines": {
+    "mlp": {
+      "architecture": "mlp",
+      "script_path": "project_12/scripts/baselines/project4_mlp_baseline_repro.py",
+      "checkpoint_path": "project_4/checkpoints/phase30_mlp_model.pt",
+      "output_dir": "project_12/results/repro_p4/baselines/mlp_v1"
+    },
+    "lstm": {
+      "architecture": "lstm",
+      "script_path": "project_12/scripts/baselines/project4_lstm_baseline_repro.py",
+      "checkpoint_path": "project_4/checkpoints/phase30_lstm_model.pt",
+      "output_dir": "project_12/results/repro_p4/baselines/lstm_v1"
+    },
+    "transformer": {
+      "architecture": "transformer",
+      "script_path": "project_12/scripts/baselines/project4_transformer_baseline_repro.py",
+      "checkpoint_path": "project_4/checkpoints/phase30_transformer_model.pt",
+      "output_dir": "project_12/results/repro_p4/baselines/transformer_v1"
+    }
+  },
+  "evaluation_config": {
+    "families": ["alternating_carry", "full_propagation_chain", "block_boundary_stress"],
+    "num_test_samples": 1000,
+    "sequence_length": 8,
+    "seed": 223311
+  },
+  "validation_targets": {
+    "P4-C02": {
+      "metric": "block_boundary_stress accuracy",
+      "thresholds": {
+        "mlp": {"min": 0.80},
+        "lstm": {"max": 0.20},
+        "transformer": {"min": 0.80}
+      }
+    },
+    "P4-C03": {
+      "metric": "in-distribution accuracy",
+      "threshold": {"all": {"max": 0.20}}
+    },
+    "P4-C05": {
+      "metric": "alternating_carry and full_propagation_chain",
+      "thresholds": {
+        "max_per_family": 0.10,
+        "no_split": 0.10
+      }
+    },
+    "P4-C06": {
+      "metric": "framework reproducibility",
+      "check": "all families executable, no runtime errors"
+    }
+  }
+}
