@@ -117,3 +117,28 @@ def write_text(path: Path, text: str) -> None:
     """Write text to file."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
+
+
+def check_leakage(holdout_points: list, pool_points: list, tolerance: float = 1e-10) -> None:
+    """
+    Verify that holdout and pool are disjoint (no data leakage).
+    
+    Points are rounded to 'tolerance' precision for comparison.
+    Raises AssertionError if any overlap detected.
+    """
+    def make_key(h: float, p: float) -> tuple:
+        """Create hashable key for point."""
+        decimals = 10
+        return (round(h, decimals), round(p, decimals))
+    
+    holdout_keys = set(make_key(pt[0], pt[1]) for pt in holdout_points)
+    pool_keys = set(make_key(pt[0], pt[1]) for pt in pool_points)
+    
+    overlap = holdout_keys & pool_keys
+    if overlap:
+        raise AssertionError(
+            f"❌ Data leakage detected! {len(overlap)} points in both holdout and pool.\n"
+            f"First overlap: {list(overlap)[0]}"
+        )
+    
+    print(f"✅ Leakage check PASS: {len(holdout_keys)} holdout points ∩ {len(pool_keys)} pool points = ∅")

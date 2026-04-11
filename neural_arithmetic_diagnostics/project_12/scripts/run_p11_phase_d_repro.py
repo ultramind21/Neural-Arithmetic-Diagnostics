@@ -233,13 +233,30 @@ def main(manifest_path: str):
     soft = load_json(SYSTEM_SOFT_PATH)
     system = merge_system(hard, soft)
 
-    holdout = load_json(HOLDOUT_PATH)
+    # Read holdout path from manifest, or use default
+    fixed_params = manifest.get("fixed_params", {})
+    holdout_path = fixed_params.get("holdout_path", str(HOLDOUT_PATH))
+    if not holdout_path.startswith("/"):
+        holdout_path = ROOT / holdout_path
+    else:
+        holdout_path = Path(holdout_path)
+    
+    holdout = load_json(holdout_path)
     pts = holdout["points"]
-    kinds = [pt.get("kind", "unknown") for pt in pts]
+    
+    # Handle both dict and list formats for points
+    if pts and isinstance(pts[0], dict):
+        # Original format: [{H, P, kind}, ...]
+        kinds = [pt.get("kind", "unknown") for pt in pts]
+        HP = [(float(pt["H"]), float(pt["P"])) for pt in pts]
+    else:
+        # New format (re-validation): [[H, P], ...]
+        kinds = ["uniform"] * len(pts)  # Default to uniform
+        HP = [(float(pt[0]), float(pt[1])) for pt in pts]
+    
     mask_u = [k == "uniform" for k in kinds]
     mask_b = [k == "boundary" for k in kinds]
 
-    HP = [(float(pt["H"]), float(pt["P"])) for pt in pts]
     y_true = [ground_truth_soft(system, H, P) for (H, P) in HP]
 
     y_v3 = [v3_predict(system, H, P) for (H, P) in HP]

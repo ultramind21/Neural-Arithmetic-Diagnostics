@@ -210,7 +210,7 @@ def sample_uniform(rng: random.Random) -> Tuple[float, float]:
     return rng.uniform(H_MIN, H_MAX), rng.uniform(P_MIN, P_MAX)
 
 
-def build_reference(system: dict, seed: int, N: int, frac_uniform: float) -> List[Tuple[float, float, str]]:
+def build_reference(system: dict, seed: int, N: int, frac_uniform: float, external_pool: list = None) -> List[Tuple[float, float, str]]:
     rng = random.Random(900000 + 13 * seed + 17 * N + int(frac_uniform * 1000))
 
     n_u = int(round(N * frac_uniform))
@@ -235,11 +235,21 @@ def build_reference(system: dict, seed: int, N: int, frac_uniform: float) -> Lis
         add_point(H, P)
 
     pool = []
-    for _ in range(POOL_SIZE):
-        H, P = sample_uniform(rng)
-        Hr, Pr = round(H, 6), round(P, 6)
-        bs = boundary_score_v3(Hr, Pr, sfs)
-        pool.append((bs, Hr, Pr))
+    
+    # Use external pool if provided, otherwise generate
+    if external_pool:
+        for hp in external_pool:
+            H, P = float(hp[0]), float(hp[1])
+            Hr, Pr = round(H, 6), round(P, 6)
+            bs = boundary_score_v3(Hr, Pr, sfs)
+            pool.append((bs, Hr, Pr))
+    else:
+        for _ in range(POOL_SIZE):
+            H, P = sample_uniform(rng)
+            Hr, Pr = round(H, 6), round(P, 6)
+            bs = boundary_score_v3(Hr, Pr, sfs)
+            pool.append((bs, Hr, Pr))
+    
     pool.sort(key=lambda x: x[0])
 
     for bs, Hr, Pr in pool:
@@ -275,11 +285,43 @@ def main(manifest_path: str):
     soft = load_json(SYSTEM_SOFT_PATH)
     system = merge_system(hard, soft)
 
-    holdout = load_json(HOLDOUT_PATH)
+    # Read holdout/pool paths from manifest, or use defaults
+    from p12_runlib import check_leakage
+    fixed_params = manifest.get("fixed_params", {})
+    
+    holdout_path = fixed_params.get("holdout_path", str(HOLDOUT_PATH))
+    if not holdout_path.startswith("/"):
+        holdout_path = ROOT / holdout_path
+    else:
+        holdout_path = Path(holdout_path)
+    
+    pool_path = fixed_params.get("pool_path", None)
+    
+    holdout = load_json(holdout_path)
     pts = holdout["points"]
-    holdout_HP = [(float(pt["H"]), float(pt["P"])) for pt in pts]
+    
+    # Handle both dict and list formats for points
+    if pts and isinstance(pts[0], dict):
+        # Original format: [{H, P, kind}, ...]
+        holdout_HP = [(float(pt["H"]), float(pt["P"])) for pt in pts]
+    else:
+        # New format (re-validation): [[H, P], ...]
+        holdout_HP = [(float(pt[0]), float(pt[1])) for pt in pts]
+    
     y_true = [ground_truth_soft(system, H, P) for (H, P) in holdout_HP]
     true_dist = dist_counts(y_true)
+    
+    # Load external pool if provided (for re-validation)
+    external_pool_points = None
+    if pool_path:
+        if not pool_path.startswith("/"):
+            pool_path = ROOT / pool_path
+        else:
+            pool_path = Path(pool_path)
+        pool_data = load_json(pool_path)
+        external_pool_points = pool_data.get("points", [])
+        # Leakage check
+        check_leakage(holdout_HP, external_pool_points)
 
     v31 = [v31_predict(system, H, P) for (H, P) in holdout_HP]
     base_v31 = {"acc": accuracy(y_true, v31), "f1": macro_f1_present(y_true, v31)}
@@ -288,11 +330,14 @@ def main(manifest_path: str):
 
     rows = []
     start = time.time()
+    
+    # Use seeds from manifest if provided, otherwise use defaults
+    seeds_to_use = fixed_params.get("seeds", SEEDS)
 
-    for seed in SEEDS:
+    for seed in seeds_to_use:
         for N in NS:
             for frac in FRACS:
-                ref = build_reference(system, seed, N, frac)
+                ref = build_reference(system, seed, N, frac, external_pool=external_pool_points)
                 y1 = [knn_label(H, P, ref, k=1) for (H, P) in holdout_HP]
                 y3 = [knn_label(H, P, ref, k=3) for (H, P) in holdout_HP]
 

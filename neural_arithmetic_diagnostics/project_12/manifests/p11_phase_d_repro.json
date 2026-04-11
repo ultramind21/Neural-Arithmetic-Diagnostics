@@ -5,7 +5,7 @@
   "sprint": "2B",
   "claim_ids": ["P11-C01", "P11-C02", "P11-C07"],
   
-  "entrypoint": "scripts/run_phase_d_repro.py",
+  "entrypoint": "project_12/scripts/run_p11_phase_d_repro.py",
   
   "fixed_params": {
     "k": 15,
@@ -21,7 +21,7 @@
     "values": [223311]
   },
   
-  "output_dir": "repro/phase_d",
+  "output_dir": "project_12/results/repro/phase_d",
   
   "expected_outputs": [
     "RESOLUTION_SWEEP_EXTENDED_ARTIFACT.json",

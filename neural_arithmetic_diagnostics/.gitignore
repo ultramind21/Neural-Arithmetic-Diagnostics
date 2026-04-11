@@ -70,3 +70,12 @@ archive_optional/debug/*.log
 # - project_4/checkpoints/
 # - checkpoints/
 # ============================================================================
+
+# ============================================================================
+# Project 12: Large generated data files (NOT tracked)
+# These are generated deterministically from manifest+seed, not tracked
+# ============================================================================
+project_12/results/revalidate/data/pool_points.json
+project_12/results/revalidate/data/holdout_points.json
+project_12/results/revalidate/data/
+

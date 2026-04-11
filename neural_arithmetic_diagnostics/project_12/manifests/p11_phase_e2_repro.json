@@ -5,7 +5,7 @@
   "sprint": "2B",
   "claim_ids": ["P11-C03", "P11-C04", "P11-C06"],
   
-  "entrypoint": "scripts/run_phase_e2_repro.py",
+  "entrypoint": "project_12/scripts/run_p11_phase_e2_repro.py",
   
   "fixed_params": {
     "k": 15,
@@ -21,7 +21,7 @@
     "values": [101, 202, 303]
   },
   
-  "output_dir": "repro/phase_e2",
+  "output_dir": "project_12/results/repro/phase_e2",
   
   "expected_outputs": [
     "artifact.json",

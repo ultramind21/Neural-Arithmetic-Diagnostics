@@ -1,0 +1,353 @@
+{
+  "test": "phase_e2_sample_efficiency",
+  "true_dist": {
+    "family-aware region": 194,
+    "transition region": 118,
+    "universal region": 488
+  },
+  "v31": {
+    "acc": 0.9825,
+    "macro_f1_present": 0.973220994273626
+  },
+  "nn41": {
+    "acc": 0.9925,
+    "macro_f1_present": 0.9873895290369571,
+    "grid_points": 1681
+  },
+  "nn81": {
+    "acc": 0.99125,
+    "macro_f1_present": 0.9868112537853003,
+    "grid_points": 6561
+  },
+  "rows": [
+    {
+      "seed": 404,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.965,
+      "macro_f1_present": 0.9419703430596676
+    },
+    {
+      "seed": 404,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.7125,
+      "macro_f1_present": 0.5226955839859065
+    },
+    {
+      "seed": 404,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.9475,
+      "macro_f1_present": 0.9218938793619639
+    },
+    {
+      "seed": 404,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.97625,
+      "macro_f1_present": 0.9626435385485365
+    },
+    {
+      "seed": 404,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.71875,
+      "macro_f1_present": 0.5262429591465839
+    },
+    {
+      "seed": 404,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.95625,
+      "macro_f1_present": 0.9325856898466608
+    },
+    {
+      "seed": 404,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.97875,
+      "macro_f1_present": 0.9661109268373989
+    },
+    {
+      "seed": 404,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.72,
+      "macro_f1_present": 0.5316898226589856
+    },
+    {
+      "seed": 404,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.97875,
+      "macro_f1_present": 0.9680657266280331
+    },
+    {
+      "seed": 404,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.98375,
+      "macro_f1_present": 0.9743908596821562
+    },
+    {
+      "seed": 404,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.73125,
+      "macro_f1_present": 0.5504902395670584
+    },
+    {
+      "seed": 404,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.98125,
+      "macro_f1_present": 0.9712939050491464
+    },
+    {
+      "seed": 404,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.9875,
+      "macro_f1_present": 0.9814252527191115
+    },
+    {
+      "seed": 404,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.7325,
+      "macro_f1_present": 0.5537420006023731
+    },
+    {
+      "seed": 404,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.9775,
+      "macro_f1_present": 0.96557567103688
+    },
+    {
+      "seed": 505,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.94,
+      "macro_f1_present": 0.9101785542515292
+    },
+    {
+      "seed": 505,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.7125,
+      "macro_f1_present": 0.5226955839859065
+    },
+    {
+      "seed": 505,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.94,
+      "macro_f1_present": 0.9147003348085537
+    },
+    {
+      "seed": 505,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.9475,
+      "macro_f1_present": 0.9164591077121332
+    },
+    {
+      "seed": 505,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.71875,
+      "macro_f1_present": 0.5262429591465839
+    },
+    {
+      "seed": 505,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.96375,
+      "macro_f1_present": 0.9460186713869768
+    },
+    {
+      "seed": 505,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.9825,
+      "macro_f1_present": 0.9707793880559232
+    },
+    {
+      "seed": 505,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.72,
+      "macro_f1_present": 0.5316898226589856
+    },
+    {
+      "seed": 505,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.97375,
+      "macro_f1_present": 0.9595556542320569
+    },
+    {
+      "seed": 505,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.98375,
+      "macro_f1_present": 0.9736642188140073
+    },
+    {
+      "seed": 505,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.73125,
+      "macro_f1_present": 0.5504902395670584
+    },
+    {
+      "seed": 505,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.97125,
+      "macro_f1_present": 0.9589118728375654
+    },
+    {
+      "seed": 505,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.9825,
+      "macro_f1_present": 0.97169621323074
+    },
+    {
+      "seed": 505,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.7325,
+      "macro_f1_present": 0.5537420006023731
+    },
+    {
+      "seed": 505,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.975,
+      "macro_f1_present": 0.9632940821256039
+    },
+    {
+      "seed": 606,
+      "N": 250,
+      "strategy": "uniform",
+      "acc": 0.95375,
+      "macro_f1_present": 0.9299073638717713
+    },
+    {
+      "seed": 606,
+      "N": 250,
+      "strategy": "boundary",
+      "acc": 0.7125,
+      "macro_f1_present": 0.5226955839859065
+    },
+    {
+      "seed": 606,
+      "N": 250,
+      "strategy": "mixed",
+      "acc": 0.94,
+      "macro_f1_present": 0.9134339506792161
+    },
+    {
+      "seed": 606,
+      "N": 500,
+      "strategy": "uniform",
+      "acc": 0.9625,
+      "macro_f1_present": 0.9390339071507787
+    },
+    {
+      "seed": 606,
+      "N": 500,
+      "strategy": "boundary",
+      "acc": 0.71875,
+      "macro_f1_present": 0.5262429591465839
+    },
+    {
+      "seed": 606,
+      "N": 500,
+      "strategy": "mixed",
+      "acc": 0.955,
+      "macro_f1_present": 0.9359751580208382
+    },
+    {
+      "seed": 606,
+      "N": 1000,
+      "strategy": "uniform",
+      "acc": 0.9725,
+      "macro_f1_present": 0.9543082442588487
+    },
+    {
+      "seed": 606,
+      "N": 1000,
+      "strategy": "boundary",
+      "acc": 0.72,
+      "macro_f1_present": 0.5316898226589856
+    },
+    {
+      "seed": 606,
+      "N": 1000,
+      "strategy": "mixed",
+      "acc": 0.97875,
+      "macro_f1_present": 0.9677065222386788
+    },
+    {
+      "seed": 606,
+      "N": 1500,
+      "strategy": "uniform",
+      "acc": 0.98625,
+      "macro_f1_present": 0.9790942285960053
+    },
+    {
+      "seed": 606,
+      "N": 1500,
+      "strategy": "boundary",
+      "acc": 0.73125,
+      "macro_f1_present": 0.5504902395670584
+    },
+    {
+      "seed": 606,
+      "N": 1500,
+      "strategy": "mixed",
+      "acc": 0.97,
+      "macro_f1_present": 0.9554789308397039
+    },
+    {
+      "seed": 606,
+      "N": 2000,
+      "strategy": "uniform",
+      "acc": 0.98625,
+      "macro_f1_present": 0.9776877121199132
+    },
+    {
+      "seed": 606,
+      "N": 2000,
+      "strategy": "boundary",
+      "acc": 0.7325,
+      "macro_f1_present": 0.5537420006023731
+    },
+    {
+      "seed": 606,
+      "N": 2000,
+      "strategy": "mixed",
+      "acc": 0.98875,
+      "macro_f1_present": 0.9829993052215275
+    }
+  ],
+  "elapsed_seconds": 18.24161696434021,
+  "p12_metadata": {
+    "git_hash": "d12a64a12a07f0ab969bbb49e2bec9a9a9665185",
+    "timestamp_utc": "2026-04-11T02:37:05.718823+00:00",
+    "env": {
+      "python_version": "3.12.0",
+      "torch_version": "2.5.1+cu121",
+      "cuda_available": true,
+      "platform": "Windows-11-10.0.28000-SP0"
+    },
+    "manifest_path": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_12\\manifests\\p12_phase_e2_revalidate.json",
+    "manifest_sha256": "2fa44a6f86045d12effff0632da64f69dfbf31b1df80c9e940a748179f7339fb",
+    "entrypoint": "run_p11_phase_e2_repro.py"
+  }
+}
