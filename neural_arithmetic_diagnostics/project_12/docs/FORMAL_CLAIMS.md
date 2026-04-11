@@ -389,7 +389,7 @@
 - Policy check report: `project_12/reports/REPRO_CHECK_PROJECT4_INTERVENTION.md`
 - Validation report: `project_12/reports/P4_VALIDATION_REPORT_INTERVENTION.md`
 **Status:** validated (Project 12; copy+patch intervention repro + policy check) ✅
-**Notes:** Core framework contribution: distinguishes narrow gains from broad robustness. Ordering threshold (≥0.10 gap) achieved and exceeded significantly (1.5 vs 0.1). Copy+patch discipline enforced via diff gate (similarity 0.895, lines chg 78). Non-deterministic training acceptable; policy-based check suffices for validation.
+**Notes:** Core framework contribution: distinguishes narrow gains from broad robustness. Ordering threshold (≥0.10 gap) achieved and exceeded significantly (1.5 vs 0.1). Copy+patch discipline enforced via diff gate (similarity 0.895, lines chg 78). **Single-run validation:** evaluation logic is reproducible; training is stochastic. Multi-seed stability verification deferred to Sprint 4F.
 
 ---
 

@@ -34,10 +34,19 @@ All 6 Project 4 claims validated within Project 12 reproducibility framework:
 
 ---
 
+## Limitations & Future Work
+
+**Single-Run Validation:** This claim is validated via one run with policy check. While the **evaluation logic is reproducible**, the **training itself is stochastic** (random initialization, data shuffling). 
+
+**Recommendation:** Multi-seed stability sweep (Sprint 4F, optional) would strengthen the claim by demonstrating pass-rate across 3-5 seeds under same policy criteria.
+
+---
+
 ## Project 4 Formally Closed
 
 - Repository: neural_arithmetic_diagnostics (project12-validation branch)
 - Last commit: 618a411
 - Validation framework: Project 12 reproducibility suite
+- Status: **Hypothesis validation complete** (Phase 1)
 - Next: Project 12 synthesis phase (aggregate all validated claims)
 
