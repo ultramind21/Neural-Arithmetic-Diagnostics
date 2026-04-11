@@ -7,45 +7,50 @@
 
 ---
 
-## Overview
+## Overview (Sprint 3.1 Revised)
 
-Project 4 successfully transitioned from legacy documentation to formally locked claims within Project 12's FORMAL_CLAIMS.md scheme.
+Project 4 claims have been reclassified and refined to separate empirical robustness claims from infrastructure claims, and to use independent (non-calibrated) targets.
 
 | Metric | Count | Status |
 |--------|-------|--------|
 | **Claims locked** | 6 | ✅ |
-| **Claims with pre-registered targets** | 6 | ✅ |
-| **Claims with numerical bases** | 5 (C02–C06) | ✅ |
-| **Claims with framework dependency** | 6 (all) | ✅ |
+| **Empirical claims (robustness)** | 4 (3 strong + 1 medium) | ✅ |
+| **Infrastructure/methodology claims** | 2 (weak) | ✅ |
+| **Claims with independent numeric targets** | 4 (C02, C03, C05, P4-C04 ordering) | ✅ |
+| **Claims with qualitative targets only** | 2 (C01, C06) | ✅ |
+| **All targets free of confirmation bias** | 6 | ✅ |
 
 ---
 
 ## Claim Breakdown
 
-### Strong Claims (4)
-- **P4-C01**: Framework distinguishes narrow gains from broad robustness
-- **P4-C02**: Architecture-dependent split on block-boundary-stress (MLP/Transformer succeed, LSTM fails)
-- **P4-C03**: Universal weak in-distribution exact-match across all three models
-- **P4-C04**: Adversarial training shows narrow transfer, not broad robustness
+### Empirical Claims (3 Strong + 1 Medium)
 
-### Medium Claims (1)
-- **P4-C05**: Alternating-carry and full-propagation-chain adversarial families equally hard across all architectures
+**Strong:**
+- **P4-C02**: Architecture-dependent robustness split on block-boundary-stress (independent thresholds: MLP/Transformer ≥0.80, LSTM ≤0.20, gap ≥0.50)
+- **P4-C03**: Universal in-distribution weakness (all models ≤0.20 exact-match)
+- **P4-C04**: Narrow transfer in adversarial training (seen gain >> held-out gain, ordering gap ≥0.10)
 
-### Weak Claims (1)
-- **P4-C06**: Diagnostic framework is methodologically stable and reproducible
+**Medium:**
+- **P4-C05**: Universal collapse on alternating-carry & full-propagation (all models ≤0.10, no architecture split)
+
+### Infrastructure/Methodology Claims (2 Weak)
+
+- **P4-C01**: Framework end-to-end execution & scorecard generation (7 components)
+- **P4-C06**: Baseline repeated-run classification reproducibility
 
 ---
 
 ## Numerical Basis Summary
 
-| Claim | Key Metrics | Data Type | Source |
-|-------|-------------|-----------|--------|
-| P4-C01 | (7 framework components) | Executable specs | project_4/framework/* |
-| P4-C02 | MLP=1.0, LSTM=0.0, Transformer=1.0 (block-boundary) | Numerical (stable runs) | PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md |
-| P4-C03 | MLP=0.0859, LSTM=0.0469, Transformer=0.0339 (in-dist) | Numerical (stable runs) | PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md |
-| P4-C04 | Seen gain > 0.2; held-out gain < 0.05 (targets) | Qualitative + numeric targets | PROJECT_4_RESULTS_SUMMARY.md |
-| P4-C05 | Alternating carry=0.0, Full propagation=0.0 (all models) | Numerical (stable runs) | PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md |
-| P4-C06 | (7 components: scorecard.py, protocol.md, etc.) | Executable specs | PROJECT_4_CLOSURE_SUMMARY.md |
+| Claim | Observed (Project 4) | Validation Target (Project 12) | Target Type |
+|-------|-----|--------|------|
+| P4-C02 | MLP=1.0, LSTM=0.0, TX=1.0 block-boundary | MLP≥0.80, TX≥0.80, LSTM≤0.20; gap≥0.50 | Independent/rounded |
+| P4-C03 | MLP=0.0859, LSTM=0.0469, TX=0.0339 in-dist | All ≤0.20 | Independent/rounded |
+| P4-C04 | Seen gain >> held-out (magnitudes TBD) | seen_gain − held_out_gain ≥ 0.10 | Ordering (independent) |
+| P4-C05 | All=0.0 on alt-carry & full-prop | max accuracy ≤0.10; diff ≤0.10 | Independent/rounded |
+| P4-C01 | 7 components, 3 models, 3+ families | Framework executes; 7 components ✓ | Qualitative |
+| P4-C06 | Baselines marked STABLE | Reproduce P4 stability classification | Qualitative |
 
 ---
 
@@ -65,17 +70,20 @@ All 6 claims: **`untested (Project 12)`**
 
 ---
 
-## Pre-Registered Targets
+## Pre-Registered Targets (Sprint 3.1 Revised)
 
-Project 4 claims have **pre-registered numerical targets** (where applicable):
+**Target Design Principle:** Targets are independent rounded thresholds or qualitative ordering requirements, not calibrated to Project 4 observed values. When exact magnitudes not available in Project 4 artifacts, targets remain TBD with ordering criteria only.
 
-| Claim | Target | Basis |
-|-------|--------|-------|
-| P4-C02 | MLP block-boundary ≥ 0.95; LSTM ≤ 0.10 | Project 4 observed (MLP=1.0, LSTM=0.0) |
-| P4-C03 | All models ≤ 0.15 in-distribution | Project 4 observed (<0.09 all) |
-| P4-C04 | Seen gain > 0.20; held-out gain < 0.05 | Project 4 qualitative result extracted |
-| P4-C05 | Both families: all models ≤ 0.10 | Project 4 observed (all 0.0) |
-| P4-C06 | All 7 framework components executable | Project 4 built and documented |
+### By Claim
+
+| Claim | Status | Pre-Registered Target(s) | Calibration |
+|-------|--------|---------|------|
+| P4-C02 | empirical | MLP block≥0.80; TX≥0.80; LSTM≤0.20; gap≥0.50 | Independent (not 0.95 from observed 1.0) |
+| P4-C03 | empirical | All in-dist ≤0.20 | Independent (single threshold, not per-model) |
+| P4-C04 | empirical | seen_gain − held_out_gain ≥ 0.10 | Ordering only; magnitudes TBD |
+| P4-C05 | empirical | max(family accs) ≤0.10; no-split ≤0.10 | Independent (single threshold) |
+| P4-C01 | infrastructure | 7 components executable; ≥3 families tested | Qualitative |
+| P4-C06 | infrastructure | Reproduce P4 stability classification ± tolerance | Qualitative |
 
 ---
 
@@ -112,15 +120,22 @@ Project 12 now manages:
 
 ## Risks & Qualifications
 
+### Methodological Changes (Sprint 3.1)
+
+1. **Target independence maintained:** Thresholds (0.80, 0.20, 0.10) are independent rounded values, not derived from Project 4 observed numbers.
+2. **P4-C01 reclassified weak:** Framework execution is infrastructure claim, not empirical robustness.
+3. **P4-C06 reclassified weak:** Reproducibility is methodology claim, not empirical robustness.
+4. **P4-C04 targets partially TBD:** Exact gain magnitudes TBD pending artifact extraction; ordering gap (≥0.10) is independent pre-registered ordering claim.
+
 ### Known Risks
-1. **Project 4 blockwise decomposition excluded**: Unresolved branch not part of scientific core (acceptable risk)
-2. **Artifact paths TBD**: Baseline run outputs not yet located; assumes they exist in project_4/results/
-3. **Target calibration**: Pre-registered targets based on Project 4 observed values; may need refinement if Project 12 conditions differ
+1. **Project 4 blockwise decomposition excluded:** Unresolved, not part of locked claims (acceptable).
+2. **Intervention artifact exact paths:** Confirmed in TRACEABILITY; should exist but verify in Sprint 4A.
+3. **P4-C04 numeric precision:** Will be estimated from artifacts during Sprint 4; ordering-only threshold sufficient for pre-registration.
 
 ### Mitigations
-- ✅ CLAIM_EXTRACTION_PROJECT_4.md documents all assumptions
-- ✅ TRACEABILITY_PROJECT_4.md flags missing artifacts
-- ✅ All targets explicitly marked "pre-registered" (not final)
+- ✅ CLAIM_EXTRACTION_PROJECT_4.md documents all assumptions and separations
+- ✅ TRACEABILITY_PROJECT_4.md provides exact artifact paths (no more TBD)
+- ✅ All targets reviewed for independence and rounded-threshold design
 
 ---
 

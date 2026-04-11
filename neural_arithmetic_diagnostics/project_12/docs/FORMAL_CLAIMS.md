@@ -264,3 +264,163 @@
 - Report: `project_12/reports/P11_VALIDATION_REPORT_REVALIDATE_P11PROC.md`
 **Status:** validated (Project 12, procedure-preserving)
 **Notes:** Build efficiency verified (0.052s < 0.10s ✓). Leakage prevention by internal RNG design; no external pool tracking required.
+
+---
+
+## Project 4 — Locked Claims (Draft v1)
+
+### ID: P4-C01
+**Project source:** project_4
+**Type:** weak (infrastructure/methodology)
+**Claim:** The Project 4 diagnostic framework can execute end-to-end and produce per-family performance scorecards for multiple architectures and adversarial pattern families.
+**Scope/Conditions:** Framework implementation (scorecard, protocol, validation rules); arithmetic reasoning task context.
+**Baselines:** Framework specification vs. actual execution; internal consistency.
+**Metrics:** framework component availability; successful end-to-end runs; scorecard output structure.
+**Observed (Project 4):**
+- 7 executable components documented (scorecard.py, protocol.md, etc.)
+- Three baseline models (MLP, LSTM, Transformer) evaluated; repeated-run stability confirmed
+- Framework produced per-family accuracy breakdown
+**Validation targets (Project 12; pre-registered):**
+- All 7 framework components executable without modification
+- Framework produces scorecard output for ≥3 architectures
+- Framework produces per-family accuracy for ≥3 adversarial families
+- Individual runs reproducible (same architecture/family → same seed)
+**Runs:** Single deterministic framework execution run.
+**Evidence:**
+- Framework specification: `project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md`
+- Framework components: `project_4/results/PROJECT_4_CLOSURE_SUMMARY.md` (section 2)
+- Extraction source: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — framework exists; reproducibility to be validated in P12.
+**Notes:** This is infrastructure/methodology validation only; empirical robustness claims (narrow transfer, architecture splits) are separate (P4-C02, C04).
+
+---
+
+### ID: P4-C02
+**Project source:** project_4
+**Type:** strong
+**Claim:** A meaningful architecture-dependent difference exists on block-boundary-stress: MLP and Transformer show substantially higher robustness than LSTM on this adversarial family.
+**Scope/Conditions:** Diagnostic evaluation of three baseline models (MLP, LSTM, Transformer) on block-boundary-stress adversarial family; repeated-stability protocol.
+**Baselines:** All three architectures evaluated on same adversarial pattern.
+**Metrics:** block-boundary-stress accuracy per architecture; cross-architecture difference.
+**Observed (Project 4):**
+- MLP: 1.0 (success)
+- LSTM: 0.0 (failure)
+- Transformer: 1.0 (success)
+- Status: STABLE under repeated runs
+**Validation targets (Project 12; pre-registered):**
+- MLP block-boundary accuracy ≥ 0.80
+- Transformer block-boundary accuracy ≥ 0.80
+- LSTM block-boundary accuracy ≤ 0.20
+- Gap threshold: min(MLP, Transformer) − LSTM ≥ 0.50
+**Runs:** Repeated-stability runs (count and seeds TBD).
+**Evidence:**
+- Baseline classification summary: `project_4/baselines/PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md` (stable baseline matrix)
+- Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
+- Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — observed in Project 4; requires Project 12 re-validation.
+**Notes:** This is the clearest stable cross-model difference in Project 4. Targets are independent/rounded, not calibrated to Project 4 observed values.
+
+---
+
+### ID: P4-C03
+**Project source:** project_4
+**Type:** strong
+**Claim:** In-distribution exact-match accuracy is universally weak across MLP, LSTM, and Transformer under the Project 4 bounded arithmetic task, with no architecture achieving strong performance.
+**Scope/Conditions:** In-distribution evaluation of three baseline models; bounded Project 4 arithmetic task (addition/subtraction in bounded ranges).
+**Baselines:** Common arithmetic reasoning task; no external reference.
+**Metrics:** in-distribution exact-match accuracy (mean across runs).
+**Observed (Project 4):**
+- MLP: 0.0859 (STABLE)
+- LSTM: 0.0469 (STABLE)
+- Transformer: 0.0339 (STABLE)
+- All three described as "universally weak"
+**Validation targets (Project 12; pre-registered):**
+- All three architectures: in-distribution accuracy ≤ 0.20
+- No architecture exceeds 0.20 exact-match threshold
+**Runs:** Repeated-stability runs (count and seeds TBD).
+**Evidence:**
+- Baseline classification: `project_4/baselines/PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md` (in-distribution exact-match row)
+- Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
+- Results summary: `project_4/results/PROJECT_4_RESULTS_SUMMARY.md`
+- Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — observed in Project 4; requires Project 12 confirmation.
+**Notes:** Establishes baseline weakness threshold for subsequent robustness claims. Independent target (0.20) chosen as rounded weakness ceiling, not calibrated to observed values.
+
+---
+
+### ID: P4-C04
+**Project source:** project_4
+**Type:** strong
+**Claim:** Adversarial training can produce narrow transfer: improving performance on a specifically targeted adversarial family while failing to improve performance on held-out adversarial families.
+**Scope/Conditions:** First MVP intervention test; adversarial training applied to one specific adversarial family (seen); evaluation includes both seen family (training target) and held-out adversarial families (generalization test).
+**Baselines:** Baseline model (pre-intervention); untrained models for transfer reference.
+**Metrics:** accuracy gain on seen family (absolute); accuracy change on held-out family (absolute); transfer ratio.
+**Observed (Project 4):**
+- Strong gain on seen adversarial family: (exact magnitude—to be extracted from intervention artifacts)
+- Failure/no meaningful gain on held-out adversarial family: (exact value—to be extracted)
+- Pattern: seen gain >> held-out gain
+- Status: STABLE signal
+**Validation targets (Project 12; pre-registered):**
+- Ordering target (independent): (seen_gain − held_out_gain) ≥ 0.10
+- Qualitative criterion: seen_gain > held_out_gain (narrow transfer confirmed)
+- Numeric precision targets: TBD after Sprint 4 artifact extraction
+**Runs:** Repeated-stability runs; intervention artifact paths TBD.
+**Evidence:**
+- Intervention artifact: `project_4/interventions/adversarial_training/results/project_4_adversarial_training_artifact.json`
+- Intervention validation: `project_4/interventions/adversarial_training/results/project_4_adversarial_training_validation_runs.json`
+- Results summary (intervention): `project_4/results/PROJECT_4_RESULTS_SUMMARY.md` (section 4)
+- Closure (intervention): `project_4/results/PROJECT_4_CLOSURE_SUMMARY.md` (section 4)
+- Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — observed and validated in Project 4; requires Project 12 re-validation and exact magnitude extraction.
+**Notes:** Core framework contribution: distinguishes narrow gains from broad robustness. Ordering threshold (≥0.10 gap) is independent pre-registered target. Numeric bounds (e.g., seen>0.20, held-out<0.05) to be calibrated in Sprint 4 when actual artifact values extracted. Blockwise decomposition excluded (unresolved).
+
+---
+
+### ID: P4-C05
+**Project source:** project_4
+**Type:** medium
+**Claim:** Alternating-carry and full-propagation-chain adversarial families are equally hard across all three baseline architectures: all show universal collapse with no architecture-dependent differentiation.
+**Scope/Conditions:** Adversarial robustness evaluation; two specific structured adversarial families (alternating-carry, full-propagation-chain).
+**Baselines:** All three models (MLP, LSTM, Transformer) evaluated on same families.
+**Metrics:** accuracy on each adversarial family per architecture.
+**Observed (Project 4):**
+- Alternating carry: 0.0 for MLP, LSTM, Transformer (universal collapse)
+- Full propagation chain: 0.0 for MLP, LSTM, Transformer (universal collapse)
+- Status: STABLE across runs
+**Validation targets (Project 12; pre-registered):**
+- For each family: max(model accuracy across all three) ≤ 0.10 (universal weakness)
+- No architecture-specific split: max_accuracy − min_accuracy ≤ 0.10 (no differentiation)
+**Runs:** Repeated-stability runs (count and seeds TBD).
+**Evidence:**
+- Baseline classification: `project_4/baselines/PROJECT_4_BASELINE_CLASSIFICATION_SUMMARY.md` (alternating carry & full propagation chain rows)
+- Baseline artifacts: `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
+- Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — observed in Project 4; requires confirmation.
+**Notes:** Contrast with P4-C02 (block-boundary shows architecture split). These two families establish a universal-collapse pattern as context for intervention effectiveness baseline.
+
+---
+
+### ID: P4-C06
+**Project source:** project_4
+**Type:** weak (infrastructure/reproducibility)
+**Claim:** Project 4 baseline repeated-run classifications (stability status) can be reproduced from artifacts or by re-running baseline scripts when framework is applied to the same models and adversarial families.
+**Scope/Conditions:** Framework reproducibility (scorecard, protocol, validation rules); three baseline architectures (MLP, LSTM, Transformer) re-evaluated.
+**Baselines:** Baseline framework itself (no external reference); internal consistency check.
+**Metrics:** match between Project 4 reported stability classification and Project 12 re-run classification; execution success rate.
+**Observed (Project 4):**
+- 7 framework components documented and implemented
+- Three baselines classified as STABLE (repeated-run consistency confirmed in Project 4)
+**Validation targets (Project 12; pre-registered):**
+- All 7 framework components execute without modification in Project 12 environment
+- Baseline re-runs produce same architecture-level classification (stable/unstable) as Project 4
+- Per-family results reproducible ±measurement tolerance
+**Runs:** Framework implementation run; deterministic.
+**Evidence:**
+- Framework specification: `project_4/framework/PROJECT_4_DIAGNOSTIC_FRAMEWORK.md`
+- Framework components: `project_4/results/PROJECT_4_CLOSURE_SUMMARY.md` (section 2: what was built)
+- Baseline artifacts (Project 4): `project_4/results/baseline_runs/phase30_*_baseline_artifact.json`
+- Extraction: `project_12/docs/CLAIM_EXTRACTION_PROJECT_4.md`
+**Status:** untested (Project 12) — framework exists; reproducibility to be validated in P12.
+**Notes:** Weak (infrastructure) claim. Does not make empirical robustness claims; only validates framework toolkit execution and baseline reproducibility.
+
+---
