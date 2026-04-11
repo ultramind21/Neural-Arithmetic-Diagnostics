@@ -47,6 +47,11 @@ This snapshot aggregates Phase 1 validated results for:
 - project_12/reports/P4_VALIDATION_REPORT_INTERVENTION.md
 - project_12/docs/PROJECT_4_CLOSURE_VALIDATION.md
 
+**Additional Evidence (Sprint 4F):**
+- P4-C04 multi-seed smoke check: 3-seed manifest-driven stability sweep (seeds: 42, 123, 456)
+- Pass-rate: 3/3; metrics stable (gap=1.5 across all seeds)
+- Reports: project_12/reports/P4_C04_STABILITY_SWEEP_REPORT.md, project_12/reports/P4_C04_STABILITY_SWEEP_RESULTS.csv
+
 ---
 
 ## Phase 1 Totals
@@ -58,9 +63,11 @@ This snapshot aggregates Phase 1 validated results for:
 
 ## Notes (Methodological)
 
-**Training Interventions:** Stochastic; evaluation logic is reproducible. The P4-C04 validation is policy-based and tied to the recorded run artifact(s). Multi-seed stability demonstration is optional future work (Sprint 4F).
+**Training Interventions:** Stochastic; evaluation logic is reproducible. The P4-C04 validation is policy-based and tied to recorded run artifacts. Multi-seed stability demonstrated via Sprint 4F (3-seed sweep, pass-rate 3/3).
 
 **Project 11 Closure:** Sensitivity sweep (C07 rejected-as-stated) revealed that absolute thresholds are brittle across different seed/sampling conditions; this finding informs design of more robust evaluation criteria for future projects.
+
+**Sprint 4F Enhancement:** P4-C04 multi-seed smoke check executed post-Phase-1-close to strengthen evidence. Same manifest-driven setup, only seed varied; metrics stable across all 3 runs. Evidence of robustness, not variance measurement.
 
 ---
 
