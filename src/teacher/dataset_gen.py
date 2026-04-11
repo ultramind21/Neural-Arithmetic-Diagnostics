@@ -42,11 +42,22 @@ class SorobanBCDataset(Dataset):
 
     def add_problems(self, problems: List[Tuple[int, int]]):
         """Add multiple problems."""
+        skipped = 0
+        first_error = None
+
         for a, b in problems:
             try:
                 self.add_problem(a, b)
             except Exception as e:
-                pass  # Skip problematic cases silently
+                skipped += 1
+                if first_error is None:
+                    first_error = (a, b, repr(e))
+
+        if skipped > 0:
+            raise RuntimeError(
+                f"add_problems failed: {skipped}/{len(problems)} problems errored; "
+                f"first_error={first_error}"
+            )
 
     def __len__(self):
         return len(self.observations)

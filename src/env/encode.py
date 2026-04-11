@@ -11,10 +11,13 @@ from .soroban_env import SorobanEnv
 
 def encode_obs(env: SorobanEnv) -> torch.Tensor:
     """
-    Encode env state as tensor (num_columns, 4).
-    Features per column: [upper, lower, is_cursor, b_digit]
+    Encode env state as a tensor of shape (num_columns, F),
+    where F is defined by the environment's _obs() implementation.
+
+    This function intentionally does not assume a fixed feature count.
     """
-    obs = env._obs()  # numpy (W, 4)
+    obs = env._obs()
+    assert obs.ndim == 2, f"Expected 2D obs (W,F); got shape={obs.shape}"
     return torch.from_numpy(obs)
 
 
