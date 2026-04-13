@@ -60,19 +60,19 @@ def run_tests():
         result = env.get_result()
         assert result == a + b, f"{desc}: {a}+{b}={result}, expected {a+b}"
 
-        print(f"  ✅ {desc:<20} {a:>8}+{b:<8}={a+b:<10} ({len(actions):2d} steps, max_add1={max_add1})")
+        print(f"  [OK] {desc:<20} {a:>8}+{b:<8}={a+b:<10} ({len(actions):2d} steps, max_add1={max_add1})")
 
     # Critical: step count comparison
     print(f"\n  --- Step Count Sanity ---")
     trace_11111 = teacher_trace(11111, 99999, config)
     assert len(trace_11111) <= 40, f"11111+99999: {len(trace_11111)} steps (should be ~31)"
-    print(f"  ✅ 11111+99999: {len(trace_11111)} steps (was 1020 in old system)")
+    print(f"  [OK] 11111+99999: {len(trace_11111)} steps (was 1020 in old system)")
 
     trace_45678 = teacher_trace(45678, 54321, config)
     assert len(trace_45678) <= 40, f"45678+54321: {len(trace_45678)} steps"
-    print(f"  ✅ 45678+54321: {len(trace_45678)} steps (was 549 in old system)")
+    print(f"  [OK] 45678+54321: {len(trace_45678)} steps (was 549 in old system)")
 
-    print("\n  ✅ ALL TEACHER TESTS PASSED!")
+    print("\n  [OK] ALL TEACHER TESTS PASSED!")
 
 
 if __name__ == "__main__":

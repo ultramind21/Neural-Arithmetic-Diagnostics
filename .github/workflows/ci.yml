@@ -6,7 +6,10 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +42,7 @@ jobs:
           python tools/verify_platform_p0.py
 
       - name: Large file guard (20MB)
+        shell: bash
         run: |
           python - <<'PY'
           import os, subprocess

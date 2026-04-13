@@ -15,12 +15,24 @@ pip install pytest
 ```
 
 ## Run checks
+One-command verification (includes all checks):
+```bash
+python tools/verify_platform_p0.py
+```
+
+Or run individually:
 ```bash
 python -m compileall -q src nad
 python -m pytest -q
 python tests/test_env.py
 python tests/test_rules.py
 python tests/test_teacher.py
+```
+
+Lock file (ledger of installed packages):
+```bash
+# Generated from requirements.txt in a clean venv
+cat requirements.lock.txt
 ```
 
 ## Adding/Changing a claim
