@@ -265,12 +265,12 @@ These are in **Sprint P2** scope.
 
 ## References
 
-- **Authority policy:** [project_12/docs/CLAIM_AUTHORITY.md](../project_12/docs/CLAIM_AUTHORITY.md)
-- **Reproducibility guide:** [docs/REPRODUCIBILITY.md](../docs/REPRODUCIBILITY.md)
-- **Contributing guide:** [CONTRIBUTING.md](../CONTRIBUTING.md)
-- **Verify script:** [tools/verify_platform_p0.py](../tools/verify_platform_p0.py)
-- **Hash generator:** [tools/hash_tree.py](../tools/hash_tree.py)
-- **CI workflow:** [.github/workflows/ci.yml](../.github/workflows/ci.yml)
+- **Authority policy:** [project_12/docs/CLAIM_AUTHORITY.md](CLAIM_AUTHORITY.md)
+- **Reproducibility guide:** [docs/REPRODUCIBILITY.md](../../docs/REPRODUCIBILITY.md)
+- **Contributing guide:** [CONTRIBUTING.md](../../CONTRIBUTING.md)
+- **Verify script:** [tools/verify_platform_p0.py](../../tools/verify_platform_p0.py)
+- **Hash generator:** [tools/hash_tree.py](../../tools/hash_tree.py)
+- **CI workflow:** [.github/workflows/ci.yml](../../.github/workflows/ci.yml)
 
 ---
 
