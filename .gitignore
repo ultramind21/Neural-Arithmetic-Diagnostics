@@ -79,3 +79,5 @@ project_12/results/revalidate/data/pool_points.json
 project_12/results/revalidate/data/holdout_points.json
 project_12/results/revalidate/data/
 
+.venv_lock/
+_tmp_cleanroom/
