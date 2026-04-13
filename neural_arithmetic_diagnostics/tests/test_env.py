@@ -22,7 +22,7 @@ def run_tests():
     env.reset(42, 13)
     assert env.get_result() == 42
     assert env.target == 55
-    print("✅")
+    print("[OK]")
 
     # GOTO
     print("  GOTO moves cursor...", end=" ")
@@ -31,35 +31,35 @@ def run_tests():
     assert env.cursor == 5
     env.step(action_goto(0))
     assert env.cursor == 0
-    print("✅")
+    print("[OK]")
 
     # ADD1 through env
     print("  ADD1 works...", end=" ")
     env.reset(0, 1)
     env.step(action_add1(W))
     assert env.get_result() == 1
-    print("✅")
+    print("[OK]")
 
     # ADD5 through env
     print("  ADD5 works...", end=" ")
     env.reset(0, 5)
     env.step(action_add5(W))
     assert env.get_result() == 5
-    print("✅")
+    print("[OK]")
 
     # Carry through env
     print("  Carry (9+1=10)...", end=" ")
     env.reset(9, 1)
     env.step(action_add1(W))
     assert env.get_result() == 10
-    print("✅")
+    print("[OK]")
 
     # Carry chain
     print("  Carry chain (999+1=1000)...", end=" ")
     env.reset(999, 1)
     env.step(action_add1(W))
     assert env.get_result() == 1000
-    print("✅")
+    print("[OK]")
 
     # DONE correct
     print("  DONE correct answer...", end=" ")
@@ -67,23 +67,23 @@ def run_tests():
     env.step(action_add5(W))
     _, reward, done, info = env.step(action_done(W))
     assert done and info["correct"] and reward > 0
-    print("✅")
+    print("[OK]")
 
     # DONE wrong
     print("  DONE wrong answer...", end=" ")
     env.reset(3, 5)
     _, reward, done, info = env.step(action_done(W))
     assert done and not info["correct"] and reward < 0
-    print("✅")
+    print("[OK]")
 
     # Observation shape
     print("  Observation shape...", end=" ")
     env.reset(123, 456)
     obs = env._obs()
     assert obs.shape == (W, 6), f"Expected ({W}, 6), got {obs.shape}"
-    print("✅")
+    print("[OK]")
 
-    print("\n  ✅ ALL ENV TESTS PASSED!")
+    print("\n  [OK] ALL ENV TESTS PASSED!")
 
 
 if __name__ == "__main__":
