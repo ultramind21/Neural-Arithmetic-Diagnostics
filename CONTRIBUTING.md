@@ -6,6 +6,10 @@
 - Keep changes **minimal and reproducible**.
 - Do not add large data files to git.
 
+## Security note
+- Never embed tokens in git remote URLs (e.g., `https://<token>@github.com/...`).
+- Never use `--force` / `--force-with-lease` unless explicitly approved for recovery.
+
 ## Dev quickstart
 ```bash
 python -m pip install -U pip
