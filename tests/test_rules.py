@@ -21,7 +21,7 @@ def run_tests():
         u, l = digit_to_beads(d)
         assert beads_to_digit(u, l) == d
         assert validate_column(u, l)
-    print("✅")
+    print("[OK]")
 
     # Number ↔ Board roundtrip
     print("  number_to_board roundtrip...", end=" ")
@@ -29,7 +29,7 @@ def run_tests():
         board = number_to_board(n, 8)
         assert board_to_number(board) == n
         assert validate_board(board)
-    print("✅")
+    print("[OK]")
 
     # ADD1 simple (0-8 → 1-9)
     print("  ADD1 simple (no carry)...", end=" ")
@@ -38,7 +38,7 @@ def run_tests():
         nu, nl, carry = apply_add1(u, l)
         assert beads_to_digit(nu, nl) == d + 1
         assert carry == 0
-    print("✅")
+    print("[OK]")
 
     # ADD1 carry (9 → 0 carry 1)
     print("  ADD1 carry (9+1)...", end=" ")
@@ -46,7 +46,7 @@ def run_tests():
     nu, nl, carry = apply_add1(u, l)
     assert beads_to_digit(nu, nl) == 0
     assert carry == 1
-    print("✅")
+    print("[OK]")
 
     # ADD1 complement (4+1=5)
     print("  ADD1 complement (4+1=5)...", end=" ")
@@ -55,7 +55,7 @@ def run_tests():
     assert beads_to_digit(nu, nl) == 5
     assert nu == 1 and nl == 0
     assert carry == 0
-    print("✅")
+    print("[OK]")
 
     # ADD5 simple (0-4 → 5-9)
     print("  ADD5 simple...", end=" ")
@@ -64,7 +64,7 @@ def run_tests():
         nu, nl, carry = apply_add5(u, l)
         assert beads_to_digit(nu, nl) == d + 5
         assert carry == 0
-    print("✅")
+    print("[OK]")
 
     # ADD5 carry (5-9 → 0-4 carry 1)
     print("  ADD5 carry...", end=" ")
@@ -73,7 +73,7 @@ def run_tests():
         nu, nl, carry = apply_add5(u, l)
         assert beads_to_digit(nu, nl) == (d + 5) % 10
         assert carry == 1
-    print("✅")
+    print("[OK]")
 
     # SUB1
     print("  SUB1...", end=" ")
@@ -86,7 +86,7 @@ def run_tests():
     nu, nl, borrow = apply_sub1(u, l)
     assert beads_to_digit(nu, nl) == 9
     assert borrow == 1
-    print("✅")
+    print("[OK]")
 
     # Carry chain via board: 999 + 1 = 1000
     print("  Carry chain (999+1)...", end=" ")
@@ -101,7 +101,7 @@ def run_tests():
         board[col] = (nu, nl)
         col += 1
     assert board_to_number(board) == 1000
-    print("✅")
+    print("[OK]")
 
     # Long carry: 99999 + 1 = 100000
     print("  Long carry (99999+1)...", end=" ")
@@ -116,7 +116,7 @@ def run_tests():
         board[col] = (nu, nl)
         col += 1
     assert board_to_number(board) == 100000
-    print("✅")
+    print("[OK]")
 
     # Full addition via digit decomposition
     print("  Full addition (multi-case)...", end=" ")
@@ -157,10 +157,11 @@ def run_tests():
 
         result = board_to_number(board)
         assert result == expected, f"{a}+{b}: got {result}, expected {expected}"
-    print("✅")
+    print("[OK]")
 
-    print("\n  ✅ ALL RULES TESTS PASSED!")
+    print("\n  [OK] ALL RULES TESTS PASSED!")
 
 
 if __name__ == "__main__":
     run_tests()
+
