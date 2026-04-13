@@ -75,6 +75,14 @@ nad-diff-gate --help
 
 ---
 
+## Reproducibility (engineering)
+- One-command verification: `python tools/verify_platform_p0.py`
+- Dependency ledger: `requirements.lock.txt` (audit trail of what was installed)
+- Hash ledgers: `project_12/results/_hashes/` (authority layer integrity)
+- Details: see `docs/REPRODUCIBILITY.md`
+
+---
+
 ## Quick mental model (how to read the repo)
 - **Projects 1–3:** historical research line (what was believed early).
 - **Audit + Projects 4–11:** structured diagnostics, mechanisms, composition, and theory under stress tests.
