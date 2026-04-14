@@ -81,6 +81,15 @@ nad-diff-gate --help
 - Hash ledgers: `project_12/results/_hashes/` (authority layer integrity)
 - Details: see `docs/REPRODUCIBILITY.md`
 
+## Integrity verified (2026-04-14)
+**Recovery phase closed.** All results audited and verified:
+- ✅ `p12_results_sha256.json` matches reference clone (`C:\NAD_REF`)
+- ✅ `MISSING=0, MISMATCH=0, ARTIFACT_NOT_IN_LEDGER=0`
+- ✅ 175 ledger entries, 23 artifacts, all hashes verified via SHA256
+- Reference clone created from GitHub main (2026-04-14) on Windows with long-path support enabled
+
+How to re-verify: see `docs/REPRODUCIBILITY.md` (Integrity checklist section).
+
 ---
 
 ## Quick mental model (how to read the repo)

@@ -59,3 +59,53 @@ To reach stronger release-grade reproducibility:
 - branch protection + required CI checks
 - signed tags/commits (optional)
 - formal release tag (e.g., `v0.1.0`)
+
+---
+
+## Integrity checklist (2026-04-14)
+To verify ledger and artifact integrity without trusting automated reporting:
+
+### 1) Verify ledger file hash (local vs reference)
+```powershell
+python -c "import hashlib, pathlib; 
+p=pathlib.Path('project_12/results/_hashes/p12_results_sha256.json'); 
+print('LOCAL_SHA256=', hashlib.sha256(p.read_bytes()).hexdigest())"
+
+# Compare with reference clone or GitHub binary
+```
+
+### 2) Check for missing/corrupted files in results
+```powershell
+python -c "import json,hashlib,os; 
+ledger=json.load(open('project_12/results/_hashes/p12_results_sha256.json',encoding='utf-8')); 
+results_root='project_12/results'; 
+missing=[]; mismatch=[]; 
+for rel,exp in ledger.items():
+    p=os.path.join(results_root, rel.replace('/', os.sep))
+    if not os.path.exists(p): missing.append(rel); continue
+    h=hashlib.sha256(open(p,'rb').read()).hexdigest()
+    if h.lower()!=str(exp).lower(): mismatch.append(rel)
+print('MISSING=',len(missing))
+print('MISMATCH=',len(mismatch))"
+```
+
+**Expected:** `MISSING=0, MISMATCH=0`
+
+### 3) Verify all artifacts are tracked in ledger
+```powershell
+python -c "import os,json,glob; 
+ledger=json.load(open('project_12/results/_hashes/p12_results_sha256.json',encoding='utf-8')); 
+results_root='project_12/results'; 
+arts=glob.glob(os.path.join(results_root,'**','artifact.json'), recursive=True); 
+bad=[]; 
+for ap in arts: 
+  rel=os.path.relpath(ap, results_root).replace(os.sep,'/'); 
+  if rel not in ledger: bad.append(rel)
+print('ARTIFACT_COUNT=',len(arts))
+print('ARTIFACT_NOT_IN_LEDGER=',len(bad))"
+```
+
+**Expected:** `ARTIFACT_NOT_IN_LEDGER=0`
+
+All three checks passing = all results integrity verified.
+
