@@ -1,0 +1,53 @@
+{
+  "n": 5,
+  "no_borrow": {
+    "mean": 0.5992,
+    "stdev": 0.0055681634714189725
+  },
+  "borrow_heavy": {
+    "mean": 0.5081333333333333,
+    "stdev": 0.007464285334548488
+  },
+  "runs": [
+    {
+      "path": "project_12/results\\sub2_1b_50_50_seed0_v1\\artifact.json",
+      "seed": 0,
+      "acc": {
+        "no_borrow": 0.5993333333333334,
+        "borrow_heavy": 0.5106666666666667
+      }
+    },
+    {
+      "path": "project_12/results\\sub2_1b_50_50_seed1_v1\\artifact.json",
+      "seed": 1,
+      "acc": {
+        "no_borrow": 0.606,
+        "borrow_heavy": 0.506
+      }
+    },
+    {
+      "path": "project_12/results\\sub2_1b_50_50_seed2_v1\\artifact.json",
+      "seed": 2,
+      "acc": {
+        "no_borrow": 0.6046666666666667,
+        "borrow_heavy": 0.5106666666666667
+      }
+    },
+    {
+      "path": "project_12/results\\sub2_1b_50_50_seed3_v1\\artifact.json",
+      "seed": 3,
+      "acc": {
+        "no_borrow": 0.592,
+        "borrow_heavy": 0.518
+      }
+    },
+    {
+      "path": "project_12/results\\sub2_1b_50_50_seed4_v1\\artifact.json",
+      "seed": 4,
+      "acc": {
+        "no_borrow": 0.594,
+        "borrow_heavy": 0.49533333333333335
+      }
+    }
+  ]
+}
