@@ -1,0 +1,381 @@
+#!/usr/bin/env python3
+"""
+Phase SUB0 Subtraction Smoke Baseline — Tiny Policy Network for Soroban Subtraction.
+
+Similar to Phase2 but for subtraction (a - b, MVP: a >= b).
+"""
+
+import argparse
+import json
+import os
+import random
+import sys
+from datetime import datetime
+from pathlib import Path
+
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from tqdm import tqdm
+
+# Add repo root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+
+from src.env.soroban_env import SorobanEnv
+from src.teacher.teacher_sub import teacher_trace_sub
+from src.utils.config import DEFAULT_CONFIG
+
+
+class TinyTransformer(nn.Module):
+    """Minimal Transformer policy for Soroban action prediction."""
+
+    def __init__(self, obs_size, action_size, embed_dim=32, num_heads=2, num_layers=1):
+        super().__init__()
+        self.embed_dim = embed_dim
+        self.obs_size = obs_size
+        self.action_size = action_size
+
+        # Embedding for flattened observations
+        self.obs_embed = nn.Linear(obs_size, embed_dim)
+
+        # Transformer encoder
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=embed_dim, nhead=num_heads, dim_feedforward=64, batch_first=True
+        )
+        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+
+        # Action output head
+        self.action_head = nn.Linear(embed_dim, action_size)
+
+    def forward(self, obs):
+        """obs: (batch, seq_len, obs_feat) -> action logits: (batch, action_size)"""
+        batch_size = obs.shape[0]
+        obs_flat = obs.reshape(batch_size, -1)  # (batch, seq_len * obs_feat)
+        x = self.obs_embed(obs_flat)  # (batch, embed_dim)
+        x = x.unsqueeze(1)  # (batch, 1, embed_dim)
+        x = self.transformer(x)  # (batch, 1, embed_dim)
+        x = x.squeeze(1)  # (batch, embed_dim)
+        logits = self.action_head(x)  # (batch, action_size)
+        return logits
+
+
+def generate_dataset(seed=0, train_size=1000, eval_size=300, problem_mode="iid"):
+    """Generate (obs, action) pairs from teacher traces for subtraction.
+    
+    VP: randomly generate pairs (a, b) with a >= b.
+    problem_mode:
+      - 'iid': uniform random (a, b) with a >= b
+      - 'no_borrow': digit-wise: a_digit >= b_digit for all digits (no borrow needed)
+      - 'borrow_heavy': digit-wise: a_digit < b_digit often (forces borrow)
+    """
+    np.random.seed(seed)
+    random.seed(seed)
+
+    config = DEFAULT_CONFIG
+    env = SorobanEnv(config)
+    W = config.num_columns
+
+    dataset = []
+    num_pairs = 0
+    while num_pairs < train_size + eval_size:
+        # Generate (a, b) with a >= b
+        if problem_mode == "no_borrow":
+            # Each digit of a >= b (no borrow needed)
+            a_digits = [np.random.randint(0, 10) for _ in range(W)]
+            b_digits = [np.random.randint(0, a_digits[i] + 1) for i in range(W)]
+            a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        elif problem_mode == "borrow_heavy":
+            # Most digits: a_digit < b_digit (forces borrow cascade)
+            # Setup: lower digits have a < b, upper digit ensures a >= b overall
+            a_digits = [np.random.randint(0, 5) for _ in range(W - 1)]  # 0-4
+            b_digits = [np.random.randint(5, 10) for _ in range(W - 1)]  # 5-9
+            # Top digit: make a >= b overall
+            a_digits.append(np.random.randint(5, 10))  # 5-9
+            b_digits.append(np.random.randint(0, 2))  # 0-1
+            a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        else:  # "iid" (default)
+            max_val = 99999  # Smaller range for MVP
+            a = np.random.randint(1, max_val + 1)
+            b = np.random.randint(0, min(a + 1, max_val + 1))  # Ensure a >= b
+        
+        # Get action sequence from teacher
+        actions = teacher_trace_sub(a, b)
+
+        # Replay in environment to get observations
+        obs = env.reset(a, b, operation="sub")
+        
+        for action in actions:
+            # Record (obs, action) pair
+            dataset.append((obs.copy(), action))
+            num_pairs += 1
+            if num_pairs >= train_size + eval_size:
+                break
+            
+            # Step environment
+            obs, _, done, _ = env.step(action)
+            if done:
+                break
+
+    # Convert to arrays
+    obs_list = np.array([d[0] for d in dataset[:train_size + eval_size]])
+    action_list = np.array([d[1] for d in dataset[:train_size + eval_size]])
+
+    # Split
+    train_obs, train_actions = obs_list[:train_size], action_list[:train_size]
+    eval_obs, eval_actions = obs_list[train_size : train_size + eval_size], action_list[
+        train_size : train_size + eval_size
+    ]
+
+    return (train_obs, train_actions), (eval_obs, eval_actions)
+
+
+def train_epoch(model, train_obs, train_actions, optimizer, criterion, device):
+    """Train for one epoch."""
+    model.train()
+    total_loss = 0
+    batch_size = 64
+
+    for i in range(0, len(train_obs), batch_size):
+        obs_batch = torch.FloatTensor(train_obs[i : i + batch_size]).to(device)
+        action_batch = torch.LongTensor(train_actions[i : i + batch_size]).to(device)
+
+        # Flatten obs if needed
+        if obs_batch.dim() > 2:
+            obs_batch = obs_batch.reshape(obs_batch.shape[0], -1)
+
+        optimizer.zero_grad()
+        logits = model(obs_batch)  # (batch, action_size)
+        loss = criterion(logits, action_batch)
+        loss.backward()
+        optimizer.step()
+
+        total_loss += loss.item()
+
+    return total_loss / (len(train_obs) // batch_size + 1)
+
+
+def eval_accuracy(model, eval_obs, eval_actions, device):
+    """Compute action accuracy on eval set."""
+    model.eval()
+    correct = 0
+    total = 0
+
+    with torch.no_grad():
+        for i in range(len(eval_obs)):
+            obs = torch.FloatTensor(eval_obs[i]).to(device)
+            if obs.dim() > 1:
+                obs = obs.reshape(-1)  # (obs_size,)
+            obs = obs.unsqueeze(0)  # (1, obs_size)
+            logits = model(obs)  # (1, action_size)
+            pred = logits.argmax(dim=1).item()
+            if pred == eval_actions[i]:
+                correct += 1
+            total += 1
+
+    return correct / total if total > 0 else 0.0
+
+
+def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=None):
+    """Generate mixed (obs, action) pairs from multiple problem modes.
+    
+    train_mix: dict of {mode: proportion}, e.g., {"no_borrow": 0.5, "borrow_heavy": 0.5}
+    """
+    np.random.seed(seed)
+    random.seed(seed)
+
+    # Parse train_mix string if provided
+    if isinstance(train_mix, str):
+        parts = train_mix.split(",")
+        train_mix = {}
+        for part in parts:
+            mode, prop = part.strip().split(":")
+            train_mix[mode] = float(prop)
+    
+    train_obs_mixed = []
+    train_actions_mixed = []
+    
+    # Generate training data from mixed modes
+    for mode, proportion in train_mix.items():
+        mode_train_size = int(train_size * proportion)
+        if mode_train_size > 0:
+            (train_obs_mode, train_actions_mode), _ = generate_dataset(
+                seed=seed, train_size=mode_train_size, eval_size=0, problem_mode=mode
+            )
+            train_obs_mixed.extend(train_obs_mode)
+            train_actions_mixed.extend(train_actions_mode)
+    
+    # Shuffle mixed training data
+    indices = list(range(len(train_obs_mixed)))
+    random.shuffle(indices)
+    train_obs_mixed = [train_obs_mixed[i] for i in indices]
+    train_actions_mixed = [train_actions_mixed[i] for i in indices]
+    
+    # Generate eval data (use first mode as default)
+    first_mode = list(train_mix.keys())[0]
+    _, (eval_obs, eval_actions) = generate_dataset(
+        seed=seed, train_size=0, eval_size=eval_size, problem_mode=first_mode
+    )
+    
+    return (train_obs_mixed, train_actions_mixed), (eval_obs, eval_actions)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Phase SUB0/SUB1/SUB2 Subtraction Smoke Run")
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--train-size", type=int, default=1000)
+    parser.add_argument("--eval-size", type=int, default=300)
+    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--out-dir", type=str, default="project_12/results/sub0_subtraction_smoke")
+    parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_borrow", "borrow_heavy"])
+    parser.add_argument("--train-mix", type=str, default=None, help="Mixed mode: e.g., 'no_borrow:0.5,borrow_heavy:0.5'")
+    parser.add_argument("--eval-modes", type=str, default=None, help="Comma-separated eval modes (e.g., 'no_borrow,borrow_heavy')")
+    args = parser.parse_args()
+    
+    # If eval_modes not specified, default to train problem_mode (original behavior)
+    if args.eval_modes is None:
+        args.eval_modes = args.problem_mode
+
+    # Setup
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    output_dir = Path(args.out_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Generate dataset (mixed or single mode)
+    if args.train_mix:
+        print(f"Generating mixed dataset (train={args.train_size}, eval={args.eval_size}, mix={args.train_mix})...")
+        (train_obs, train_actions), (eval_obs, eval_actions) = generate_mixed_dataset(
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, train_mix=args.train_mix
+        )
+        train_mode = "mixed"
+        train_mix_dict = {}
+        for part in args.train_mix.split(","):
+            mode, prop = part.strip().split(":")
+            train_mix_dict[mode] = float(prop)
+    else:
+        print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
+        (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
+        )
+        train_mode = args.problem_mode
+        train_mix_dict = {}
+
+    obs_size = train_obs[0].size if hasattr(train_obs[0], 'size') else train_obs[0].shape[0]
+    if len(train_obs[0].shape) > 1:
+        obs_size = int(np.prod(train_obs[0].shape))
+    action_size = int(np.max(train_actions)) + 1
+
+    print(f"Obs shape: {train_obs[0].shape}, Flattened size: {obs_size}, Action size: {action_size}")
+
+    # Model
+    model = TinyTransformer(obs_size=obs_size, action_size=action_size).to(device)
+    optimizer = optim.Adam(model.parameters(), lr=1e-3)
+    criterion = nn.CrossEntropyLoss()
+
+    # Training
+    print(f"Training for {args.epochs} epochs...")
+    train_losses = []
+    eval_accs = []
+
+    for epoch in range(args.epochs):
+        loss = train_epoch(model, train_obs, train_actions, optimizer, criterion, device)
+        acc = eval_accuracy(model, eval_obs, eval_actions, device)
+        train_losses.append(loss)
+        eval_accs.append(acc)
+        print(f"Epoch {epoch+1}/{args.epochs}: loss={loss:.4f}, eval_acc={acc:.4f}")
+
+    # Multi-mode evaluation
+    eval_modes_list = [m.strip() for m in args.eval_modes.split(",")]
+    eval_accuracy_by_mode = {}
+    
+    for eval_mode in eval_modes_list:
+        print(f"\nEvaluating on mode: {eval_mode}...")
+        # Generate eval dataset for this mode
+        _, (eval_obs_mode, eval_actions_mode) = generate_dataset(
+            seed=args.seed, train_size=0, eval_size=args.eval_size, problem_mode=eval_mode
+        )
+        # Compute accuracy on this mode
+        mode_acc = eval_accuracy(model, eval_obs_mode, eval_actions_mode, device)
+        eval_accuracy_by_mode[eval_mode] = float(mode_acc)
+        print(f"  Accuracy on {eval_mode}: {mode_acc:.4f}")
+
+    # Save artifact
+    artifact = {
+        "git_commit": os.popen("git rev-parse HEAD").read().strip(),
+        "seed": args.seed,
+        "train_size": args.train_size,
+        "eval_size": args.eval_size,
+        "epochs": args.epochs,
+        "operation": "subtraction",
+        "train_problem_mode": train_mode,
+        "eval_modes": eval_modes_list,
+        "eval_accuracy_by_mode": eval_accuracy_by_mode,
+        "obs_size": obs_size,
+        "action_size": action_size,
+        "metrics": {
+            "final_train_loss": float(train_losses[-1]) if train_losses else None,
+            "final_eval_accuracy": float(eval_accs[-1]) if eval_accs else None,
+            "all_train_losses": [float(x) for x in train_losses],
+            "all_eval_accuracies": [float(x) for x in eval_accs],
+        },
+        "device": str(device),
+        "timestamp": datetime.utcnow().isoformat() + "Z",
+    }
+    
+    # Add train_mix if applicable
+    if train_mix_dict:
+        artifact["train_mix"] = train_mix_dict
+
+    artifact_path = output_dir / "artifact.json"
+    with open(artifact_path, "w") as f:
+        json.dump(artifact, f, indent=2)
+    print(f"Artifact saved to {artifact_path}")
+
+    # Save report
+    report_md = f"""# Phase SUB0 Subtraction Smoke — Evaluation Report
+
+## Configuration
+
+| Key | Value |
+|-----|-------|
+| Seed | {args.seed} |
+| Train Size | {args.train_size} |
+| Eval Size | {args.eval_size} |
+| Epochs | {args.epochs} |
+| Operation | Subtraction (a >= b) |
+| Obs Size | {obs_size} |
+| Action Size | {action_size} |
+| Device | {device} |
+
+## Results
+
+| Metric | Value |
+|--------|-------|
+| Final Train Loss | {train_losses[-1]:.6f} |
+| Final Eval Accuracy | {eval_accs[-1]:.4f} |
+
+## Training History
+
+"""
+    for i, (loss, acc) in enumerate(zip(train_losses, eval_accs)):
+        report_md += f"- Epoch {i+1}: loss={loss:.6f}, eval_acc={acc:.4f}\n"
+
+    report_md += f"""
+
+## Notes
+
+This is a MVP smoke run for subtraction. Model learns to predict actions for a - b where a >= b.
+Not a validated claim. Simply demonstrates feasibility of subtraction in soroban environment.
+"""
+
+    report_path = output_dir / "report.md"
+    with open(report_path, "w") as f:
+        f.write(report_md)
+    print(f"Report saved to {report_path}")
+    print("Phase SUB0 smoke run complete!")
+
+
+if __name__ == "__main__":
+    main()

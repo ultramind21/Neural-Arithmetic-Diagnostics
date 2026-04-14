@@ -1,0 +1,29 @@
+{
+  "git_commit": "2cc23829d9064be044be23e883b10475a1bce53e",
+  "seed": 0,
+  "train_size": 10000,
+  "eval_size": 2000,
+  "epochs": 5,
+  "obs_size": 78,
+  "action_size": 16,
+  "metrics": {
+    "final_train_loss": 0.24981158568411116,
+    "final_eval_accuracy": 0.885,
+    "all_train_losses": [
+      0.9642329980992967,
+      0.33084329061067785,
+      0.28533260239537356,
+      0.26800936479477366,
+      0.24981158568411116
+    ],
+    "all_eval_accuracies": [
+      0.8595,
+      0.8755,
+      0.8895,
+      0.8885,
+      0.885
+    ]
+  },
+  "device": "cpu",
+  "timestamp": "2026-04-14T02:33:27.357318Z"
+}
