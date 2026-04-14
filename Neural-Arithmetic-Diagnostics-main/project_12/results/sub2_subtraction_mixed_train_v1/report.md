@@ -5,8 +5,8 @@
 | Key | Value |
 |-----|-------|
 | Seed | 0 |
-| Train Size | 3000 |
-| Eval Size | 1000 |
+| Train Size | 4000 |
+| Eval Size | 1500 |
 | Epochs | 3 |
 | Operation | Subtraction (a >= b) |
 | Obs Size | 78 |
@@ -17,14 +17,14 @@
 
 | Metric | Value |
 |--------|-------|
-| Final Train Loss | 1.643588 |
-| Final Eval Accuracy | 0.5990 |
+| Final Train Loss | 1.615846 |
+| Final Eval Accuracy | 0.5980 |
 
 ## Training History
 
-- Epoch 1: loss=1.883295, eval_acc=0.5990
-- Epoch 2: loss=1.703185, eval_acc=0.5990
-- Epoch 3: loss=1.643588, eval_acc=0.5990
+- Epoch 1: loss=1.882787, eval_acc=0.5980
+- Epoch 2: loss=1.690477, eval_acc=0.5980
+- Epoch 3: loss=1.615846, eval_acc=0.5980
 
 
 ## Notes
