@@ -1,0 +1,91 @@
+{
+  "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+  "runs": [
+    {
+      "path": "project_12/results\\sub1_5_baseline_borrow_heavy_seed0_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "borrow_heavy",
+      "seed": 0,
+      "eval_accuracy_by_mode": {
+        "borrow_heavy": 0.50625,
+        "no_borrow": 0.59875
+      }
+    },
+    {
+      "path": "project_12/results\\sub1_5_baseline_borrow_heavy_seed1_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "borrow_heavy",
+      "seed": 1,
+      "eval_accuracy_by_mode": {
+        "borrow_heavy": 0.50875,
+        "no_borrow": 0.6
+      }
+    },
+    {
+      "path": "project_12/results\\sub1_5_baseline_borrow_heavy_seed2_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "borrow_heavy",
+      "seed": 2,
+      "eval_accuracy_by_mode": {
+        "borrow_heavy": 0.5025,
+        "no_borrow": 0.6
+      }
+    },
+    {
+      "path": "project_12/results\\sub1_5_baseline_no_borrow_seed0_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "no_borrow",
+      "seed": 0,
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6025,
+        "borrow_heavy": 0.50625
+      }
+    },
+    {
+      "path": "project_12/results\\sub1_5_baseline_no_borrow_seed1_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "no_borrow",
+      "seed": 1,
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.60125,
+        "borrow_heavy": 0.50875
+      }
+    },
+    {
+      "path": "project_12/results\\sub1_5_baseline_no_borrow_seed2_v1\\artifact.json",
+      "git_commit": "d423010c484fcafce5abb0851bbea16798d6c94d",
+      "train_problem_mode": "no_borrow",
+      "seed": 2,
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6,
+        "borrow_heavy": 0.5025
+      }
+    }
+  ],
+  "summary": {
+    "borrow_heavy": {
+      "borrow_heavy": {
+        "n": 3,
+        "mean": 0.5058,
+        "stdev": 0.0026
+      },
+      "no_borrow": {
+        "n": 3,
+        "mean": 0.5996,
+        "stdev": 0.0006
+      }
+    },
+    "no_borrow": {
+      "borrow_heavy": {
+        "n": 3,
+        "mean": 0.5058,
+        "stdev": 0.0026
+      },
+      "no_borrow": {
+        "n": 3,
+        "mean": 0.6012,
+        "stdev": 0.001
+      }
+    }
+  }
+}
