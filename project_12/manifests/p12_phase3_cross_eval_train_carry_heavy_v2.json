@@ -1,0 +1,13 @@
+{
+  "name": "p12_phase3_cross_eval_train_carry_heavy_v2",
+  "type": "experiment",
+  "script": "project_12/scripts/phase2/run_phase2_transformer_smoke.py",
+  "seed": 0,
+  "train_size": 3000,
+  "eval_size": 1000,
+  "epochs": 3,
+  "problem_mode": "carry_heavy",
+  "eval_modes": "carry_heavy,no_carry",
+  "out_dir": "project_12/results/phase3_cross_eval_train_carry_heavy_v2",
+  "notes": "Train on carry_heavy, eval on carry_heavy + no_carry. Not a validated claim."
+}

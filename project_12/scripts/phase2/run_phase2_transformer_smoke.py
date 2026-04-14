@@ -189,7 +189,12 @@ def main():
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--out-dir", type=str, default="project_12/results/phase2_transformer_smoke")
     parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_carry", "carry_heavy"])
+    parser.add_argument("--eval-modes", type=str, default=None, help="Comma-separated eval modes (e.g., 'no_carry,carry_heavy')")
     args = parser.parse_args()
+    
+    # If eval_modes not specified, default to train problem_mode (original behavior)
+    if args.eval_modes is None:
+        args.eval_modes = args.problem_mode
 
     # Setup
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -225,6 +230,21 @@ def main():
         eval_accs.append(acc)
         print(f"Epoch {epoch+1}/{args.epochs}: loss={loss:.4f}, eval_acc={acc:.4f}")
 
+    # Multi-mode evaluation
+    eval_modes_list = [m.strip() for m in args.eval_modes.split(",")]
+    eval_accuracy_by_mode = {}
+    
+    for eval_mode in eval_modes_list:
+        print(f"\nEvaluating on mode: {eval_mode}...")
+        # Generate eval dataset for this mode
+        _, (eval_obs_mode, eval_actions_mode) = generate_dataset(
+            seed=args.seed, train_size=0, eval_size=args.eval_size, problem_mode=eval_mode
+        )
+        # Compute accuracy on this mode
+        mode_acc = eval_accuracy(model, eval_obs_mode, eval_actions_mode, device)
+        eval_accuracy_by_mode[eval_mode] = float(mode_acc)
+        print(f"  Accuracy on {eval_mode}: {mode_acc:.4f}")
+
     # Save artifact
     artifact = {
         "git_commit": os.popen("git rev-parse HEAD").read().strip(),
@@ -232,7 +252,9 @@ def main():
         "train_size": args.train_size,
         "eval_size": args.eval_size,
         "epochs": args.epochs,
-        "problem_mode": args.problem_mode,
+        "train_problem_mode": args.problem_mode,
+        "eval_modes": eval_modes_list,
+        "eval_accuracy_by_mode": eval_accuracy_by_mode,
         "obs_size": obs_size,
         "action_size": action_size,
         "metrics": {
@@ -261,16 +283,21 @@ def main():
 | Train Size | {args.train_size} |
 | Eval Size | {args.eval_size} |
 | Epochs | {args.epochs} |
+| Train Mode | {args.problem_mode} |
+| Eval Modes | {', '.join(eval_modes_list)} |
 | Obs Size | {obs_size} |
 | Action Size | {action_size} |
 | Device | {device} |
 
 ## Results
 
-| Metric | Value |
-|--------|-------|
-| Final Train Loss | {train_losses[-1]:.6f} |
-| Final Eval Accuracy | {eval_accs[-1]:.4f} |
+| Mode | Accuracy |
+|------|----------|
+"""
+    for mode, acc in eval_accuracy_by_mode.items():
+        report_md += f"| {mode} | {acc:.4f} |\n"
+    
+    report_md += f"""
 
 ## Training History
 
