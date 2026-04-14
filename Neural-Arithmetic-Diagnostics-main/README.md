@@ -92,6 +92,28 @@ How to re-verify: see `docs/REPRODUCIBILITY.md` (Integrity checklist section).
 
 ---
 
+## Current verification commands
+To verify the repository is working:
+```bash
+python tools/verify_platform_p0.py
+python -m pytest -q
+```
+
+To verify Project 12 results integrity:
+```bash
+python -c "import json,hashlib,os; ledger=json.load(open('project_12/results/_hashes/p12_results_sha256.json',encoding='utf-8')); results_root='project_12/results'; missing=[]; mismatch=[]; 
+for rel,exp in ledger.items():
+    p=os.path.join(results_root, rel.replace('/', os.sep))
+    if not os.path.exists(p): missing.append(rel); continue
+    h=hashlib.sha256(open(p,'rb').read()).hexdigest()
+    if h.lower()!=str(exp).lower(): mismatch.append(rel)
+print('MISSING=',len(missing))
+print('MISMATCH=',len(mismatch))"
+```
+Expected: `MISSING=0, MISMATCH=0`
+
+---
+
 ## Quick mental model (how to read the repo)
 - **Projects 1–3:** historical research line (what was believed early).
 - **Audit + Projects 4–11:** structured diagnostics, mechanisms, composition, and theory under stress tests.

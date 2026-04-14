@@ -14,6 +14,16 @@ The repository is no longer "a project"; it is a research program with multiple 
 
 ---
 
+## Verification
+All project artifacts are tracked under `project_12/results/_hashes/p12_results_sha256.json`.
+To verify infrastructure is working:
+```bash
+python tools/verify_platform_p0.py
+python -m pytest -q
+```
+
+---
+
 ## 1) Why this document exists
 The post-audit program contains:
 - a diagnostic framework (Project 4),

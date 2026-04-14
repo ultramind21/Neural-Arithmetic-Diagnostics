@@ -25,6 +25,16 @@ If you want the evidence-first entry point, start here:
 
 ---
 
+## How to verify
+Verify the entire validation infrastructure in one command:
+```bash
+python tools/verify_platform_p0.py
+```
+
+For detailed integrity checks, see `docs/REPRODUCIBILITY.md`.
+
+---
+
 ## What this repository is (one sentence)
 A research program on neural arithmetic reasoning that turns experiments into **validated evidence** via locked claims, manifests, artifacts, and validation gates (Project 12).
 

@@ -6,6 +6,16 @@
 
 ---
 
+## How to verify the research program
+One command confirms all infrastructure is working:
+```bash
+python tools/verify_platform_p0.py
+```
+
+For evidence integrity, see `docs/REPRODUCIBILITY.md` (Integrity checklist).
+
+---
+
 ## 0. New status after Project 12 Phase 1 (what changed)
 The program now includes a dedicated validation layer:
 
