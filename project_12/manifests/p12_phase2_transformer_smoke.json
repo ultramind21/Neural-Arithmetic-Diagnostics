@@ -1,0 +1,10 @@
+{
+  "name": "p12_phase2_transformer_smoke",
+  "type": "experiment",
+  "script": "project_12/scripts/phase2/run_phase2_transformer_smoke.py",
+  "seed": 0,
+  "train_size": 2000,
+  "eval_size": 500,
+  "epochs": 2,
+  "notes": "Tiny Transformer baseline smoke run. Produces artifact+report. Not a claim."
+}
