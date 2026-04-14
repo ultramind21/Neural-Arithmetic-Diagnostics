@@ -1,0 +1,40 @@
+{
+  "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+  "seed": 1,
+  "train_size": 4000,
+  "eval_size": 1500,
+  "epochs": 3,
+  "operation": "subtraction",
+  "train_problem_mode": "mixed",
+  "eval_modes": [
+    "no_borrow",
+    "borrow_heavy"
+  ],
+  "eval_accuracy_by_mode": {
+    "no_borrow": 0.6426666666666667,
+    "borrow_heavy": 0.4886666666666667
+  },
+  "obs_size": 78,
+  "action_size": 18,
+  "active_digits": 8,
+  "metrics": {
+    "final_train_loss": 1.3070921036932204,
+    "final_eval_accuracy": 0.6426666666666667,
+    "all_train_losses": [
+      1.804356506892613,
+      1.5224646689399841,
+      1.3070921036932204
+    ],
+    "all_eval_accuracies": [
+      0.594,
+      0.6006666666666667,
+      0.6426666666666667
+    ]
+  },
+  "device": "cpu",
+  "timestamp": "2026-04-14T14:37:08.697706Z",
+  "train_mix": {
+    "no_borrow": 0.7,
+    "borrow_heavy": 0.3
+  }
+}
