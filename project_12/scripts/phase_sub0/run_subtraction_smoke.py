@@ -178,14 +178,59 @@ def eval_accuracy(model, eval_obs, eval_actions, device):
     return correct / total if total > 0 else 0.0
 
 
+def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=None):
+    """Generate mixed (obs, action) pairs from multiple problem modes.
+    
+    train_mix: dict of {mode: proportion}, e.g., {"no_borrow": 0.5, "borrow_heavy": 0.5}
+    """
+    np.random.seed(seed)
+    random.seed(seed)
+
+    # Parse train_mix string if provided
+    if isinstance(train_mix, str):
+        parts = train_mix.split(",")
+        train_mix = {}
+        for part in parts:
+            mode, prop = part.strip().split(":")
+            train_mix[mode] = float(prop)
+    
+    train_obs_mixed = []
+    train_actions_mixed = []
+    
+    # Generate training data from mixed modes
+    for mode, proportion in train_mix.items():
+        mode_train_size = int(train_size * proportion)
+        if mode_train_size > 0:
+            (train_obs_mode, train_actions_mode), _ = generate_dataset(
+                seed=seed, train_size=mode_train_size, eval_size=0, problem_mode=mode
+            )
+            train_obs_mixed.extend(train_obs_mode)
+            train_actions_mixed.extend(train_actions_mode)
+    
+    # Shuffle mixed training data
+    indices = list(range(len(train_obs_mixed)))
+    random.shuffle(indices)
+    train_obs_mixed = [train_obs_mixed[i] for i in indices]
+    train_actions_mixed = [train_actions_mixed[i] for i in indices]
+    
+    # Generate eval data (use first mode as default)
+    first_mode = list(train_mix.keys())[0]
+    _, (eval_obs, eval_actions) = generate_dataset(
+        seed=seed, train_size=0, eval_size=eval_size, problem_mode=first_mode
+    )
+    
+    return (train_obs_mixed, train_actions_mixed), (eval_obs, eval_actions)
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Phase SUB0/SUB1 Subtraction Smoke Run")
+    parser = argparse.ArgumentParser(description="Phase SUB0/SUB1/SUB2 Subtraction Smoke Run")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--train-size", type=int, default=1000)
     parser.add_argument("--eval-size", type=int, default=300)
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--out-dir", type=str, default="project_12/results/sub0_subtraction_smoke")
     parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_borrow", "borrow_heavy"])
+    parser.add_argument("--train-mix", type=str, default=None, help="Mixed mode: e.g., 'no_borrow:0.5,borrow_heavy:0.5'")
     parser.add_argument("--eval-modes", type=str, default=None, help="Comma-separated eval modes (e.g., 'no_borrow,borrow_heavy')")
     args = parser.parse_args()
     
@@ -198,10 +243,24 @@ def main():
     output_dir = Path(args.out_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
-    (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
-        seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
-    )
+    # Generate dataset (mixed or single mode)
+    if args.train_mix:
+        print(f"Generating mixed dataset (train={args.train_size}, eval={args.eval_size}, mix={args.train_mix})...")
+        (train_obs, train_actions), (eval_obs, eval_actions) = generate_mixed_dataset(
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, train_mix=args.train_mix
+        )
+        train_mode = "mixed"
+        train_mix_dict = {}
+        for part in args.train_mix.split(","):
+            mode, prop = part.strip().split(":")
+            train_mix_dict[mode] = float(prop)
+    else:
+        print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
+        (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
+        )
+        train_mode = args.problem_mode
+        train_mix_dict = {}
 
     obs_size = train_obs[0].size if hasattr(train_obs[0], 'size') else train_obs[0].shape[0]
     if len(train_obs[0].shape) > 1:
@@ -250,7 +309,7 @@ def main():
         "eval_size": args.eval_size,
         "epochs": args.epochs,
         "operation": "subtraction",
-        "train_problem_mode": args.problem_mode,
+        "train_problem_mode": train_mode,
         "eval_modes": eval_modes_list,
         "eval_accuracy_by_mode": eval_accuracy_by_mode,
         "obs_size": obs_size,
@@ -264,6 +323,10 @@ def main():
         "device": str(device),
         "timestamp": datetime.utcnow().isoformat() + "Z",
     }
+    
+    # Add train_mix if applicable
+    if train_mix_dict:
+        artifact["train_mix"] = train_mix_dict
 
     artifact_path = output_dir / "artifact.json"
     with open(artifact_path, "w") as f:
