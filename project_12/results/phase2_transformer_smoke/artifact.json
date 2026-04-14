@@ -1,5 +1,5 @@
 {
-  "git_commit": "104a53004eff264682c9a8ba49f5ee7cea966112",
+  "git_commit": "53295bda0a040c4dc3b133ae68d1bfa4cb5857b5",
   "seed": 0,
   "train_size": 2000,
   "eval_size": 500,
@@ -7,17 +7,17 @@
   "obs_size": 78,
   "action_size": 16,
   "metrics": {
-    "final_train_loss": 1.139415416866541,
-    "final_eval_accuracy": 0.596,
+    "final_train_loss": 1.1710074413567781,
+    "final_eval_accuracy": 0.582,
     "all_train_losses": [
-      1.6879865750670433,
-      1.139415416866541
+      1.7574211061000824,
+      1.1710074413567781
     ],
     "all_eval_accuracies": [
       0.582,
-      0.596
+      0.582
     ]
   },
   "device": "cpu",
-  "timestamp": "2026-04-14T02:06:54.961920Z"
+  "timestamp": "2026-04-14T02:11:32.398199Z"
 }
