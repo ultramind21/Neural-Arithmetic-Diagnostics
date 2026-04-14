@@ -60,10 +60,14 @@ class TinyTransformer(nn.Module):
         return logits
 
 
-def generate_dataset(seed=0, train_size=1000, eval_size=300):
+def generate_dataset(seed=0, train_size=1000, eval_size=300, problem_mode="iid"):
     """Generate (obs, action) pairs from teacher traces for subtraction.
     
-    MVP: randomly generate pairs (a, b) with a >= b.
+    VP: randomly generate pairs (a, b) with a >= b.
+    problem_mode:
+      - 'iid': uniform random (a, b) with a >= b
+      - 'no_borrow': digit-wise: a_digit >= b_digit for all digits (no borrow needed)
+      - 'borrow_heavy': digit-wise: a_digit < b_digit often (forces borrow)
     """
     np.random.seed(seed)
     random.seed(seed)
@@ -75,10 +79,27 @@ def generate_dataset(seed=0, train_size=1000, eval_size=300):
     dataset = []
     num_pairs = 0
     while num_pairs < train_size + eval_size:
-        # Generate (a, b) with a >= b (use smaller range to avoid int overflow)
-        max_val = 99999  # Smaller range for MVP
-        a = np.random.randint(1, max_val + 1)
-        b = np.random.randint(0, min(a + 1, max_val + 1))  # Ensure a >= b
+        # Generate (a, b) with a >= b
+        if problem_mode == "no_borrow":
+            # Each digit of a >= b (no borrow needed)
+            a_digits = [np.random.randint(0, 10) for _ in range(W)]
+            b_digits = [np.random.randint(0, a_digits[i] + 1) for i in range(W)]
+            a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        elif problem_mode == "borrow_heavy":
+            # Most digits: a_digit < b_digit (forces borrow cascade)
+            # Setup: lower digits have a < b, upper digit ensures a >= b overall
+            a_digits = [np.random.randint(0, 5) for _ in range(W - 1)]  # 0-4
+            b_digits = [np.random.randint(5, 10) for _ in range(W - 1)]  # 5-9
+            # Top digit: make a >= b overall
+            a_digits.append(np.random.randint(5, 10))  # 5-9
+            b_digits.append(np.random.randint(0, 2))  # 0-1
+            a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        else:  # "iid" (default)
+            max_val = 99999  # Smaller range for MVP
+            a = np.random.randint(1, max_val + 1)
+            b = np.random.randint(0, min(a + 1, max_val + 1))  # Ensure a >= b
         
         # Get action sequence from teacher
         actions = teacher_trace_sub(a, b)
@@ -158,22 +179,28 @@ def eval_accuracy(model, eval_obs, eval_actions, device):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Phase SUB0 Subtraction Smoke Run")
+    parser = argparse.ArgumentParser(description="Phase SUB0/SUB1 Subtraction Smoke Run")
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--train-size", type=int, default=1000)
     parser.add_argument("--eval-size", type=int, default=300)
     parser.add_argument("--epochs", type=int, default=3)
     parser.add_argument("--out-dir", type=str, default="project_12/results/sub0_subtraction_smoke")
+    parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_borrow", "borrow_heavy"])
+    parser.add_argument("--eval-modes", type=str, default=None, help="Comma-separated eval modes (e.g., 'no_borrow,borrow_heavy')")
     args = parser.parse_args()
+    
+    # If eval_modes not specified, default to train problem_mode (original behavior)
+    if args.eval_modes is None:
+        args.eval_modes = args.problem_mode
 
     # Setup
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     output_dir = Path(args.out_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Generating dataset (train={args.train_size}, eval={args.eval_size})...")
+    print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
     (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
-        seed=args.seed, train_size=args.train_size, eval_size=args.eval_size
+        seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
     )
 
     obs_size = train_obs[0].size if hasattr(train_obs[0], 'size') else train_obs[0].shape[0]
@@ -200,6 +227,21 @@ def main():
         eval_accs.append(acc)
         print(f"Epoch {epoch+1}/{args.epochs}: loss={loss:.4f}, eval_acc={acc:.4f}")
 
+    # Multi-mode evaluation
+    eval_modes_list = [m.strip() for m in args.eval_modes.split(",")]
+    eval_accuracy_by_mode = {}
+    
+    for eval_mode in eval_modes_list:
+        print(f"\nEvaluating on mode: {eval_mode}...")
+        # Generate eval dataset for this mode
+        _, (eval_obs_mode, eval_actions_mode) = generate_dataset(
+            seed=args.seed, train_size=0, eval_size=args.eval_size, problem_mode=eval_mode
+        )
+        # Compute accuracy on this mode
+        mode_acc = eval_accuracy(model, eval_obs_mode, eval_actions_mode, device)
+        eval_accuracy_by_mode[eval_mode] = float(mode_acc)
+        print(f"  Accuracy on {eval_mode}: {mode_acc:.4f}")
+
     # Save artifact
     artifact = {
         "git_commit": os.popen("git rev-parse HEAD").read().strip(),
@@ -208,6 +250,9 @@ def main():
         "eval_size": args.eval_size,
         "epochs": args.epochs,
         "operation": "subtraction",
+        "train_problem_mode": args.problem_mode,
+        "eval_modes": eval_modes_list,
+        "eval_accuracy_by_mode": eval_accuracy_by_mode,
         "obs_size": obs_size,
         "action_size": action_size,
         "metrics": {
