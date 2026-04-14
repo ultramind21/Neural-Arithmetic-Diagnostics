@@ -1,0 +1,12 @@
+{
+  "name": "p12_phase3_addition_no_carry_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase2/run_phase2_transformer_smoke.py",
+  "seed": 0,
+  "train_size": 3000,
+  "eval_size": 1000,
+  "epochs": 3,
+  "problem_mode": "no_carry",
+  "out_dir": "project_12/results/phase3_addition_no_carry_v1",
+  "notes": "Phase3 diversification: no-carry distribution (addition). Not a validated claim."
+}
