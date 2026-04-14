@@ -6,6 +6,16 @@
 
 ---
 
+## Verification
+To verify project structure and tests:
+```bash
+python tools/verify_platform_p0.py
+```
+
+All project names defined here are used consistently across `project_*/` folders and documentation.
+
+---
+
 ## Rule
 Projects are identified by:
 1) numerical order  

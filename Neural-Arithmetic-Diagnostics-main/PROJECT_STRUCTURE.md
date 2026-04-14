@@ -27,7 +27,8 @@ neural_arithmetic_diagnostics/
 ├── assets/                 # Public-facing visual assets
 ├── meta/                   # Governance / naming / cleanup plans
 ├── archive_optional/       # Archived optional/debug/root legacy materials
-├── tools/                  # Secondary helper scripts
+├── tools/                  # Verification + utility scripts (hash_tree.py, verify_platform_p0.py)
+├── nad/                    # NAD toolkit (cli: nad-check-links, nad-diff-gate)
 ├── README.md
 ├── GETTING_STARTED_FAST.md
 ├── WHY_THIS_PROJECT_MATTERS.md

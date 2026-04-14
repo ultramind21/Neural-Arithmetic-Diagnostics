@@ -16,6 +16,15 @@ Phase 1 of Project 12 validates **Project 11 + Project 4**; Projects 5–10 rema
 
 ---
 
+## Verification note
+All claims and evidence references point to artifacts under `project_12/results/_hashes/`. To verify:
+```bash
+python tools/verify_platform_p0.py
+```
+For integrity audit: see `docs/REPRODUCIBILITY.md` (Integrity checklist section).
+
+---
+
 ## 1. Purpose
 This document states the current program-level position across the post-audit research line (Projects 4–11), while explicitly distinguishing:
 

@@ -39,6 +39,16 @@ A practical way to think about the repo:
 
 ---
 
+## Quick verification (one command)
+Everything working?
+```bash
+python tools/verify_platform_p0.py
+```
+
+Run this first after cloning or updating.
+
+---
+
 ## Start here (fast paths)
 
 ### Path A — "Validated evidence only" (recommended)
