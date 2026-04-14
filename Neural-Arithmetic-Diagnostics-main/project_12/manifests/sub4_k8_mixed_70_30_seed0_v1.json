@@ -1,0 +1,14 @@
+{
+  "name": "sub4_k8_mixed_70_30_seed0_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase_sub0/run_subtraction_smoke.py",
+  "seed": 0,
+  "train_size": 4000,
+  "eval_size": 1500,
+  "epochs": 3,
+  "train_mix": "no_borrow:0.7,borrow_heavy:0.3",
+  "eval_modes": "no_borrow,borrow_heavy",
+  "active_digits": 8,
+  "out_dir": "project_12/results/sub4_k8_mixed_70_30_seed0_v1",
+  "notes": "SUB4 ratio sweep at fixed active_digits=8. Variable: train_mix ratio. Seeds 0..2 are replicates. Not a validated claim."
+}
