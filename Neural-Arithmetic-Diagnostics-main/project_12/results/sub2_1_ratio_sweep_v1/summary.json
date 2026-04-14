@@ -1,0 +1,64 @@
+{
+  "runs": [
+    {
+      "out_dir": "project_12/results/sub2_1_mixed_90_10_seed0_v1",
+      "git_commit": "f70b9adf4f6a3747b0f83975015216cb4d54b913",
+      "train_mix": {
+        "no_borrow": 0.9,
+        "borrow_heavy": 0.1
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.606,
+        "borrow_heavy": 0.5106666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub2_1_mixed_70_30_seed0_v1",
+      "git_commit": "f70b9adf4f6a3747b0f83975015216cb4d54b913",
+      "train_mix": {
+        "no_borrow": 0.7,
+        "borrow_heavy": 0.3
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6,
+        "borrow_heavy": 0.5106666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub2_1_mixed_50_50_seed0_v1",
+      "git_commit": "f70b9adf4f6a3747b0f83975015216cb4d54b913",
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.598,
+        "borrow_heavy": 0.508
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub2_1_mixed_30_70_seed0_v1",
+      "git_commit": "f70b9adf4f6a3747b0f83975015216cb4d54b913",
+      "train_mix": {
+        "no_borrow": 0.3,
+        "borrow_heavy": 0.7
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.5986666666666667,
+        "borrow_heavy": 0.5093333333333333
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub2_1_mixed_10_90_seed0_v1",
+      "git_commit": "f70b9adf4f6a3747b0f83975015216cb4d54b913",
+      "train_mix": {
+        "no_borrow": 0.1,
+        "borrow_heavy": 0.9
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6,
+        "borrow_heavy": 0.508
+      }
+    }
+  ]
+}
