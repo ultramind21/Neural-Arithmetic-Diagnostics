@@ -25,10 +25,10 @@ from typing import Dict, Tuple, List
 
 from .soroban_rules import (
     digit_to_beads, beads_to_digit, number_to_board, board_to_number,
-    apply_add1, apply_add5, validate_board,
+    apply_add1, apply_add5, apply_sub1, apply_sub5, validate_board,
 )
 from .action_space import (
-    action_add1, action_add5, action_done,
+    action_add1, action_add5, action_sub1, action_sub5, action_done,
     is_goto, decode_action, num_actions,
 )
 from ..utils.config import SorobanConfig, DEFAULT_CONFIG
@@ -65,15 +65,27 @@ class SorobanEnv:
         self.done: bool = False
         self.a: int = 0
         self.b: int = 0
+        self.operation: str = "add"  # "add" or "sub"
 
-    def reset(self, a: int, b: int) -> np.ndarray:
+    def reset(self, a: int, b: int, operation: str = "add") -> np.ndarray:
         """
         Start new episode.
-        Board is PRE-LOADED with 'a'. Model's job: add 'b'.
+        For addition: Board is PRE-LOADED with 'a'. Model's job: add 'b'.
+        For subtraction: Board is PRE-LOADED with 'a'. Model's job: subtract 'b'. (MVP: requires a >= b)
         """
+        if operation == "sub" and b > a:
+            raise ValueError(f"SUB MVP: a must be >= b (got a={a}, b={b})")
+        
         self.a = a
         self.b = b
-        self.target = a + b
+        self.operation = operation
+        
+        if operation == "add":
+            self.target = a + b
+        elif operation == "sub":
+            self.target = a - b
+        else:
+            raise ValueError(f"Unknown operation: {operation}")
 
         # Load 'a' directly onto board (NO model involvement)
         self.board = number_to_board(a, self.W)
@@ -85,7 +97,7 @@ class SorobanEnv:
         for _ in range(self.W):
             digit = temp % 10
             self.b_digits.append(digit)
-            self.b_remaining.append(digit)  # Track what needs to be added
+            self.b_remaining.append(digit)  # Track what needs to be added/subtracted
             temp //= 10
 
         self.cursor = 0
@@ -150,6 +162,42 @@ class SorobanEnv:
                 info["illegal_reason"] = "overspend_add5"
                 info["correct"] = False
 
+        elif action == action_sub1(self.W):
+            # SUB1 at cursor column with automatic borrow
+            if self.b_remaining[self.cursor] >= 1:
+                self.active_col = self.cursor
+                u, l = self.board[self.cursor]
+                new_u, new_l, borrow = apply_sub1(u, l)
+                self.board[self.cursor] = (new_u, new_l)
+                self.b_remaining[self.cursor] -= 1
+                if borrow:
+                    self._propagate_borrow(self.cursor)
+            else:
+                # ILLEGAL: trying to subtract more than available
+                self.done = True
+                reward = -1.0
+                info["illegal"] = True
+                info["illegal_reason"] = "overspend_sub1"
+                info["correct"] = False
+
+        elif action == action_sub5(self.W):
+            # SUB5 at cursor column with automatic borrow
+            if self.b_remaining[self.cursor] >= 5:
+                self.active_col = self.cursor
+                u, l = self.board[self.cursor]
+                new_u, new_l, borrow = apply_sub5(u, l)
+                self.board[self.cursor] = (new_u, new_l)
+                self.b_remaining[self.cursor] -= 5
+                if borrow:
+                    self._propagate_borrow(self.cursor)
+            else:
+                # ILLEGAL: trying to subtract more than available
+                self.done = True
+                reward = -1.0
+                info["illegal"] = True
+                info["illegal_reason"] = "overspend_sub5"
+                info["correct"] = False
+
         elif action == action_done(self.W):
             # M1: Check if all remaining additions are done
             # (prevents DONE_early pattern)
@@ -198,6 +246,17 @@ class SorobanEnv:
             new_u, new_l, carry = apply_add1(u, l)
             self.board[col] = (new_u, new_l)
             if not carry:
+                break
+            col += 1
+
+    def _propagate_borrow(self, from_col: int):
+        """Borrow cascades upward. This is PHYSICS, not a decision."""
+        col = from_col + 1
+        while col < self.W:
+            u, l = self.board[col]
+            new_u, new_l, borrow = apply_sub1(u, l)
+            self.board[col] = (new_u, new_l)
+            if not borrow:
                 break
             col += 1
 
