@@ -1,0 +1,12 @@
+{
+  "name": "p12_phase3_addition_carry_heavy_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase2/run_phase2_transformer_smoke.py",
+  "seed": 0,
+  "train_size": 3000,
+  "eval_size": 1000,
+  "epochs": 3,
+  "problem_mode": "carry_heavy",
+  "out_dir": "project_12/results/phase3_addition_carry_heavy_v1",
+  "notes": "Phase3 diversification: carry-heavy distribution (addition). Not a validated claim."
+}

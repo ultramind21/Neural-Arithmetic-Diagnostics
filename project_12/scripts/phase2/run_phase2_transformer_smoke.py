@@ -63,19 +63,46 @@ class TinyTransformer(nn.Module):
         return logits
 
 
-def generate_dataset(seed=0, train_size=2000, eval_size=500):
-    """Generate (obs, action) pairs from teacher traces."""
+def generate_dataset(seed=0, train_size=2000, eval_size=500, problem_mode="iid"):
+    """Generate (obs, action) pairs from teacher traces.
+    
+    problem_mode:
+      - 'iid': uniform random (a, b)
+      - 'no_carry': digit-wise sums always < 10
+      - 'carry_heavy': digit-wise sums always >= 10
+    """
     np.random.seed(seed)
     random.seed(seed)
 
     config = DEFAULT_CONFIG
     env = SorobanEnv(config)
+    W = config.num_columns
 
     dataset = []
     num_pairs = 0
     while num_pairs < train_size + eval_size:
-        num_a = np.random.randint(1, 100)
-        num_b = np.random.randint(1, 100)
+        # Generate (a, b) based on problem_mode
+        if problem_mode == "no_carry":
+            # Each digit of a and b sums to < 10
+            a_digits = [np.random.randint(0, 5) for _ in range(W)]
+            b_digits = [np.random.randint(0, min(5, 9 - a_digits[i])) for i in range(W)]
+            num_a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            num_b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        elif problem_mode == "carry_heavy":
+            # Fewer digits (2-3), each digit sum >= 10 to force carries
+            num_digits = np.random.randint(2, 4)
+            a_digits = [0] * W
+            b_digits = [0] * W
+            for i in range(num_digits):
+                a_dig = np.random.randint(5, 10)
+                b_dig = np.random.randint(5, 10)
+                a_digits[i] = a_dig
+                b_digits[i] = b_dig
+            num_a = sum(a_digits[i] * (10 ** i) for i in range(W))
+            num_b = sum(b_digits[i] * (10 ** i) for i in range(W))
+        else:  # iid (default)
+            num_a = np.random.randint(1, 100)
+            num_b = np.random.randint(1, 100)
         
         # Get action sequence from teacher
         actions = teacher_trace(num_a, num_b, config)
@@ -161,6 +188,7 @@ def main():
     parser.add_argument("--eval-size", type=int, default=500)
     parser.add_argument("--epochs", type=int, default=2)
     parser.add_argument("--out-dir", type=str, default="project_12/results/phase2_transformer_smoke")
+    parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_carry", "carry_heavy"])
     args = parser.parse_args()
 
     # Setup
@@ -168,9 +196,9 @@ def main():
     output_dir = Path(args.out_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Generating dataset (train={args.train_size}, eval={args.eval_size})...")
+    print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
     (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
-        seed=args.seed, train_size=args.train_size, eval_size=args.eval_size
+        seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
     )
 
     obs_size = train_obs[0].size if hasattr(train_obs[0], 'size') else train_obs[0].shape[0]
@@ -204,6 +232,7 @@ def main():
         "train_size": args.train_size,
         "eval_size": args.eval_size,
         "epochs": args.epochs,
+        "problem_mode": args.problem_mode,
         "obs_size": obs_size,
         "action_size": action_size,
         "metrics": {
