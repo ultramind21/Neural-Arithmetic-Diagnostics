@@ -1,0 +1,214 @@
+{
+  "runs": [
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_10_90_seed0_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 0,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.1,
+        "borrow_heavy": 0.9
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.586,
+        "borrow_heavy": 0.514
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_10_90_seed1_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 1,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.1,
+        "borrow_heavy": 0.9
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.5753333333333334,
+        "borrow_heavy": 0.5006666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_10_90_seed2_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 2,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.1,
+        "borrow_heavy": 0.9
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.5993333333333334,
+        "borrow_heavy": 0.5653333333333334
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_30_70_seed0_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 0,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.3,
+        "borrow_heavy": 0.7
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6226666666666667,
+        "borrow_heavy": 0.5033333333333333
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_30_70_seed1_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 1,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.3,
+        "borrow_heavy": 0.7
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6346666666666667,
+        "borrow_heavy": 0.5253333333333333
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_30_70_seed2_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 2,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.3,
+        "borrow_heavy": 0.7
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6093333333333333,
+        "borrow_heavy": 0.5113333333333333
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_50_50_seed0_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 0,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6313333333333333,
+        "borrow_heavy": 0.49933333333333335
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_50_50_seed1_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 1,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6233333333333333,
+        "borrow_heavy": 0.49533333333333335
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_50_50_seed2_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 2,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.626,
+        "borrow_heavy": 0.5066666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_70_30_seed0_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 0,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.7,
+        "borrow_heavy": 0.3
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6246666666666667,
+        "borrow_heavy": 0.49933333333333335
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_70_30_seed1_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 1,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.7,
+        "borrow_heavy": 0.3
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6426666666666667,
+        "borrow_heavy": 0.4886666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_70_30_seed2_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 2,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.7,
+        "borrow_heavy": 0.3
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.628,
+        "borrow_heavy": 0.5013333333333333
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_90_10_seed0_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 0,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.9,
+        "borrow_heavy": 0.1
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.64,
+        "borrow_heavy": 0.49933333333333335
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_90_10_seed1_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 1,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.9,
+        "borrow_heavy": 0.1
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6606666666666666,
+        "borrow_heavy": 0.48533333333333334
+      }
+    },
+    {
+      "out_dir": "project_12/results\\sub4_k8_mixed_90_10_seed2_v1",
+      "git_commit": "849d32995f643ea70e87a9bc55a7b2532a89dcab",
+      "seed": 2,
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.9,
+        "borrow_heavy": 0.1
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.6146666666666667,
+        "borrow_heavy": 0.5013333333333333
+      }
+    }
+  ]
+}
