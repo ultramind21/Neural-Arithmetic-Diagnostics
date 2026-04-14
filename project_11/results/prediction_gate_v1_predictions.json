@@ -1,0 +1,26 @@
+{
+  "gate": "prediction_gate_v1",
+  "created_date": "2026-04-10",
+  "lock_note": "Predictions must not be edited after this file is saved/locked.",
+  "predictions": [
+    { "id": "p01", "H": 0.0035, "P": 0.29, "predicted_region": "transition region", "confidence": "high", "optional_notes": "Below heterogeneity threshold at low universal power." },
+    { "id": "p02", "H": 0.0055, "P": 0.29, "predicted_region": "transition region", "confidence": "medium", "optional_notes": "Near low-to-medium heterogeneity threshold." },
+    { "id": "p03", "H": 0.0105, "P": 0.29, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High heterogeneity with low universal power should favor family-aware." },
+    { "id": "p04", "H": 0.0140, "P": 0.29, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high heterogeneity with low universal power." },
+
+    { "id": "p05", "H": 0.0035, "P": 0.31, "predicted_region": "transition region", "confidence": "high", "optional_notes": "Baseline-ish power with low heterogeneity." },
+    { "id": "p06", "H": 0.0055, "P": 0.31, "predicted_region": "transition region", "confidence": "low", "optional_notes": "Ambiguous near threshold; kept as transition." },
+    { "id": "p07", "H": 0.0105, "P": 0.31, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High heterogeneity at baseline-ish power." },
+    { "id": "p08", "H": 0.0140, "P": 0.31, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high heterogeneity at baseline-ish power." },
+
+    { "id": "p09", "H": 0.0035, "P": 0.37, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Moderate-to-high universal power should dominate." },
+    { "id": "p10", "H": 0.0055, "P": 0.37, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Universal should dominate across H at this power." },
+    { "id": "p11", "H": 0.0105, "P": 0.37, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Universal dominates at moderate/strong power." },
+    { "id": "p12", "H": 0.0140, "P": 0.37, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Universal dominates at moderate/strong power." },
+
+    { "id": "p13", "H": 0.0035, "P": 0.41, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Near strong universal power." },
+    { "id": "p14", "H": 0.0055, "P": 0.41, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Near strong universal power." },
+    { "id": "p15", "H": 0.0105, "P": 0.41, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Near strong universal power." },
+    { "id": "p16", "H": 0.0140, "P": 0.41, "predicted_region": "universal region", "confidence": "high", "optional_notes": "Near strong universal power." }
+  ]
+}

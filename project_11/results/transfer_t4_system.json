@@ -1,0 +1,18 @@
+{
+  "name": "transfer_t4_system",
+  "created_date": "2026-04-10",
+  "notes": "Stress system for Rule V3: extreme shared_failure distribution + high base_global for some families to induce clamp sensitivity in ground truth.",
+  "families": [
+    { "family": "A", "base_global": 0.78, "shared_failure": 0.72 },
+    { "family": "B", "base_global": 0.74, "shared_failure": 0.65 },
+    { "family": "C", "base_global": 0.40, "shared_failure": 0.30 },
+    { "family": "D", "base_global": 0.38, "shared_failure": 0.28 }
+  ],
+  "thresholds": {
+    "per_family_margin": 0.005,
+    "region_family_aware_gap_gt": 0.005,
+    "region_universal_gap_lt": -0.003,
+    "region_family_aware_wins_ge": 3,
+    "region_universal_wins_ge": 2
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "model_name": "phase30_lstm_baseline_run2",
+  "timestamp_utc": "2026-03-31T19:13:22.061042Z",
+  "config": {
+    "model_name": "phase30_lstm_baseline_run2",
+    "checkpoint": "project_4/checkpoints/phase30_lstm_project4_ready.pt",
+    "device": "cuda",
+    "train_length": 5,
+    "adversarial_length": 5,
+    "num_samples_id": 128,
+    "num_samples_adv": 32,
+    "num_samples_extra": 128,
+    "lengths": [
+      5
+    ],
+    "corruption_levels": [
+      0.5
+    ],
+    "seed": 44
+  },
+  "adapter_metadata": {
+    "source_file": "D:\\Music\\Project 03 Abacus\\soroban_project\\src\\train\\phase_30_multidigit_learning.py",
+    "model_type": "lstm",
+    "device": "cuda",
+    "import_successful": true,
+    "adapter_scope": "runtime_construction_only",
+    "notes": [
+      "This adapter wraps phase_30_multidigit_learning.py model classes.",
+      "It supports model instantiation and optional checkpoint loading.",
+      "It does not by itself establish a complete Project 4 evaluation path.",
+      "Project 4 runtime/evaluation logic must still be defined at baseline-runner level."
+    ]
+  },
+  "qualification_notes": [
+    "This baseline artifact uses the actual Phase 30 digit/carry evaluation semantics.",
+    "Project 4 scorecard projection currently maps in-distribution and adversarial values using exact_match as the closest aligned scalar.",
+    "Rounding sensitivity remains placeholder until an alternate aligned decode path is explicitly defined.",
+    "Carry corruption remains placeholder until direct aligned intervention wiring is implemented.",
+    "Final regime assignment must remain human-reviewed."
+  ],
+  "raw_metrics": {
+    "in_distribution": {
+      "digit_acc": 0.44687500945292413,
+      "carry_acc": 0.9562500023748726,
+      "combined_acc": 0.44687500945292413,
+      "exact_match": 0.0546875
+    },
+    "adversarial": {
+      "alternating_carry": {
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
+        "exact_match": 0.0
+      },
+      "full_propagation_chain": {
+        "digit_acc": 0.6000000238418579,
+        "carry_acc": 1.0,
+        "combined_acc": 0.6000000238418579,
+        "exact_match": 0.0
+      },
+      "block_boundary_stress": {
+        "digit_acc": 0.800000011920929,
+        "carry_acc": 1.0,
+        "combined_acc": 0.800000011920929,
+        "exact_match": 0.0
+      }
+    },
+    "lengths": {
+      "5": {
+        "digit_acc": 0.43437500996515155,
+        "carry_acc": 0.9453125030267984,
+        "combined_acc": 0.43437500996515155,
+        "exact_match": 0.03125
+      }
+    },
+    "rounding": {
+      "status": "placeholder",
+      "with_rounding": 0.0546875,
+      "without_rounding": 0.0546875,
+      "sensitivity": 0.0,
+      "qualification": "alternate decode path not yet implemented in aligned Phase 30 Project 4 path"
+    },
+    "carry_corruption": {
+      "status": "placeholder",
+      "levels": [
+        0.5
+      ],
+      "accuracies": {
+        "0.5": 0.0546875
+      },
+      "qualification": "carry corruption intervention not yet directly wired into aligned Phase 30 Project 4 path"
+    }
+  },
+  "scorecard": {
+    "model_name": "phase30_lstm_baseline_run2",
+    "in_distribution_accuracy": 0.0546875,
+    "mean_adversarial_accuracy": 0.0,
+    "worst_case_pattern_accuracy": 0.0,
+    "rounding_sensitivity": 0.0,
+    "pattern_breakdown": {
+      "alternating_carry": 0.0,
+      "full_propagation_chain": 0.0,
+      "block_boundary_stress": 0.0
+    },
+    "length_summary": {
+      "training_max_length": 5,
+      "tested_lengths": [
+        5
+      ],
+      "accuracies": [
+        0.03125
+      ],
+      "reference_accuracy": 0.0546875,
+      "relative_drops": [
+        0.42857142857142855
+      ],
+      "trend_label": "sharp_collapse"
+    },
+    "carry_corruption_summary": {
+      "corruption_levels": [
+        0.5
+      ],
+      "accuracies": [
+        0.0546875
+      ],
+      "baseline_accuracy": 0.0546875,
+      "degradation": [
+        0.0
+      ],
+      "trend_label": "flat"
+    },
+    "notes": [
+      "This baseline artifact uses the actual Phase 30 digit/carry evaluation semantics.",
+      "Project 4 scorecard projection currently maps in-distribution and adversarial values using exact_match as the closest aligned scalar.",
+      "Rounding sensitivity remains placeholder until an alternate aligned decode path is explicitly defined.",
+      "Carry corruption remains placeholder until direct aligned intervention wiring is implemented.",
+      "Final regime assignment must remain human-reviewed."
+    ],
+    "tags": [
+      "project4",
+      "phase30",
+      "lstm",
+      "aligned_eval_path"
+    ]
+  },
+  "regime_guidance": {
+    "tentative_regime": "Mixed / Borderline",
+    "regime_1_signals": [
+      "weak_in_distribution_accuracy",
+      "low_mean_adversarial_accuracy",
+      "poor_worst_case_pattern_accuracy",
+      "pattern_specific_collapse_present",
+      "sharp_length_collapse",
+      "flat_carry_corruption_response"
+    ],
+    "regime_2_signals": [],
+    "regime_3_signals": [
+      "low_rounding_sensitivity"
+    ],
+    "cautions": [
+      "carry_corruption_requires_joint_interpretation",
+      "final_regime_assignment_must_not_be_single_metric_based"
+    ],
+    "rationale": [
+      "in-distribution accuracy is weak (0.0547)",
+      "mean adversarial accuracy is low (0.0000)",
+      "worst-case pattern accuracy is poor (0.0000)",
+      "low-performing adversarial patterns detected: ['alternating_carry', 'full_propagation_chain', 'block_boundary_stress']",
+      "rounding sensitivity is low (0.0000)",
+      "length extrapolation shows sharp collapse",
+      "carry corruption shows flat response"
+    ]
+  }
+}

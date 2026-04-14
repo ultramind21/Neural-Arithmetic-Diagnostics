@@ -1,0 +1,366 @@
+{
+  "test": "transfer_t4_rule_v3",
+  "paths": {
+    "system": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_11\\results\\transfer_t4_system.json",
+    "holdout": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_11\\results\\transfer_t4_holdout_points.json",
+    "predictions": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_11\\results\\transfer_t4_predictions.json"
+  },
+  "metrics": {
+    "model": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 6,
+          "transition region": 0,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 0,
+          "transition region": 4,
+          "universal region": 0
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 10
+        }
+      }
+    },
+    "baseline_majority_from_t4_grid": {
+      "label": "universal region",
+      "accuracy": 0.5,
+      "macro_f1": 0.2222222222222222,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 6
+        },
+        "transition region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 4
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 10
+        }
+      }
+    },
+    "baseline_nearest_neighbor_t4_grid": {
+      "accuracy": 0.8,
+      "macro_f1": 0.7222222222222222,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 4,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 2,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 10
+        }
+      }
+    },
+    "t4_grid_counts": {
+      "family-aware region": 2,
+      "transition region": 1,
+      "universal region": 6
+    }
+  },
+  "best_baseline_macro_f1": 0.7222222222222222,
+  "pass_condition": {
+    "required": "macro-F1 >= best_baseline + 0.10 AND macro-F1 >= 0.70",
+    "passed": true
+  },
+  "per_point": [
+    {
+      "id": "t4_p01",
+      "H": 0.0025,
+      "P": 0.28,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "gap": 0.011750000000000038,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "t4_p02",
+      "H": 0.0055,
+      "P": 0.28,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "gap": 0.014050000000000007,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "t4_p03",
+      "H": 0.0095,
+      "P": 0.28,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.016449999999999965,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "t4_p04",
+      "H": 0.0135,
+      "P": 0.28,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.018850000000000033,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "t4_p05",
+      "H": 0.0185,
+      "P": 0.28,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.021850000000000036,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "t4_p06",
+      "H": 0.0025,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "high",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "gap": -0.002074999999999938,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "t4_p07",
+      "H": 0.0055,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "high",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "gap": 0.00022500000000003073,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "t4_p08",
+      "H": 0.0095,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "high",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.0026249999999999885,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "t4_p09",
+      "H": 0.0135,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "medium",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.005025000000000057,
+      "uni_wins": 0,
+      "fam_wins": 2,
+      "near_ties": 2
+    },
+    {
+      "id": "t4_p10",
+      "H": 0.0185,
+      "P": 0.31,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "gap": 0.00802500000000006,
+      "uni_wins": 0,
+      "fam_wins": 3,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p11",
+      "H": 0.0025,
+      "P": 0.35,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.014374999999999916,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p12",
+      "H": 0.0055,
+      "P": 0.35,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.012074999999999947,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p13",
+      "H": 0.0095,
+      "P": 0.35,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.00967499999999999,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p14",
+      "H": 0.0135,
+      "P": 0.35,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.00727499999999992,
+      "uni_wins": 1,
+      "fam_wins": 0,
+      "near_ties": 3
+    },
+    {
+      "id": "t4_p15",
+      "H": 0.0185,
+      "P": 0.35,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.004274999999999918,
+      "uni_wins": 1,
+      "fam_wins": 0,
+      "near_ties": 3
+    },
+    {
+      "id": "t4_p16",
+      "H": 0.0025,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.031200000000000006,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p17",
+      "H": 0.0055,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.028900000000000037,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p18",
+      "H": 0.0095,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.02650000000000008,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p19",
+      "H": 0.0135,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.02410000000000001,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    },
+    {
+      "id": "t4_p20",
+      "H": 0.0185,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "gap": -0.021100000000000008,
+      "uni_wins": 3,
+      "fam_wins": 0,
+      "near_ties": 1
+    }
+  ]
+}

@@ -1,0 +1,5421 @@
+{
+  "timestamp_utc": "2026-04-04T21:58:29.029607Z",
+  "experiment": "project_5_selective_failure_diagnostic",
+  "hypothesis": "Zero-prediction failures correlate with carry_in=1 context",
+  "analysis": {
+    "alternating_carry": {
+      "total_failures": 300,
+      "failures": [
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 1,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 3,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 5,
+          "carry_in": 1,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        }
+      ]
+    },
+    "full_propagation_chain": {
+      "total_failures": 0,
+      "failures": []
+    },
+    "block_boundary_stress": {
+      "total_failures": 300,
+      "failures": [
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        },
+        {
+          "position": 0,
+          "carry_in": 0,
+          "digit_a": 0,
+          "digit_b": 0,
+          "digit_true": 0,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 2,
+          "carry_in": 0,
+          "digit_a": 1,
+          "digit_b": 0,
+          "digit_true": 1,
+          "digit_pred": 2,
+          "carry_true": 0
+        },
+        {
+          "position": 4,
+          "carry_in": 0,
+          "digit_a": 2,
+          "digit_b": 0,
+          "digit_true": 2,
+          "digit_pred": 3,
+          "carry_true": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "timestamp_utc": "2026-04-04T22:46:39.153675Z",
+  "experiment": "project_5_chunk_size_sensitivity_v1",
+  "chunk_sizes": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "results": {
+    "alternating_carry": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "6": 0.0
+    },
+    "full_propagation_chain": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "6": 1.0
+    },
+    "block_boundary_stress": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "6": 0.0
+    }
+  },
+  "notes": [
+    "This experiment tests whether residual failure depends on block granularity.",
+    "Explicit carry-conditioned local representation is used as the local processor."
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "gate": "prediction_gate_v1",
+  "paths": {
+    "holdout_points": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_11\\results\\prediction_gate_v1_holdout_points.json",
+    "predictions": "D:\\Music\\Project 03 Abacus\\neural_arithmetic_diagnostics\\project_11\\results\\prediction_gate_v1_predictions.json"
+  },
+  "metrics": {
+    "model": {
+      "accuracy": 0.8125,
+      "macro_f1": 0.746031746031746,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 3,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 1,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 8
+        }
+      }
+    },
+    "baseline_majority_from_project10_grid": {
+      "label": "universal region",
+      "accuracy": 0.5,
+      "macro_f1": 0.2222222222222222,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 5
+        },
+        "transition region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 3
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 8
+        }
+      }
+    },
+    "baseline_nearest_neighbor_project10_grid": {
+      "accuracy": 0.8125,
+      "macro_f1": 0.746031746031746,
+      "confusion": {
+        "family-aware region": {
+          "family-aware region": 3,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "transition region": {
+          "family-aware region": 1,
+          "transition region": 2,
+          "universal region": 0
+        },
+        "universal region": {
+          "family-aware region": 0,
+          "transition region": 0,
+          "universal region": 8
+        }
+      }
+    }
+  },
+  "best_baseline_macro_f1": 0.746031746031746,
+  "pass_condition": {
+    "required": "macro_f1 >= best_baseline + 0.15 AND macro_f1 >= 0.60",
+    "passed": false
+  },
+  "per_point": [
+    {
+      "id": "p01",
+      "H": 0.0035,
+      "P": 0.29,
+      "predicted": "transition region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "avg_uni": 0.58745,
+      "avg_fam": 0.5943,
+      "gap": 0.006850000000000023,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "p02",
+      "H": 0.0055,
+      "P": 0.29,
+      "predicted": "transition region",
+      "confidence": "medium",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "avg_uni": 0.58745,
+      "avg_fam": 0.5958999999999999,
+      "gap": 0.008449999999999847,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "p03",
+      "H": 0.0105,
+      "P": 0.29,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "avg_uni": 0.58745,
+      "avg_fam": 0.5998999999999999,
+      "gap": 0.01244999999999985,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "p04",
+      "H": 0.014,
+      "P": 0.29,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "avg_uni": 0.58745,
+      "avg_fam": 0.6027,
+      "gap": 0.015249999999999986,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "p05",
+      "H": 0.0035,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "high",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "avg_uni": 0.59555,
+      "avg_fam": 0.5943,
+      "gap": -0.0012499999999999734,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "p06",
+      "H": 0.0055,
+      "P": 0.31,
+      "predicted": "transition region",
+      "confidence": "low",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "transition region",
+      "avg_uni": 0.59555,
+      "avg_fam": 0.5958999999999999,
+      "gap": 0.00034999999999985043,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "p07",
+      "H": 0.0105,
+      "P": 0.31,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "transition region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "avg_uni": 0.59555,
+      "avg_fam": 0.5998999999999999,
+      "gap": 0.004349999999999854,
+      "uni_wins": 0,
+      "fam_wins": 0,
+      "near_ties": 4
+    },
+    {
+      "id": "p08",
+      "H": 0.014,
+      "P": 0.31,
+      "predicted": "family-aware region",
+      "confidence": "high",
+      "true": "family-aware region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "family-aware region",
+      "avg_uni": 0.59555,
+      "avg_fam": 0.6027,
+      "gap": 0.00714999999999999,
+      "uni_wins": 0,
+      "fam_wins": 4,
+      "near_ties": 0
+    },
+    {
+      "id": "p09",
+      "H": 0.0035,
+      "P": 0.37,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.61985,
+      "avg_fam": 0.5943,
+      "gap": -0.02554999999999996,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p10",
+      "H": 0.0055,
+      "P": 0.37,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.61985,
+      "avg_fam": 0.5958999999999999,
+      "gap": -0.023950000000000138,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p11",
+      "H": 0.0105,
+      "P": 0.37,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.61985,
+      "avg_fam": 0.5998999999999999,
+      "gap": -0.019950000000000134,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p12",
+      "H": 0.014,
+      "P": 0.37,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.61985,
+      "avg_fam": 0.6027,
+      "gap": -0.01715,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p13",
+      "H": 0.0035,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.63605,
+      "avg_fam": 0.5943,
+      "gap": -0.041749999999999954,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p14",
+      "H": 0.0055,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.63605,
+      "avg_fam": 0.5958999999999999,
+      "gap": -0.04015000000000013,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p15",
+      "H": 0.0105,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.63605,
+      "avg_fam": 0.5998999999999999,
+      "gap": -0.036150000000000126,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    },
+    {
+      "id": "p16",
+      "H": 0.014,
+      "P": 0.41,
+      "predicted": "universal region",
+      "confidence": "high",
+      "true": "universal region",
+      "baseline_majority": "universal region",
+      "baseline_nearest_neighbor": "universal region",
+      "avg_uni": 0.63605,
+      "avg_fam": 0.6027,
+      "gap": -0.03334999999999999,
+      "uni_wins": 4,
+      "fam_wins": 0,
+      "near_ties": 0
+    }
+  ]
+}

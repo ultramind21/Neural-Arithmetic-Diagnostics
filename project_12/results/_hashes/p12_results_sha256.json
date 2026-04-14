@@ -30,8 +30,6 @@
   "repro_p4/intervention_sweep/seed_123/artifact.json": "266a19b9e0d21cac5092e3481720eb17f3db66031ff100a416486b6aaa5be2a8",
   "repro_p4/intervention_sweep/seed_42/artifact.json": "73ceb22f1638cf4961fc09dcc208ef8df627a35f98a40bd42184ecb33256f33c",
   "repro_p4/intervention_sweep/seed_456/artifact.json": "b2a407532c6ad6c2b65f48a5b1720cc3b295e2cafd6c31cd455b49d3cd11f8c4",
-  "revalidate/data/holdout_points.json": "2620e61dfd9bc332d7e618a403dc5ee6d3e9338426c72a81099e3dad77d02d1d",
-  "revalidate/data/pool_points.json": "a65252ecd4ecaf9f3372172f623f0577b672853084317b8c237301b73c28d905",
   "revalidate/phase_d/RESOLUTION_SWEEP_EXTENDED.md": "ad325e21669949832d7ee7deecf551413b467b42b954ef76580e10f1b4478774",
   "revalidate/phase_d/RESOLUTION_SWEEP_EXTENDED_ARTIFACT.json": "a963928cd59791ae3762089296497d8de1a507931723e05fdde01d53f2558ad7",
   "revalidate/phase_e2/artifact.json": "70573e28495cd1f9e9e7dc82c483890a1ab81f5d9d4bc1f958b946f2a20dd615",

@@ -1,0 +1,34 @@
+{
+  "gate": "prediction_gate_v2",
+  "created_date": "2026-04-10",
+  "lock_note": "Predictions must not be edited after this file is saved/locked.",
+  "predictions": [
+    { "id": "v2_p01", "H": 0.0028, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Low universal power strongly favors family-aware even at low H." },
+    { "id": "v2_p02", "H": 0.0048, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Below-baseline P shifts toward family-aware." },
+    { "id": "v2_p03", "H": 0.0082, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High H + low P => family-aware." },
+    { "id": "v2_p04", "H": 0.0118, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High H + low P => family-aware." },
+    { "id": "v2_p05", "H": 0.0165, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high H + low P => family-aware." },
+    { "id": "v2_p06", "H": 0.0190, "P": 0.275, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high H + low P => family-aware." },
+
+    { "id": "v2_p07", "H": 0.0028, "P": 0.295, "predicted_region": "transition region", "confidence": "medium", "optional_notes": "Near baseline; low H tends to transition." },
+    { "id": "v2_p08", "H": 0.0048, "P": 0.295, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Sufficient H to cross family-aware boundary at slightly low P." },
+    { "id": "v2_p09", "H": 0.0082, "P": 0.295, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High H + slightly low P => family-aware." },
+    { "id": "v2_p10", "H": 0.0118, "P": 0.295, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High H + slightly low P => family-aware." },
+    { "id": "v2_p11", "H": 0.0165, "P": 0.295, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high H + slightly low P => family-aware." },
+    { "id": "v2_p12", "H": 0.0190, "P": 0.295, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high H + slightly low P => family-aware." },
+
+    { "id": "v2_p13", "H": 0.0028, "P": 0.315, "predicted_region": "universal region", "confidence": "medium", "optional_notes": "Above baseline P pushes low H into universal via negative gap threshold." },
+    { "id": "v2_p14", "H": 0.0048, "P": 0.315, "predicted_region": "transition region", "confidence": "medium", "optional_notes": "Moderate H not enough to reach family-aware; not negative enough for universal." },
+    { "id": "v2_p15", "H": 0.0082, "P": 0.315, "predicted_region": "transition region", "confidence": "high", "optional_notes": "Mid H + slightly above baseline => transition." },
+    { "id": "v2_p16", "H": 0.0118, "P": 0.315, "predicted_region": "transition region", "confidence": "high", "optional_notes": "Still below family-aware threshold at this P." },
+    { "id": "v2_p17", "H": 0.0165, "P": 0.315, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "High H compensates for above-baseline P." },
+    { "id": "v2_p18", "H": 0.0190, "P": 0.315, "predicted_region": "family-aware region", "confidence": "high", "optional_notes": "Very high H crosses family-aware boundary." },
+
+    { "id": "v2_p19", "H": 0.0028, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." },
+    { "id": "v2_p20", "H": 0.0048, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." },
+    { "id": "v2_p21", "H": 0.0082, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." },
+    { "id": "v2_p22", "H": 0.0118, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." },
+    { "id": "v2_p23", "H": 0.0165, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." },
+    { "id": "v2_p24", "H": 0.0190, "P": 0.345, "predicted_region": "universal region", "confidence": "high", "optional_notes": "High P dominates." }
+  ]
+}

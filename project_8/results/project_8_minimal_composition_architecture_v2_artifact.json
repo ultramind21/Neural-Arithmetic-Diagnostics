@@ -1,0 +1,1036 @@
+{
+  "timestamp_utc": "2026-04-05T20:14:57.998047Z",
+  "experiment": "project_8_minimal_composition_architecture_v2",
+  "results": {
+    "alternating_carry": {
+      "baseline_composition": {
+        "truth_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "interface_only": {
+        "truth_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 1,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "controller_only": {
+        "truth_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "interface_plus_controller": {
+        "truth_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 1,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      }
+    },
+    "full_propagation_chain": {
+      "baseline_composition": {
+        "truth_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "interface_only": {
+        "truth_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "controller_only": {
+        "truth_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 0,
+        "controller_count": 5,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 1,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          }
+        ]
+      },
+      "interface_plus_controller": {
+        "truth_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "predicted_full_sequence": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 0,
+        "controller_count": 5,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 1,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          },
+          {
+            "position": 0,
+            "a_digit": 9,
+            "b_digit": 1,
+            "carry_in": 1,
+            "digit_pred": 1,
+            "carry_pred": 1,
+            "interface_applied": false,
+            "controller_applied": true
+          }
+        ]
+      }
+    },
+    "block_boundary_stress": {
+      "baseline_composition": {
+        "truth_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "predicted_full_sequence": [
+          0,
+          1,
+          1,
+          9,
+          9,
+          9,
+          1
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 1,
+            "b_digit": 8,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "interface_only": {
+        "truth_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "predicted_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 3,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 1,
+            "b_digit": 8,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          }
+        ]
+      },
+      "controller_only": {
+        "truth_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "predicted_full_sequence": [
+          0,
+          1,
+          1,
+          9,
+          9,
+          9,
+          1
+        ],
+        "exact_match": false,
+        "interface_count": 0,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 1,
+            "b_digit": 8,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 1,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          }
+        ]
+      },
+      "interface_plus_controller": {
+        "truth_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "predicted_full_sequence": [
+          0,
+          0,
+          0,
+          9,
+          9,
+          9,
+          0
+        ],
+        "exact_match": true,
+        "interface_count": 3,
+        "controller_count": 0,
+        "trace": [
+          {
+            "position": 5,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 4,
+            "a_digit": 1,
+            "b_digit": 8,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 3,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 2,
+            "a_digit": 9,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 9,
+            "carry_pred": 0,
+            "interface_applied": false,
+            "controller_applied": false
+          },
+          {
+            "position": 1,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          },
+          {
+            "position": 0,
+            "a_digit": 0,
+            "b_digit": 0,
+            "carry_in": 0,
+            "digit_pred": 0,
+            "carry_pred": 0,
+            "interface_applied": true,
+            "controller_applied": false
+          }
+        ]
+      }
+    }
+  },
+  "notes": [
+    "This is the first discriminative architecture experiment in Project 8.",
+    "It uses controlled local error injection so interface/controller effects can become visible."
+  ]
+}

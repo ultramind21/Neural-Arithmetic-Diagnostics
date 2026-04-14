@@ -1,0 +1,316 @@
+{
+  "timestamp_utc": "2026-04-05T02:06:59.537112Z",
+  "experiment": "project_7_context_trigger_intervention_v1",
+  "family_results": {
+    "alternating_carry": {
+      "truth_full_sequence": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "predicted_full_sequence": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "exact_match": false,
+      "intervention_count": 1,
+      "trace": [
+        {
+          "position": 5,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 0,
+          "digit_pred_before": 1,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": true
+        },
+        {
+          "position": 4,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 1,
+          "digit_pred_before": 0,
+          "carry_pred_before": 1,
+          "digit_pred_after": 0,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 3,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 0,
+          "digit_pred_before": 0,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": false
+        },
+        {
+          "position": 2,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 1,
+          "digit_pred_before": 0,
+          "carry_pred_before": 1,
+          "digit_pred_after": 0,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 1,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 0,
+          "digit_pred_before": 0,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": false
+        },
+        {
+          "position": 0,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 1,
+          "digit_pred_before": 0,
+          "carry_pred_before": 1,
+          "digit_pred_after": 0,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        }
+      ]
+    },
+    "full_propagation_chain": {
+      "truth_full_sequence": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "predicted_full_sequence": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "exact_match": true,
+      "intervention_count": 0,
+      "trace": [
+        {
+          "position": 5,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 1,
+          "digit_pred_before": 0,
+          "carry_pred_before": 1,
+          "digit_pred_after": 0,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 4,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 1,
+          "digit_pred_before": 1,
+          "carry_pred_before": 1,
+          "digit_pred_after": 1,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 3,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 1,
+          "digit_pred_before": 1,
+          "carry_pred_before": 1,
+          "digit_pred_after": 1,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 2,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 1,
+          "digit_pred_before": 1,
+          "carry_pred_before": 1,
+          "digit_pred_after": 1,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 1,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 1,
+          "digit_pred_before": 1,
+          "carry_pred_before": 1,
+          "digit_pred_after": 1,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        },
+        {
+          "position": 0,
+          "a_digit": 9,
+          "b_digit": 1,
+          "carry_in": 1,
+          "digit_true": 1,
+          "carry_true": 1,
+          "digit_pred_before": 1,
+          "carry_pred_before": 1,
+          "digit_pred_after": 1,
+          "carry_pred_after": 1,
+          "intervention_applied": false
+        }
+      ]
+    },
+    "block_boundary_stress": {
+      "truth_full_sequence": [
+        0,
+        0,
+        0,
+        9,
+        9,
+        9,
+        0
+      ],
+      "predicted_full_sequence": [
+        0,
+        0,
+        0,
+        9,
+        9,
+        9,
+        0
+      ],
+      "exact_match": true,
+      "intervention_count": 3,
+      "trace": [
+        {
+          "position": 5,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 0,
+          "digit_pred_before": 1,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": true
+        },
+        {
+          "position": 4,
+          "a_digit": 1,
+          "b_digit": 8,
+          "carry_in": 0,
+          "digit_true": 9,
+          "carry_true": 0,
+          "digit_pred_before": 9,
+          "carry_pred_before": 0,
+          "digit_pred_after": 9,
+          "carry_pred_after": 0,
+          "intervention_applied": false
+        },
+        {
+          "position": 3,
+          "a_digit": 9,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 9,
+          "carry_true": 0,
+          "digit_pred_before": 9,
+          "carry_pred_before": 0,
+          "digit_pred_after": 9,
+          "carry_pred_after": 0,
+          "intervention_applied": false
+        },
+        {
+          "position": 2,
+          "a_digit": 9,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 9,
+          "carry_true": 0,
+          "digit_pred_before": 9,
+          "carry_pred_before": 0,
+          "digit_pred_after": 9,
+          "carry_pred_after": 0,
+          "intervention_applied": false
+        },
+        {
+          "position": 1,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 0,
+          "digit_pred_before": 1,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": true
+        },
+        {
+          "position": 0,
+          "a_digit": 0,
+          "b_digit": 0,
+          "carry_in": 0,
+          "digit_true": 0,
+          "carry_true": 0,
+          "digit_pred_before": 1,
+          "carry_pred_before": 0,
+          "digit_pred_after": 0,
+          "carry_pred_after": 0,
+          "intervention_applied": true
+        }
+      ]
+    }
+  },
+  "notes": [
+    "This is the first surgical local trigger intervention in Project 7.",
+    "It tests whether correcting a known recurring local failure context rescues family-level behavior."
+  ]
+}
