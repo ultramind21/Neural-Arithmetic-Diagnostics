@@ -1,0 +1,14 @@
+{
+  "name": "sub3_0_active_digits_08_seed0_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase_sub0/run_subtraction_smoke.py",
+  "seed": 0,
+  "train_size": 4000,
+  "eval_size": 1500,
+  "epochs": 3,
+  "train_mix": "no_borrow:0.5,borrow_heavy:0.5",
+  "eval_modes": "no_borrow,borrow_heavy",
+  "active_digits": 8,
+  "out_dir": "project_12/results/sub3_0_active_digits_08_seed0_v1",
+  "notes": "SUB3.0 hardness scaling via active_digits=8. Not a validated claim."
+}

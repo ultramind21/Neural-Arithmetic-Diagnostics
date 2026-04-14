@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_02_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 2,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.908,
+        "borrow_heavy": 0.9206666666666666
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_03_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 3,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.9106666666666666,
+        "borrow_heavy": 0.7846666666666666
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_04_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 4,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.856,
+        "borrow_heavy": 0.7086666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_06_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 6,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.7273333333333334,
+        "borrow_heavy": 0.5633333333333334
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_08_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 8,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.636,
+        "borrow_heavy": 0.5046666666666667
+      }
+    },
+    {
+      "out_dir": "project_12/results/sub3_0_active_digits_13_seed0_v1",
+      "git_commit": "81c868bddd735ac7d42d91bf8e9d623773cf1246",
+      "active_digits": 13,
+      "train_mix": {
+        "no_borrow": 0.5,
+        "borrow_heavy": 0.5
+      },
+      "eval_accuracy_by_mode": {
+        "no_borrow": 0.5993333333333334,
+        "borrow_heavy": 0.5106666666666667
+      }
+    }
+  ]
+}
