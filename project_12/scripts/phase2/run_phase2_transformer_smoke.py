@@ -160,11 +160,12 @@ def main():
     parser.add_argument("--train-size", type=int, default=2000)
     parser.add_argument("--eval-size", type=int, default=500)
     parser.add_argument("--epochs", type=int, default=2)
+    parser.add_argument("--out-dir", type=str, default="project_12/results/phase2_transformer_smoke")
     args = parser.parse_args()
 
     # Setup
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    output_dir = Path("project_12/results/phase2_transformer_smoke")
+    output_dir = Path(args.out_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"Generating dataset (train={args.train_size}, eval={args.eval_size})...")
