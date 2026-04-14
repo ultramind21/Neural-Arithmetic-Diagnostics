@@ -25,6 +25,8 @@ Repository = "https://github.com/ultramind21/Neural-Arithmetic-Diagnostics"
 [project.scripts]
 nad-check-links = "nad.cli:check_links_main"
 nad-diff-gate = "nad.cli:diff_gate_main"
+nad-ledger-check = "nad.cli:ledger_check_main"
+nad-repro-check = "nad.cli:repro_check_main"
 
 [tool.setuptools]
 packages = ["nad"]
