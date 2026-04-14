@@ -1,0 +1,11 @@
+{
+  "name": "p12_phase2_transformer_realrun_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase2/run_phase2_transformer_smoke.py",
+  "seed": 0,
+  "train_size": 10000,
+  "eval_size": 2000,
+  "epochs": 5,
+  "out_dir": "project_12/results/phase2_transformer_realrun_v1",
+  "notes": "Phase2 real run v1 (larger dataset/epochs). Baseline experiment only (not a validated claim)."
+}
