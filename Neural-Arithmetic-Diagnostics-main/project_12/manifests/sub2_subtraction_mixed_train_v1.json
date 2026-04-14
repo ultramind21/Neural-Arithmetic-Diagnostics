@@ -1,0 +1,13 @@
+{
+  "name": "sub2_subtraction_mixed_train_v1",
+  "type": "experiment",
+  "script": "project_12/scripts/phase_sub0/run_subtraction_smoke.py",
+  "seed": 0,
+  "train_size": 4000,
+  "eval_size": 1500,
+  "epochs": 3,
+  "train_mix": "no_borrow:0.5,borrow_heavy:0.5",
+  "eval_modes": "no_borrow,borrow_heavy",
+  "out_dir": "project_12/results/sub2_subtraction_mixed_train_v1",
+  "notes": "SUB2 mixed-mode subtraction training baseline. Not a validated claim."
+}
