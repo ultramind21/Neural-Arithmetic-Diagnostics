@@ -60,7 +60,7 @@ class TinyTransformer(nn.Module):
         return logits
 
 
-def generate_dataset(seed=0, train_size=1000, eval_size=300, problem_mode="iid"):
+def generate_dataset(seed=0, train_size=1000, eval_size=300, problem_mode="iid", active_digits=None):
     """Generate (obs, action) pairs from teacher traces for subtraction.
     
     VP: randomly generate pairs (a, b) with a >= b.
@@ -68,36 +68,51 @@ def generate_dataset(seed=0, train_size=1000, eval_size=300, problem_mode="iid")
       - 'iid': uniform random (a, b) with a >= b
       - 'no_borrow': digit-wise: a_digit >= b_digit for all digits (no borrow needed)
       - 'borrow_heavy': digit-wise: a_digit < b_digit often (forces borrow)
+    active_digits: hardness scaling. Only lowest K digits are nonzero (rest padded to 0).
+                   Must be in [1, W]. If None, use full W.
     """
     np.random.seed(seed)
     random.seed(seed)
 
     config = DEFAULT_CONFIG
     env = SorobanEnv(config)
-    W = config.num_columns
+    W_full = config.num_columns
+    W_active = W_full if active_digits is None else int(active_digits)
+    if W_active < 1 or W_active > W_full:
+        raise ValueError(f"active_digits must be in [1, {W_full}] (got {W_active})")
+    W = W_full
 
     dataset = []
     num_pairs = 0
     while num_pairs < train_size + eval_size:
         # Generate (a, b) with a >= b
         if problem_mode == "no_borrow":
-            # Each digit of a >= b (no borrow needed)
-            a_digits = [np.random.randint(0, 10) for _ in range(W)]
-            b_digits = [np.random.randint(0, a_digits[i] + 1) for i in range(W)]
-            a = sum(a_digits[i] * (10 ** i) for i in range(W))
-            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+            # Each active digit: a_digit >= b_digit (no borrow needed)
+            # Remaining digits padded to 0
+            a_digits = [np.random.randint(0, 10) for _ in range(W_active)] + [0] * (W_full - W_active)
+            b_digits = [np.random.randint(0, a_digits[i] + 1) for i in range(W_active)] + [0] * (W_full - W_active)
+            a = sum(a_digits[i] * (10 ** i) for i in range(W_full))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W_full))
         elif problem_mode == "borrow_heavy":
-            # Most digits: a_digit < b_digit (forces borrow cascade)
-            # Setup: lower digits have a < b, upper digit ensures a >= b overall
-            a_digits = [np.random.randint(0, 5) for _ in range(W - 1)]  # 0-4
-            b_digits = [np.random.randint(5, 10) for _ in range(W - 1)]  # 5-9
-            # Top digit: make a >= b overall
+            # Requires at least 2 active digits
+            if W_active < 2:
+                raise ValueError(f"borrow_heavy requires active_digits >= 2 (got {W_active})")
+            # Most active digits: a_digit < b_digit (forces borrow cascade)
+            a_digits = [np.random.randint(0, 5) for _ in range(W_active - 1)]  # 0-4
+            b_digits = [np.random.randint(5, 10) for _ in range(W_active - 1)]  # 5-9
+            # Top active digit: ensure a >= b overall
             a_digits.append(np.random.randint(5, 10))  # 5-9
             b_digits.append(np.random.randint(0, 2))  # 0-1
-            a = sum(a_digits[i] * (10 ** i) for i in range(W))
-            b = sum(b_digits[i] * (10 ** i) for i in range(W))
+            # Pad remaining digits to 0 (W_full fixed)
+            a_digits = a_digits + [0] * (W_full - W_active)
+            b_digits = b_digits + [0] * (W_full - W_active)
+            a = sum(a_digits[i] * (10 ** i) for i in range(W_full))
+            b = sum(b_digits[i] * (10 ** i) for i in range(W_full))
         else:  # "iid" (default)
             max_val = 99999  # Smaller range for MVP
+            # Scale max_val based on active_digits
+            if W_active <= 5:
+                max_val = min(max_val, (10 ** W_active) - 1)
             a = np.random.randint(1, max_val + 1)
             b = np.random.randint(0, min(a + 1, max_val + 1))  # Ensure a >= b
         
@@ -178,10 +193,11 @@ def eval_accuracy(model, eval_obs, eval_actions, device):
     return correct / total if total > 0 else 0.0
 
 
-def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=None):
+def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=None, active_digits=None):
     """Generate mixed (obs, action) pairs from multiple problem modes.
     
     train_mix: dict of {mode: proportion}, e.g., {"no_borrow": 0.5, "borrow_heavy": 0.5}
+    active_digits: hardness scaling parameter (passed to generate_dataset)
     """
     np.random.seed(seed)
     random.seed(seed)
@@ -202,7 +218,7 @@ def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=Non
         mode_train_size = int(train_size * proportion)
         if mode_train_size > 0:
             (train_obs_mode, train_actions_mode), _ = generate_dataset(
-                seed=seed, train_size=mode_train_size, eval_size=0, problem_mode=mode
+                seed=seed, train_size=mode_train_size, eval_size=0, problem_mode=mode, active_digits=active_digits
             )
             train_obs_mixed.extend(train_obs_mode)
             train_actions_mixed.extend(train_actions_mode)
@@ -216,7 +232,7 @@ def generate_mixed_dataset(seed=0, train_size=1000, eval_size=300, train_mix=Non
     # Generate eval data (use first mode as default)
     first_mode = list(train_mix.keys())[0]
     _, (eval_obs, eval_actions) = generate_dataset(
-        seed=seed, train_size=0, eval_size=eval_size, problem_mode=first_mode
+        seed=seed, train_size=0, eval_size=eval_size, problem_mode=first_mode, active_digits=active_digits
     )
     
     return (train_obs_mixed, train_actions_mixed), (eval_obs, eval_actions)
@@ -232,6 +248,7 @@ def main():
     parser.add_argument("--problem-mode", type=str, default="iid", choices=["iid", "no_borrow", "borrow_heavy"])
     parser.add_argument("--train-mix", type=str, default=None, help="Mixed mode: e.g., 'no_borrow:0.5,borrow_heavy:0.5'")
     parser.add_argument("--eval-modes", type=str, default=None, help="Comma-separated eval modes (e.g., 'no_borrow,borrow_heavy')")
+    parser.add_argument("--active-digits", type=int, default=None, help="Hardness scaling: only the lowest K digits are nonzero (pads remaining digits with zeros). Must be in [1, W]. borrow_heavy requires K>=2.")
     args = parser.parse_args()
     
     # If eval_modes not specified, default to train problem_mode (original behavior)
@@ -247,7 +264,7 @@ def main():
     if args.train_mix:
         print(f"Generating mixed dataset (train={args.train_size}, eval={args.eval_size}, mix={args.train_mix})...")
         (train_obs, train_actions), (eval_obs, eval_actions) = generate_mixed_dataset(
-            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, train_mix=args.train_mix
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, train_mix=args.train_mix, active_digits=args.active_digits
         )
         train_mode = "mixed"
         train_mix_dict = {}
@@ -257,7 +274,7 @@ def main():
     else:
         print(f"Generating dataset (train={args.train_size}, eval={args.eval_size}, mode={args.problem_mode})...")
         (train_obs, train_actions), (eval_obs, eval_actions) = generate_dataset(
-            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode
+            seed=args.seed, train_size=args.train_size, eval_size=args.eval_size, problem_mode=args.problem_mode, active_digits=args.active_digits
         )
         train_mode = args.problem_mode
         train_mix_dict = {}
@@ -294,7 +311,7 @@ def main():
         print(f"\nEvaluating on mode: {eval_mode}...")
         # Generate eval dataset for this mode
         _, (eval_obs_mode, eval_actions_mode) = generate_dataset(
-            seed=args.seed, train_size=0, eval_size=args.eval_size, problem_mode=eval_mode
+            seed=args.seed, train_size=0, eval_size=args.eval_size, problem_mode=eval_mode, active_digits=args.active_digits
         )
         # Compute accuracy on this mode
         mode_acc = eval_accuracy(model, eval_obs_mode, eval_actions_mode, device)
@@ -314,6 +331,7 @@ def main():
         "eval_accuracy_by_mode": eval_accuracy_by_mode,
         "obs_size": obs_size,
         "action_size": action_size,
+        "active_digits": DEFAULT_CONFIG.num_columns if args.active_digits is None else int(args.active_digits),
         "metrics": {
             "final_train_loss": float(train_losses[-1]) if train_losses else None,
             "final_eval_accuracy": float(eval_accs[-1]) if eval_accs else None,
@@ -347,6 +365,7 @@ def main():
 | Operation | Subtraction (a >= b) |
 | Obs Size | {obs_size} |
 | Action Size | {action_size} |
+| Active Digits | {artifact['active_digits']} |
 | Device | {device} |
 
 ## Results
